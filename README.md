@@ -1,6 +1,6 @@
-# Emotion Design System
+# AffectAtlas
 
-A React Native app that generates complete design systems based on emotional inputs using Plutchik's Wheel of Emotions.
+A React Native app that maps emotions to beautiful design systems using Plutchik's Wheel of Emotions. Navigate the landscape of affect to discover the perfect visual language for your project.
 
 ## Security Status
 
@@ -55,7 +55,7 @@ npm run android
 ## Project Structure
 
 ```
-emotion-design-system/
+affect-atlas/
 ├── app/                    # Expo Router screens
 │   ├── _layout.tsx         # Root layout
 │   ├── index.tsx           # Home/Wheel screen

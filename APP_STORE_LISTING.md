@@ -1,14 +1,14 @@
 # App Store Listing Information
 
 ## App Name
-Emotion Design System
+AffectAtlas
 
 ## Subtitle (iOS) / Short Description (Android)
-Transform emotions into beautiful design systems
+Map emotions to beautiful design systems
 
 ## Description
 
-Transform emotions into complete design systems with Emotion Design System - the innovative app that bridges psychology and design through Plutchik's Wheel of Emotions.
+Navigate the landscape of emotions to discover your perfect design system with AffectAtlas - the innovative app that maps affect to aesthetics through Plutchik's Wheel of Emotions.
 
 **KEY FEATURES:**
 
@@ -63,15 +63,15 @@ Export your design system in multiple formats:
 
 Based on Robert Plutchik's psychoevolutionary theory of emotions, this app creates scientifically-grounded design systems that resonate with human psychology.
 
-Whether you're designing a calming meditation app, an exciting gaming interface, or a trustworthy financial platform, Emotion Design System helps you find the perfect visual language for your emotional intent.
+Whether you're designing a calming meditation app, an exciting gaming interface, or a trustworthy financial platform, AffectAtlas helps you chart the perfect visual language for your emotional intent.
 
 ## Keywords
 
 ### iOS Keywords
-emotion,design system,color palette,plutchik,design tokens,ui design,color theory,oklch,design tools,color generator
+affect,atlas,emotion,design system,color palette,plutchik,design tokens,ui design,color theory,oklch
 
 ### Android Keywords
-emotion design, design system, color palette, plutchik wheel, design tokens, ui ux design, color theory, oklch color, design tools, color generator, emotion wheel, design generator, color science, typography, design inspiration
+affect atlas, emotion mapping, design system, color palette, plutchik wheel, design tokens, ui ux design, color theory, oklch color, design tools, emotion wheel, affect design, color science, typography, design inspiration
 
 ## Category
 - **Primary**: Graphics & Design

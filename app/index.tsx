@@ -29,9 +29,9 @@ export default function HomeScreen() {
       >
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.title}>Emotion Design System</Text>
+          <Text style={styles.title}>AffectAtlas</Text>
           <Text style={styles.subtitle}>
-            Select an emotion and intensity to generate a design system
+            Map emotions to design systems with a simple touch
           </Text>
         </View>
 

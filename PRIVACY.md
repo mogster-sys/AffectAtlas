@@ -1,16 +1,16 @@
-# Privacy Policy - Emotion Design System
+# Privacy Policy - AffectAtlas
 
 **Last Updated: December 19, 2024**
 
 ## Overview
 
-Emotion Design System ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application.
+AffectAtlas ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application.
 
 ## Information Collection
 
 **We do not collect any personal information.**
 
-The Emotion Design System app:
+The AffectAtlas app:
 - Does NOT collect user data
 - Does NOT require user accounts
 - Does NOT track user behavior

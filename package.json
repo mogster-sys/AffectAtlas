@@ -1,6 +1,6 @@
 {
-  "name": "emotion-design-system",
-  "displayName": "Emotion Design System",
+  "name": "affect-atlas",
+  "displayName": "AffectAtlas",
   "version": "1.0.0",
   "description": "Generate beautiful design systems from emotional inputs using Plutchik's Wheel of Emotions",
   "author": "mogster-sys",

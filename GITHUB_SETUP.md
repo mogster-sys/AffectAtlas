@@ -4,9 +4,9 @@
 
 1. **Go to GitHub** and create a new repository:
    - Visit: https://github.com/new
-   - Repository name: `emotion-design-system`
-   - Description: "React Native app that generates design systems from emotional inputs using Plutchik's Wheel"
-   - Make it **Public**
+   - Repository name: `affect-atlas`
+   - Description: "Map emotions to beautiful design systems using Plutchik's Wheel of Emotions"
+   - Make it **Public** (or Private if you prefer)
    - DO NOT initialize with README (we already have one)
    - DO NOT add .gitignore (we have one)
    - License: MIT
@@ -35,7 +35,7 @@ If you get an authentication error, you may need to:
 ### Option B: Use SSH
 ```bash
 # Change remote to SSH
-git remote set-url origin git@github.com:mogster-sys/emotion-design-system.git
+git remote set-url origin git@github.com:mogster-sys/affect-atlas.git
 
 # Generate SSH key if needed
 ssh-keygen -t ed25519 -C "mogie.dick@gmail.com"
@@ -91,7 +91,7 @@ cat ~/.ssh/id_ed25519.pub
 2. **Create App ID**:
    - Sign in to Apple Developer
    - Certificates, IDs & Profiles → Identifiers → +
-   - App ID: `com.mogstersys.emotiondesignsystem`
+   - App ID: `com.mogstersys.affectatlas`
 
 3. **Create App in App Store Connect**:
    - https://appstoreconnect.apple.com/
@@ -105,7 +105,7 @@ cat ~/.ssh/id_ed25519.pub
 
 2. **Create App**:
    - Google Play Console → Create app
-   - App name: Emotion Design System
+   - App name: AffectAtlas
    - Use the information from APP_STORE_LISTING.md
 
 ## Building for Stores
