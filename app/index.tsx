@@ -10,7 +10,7 @@ import { EmotionWheel } from '@/components/wheel/EmotionWheel';
 import { useEmotionStore } from '@/store/useEmotionStore';
 import { getPrimaryEmotion } from '@/constants/emotions';
 import { mapEmotionToColor } from '@/engine/mapping/colorMapper';
-import { useTheme } from '@/hooks/useTheme';
+import { useEmotionTheme } from '@/hooks/useEmotionTheme';
 
 export default function HomeScreen() {
   const {
@@ -19,7 +19,7 @@ export default function HomeScreen() {
     clearSelection,
   } = useEmotionStore();
 
-  const { theme } = useTheme();
+  const theme = useEmotionTheme();
 
   const selectedEmotion = primaryEmotion ? getPrimaryEmotion(primaryEmotion) : null;
   const colors = primaryEmotion ? mapEmotionToColor(primaryEmotion, intensity) : null;
