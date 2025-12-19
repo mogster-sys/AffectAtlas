@@ -12,7 +12,7 @@
     "privacy": "public",
     "platforms": ["ios", "android"],
     "description": "Generate beautiful design systems from emotional inputs using Plutchik's Wheel of Emotions",
-    "githubUrl": "https://github.com/mogster-sys/emotion-design-system",
+    "githubUrl": "https://github.com/mogster-sys/AffectAtlas",
     "primaryColor": "#3B82F6",
     "splash": {
       "image": "./assets/splash.png",

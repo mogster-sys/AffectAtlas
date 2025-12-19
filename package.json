@@ -5,13 +5,13 @@
   "description": "Generate beautiful design systems from emotional inputs using Plutchik's Wheel of Emotions",
   "author": "mogster-sys",
   "license": "MIT",
-  "homepage": "https://github.com/mogster-sys/emotion-design-system",
+  "homepage": "https://github.com/mogster-sys/AffectAtlas",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mogster-sys/emotion-design-system.git"
+    "url": "https://github.com/mogster-sys/AffectAtlas.git"
   },
   "bugs": {
-    "url": "https://github.com/mogster-sys/emotion-design-system/issues"
+    "url": "https://github.com/mogster-sys/AffectAtlas/issues"
   },
   "keywords": [
     "design-system",
