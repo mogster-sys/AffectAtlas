@@ -10,7 +10,7 @@
     "scheme": "affectatlas",
     "newArchEnabled": true,
     "privacy": "public",
-    "platforms": ["ios", "android"],
+    "platforms": ["ios", "android", "web"],
     "description": "Generate beautiful design systems from emotional inputs using Plutchik's Wheel of Emotions",
     "githubUrl": "https://github.com/mogster-sys/AffectAtlas",
     "primaryColor": "#3B82F6",
