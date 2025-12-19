@@ -1,12 +1,38 @@
 {
   "name": "emotion-design-system",
+  "displayName": "Emotion Design System",
   "version": "1.0.0",
+  "description": "Generate beautiful design systems from emotional inputs using Plutchik's Wheel of Emotions",
+  "author": "mogster-sys",
+  "license": "MIT",
+  "homepage": "https://github.com/mogster-sys/emotion-design-system",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mogster-sys/emotion-design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mogster-sys/emotion-design-system/issues"
+  },
+  "keywords": [
+    "design-system",
+    "emotions",
+    "plutchik",
+    "color-theory",
+    "react-native",
+    "expo",
+    "oklch",
+    "design-tokens"
+  ],
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "build:ios": "eas build --platform ios",
+    "build:android": "eas build --platform android",
+    "submit:ios": "eas submit --platform ios",
+    "submit:android": "eas submit --platform android"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^2.2.0",
