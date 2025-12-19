@@ -10,6 +10,7 @@ import { EmotionWheel } from '@/components/wheel/EmotionWheel';
 import { useEmotionStore } from '@/store/useEmotionStore';
 import { getPrimaryEmotion } from '@/constants/emotions';
 import { mapEmotionToColor } from '@/engine/mapping/colorMapper';
+import { useTheme } from '@/hooks/useTheme';
 
 export default function HomeScreen() {
   const {
@@ -18,11 +19,101 @@ export default function HomeScreen() {
     clearSelection,
   } = useEmotionStore();
 
+  const { theme } = useTheme();
+
   const selectedEmotion = primaryEmotion ? getPrimaryEmotion(primaryEmotion) : null;
   const colors = primaryEmotion ? mapEmotionToColor(primaryEmotion, intensity) : null;
 
+  // Create dynamic styles with theme colors
+  const dynamicStyles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: theme.background,
+    },
+    title: {
+      fontSize: 28,
+      fontWeight: 'bold',
+      color: theme.text,
+      marginBottom: 8,
+    },
+    subtitle: {
+      fontSize: 16,
+      color: theme.textSecondary,
+      textAlign: 'center',
+      paddingHorizontal: 32,
+    },
+    selectionContainer: {
+      backgroundColor: theme.surface,
+      borderRadius: 16,
+      padding: 20,
+      marginTop: 24,
+    },
+    selectionTitle: {
+      fontSize: 18,
+      fontWeight: '600',
+      color: theme.text,
+      marginBottom: 16,
+    },
+    emotionName: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: theme.text,
+      marginBottom: 4,
+    },
+    intensityText: {
+      fontSize: 14,
+      color: theme.textSecondary,
+      marginBottom: 8,
+      textTransform: 'capitalize',
+    },
+    descriptionText: {
+      fontSize: 14,
+      color: theme.textTertiary,
+      lineHeight: 20,
+    },
+    paletteTitle: {
+      fontSize: 14,
+      fontWeight: '600',
+      color: theme.textSecondary,
+      marginBottom: 12,
+    },
+    colorLabel: {
+      fontSize: 11,
+      color: theme.textTertiary,
+    },
+    buttonText: {
+      fontSize: 16,
+      fontWeight: '600',
+      color: '#FFFFFF',
+    },
+    secondaryButton: {
+      backgroundColor: theme.surfaceElevated,
+      borderWidth: 1,
+      borderColor: theme.border,
+    },
+    secondaryButtonText: {
+      color: theme.text,
+    },
+    clearButtonText: {
+      fontSize: 14,
+      color: theme.textTertiary,
+    },
+    borderTop: {
+      borderTopWidth: 1,
+      borderTopColor: theme.border,
+    },
+    colorSwatch: {
+      width: 48,
+      height: 48,
+      borderRadius: 8,
+      marginBottom: 8,
+      borderWidth: 1,
+      borderColor: theme.borderLight,
+    },
+  });
+
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={dynamicStyles.container}>
       <ScrollView
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}

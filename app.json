@@ -6,7 +6,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "dark",
+    "userInterfaceStyle": "automatic",
     "scheme": "affectatlas",
     "newArchEnabled": true,
     "privacy": "public",
@@ -47,7 +47,7 @@
       ],
       "intentFilters": [],
       "allowBackup": false,
-      "userInterfaceStyle": "dark",
+      "userInterfaceStyle": "automatic",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
