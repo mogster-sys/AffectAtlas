@@ -7,12 +7,15 @@ import { View, Text, StyleSheet, ScrollView, Pressable, Alert } from 'react-nati
 import { SafeAreaView } from 'react-native-safe-area-context';
 import * as Clipboard from 'expo-clipboard';
 import { useEmotionStore } from '@/store/useEmotionStore';
-import { mapEmotionToColor } from '@/engine/mapping/colorMapper';
-import { generateColorPalette } from '@/engine/color/oklch';
+import { generateDesignSystem, generateAIPrompt } from '@/engine/mapping/themeMapper';
+import { getEmotionTheme } from '@/constants/designTokens';
+import { getDesignGuidance } from '@/constants/designGuidance';
+
+type ExportFormat = 'css' | 'json' | 'swift' | 'ai-prompt';
 
 export default function ExportScreen() {
   const { primaryEmotion, intensity } = useEmotionStore();
-  const [selectedFormat, setSelectedFormat] = useState<'css' | 'json' | 'swift'>('css');
+  const [selectedFormat, setSelectedFormat] = useState<ExportFormat>('css');
 
   if (!primaryEmotion) {
     return (
@@ -24,62 +27,99 @@ export default function ExportScreen() {
     );
   }
 
-  const colors = mapEmotionToColor(primaryEmotion, intensity);
-  const palette = generateColorPalette(colors.primary);
+  const designSystem = generateDesignSystem(primaryEmotion, intensity);
+  const theme = getEmotionTheme(primaryEmotion, intensity);
+  const guidance = getDesignGuidance(primaryEmotion, intensity);
 
   const generateCSS = () => {
+    const { semantic, palette } = designSystem.colors;
     const lines: string[] = [
       ':root {',
-      `  /* Emotion: ${primaryEmotion} - ${intensity} */`,
-      `  --color-primary: ${colors.primary};`,
-      `  --color-secondary: ${colors.secondary};`,
-      `  --color-accent: ${colors.accent};`,
-      `  --color-background: ${colors.background};`,
-      `  --color-surface: ${colors.surface};`,
-      `  --color-text: ${colors.text};`,
-      `  --color-text-secondary: ${colors.textSecondary};`,
+      `  /* ${primaryEmotion} - ${intensity} */`,
+      `  /* Source: ${theme.source} */`,
+      '',
+      '  /* Colors */',
+      `  --color-primary: ${semantic.primary};`,
+      `  --color-secondary: ${semantic.secondary};`,
+      `  --color-accent: ${semantic.accent};`,
+      `  --color-background: ${semantic.background};`,
+      `  --color-surface: ${semantic.surface};`,
+      `  --color-text: ${semantic.text};`,
+      `  --color-text-secondary: ${semantic.textSecondary};`,
       '',
       '  /* Palette */',
     ];
-
     Object.entries(palette).forEach(([shade, color]) => {
       lines.push(`  --color-${shade}: ${color};`);
     });
-
+    lines.push('');
+    lines.push('  /* Typography */');
+    lines.push(`  --font-headline: "${theme.typography.headlineFont}", sans-serif;`);
+    lines.push(`  --font-body: "${theme.typography.bodyFont}", sans-serif;`);
+    lines.push('');
+    lines.push('  /* Shapes */');
+    lines.push(`  --border-radius: ${theme.shapes.borderRadius}px;`);
+    lines.push(`  --border-radius-lg: ${theme.shapes.borderRadiusLg}px;`);
+    lines.push(`  --border-radius-xl: ${theme.shapes.borderRadiusXl}px;`);
     lines.push('}');
+    if (guidance) {
+      lines.push('');
+      lines.push(`/* Creative North Star: "${guidance.northStar}" */`);
+      lines.push(`/* ${guidance.philosophy} */`);
+      lines.push('/*');
+      lines.push(" * Do's:");
+      guidance.dos.forEach(d => lines.push(` *   - ${d}`));
+      lines.push(" * Don'ts:");
+      guidance.donts.forEach(d => lines.push(` *   - ${d}`));
+      lines.push(' */');
+    }
     return lines.join('\n');
   };
 
   const generateJSON = () => {
-    return JSON.stringify(
-      {
-        emotion: primaryEmotion,
-        intensity,
-        colors,
-        palette,
-      },
-      null,
-      2
-    );
+    return JSON.stringify({
+      emotion: primaryEmotion,
+      intensity,
+      source: theme.source,
+      isDark: theme.isDark,
+      colors: theme.colors,
+      typography: theme.typography,
+      shapes: theme.shapes,
+      ...(guidance ? { designGuidance: guidance } : {}),
+    }, null, 2);
   };
 
   const generateSwift = () => {
+    const c = theme.colors;
     const lines: string[] = [
       'import SwiftUI',
       '',
+      `// ${primaryEmotion} - ${intensity}`,
+      `// Source: ${theme.source}`,
       'extension Color {',
-      `    // ${primaryEmotion} - ${intensity}`,
-      `    static let primary = Color(hex: "${colors.primary}")`,
-      `    static let secondary = Color(hex: "${colors.secondary}")`,
-      `    static let accent = Color(hex: "${colors.accent}")`,
-      `    static let background = Color(hex: "${colors.background}")`,
-      `    static let surface = Color(hex: "${colors.surface}")`,
+      `    static let emotionPrimary = Color(hex: "${c.primary}")`,
+      `    static let emotionSecondary = Color(hex: "${c.secondary}")`,
+      `    static let emotionAccent = Color(hex: "${c.accent}")`,
+      `    static let emotionBackground = Color(hex: "${c.background}")`,
+      `    static let emotionSurface = Color(hex: "${c.surface}")`,
+      `    static let emotionText = Color(hex: "${c.text}")`,
+      '}',
+      '',
+      'struct EmotionTypography {',
+      `    static let headlineFont = "${theme.typography.headlineFont}"`,
+      `    static let bodyFont = "${theme.typography.bodyFont}"`,
+      '}',
+      '',
+      'struct EmotionShapes {',
+      `    static let cornerRadius: CGFloat = ${theme.shapes.borderRadius}`,
+      `    static let cornerRadiusLg: CGFloat = ${theme.shapes.borderRadiusLg}`,
+      `    static let cornerRadiusXl: CGFloat = ${theme.shapes.borderRadiusXl}`,
       '}',
     ];
     return lines.join('\n');
   };
 
-  const getExportContent = () => {
+  const getExportContent = (): string => {
     switch (selectedFormat) {
       case 'css':
         return generateCSS();
@@ -87,6 +127,8 @@ export default function ExportScreen() {
         return generateJSON();
       case 'swift':
         return generateSwift();
+      case 'ai-prompt':
+        return generateAIPrompt(primaryEmotion, intensity);
     }
   };
 
@@ -96,6 +138,13 @@ export default function ExportScreen() {
     Alert.alert('Copied!', 'Design tokens copied to clipboard');
   };
 
+  const formats: { key: ExportFormat; label: string }[] = [
+    { key: 'css', label: 'CSS' },
+    { key: 'json', label: 'JSON' },
+    { key: 'swift', label: 'SWIFT' },
+    { key: 'ai-prompt', label: 'AI' },
+  ];
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
@@ -103,22 +152,22 @@ export default function ExportScreen() {
 
         {/* Format Selector */}
         <View style={styles.formatSelector}>
-          {(['css', 'json', 'swift'] as const).map((format) => (
+          {formats.map(({ key, label }) => (
             <Pressable
-              key={format}
+              key={key}
               style={[
                 styles.formatButton,
-                selectedFormat === format && styles.formatButtonActive,
+                selectedFormat === key && styles.formatButtonActive,
               ]}
-              onPress={() => setSelectedFormat(format)}
+              onPress={() => setSelectedFormat(key)}
             >
               <Text
                 style={[
                   styles.formatButtonText,
-                  selectedFormat === format && styles.formatButtonTextActive,
+                  selectedFormat === key && styles.formatButtonTextActive,
                 ]}
               >
-                {format.toUpperCase()}
+                {label}
               </Text>
             </Pressable>
           ))}
