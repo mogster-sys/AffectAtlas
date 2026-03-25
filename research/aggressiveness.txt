@@ -1,0 +1,201 @@
+Aggressiveness -- Perplexity Design Research
+===============================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR AGGRESSIVENESS
+=====================================================
+
+Aggressiveness in visual design is conveyed through a consistent
+mix of color, shape, motion, and composition choices that signal
+tension, force, or threat.
+
+Core visual levers
+
+Color:
+Dominant saturated reds (often combined with black or very dark
+grays) are strongly associated with aggression, danger, dominance,
+and arousal. High contrast (e.g., red on black, white on black)
+increases arousal and urgency, which can read as confrontational.
+Secondary accents: harsh yellows, neon greens, or metallics can
+push toward hostile or "toxic" energy depending on context.
+
+Shapes and lines:
+Angular, jagged, and triangular forms are linked to tension,
+instability, and aggression, while smooth curves read as soft
+and calming. Pointed terminals, spikes, shards, and arrow-like
+motifs visually echo weapons or impact, reinforcing a sense of
+threat.
+
+Typography:
+Condensed, tall, sharp-edged typefaces feel more aggressive and
+dominant than rounded, humanist forms. Distressed or fractured
+type can signal violence or hostility, whereas rigid geometric
+sans can communicate cold, mechanical aggression.
+
+Composition and layout:
+Strong diagonals, off-balance layouts, and tight cropping create
+unease and dynamic tension versus centered, symmetrical calm.
+Overlapping elements, collision motifs, and "impact points"
+(where lines or shapes converge) visually imply conflict or force.
+
+Texture and rendering:
+Rough, gritty, or high-contrast textures (grunge, metal, concrete,
+scratches) support themes of conflict, abrasion, or hostility.
+Glossy, weapon-like surfaces (chromed edges, carbon fiber, latex,
+armor) blend aggression with seduction (often described as
+"aesthetic violence").
+
+
+EXAMPLES OF AGGRESSIVE DESIGN LANGUAGES
+==========================================
+
+Militaristic / industrial:
+Palettes of red-black-dark green, stenciled type, hazard stripes,
+and utilitarian iconography suggest organized force and domination.
+Modular grids with mechanical details (rivets, panels, targeting
+reticles) imply cold, systemic aggression.
+
+Punk / hardcore / extreme sports:
+High-contrast, jagged graphics, chaotic composition, and distressed
+lettering code as rebellious, confrontational energy. Explosive
+motifs (splats, cracks, speed lines) frame aggression as volatility
+and impact.
+
+Hostile environments / products:
+"Hostile design" uses physically uncomfortable or unwelcoming forms
+(spikes on benches, anti-loitering shapes) to communicate exclusion
+and aggression through the object's silhouette and ergonomics.
+
+
+QUICK DESIGN CHECKLIST FOR AGGRESSIVE FEEL
+============================================
+
+1-2 dominant saturated warm hues (red or red-orange) against deep
+darks, with very high contrast.
+
+Angular, triangular, or jagged shapes, strong diagonals, and
+asymmetry in composition.
+
+Sharp, condensed or blocky type with minimal rounding.
+
+Visual cues of impact: collisions, fractures, overlapping layers,
+and motion blur.
+
+Textures or materials that feel abrasive (grit, metal) or
+weapon-like (polished chrome, armor).
+
+
+FULL DESIGN SYSTEM FOR AGGRESSIVE COMBAT APP
+===============================================
+
+Brand + mood foundation:
+Emotion keywords: aggressive, dominant, lethal, high-stakes,
+relentless.
+Tone of voice: short, imperative copy ("Strike now", "Execute",
+"No retreat").
+Iconic reference: military HUDs and fighting game HUDs with dark,
+high-contrast styling.
+
+Color system:
+Base: near-black background (#05060A to #0B0E13) for contrast and
+"combat room" feel.
+Primary: saturated red for attack and critical highlights
+(e.g. #E32626).
+Secondary: amber/orange for warnings and timers (e.g. #F89C2A).
+Desaturated cyan for targeting, selection outlines, and system
+feedback (e.g. #27C1D6).
+States: neutral text cool gray range (#A8ADB7 to #E0E4EB).
+Success/buff: toxic green (#40D674) but used sparingly.
+Danger/critical: brighter, pulsing red; pair with subtle
+vibration/flash.
+Rule: backgrounds stay dark and cool; aggression comes from warm
+accents and high contrast.
+
+Typography:
+Primary type: condensed, sharp sans for headings and HUD labels.
+Secondary type: highly readable grotesk for body text and tooltips.
+Treatments: all-caps for labels, abilities, and system text.
+Slight tracking for labels to emphasize cold formality. Avoid
+rounded typefaces; keep edges crisp.
+
+Layout and spatial system:
+Grid: 8-pt base grid; 4-pt for micro spacing inside HUD elements.
+Composition: strong diagonals in panel edges and dividers, not in
+content alignment. Asymmetry: left side heavier with status, right
+side slightly lighter but with "spikes" (kill feed, critical
+alerts). Density: keep the play space visually clean; aggression
+happens in the framing HUD and effects, not clutter over the action.
+
+Components (aggressive variants):
+Buttons: beveled or chamfered rectangles, slightly angled corners
+(not rounded). Default: dark fill, thin cyan outline. Hover/active:
+red/amber fill with inner glow or "heat" line, micro-scale up and
+quick snap-back.
+
+Health/armor bars: long segmented bars with diagonal cut on one
+side. Health: red, with shake and "shatter" effect when critically
+low. Armor/shield: cyan or blue overlay that "chips" away in chunks.
+
+Ability tiles: icon on dark plate with a diagonal top edge.
+Cooldown shown as aggressive radial wedge or sweeping "burn" from
+one corner.
+
+Notifications/toasts: slide in from edges at fast speed, using
+strong color (amber/red) and short, clipped text ("BREACH",
+"STUNNED"). Auto-dismiss quickly to keep tempo high.
+
+Menus: full-bleed dark background, red accent bars at top/bottom.
+Section headers in all-caps, left aligned, thin dividers with
+diagonal breaks.
+
+
+ICONOGRAPHY AND ILLUSTRATION
+===============================
+
+Icon style: sharp silhouettes, triangular motifs, jagged edges for
+attack/crit/damage icons. Minimal interior detail; rely on strong
+silhouettes and a 1-2 color fill.
+
+Semantic mapping:
+Attack/weapon: red/amber, angular shapes (blades, spikes, bursts).
+Defense/guard: cyan, more rectangular or shield-like forms.
+Debuffs/hostile status: distorted, fractured icons (cracks, glitch
+lines).
+
+Character / enemy framing: use red or amber rim-lights and shadows
+to push threat. On hit/crit, overlay brief red slashes or "impact
+frames" around the target.
+
+
+MOTION AND FEEDBACK
+======================
+
+Animation character: fast, snappy, "hit, don't float."
+Open/close menus: 150-220ms, with subtle overshoot on key panels.
+On tap: 80-120ms scale down/up; combine with sound and a color
+flash.
+
+Impact feedback: screen shake on heavy hits (short, low amplitude).
+Ability activation: quick color bloom (red/amber) behind the
+button, then drain toward the play area, implying force release.
+Low health: rhythmic pulsing red border + muted vignette, but
+ensure legibility.
+
+
+AGGRESSIVENESS VS ANGER VS ALARM
+====================================
+
+Aggressiveness: forward-driving, proactive force. Wants to
+dominate, overpower, advance. Visual: dense, diagonal, impactful,
+collision-oriented.
+
+Anger: reactive, hot, blocked energy seeking release. Visual:
+explosive, tight, pressurized, red-hot.
+
+Alarm: urgent, signaling, demanding immediate attention. Visual:
+high-contrast, pulsing, red-on-black, broadcasting.
+
+Key distinction: aggressiveness is offensive (moving forward to
+dominate), anger is reactive (energy blocked and building),
+alarm is defensive (warning of incoming threat).

@@ -1,0 +1,297 @@
+Awe -- Perplexity Design Research
+==================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR AWE
+=========================================
+
+Awe in visual design is usually evoked by aesthetics that suggest
+vastness, transcend normal scale, and gently overwhelm perception
+while remaining coherent and ordered.
+
+
+CORE EMOTIONAL QUALITIES OF AWE
+---------------------------------
+A mix of wonder, admiration, and a slight sense of smallness or
+humility.
+
+Often linked to the "sublime": stimuli that feel larger, more
+powerful, or more complex than the self.
+
+Can be positive (beauty-based, nature, art, architecture) or
+tinged with threat (storms, towering structures, dark cosmic
+scenes).
+
+
+KEY AESTHETIC LEVERS
+---------------------
+Scale and proportion: Very large or seemingly infinite spaces,
+oversized elements, or views that extend beyond the frame to
+make the viewer feel small.
+
+Vastness cues: Horizons, starfields, deep canyons, towering
+verticals, or receding grids that hint at immensity or depth
+beyond what is seen.
+
+Repetition and pattern: Iterated motifs (arches, columns, tiles,
+waves, foliage) that imply an underlying system or process beyond
+the visible portion.
+
+Light and darkness: Strong contrasts; shafts of light in shadow;
+glow emerging from darkness; high dynamic range that emphasizes
+depth and mystery.
+
+Obscurity and mystery: Partially hidden forms, fog, reflection,
+or scale-ambiguous elements that are understandable enough to
+feel "real" but not fully resolvable.
+
+Biophilic or natural forms: Mountains, oceans, forests, clouds,
+fractal-like patterns and flows that echo natural systems.
+
+Purity and minimal noise: Relatively sparse compositions with a
+few dominant elements, so the mind can "expand into" the scene
+rather than fight clutter.
+
+
+POSITIVE VS DARKER AWE AESTHETICS
+-----------------------------------
+Positive / beauty-based: Soft light, luminous color, open vistas,
+organic curves, warm or balanced palettes. Example: sunrise
+clouds, cathedral interior light, lush forest canopy.
+
+Threat-based / dark sublime: High contrast, looming masses, cold
+hues, sharp angles, extreme scale, storm-like atmospheres.
+Example: towering brutalist forms, stormy skies, deep space voids.
+
+
+CONCRETE DESIGN MOVES
+-----------------------
+Use a single, dominant large-scale element (planet, mountain,
+cathedral-like volume) occupying much of the canvas, with the
+viewer's reference scale very small.
+
+Layer depth with atmospheric perspective, parallax, or receding
+repetition to signal distance and immensity.
+
+Let light be the "hero" (beams, halos, backlit silhouettes) and
+keep color restrained so light contrast does the emotional work.
+
+Introduce a hint of mystery: partial occlusion, reflections, fog,
+or an implied process (e.g., swirling galaxies, branching networks)
+that feels systematic but not fully knowable.
+
+Incorporate natural or nature-inspired patterns (fractals,
+branching, flows, waves) to tap into biophilic awe and
+self-transcendent feelings.
+
+
+MOBILE UI AND BRANDING APPLICATION
+====================================
+
+High-level approach: Anchor everything in solid mobile UX (one
+clear primary action per screen, tight visual hierarchy, minimal
+cognitive load). Layer awe on top via visuals (imagery, motion,
+light, brand system) rather than complexity of controls.
+
+
+VISUAL SYSTEM TRAITS THAT EVOKE AWE
+-------------------------------------
+Vastness and depth in layout:
+- Full-bleed hero imagery or gradients that suggest space/sky/
+  landscapes, with content floating in foreground layers.
+- Strong use of vertical scale (tall sections, large typography)
+  and generous negative space to make elements feel monumental.
+
+Light, glow, and contrast:
+- High-contrast lighting effects (beams, halos, glows, soft bloom)
+  around key elements like the primary CTA or logo.
+- Dark or mid-tone backgrounds with luminous accent colors for
+  that "portal into something bigger" feel.
+
+Cohesive, elevated color language:
+- Restrained palettes with 1-2 saturated "awe" colors (cosmic
+  blues, deep purples, neon cyans, sunrise oranges) against
+  neutrals.
+- Gradients that feel atmospheric rather than candy: slow
+  transitions, subtle noise or texture, clear light direction.
+
+Typography with presence:
+- Large, confident display type for brand lines or key metrics,
+  using either elegant high-contrast serifs or clean geometric sans.
+- Tight, consistent type scale and spacing so the system feels
+  intentional and "bigger than the app."
+
+Imagery and illustration:
+- Scenes that depict vastness (cityscapes, nature vistas, cosmic
+  scenes, abstract dimensional spaces) behind or around UI cards.
+- Brand illustration that hints at complexity -- layered shapes,
+  fractal-like patterns, or branching systems -- kept soft enough
+  not to fight legibility.
+
+Motion and micro-interactions:
+- Slow, smooth transitions that reveal depth (parallax on scroll,
+  cards gently lifting from a "field," subtle scale/opacity shifts).
+- Sparse, meaningful animations: an emblem that "breathes," a light
+  sweep over a hero element, or an onboarding sequence that feels
+  like entering a world.
+
+
+BRANDING-LEVEL DECISIONS
+--------------------------
+Define a brand "world": a simple story like "cosmic calm",
+"cathedral of data", or "living forest" and reflect it across
+color, type, motion, and sound.
+
+Use consistent iconic forms (halo, ring, beam, arch, spiral,
+branching line) as recurring motifs in logo, icons, dividers,
+and background patterns.
+
+Keep system primitives simple: a small set of card styles,
+elevations, and shadows, all tuned to feel slightly more
+cinematic than standard material/flat UI.
+
+
+UI PATTERNS THAT WORK WELL FOR AWE
+-------------------------------------
+Tall, scrollable hero on first-run or key marketing screens,
+with storytelling sections that reveal the product in stages
+(almost like an Apple product page, but mobile-first).
+
+Card-based main UI where cards sit on a deep, atmospheric
+background, with one card clearly dominant as the "scene focus."
+
+Minimalist navigation (bottom bar or floating primary button)
+that feels small and respectful compared to the "world" visuals
+behind it.
+
+
+BALANCING AWE VS USABILITY
+-----------------------------
+Color: Deep backgrounds, luminous accents -- maintain WCAG
+contrast; keep text on solid surfaces.
+
+Typography: Large, expressive display sizes -- limit to 1-2
+families; use system-like body fonts.
+
+Motion: Cinematic, slower transitions -- prefer <300ms for core
+flows; no blocking loops.
+
+Imagery: Vistas, abstractions with depth -- blur/fade behind
+content; avoid text over noise.
+
+Layout: Big hero sections, layered depth -- one primary action
+per screen; progressive disclosure.
+
+
+FUTURISTIC COSMIC AWE DIRECTION
+==================================
+
+Visual atmosphere: Dark, near-black or deep navy base with subtle
+starfield/noise, plus a few luminous accent colors (electric cyan,
+magenta, violet) for CTAs and key metrics.
+
+Clean, grid-based layouts: think command deck rather than chaotic
+HUD, so the emotional "wow" comes from polish and scale, not
+clutter.
+
+Components and layout:
+- Large hero elements where it matters: big countdowns, progress
+  rings, or "mission of the day" blocks centered with plenty of
+  negative space.
+- Supporting data in compact "pods" or tiles grouped by mission,
+  each with glowing borders or subtle inner glows.
+- Cards feel like glassy or holographic panels hovering over a
+  cosmic backdrop (soft shadows, blurs, and light leaks used
+  sparingly).
+
+Typography and iconography:
+- One strong geometric sans or sci-fi-leaning display font for
+  headings and key numbers, paired with a highly readable sans
+  for body text.
+- Thin, technical icons (orbits, nodes, simple glyphs) with
+  rounded line caps and neon accents to avoid a cold or
+  militaristic feel.
+
+Motion and feedback:
+- Smooth, low-frequency animations: panels sliding with slight
+  parallax, soft fades, and tiny scale changes instead of bouncy
+  motion.
+- Cosmic responses to actions: starting focus gently "warps" the
+  background or animates a ring filling; completing tasks triggers
+  small particle arcs or starbursts, never blocking interaction.
+
+
+CALM SPIRITUAL AWE DIRECTION
+================================
+
+Overall atmosphere: Think "digital chapel" more than productivity
+tool -- simplified forms, enclosed feeling, and one clear focus
+area per screen.
+
+Prioritize psychological safety: soft visuals, no harsh alerts,
+and copy that feels like gentle guidance instead of performance
+tracking.
+
+Color, light, and layout:
+- Palette: muted, low-saturation hues (soft blues, lavenders,
+  warm neutrals) with rare, warmer accents (coral, gold) for
+  moments of grace or insight.
+- Light: emphasize diffused, indirect light -- gradients that feel
+  like dawn through frosted glass, or a glow behind the writing
+  area -- rather than sharp shadows or high contrast.
+- Layout: lots of breathing room; centered or slightly elevated
+  surface, minimal chrome, single column with a clear top-to-
+  bottom contemplative flow.
+
+Typography and iconography:
+- One friendly, legible sans for body text, plus a softer display
+  style (slight contrast or rounded serif) for prompts to add a
+  spiritual note.
+- Icons: reduce to essentials; use thin, rounded lines and
+  symbolic motifs (small sun, moon, candle, leaf, wave) rather
+  than app-y pictograms.
+
+Motion and interaction:
+- Motion: slow, easing transitions; fades and gentle slides
+  rather than bouncy or snappy animations.
+- When saving: a soft pulse of light through the page or a small
+  ripple, as if the words are sinking into a still pool.
+- Completion animations: brief, quiet light converging or
+  expanding outward, hinting at insight or connection.
+
+
+BIOPHILIC NATURE AWE DIRECTION
+==================================
+
+Atmosphere and layout:
+- Present habitats first, data second: full-bleed landscapes or
+  stylized habitat bands at the top of key screens, with cards
+  and controls gently overlaid.
+- Use prospect and "compression to release": tight, focused views
+  that occasionally open into wide overlook screens.
+
+Color, form, and pattern:
+- Palette from real environments: soft sky blues, canopy greens,
+  wetland teals, bark neutrals; accent colors sampled from
+  plumage for CTAs and tags.
+- Organic shapes and biomorphic lines: rounded cards, branch-like
+  connectors, flowing map overlays that echo rivers, flyways, or
+  hedgerows.
+- Complexity with order: clustered elements that look rich but
+  are clearly grouped by habitat, season, or region.
+
+Imagery, motion, and "awe beats":
+- Generous, uncluttered imagery with a sense of place, plus
+  occasional panoramic illustrations for hubs and empty states.
+- Subtle motion: drifting cloud shadows, distant elements looping
+  at low opacity, ripples on water backgrounds -- never enough
+  to interfere with reading or controls.
+- Special screens for milestones with larger imagery and copy that
+  zooms out to the bigger ecological story.
+
+Copy and interaction tone:
+- Language: gentle, observant, and relational rather than
+  competitive or gamified.
+- Contextual awe facts: short, surprising notes surfaced
+  alongside content to connect each encounter to a larger system.

@@ -1,0 +1,280 @@
+Embarrassment — Perplexity Design Research
+=============================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR EMBARRASSMENT
+===================================================
+
+Embarrassment usually sits in the unpleasant but moderately aroused
+part of the valence-arousal space, and visually it tends to read as
+exposed, blushing, and slightly awkward rather than fully tragic or
+angry.
+
+Emotional position
+On circumplex models, embarrassment is a self-conscious emotion
+related to shame and guilt, placed in negative valence with moderate
+arousal rather than extreme activation.
+
+It often co-occurs with visual signs of blushing and social exposure
+(being looked at, judged), which are central to its aesthetic
+treatment.
+
+Color and light
+Strong associations between embarrassment and redness or pinkish
+tones, echoing blushing. Using softer tints (pinks, rose, warm
+blush) keeps it specific and less aggressive than anger reds.
+
+"Embarrassment" palettes in practice often use light warm pinks with
+darker wine or plum accents, suggesting heat, intimacy, and
+self-consciousness without full hostility.
+
+Shape, layout, and composition
+Slightly off-balance compositions (minor misalignment, elements too
+close for comfort) echo social awkwardness.
+
+Compression around focal elements (tight framing, cropped faces,
+cramped clusters) simulates feeling "on the spot" and overexposed.
+
+Soft or rounded forms suggest vulnerability and defensiveness, while
+a few sharper intrusions (pointed arrows, spotlight cones, gaze
+lines) imply scrutiny from others.
+
+Typography and imagery
+Type that conveys embarrassment often feels slightly small or
+withdrawn relative to its container (understated headings, lower
+contrast).
+
+Modestly irregular: mild wobble, variable baseline, or subtle
+distortions that imply self-consciousness without destroying
+legibility.
+
+Imagery frequently highlights faces turned partly away, downward
+gazes, or shielded gestures (hands near face) — classic
+embarrassment cues.
+
+Contexts of public visibility (stage, spotlight, crowd, camera)
+reinforce the sense of being seen and evaluated.
+
+Motion and interaction cues
+Short, hesitant, and slightly delayed motion (micro-stutters, small
+retreats after a reveal), rather than smooth confidence or explosive
+reactions.
+
+Transient "heat" states (quick blush overlays, brief color shifts
+toward warmer pinks) that fade as the interface "recovers," mirroring
+the passing flush of embarrassment.
+
+
+COLOR PALETTES THAT EVOKE EMBARRASSMENT
+=========================================
+
+Embarrassment palettes usually center on blushy reds and pinks that
+echo facial blushing, with enough softness or depth to feel
+self-conscious rather than aggressively angry.
+
+Core hue choices
+Blushing reds and pinks are primary: light coral, blush pink, and
+soft rose are repeatedly used to symbolize embarrassment and are
+directly tied to facial reddening in social-emotion research.
+
+Popular culture (e.g., Inside Out 2) explicitly codes embarrassment
+as pink, leaning into the association with a visible blush.
+
+Example "embarrassed" palettes
+Soft blush gradient:
+  Very light pink: #FDD3EA (background, "hot cheeks" glow)
+  Mid blush: #FF76B4 (highlight or primary accent)
+  Deep berry: #C33C73 (shadows, text accents)
+  Wine / plum: #5E013E (edge, outlines)
+
+Warm red-pink range:
+  Embarrassment swatch: #FF7777 and close variants #FF7275 / #FE7271
+  Supporting tones: light coral (#F18383), American pink (#F99191),
+  and light salmon pinks.
+
+Value, saturation, and contrast
+Use mid to light values for primary surfaces so the palette reads as
+flushed and exposed rather than dark and ominous; deeper maroon or
+plum reserved for accent and depth.
+
+Moderate to high saturation in the pink/red band signals
+physiological arousal (heat, rush of blood to the face).
+
+How to apply in UI
+Backgrounds: pale blush or off-white with pink undertone for subtle
+"warm cheeks" field.
+
+Key accents: buttons, highlights in medium blush reds/pinks
+(#FF7777, #FF76B4) to focus on the embarrassed state.
+
+Depth and text: dark berry or plum instead of pure black to keep the
+feel soft but intense and socially charged.
+
+
+TYPOGRAPHY FOR EMBARRASSMENT
+==============================
+
+Subtle embarrassment in typography comes from making the text feel
+shy, hesitant, or "caught out" without sacrificing readability.
+
+Typeface category and voice
+Prefer soft, human sans-serifs or gentle serifs (slightly rounded
+terminals, modest contrast) over loud geometric or ultra-bold
+display faces.
+
+Handwritten or script styles can work if neat and restrained,
+hinting at vulnerability or intimacy instead of drama.
+
+Weight, size, and case
+Lighter weights and slightly smaller sizes than "neutral" or "happy"
+modes so the type feels withdrawn or apologetic, not shouting.
+
+All-lowercase or sentence case (even in headings) suggests softness
+and self-effacement, contrasting with more formal title case in
+other emotional states.
+
+Spacing and alignment
+Slightly increased letterspacing and line spacing give words a
+gentle, tentative feel, as if keeping a bit of distance.
+
+Mildly off-center alignment (headings nudged off axis or
+right-aligned in an otherwise centered system) introduces soft
+social awkwardness while remaining structured.
+
+Shape details and rhythm
+Favor rounded or softened corners in letterforms, avoiding angular
+sharp shapes that convey aggression or hard confidence.
+
+Introduce tiny irregularities only in display moments (slightly
+wobbly baseline or gentle vertical "shrink" of one word) to echo a
+verbal stumble, keeping body text clean.
+
+System application
+Define "embarrassed" text style as variant of base: same family, one
+step lighter in weight, 5-10% smaller, slightly higher line height,
+optionally all-lowercase for microcopy.
+
+Pair with blush palette using lower-contrast foreground colors so the
+message visually "backs away" from the reader.
+
+
+BRIGHTNESS, SATURATION, AND BLUSHING PERCEPTION
+=================================================
+
+Brightness correlates with how blushing is perceived, but the
+relationship is indirect and interacts with hue and saturation.
+
+Brightness and blush visibility
+Increasing luminance/lightness makes skin look brighter, which can
+make moderate redness more noticeable against a lighter base.
+
+Observers' judgments of brightness and whiteness both increase
+monotonically with lightness.
+
+Saturation vs brightness in blush perception
+At constant luminance, general color patches look brighter as
+saturation increases (Helmholtz-Kohlrausch effect), but faces behave
+differently: increasing saturation can actually make faces look less
+bright.
+
+Blushing is primarily driven by increased redness/yellowness in
+facial regions rather than pure brightness; the key cue is chromatic
+change in cheeks and nearby skin.
+
+Design implications
+Slightly lighter base skin tone heightens contrast of a red/pink
+blush overlay, making embarrassment more legible.
+
+To read as blushing rather than just bright: maintain plausible
+lightness range, apply localized hue/saturation shifts toward
+red-pink on cheeks, use only modest overall brightness changes.
+
+
+LAYOUT AND SPACING FOR VULNERABILITY / EXPOSURE
+=================================================
+
+Layouts signal vulnerability or exposure when they make a focal
+element feel either too small and isolated or too close to others,
+with little "protection."
+
+Large negative space around a small subject
+Surrounding a small card, avatar, or sentence with expansive negative
+space makes it feel exposed and slightly lonely.
+
+Empty or low-detail backgrounds remove places to "hide," heightening
+the sense of being on display.
+
+Off-center, edge-biased placement
+Placing key element away from safe central zones — closer to an edge
+or in a lower corner — introduces precariousness rather than stable
+belonging.
+
+Lone element positioned low with open space above feels small and
+dominated by its environment.
+
+Contrast between emptiness and density
+Single element in a wide empty region contrasted against denser
+clusters elsewhere reads as singled-out or left behind.
+
+Tightly crowding an element with others (little padding, overlapping
+or near-touching) conveys social pressure and loss of personal space.
+
+Spotlighting and layering
+"Spotlight" compositions — bright subject against darker surroundings
+— feel like being under a literal or metaphorical spotlight.
+
+Pulling one element visually forward (scale, elevation, lighter tone)
+while others recede creates a sense of being examined or judged.
+
+Practical UI patterns
+Embarrassing/error states: Small illustration or avatar in center of
+generous white space, with short quiet copy and minimal controls.
+
+Profiles and disclosures: Personal details in a relatively open block
+with more padding than surrounding content, avoiding heavy frames.
+
+
+SATURATION, BRIGHTNESS, AND HUE MAPPED TO EMBARRASSMENT
+=========================================================
+
+Embarrassment maps to warm red-pink hues (blush tones), medium-high
+saturation, and mid-high brightness, together reading as a hot
+exposed "blush."
+
+Hue: from skin tone to blush
+Embarrassment is physiologically expressed as blushing: reddening
+from vasodilation in cheeks. Faces shifted toward redder hues are
+judged as more embarrassed and more sincerely apologetic.
+
+In stylized systems this becomes a red-pink band: "blush" pinks are
+culturally recognized as associated with cheeks flushing.
+
+Saturation: intensity of the emotional "heat"
+Higher saturation systematically increases self-reported arousal.
+For warm hues, increased saturation is particularly tied to
+high-arousal tense emotions; adding chroma to red skin regions
+makes the blush feel hotter.
+
+Embarrassment typically uses medium-high saturation in the red-pink
+range: high enough for intense flush, but not as extreme as anger
+or danger reds.
+
+Brightness: exposed rather than ominous
+Brighter, more saturated colors are associated with higher arousal.
+Darker, low-brightness colors skew toward heavy or threatening moods.
+
+Blush palettes use light to mid-light pinks (#FDD3EA, #FF76B4) with
+deeper wine/berry only as accents, so brightness supports visibility
+and vulnerability.
+
+Combined mapping for design tokens
+Hue: warm red to red-pink to blush; applied locally to
+cheeks/avatars for realism, or to icons/badges abstractly.
+
+Saturation: 60-85% for accents (cheeks, highlights, states), softer
+tints in backgrounds to avoid turning embarrassment into alarm.
+
+Brightness: around 60-90% for primary blush tones, letting redness
+sit on a relatively light base so it reads as social exposure rather
+than dark hostility.

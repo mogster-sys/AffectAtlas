@@ -1,0 +1,185 @@
+GPT Chat Reconstruction — Original AffectAtlas Working Session
+==============================================================
+Source: ChatGPT conversation, reconstructed from user's request
+Date: Likely late 2024 (before December 19 2024 initial commit)
+
+Note: This is a reconstruction of the original ChatGPT conversation
+where the emotion-to-design-system concept was developed. The user
+asked GPT to recreate the lost chat as closely as possible.
+
+
+OPENING IDEA
+============
+
+What if instead of designing interfaces manually...
+...you could select an emotional state
+and the system generates a complete, coherent design language?
+
+Not just colours — but:
+- typography
+- spacing
+- motion
+- layout
+- component feel
+
+All aligned to how humans actually perceive emotion.
+
+
+CORE MODEL: EMOTIONAL WHEEL
+============================
+
+Anchored to a wheel structure (Plutchik-inspired but adapted for
+design use).
+
+Primary Emotional Axes:
+  Joy          -> Warm, bright, energetic
+  Trust        -> Stable, clear, balanced
+  Fear         -> Tense, sharp, high contrast
+  Surprise     -> Dynamic, contrast-heavy
+  Sadness      -> Muted, soft, low energy
+  Disgust      -> Uneasy, off-balance
+  Anger        -> Aggressive, bold
+  Anticipation -> Forward-moving, directional
+
+
+INTENSITY LAYER
+================
+
+Each emotion has intensity levels:
+  Low    -> subtle influence
+  Medium -> dominant tone
+  High   -> overwhelming / stylised
+
+Examples:
+  Calm (low joy + high trust)
+  Ecstatic (high joy)
+  Rage (high anger)
+
+
+EMOTIONAL BLENDING
+===================
+
+Emotions don't exist alone — they combine.
+
+  Joy + Trust           -> Friendly confidence
+  Fear + Surprise       -> Alert / alarm
+  Sadness + Trust       -> Reflective calm
+  Anger + Anticipation  -> Aggressive drive
+
+System needs to interpolate, not switch.
+
+
+MAPPING LAYER
+==============
+
+1. Colour System
+   Hue        -> emotion family
+   Saturation -> emotional intensity
+   Brightness -> energy level
+
+   Joy (high):    Yellow-Orange, High sat, High brightness
+   Sadness:       Blue/Grey, Low sat, Low brightness
+   Fear:          Green/Cyan shift, Medium-high sat, Low contrast spikes
+
+2. Typography Mapping
+   Joy     -> Rounded, open, playful
+   Trust   -> Geometric, clean, readable
+   Fear    -> Narrow, tense
+   Anger   -> Bold, condensed
+   Sadness -> Light, spaced, airy
+
+3. Shape Language
+   Rounded   -> Safe / friendly
+   Sharp     -> Danger / tension
+   Symmetry  -> Stability
+   Asymmetry -> Unease / motion
+
+4. Motion System
+   Joy     -> Bounce, elastic
+   Trust   -> Smooth easing
+   Fear    -> Jitter, delay
+   Anger   -> Fast, linear
+   Sadness -> Slow fade
+
+5. Layout + Density
+   Calm    -> Spacious
+   Urgent  -> Dense
+   Stable  -> Centered
+   Tense   -> Off-axis
+
+
+SYSTEM OUTPUT
+==============
+
+User selects: "Calm but alert"
+
+System outputs:
+- Full colour palette (primary, secondary, background)
+- Typography pairing
+- Spacing scale
+- Motion presets
+- Component styling
+
+
+OUTPUT FORMATS
+===============
+
+- Tailwind config
+- CSS variables
+- Figma tokens
+- JSON schema
+
+
+PRODUCT DIRECTION
+==================
+
+Emotion-driven design generator.
+
+User flow:
+1. Pick emotion (wheel UI)
+2. Adjust intensity sliders
+3. Blend secondary emotion
+4. Preview UI live
+5. Export tokens
+
+
+MESSAGING (refined)
+====================
+
+"Turn a chosen mood into a complete, usable design system.
+Generate colours, typography, spacing and motion that actually
+work together. Blend emotional tones for more nuanced UI styles.
+Export directly into Figma, CSS or Tailwind."
+
+
+EXAMPLE PRESETS
+================
+
+"Calm Focus":
+  Blue-grey palette, soft shadows, wide spacing, smooth motion
+
+"Aggressive Energy":
+  Red/black palette, high contrast, tight layout, fast transitions
+
+"Playful Discovery":
+  Bright multi-colour, rounded UI, bounce motion
+
+
+KEY INSIGHT
+============
+
+"You're not designing UI...
+you're designing emotional states expressed through systems."
+
+
+WHERE THE CHAT LEFT OFF
+=========================
+
+Heading toward:
+- Turning this into a real tool
+- Generating tokens automatically
+- Plugging into dev workflow
+- Using it as a theme engine across apps
+
+This conversation led directly to the creation of the AffectAtlas
+Expo app (initial commit: December 19, 2024).

@@ -1,0 +1,319 @@
+Fright — Perplexity Design Research
+=====================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR FRIGHT
+============================================
+
+Frightened emotion in visual design is usually expressed through
+dark, high-contrast palettes, unstable or distorted forms, and
+tense, unbalanced compositions that signal threat, uncertainty, or
+lack of control.
+
+Color and lighting
+Dark, low-key palettes with heavy blacks, deep blues, dirty greens,
+and desaturated tones create a sense of obscurity and danger.
+
+Sharp accent colors like cold blue or blood-like red used sparingly
+heighten alarm and instability, especially when they appear in
+sudden or localized areas.
+
+High contrast lighting (strong highlights against darkness),
+silhouettes, and obscured details suggest hidden threats and trigger
+fear of the unknown.
+
+Shape, form, and composition
+Irregular, jagged, or distorted shapes feel unsafe and are strongly
+associated with fear and threat in both art and interface design.
+
+Off-balance compositions, skewed perspectives, and labyrinthine or
+hard-to-read layouts evoke disorientation and loss of control,
+which amplifies dread.
+
+Isolated figures or objects against large dark fields emphasize
+vulnerability and exposure.
+
+Typography and micro-details
+"Scary" or horror fonts tend to use jagged edges, uneven baselines,
+distressed textures, and hand-scratched or eroded forms to signal
+unease.
+
+Overly compressed, tightly tracked, or slightly misaligned type can
+add tension, while maintaining legibility by pairing with simpler
+body fonts.
+
+Unexpected or subtly "wrong" details (tilted letter, dripping
+stroke, inverted character) exploit the uncanny and make viewers
+feel something is off.
+
+Space, density, and environment
+Confining compositions (tight crops, cramped interiors, narrow
+corridors) suggest entrapment and heighten fear.
+
+Conversely, vast empty dark space around a small subject can create
+isolation and anticipatory dread.
+
+Environments that are slightly disordered or unpredictable — objects
+out of place, doors ajar, ordinary items subtly altered — evoke a
+creeping sense of danger.
+
+Motion, interaction, and UX context
+Sudden, non-linear, or slightly delayed motions (stuttering
+animations, unexpected flickers, brief glitches) feel uncanny and
+unsettling.
+
+UI elements that momentarily withhold information, obscure content,
+or reveal it through gradual fade-ins and spotlighting produce
+suspense and cautious fear.
+
+In product or UX work, fear-related aesthetics are often softened —
+small doses of tension around risk, warnings, or suspense, balanced
+with clear paths back to safety.
+
+
+FONTS THAT CONVEY FEAR
+========================
+
+Fear in branding and posters is conveyed by heavy, jagged,
+distressed, or gothic type with strong contrast and irregular
+details that feel unstable or "wrong."
+
+Key horror font traits
+Heavy weights and high stroke contrast, linked to negative emotions
+like fear or tension in typographic perception.
+
+Irregular outlines: jagged, cracked, smeared, or eroded edges
+suggesting decay, violence, or instability.
+
+Condensed or compressed forms that feel tight and suffocating,
+especially in all caps for titles.
+
+Hand-drawn, scratchy, or "ransom note" textures introducing chaos
+and unpredictability.
+
+Commonly used fear font categories
+Jagged / splatter display fonts: For slasher, gore, high-impact
+posters. Use for main title logotypes and large headers; keep
+supporting text in a neutral sans serif.
+
+Distressed and grunge horror fonts: For occult, grindhouse,
+psychological horror. Use for titles and section headers; avoid
+long paragraphs because texture reduces readability.
+
+Gothic / blackletter horror fonts: For supernatural, religious, or
+historical fear. Use for brand marks, wordmarks, or short taglines
+where you want ritual, occult, or "ancient evil" vibes.
+
+Cinematic serif and "Trajan-style" fonts: For prestige or "serious"
+fear. Classic film posters using tall caps with blood-red color and
+high contrast. Use when you want fear plus gravitas.
+
+Branding vs posters
+Brand identity: One distinctive horror display font for logotype +
+clean companion for body copy. Test at multiple sizes.
+
+Posters and key art: Push texture, jagged edges, and extreme
+contrast more aggressively. Match type style to subgenre.
+
+
+COLOR PALETTES THAT EVOKE FRIGHT AND UNEASE
+=============================================
+
+Palettes usually combine darkness, low saturation, and sharp
+high-contrast accents, often anchored by black or near-black with
+sickly or blood-coded colors.
+
+Core "fear" bases
+Black / near-black: Connotes darkness, the unknown, death, ominous
+threat. Staple for horror posters and haunted environments.
+
+Charcoal greys: Heavy, isolating, depressive, especially pushing
+close to black.
+
+Desaturated dark blues: Link to night, cold fear, tension, tragedy.
+
+Danger and alarm accents
+Deep reds and crimson: Signal blood, danger, violence, high arousal.
+Widely used as primary accent in horror with dark backgrounds.
+
+Yellow-black combos: Echo hazard signs and wasps, triggering
+instinctive alertness and threat perception.
+
+Acidic or "wrong" yellows: In horror contexts, associated with
+madness, insecurity, psychological isolation.
+
+Decay, sickness, and dread
+Dark dirty greens: Evoke rot, contamination, disease.
+
+Muted browns and dirty neutrals: Washed-out browns and taupes
+create bleakness, decay, lifelessness.
+
+Sickly grey-greens or yellow-greens: Feel moldy, polluted, toxic.
+
+Bleakness and anxiety
+Desaturated greys: Strongly associated with anxiety, depression,
+emotional blunting when used broadly.
+
+Dark purples: Can induce anxiety, sadness, nightmare-like unease.
+
+Faded, low-chroma palettes: Communicate despair and hopelessness.
+
+Practical palette "recipes"
+Classic slasher: Black / charcoal base + deep crimson + dirty steel
+grey or off-white for text.
+
+Psychological / slow-burn horror: Desaturated blue-greys + charcoal
++ single small red or mustard accent to disturb a muted field.
+
+Body horror / decay: Black + dark green + muddy brown + grey-green
+highlights, sometimes with sickly yellow.
+
+
+TEXTURE AND DISTRESS EFFECTS FOR SCARY DESIGN
+===============================================
+
+Texture and distress effects make designs scarier when they suggest
+age, damage, or contamination instead of a clean controlled surface.
+
+Textures that feel inherently scary
+Dark grunge and erosion: Cracked walls, torn posters, peeling paint,
+rough concrete backgrounds imply neglect, decay, danger.
+
+Scratches, gouges, claw marks: Aggressive directional scratches look
+like attacks, escape attempts, or something breaking through.
+
+Stains, splatter, and drips: Irregular dark marks easily read as
+blood, mold, or bodily fluids, strongly activating disgust.
+
+Film grain, dust, and "dirty" overlays: Grain and specks make
+imagery feel old, damaged, or "found" — core analog-horror
+aesthetic.
+
+Clustered or "trypophobic" patterns (used carefully): Repetitive
+holes or organic pits can provoke intense unease.
+
+Where to place distress
+Background/environment: Heavy grunge behind characters so the world
+itself feels hostile. Concentrate damage at edges, corners, and
+"contact zones."
+
+Typography and key graphics: Distressed overlays on titles chipping
+away edges or adding cracks while preserving letter shapes.
+
+On top of everything ("in the air"): Subtle dust, hairline scratches,
+web-like overlays so it feels like grime on the lens. Keep low
+opacity.
+
+Subtle vs overt horror
+Subtle dread: Light film grain, soft paper texture, faint stains,
+occasional scratches mostly in periphery. Clean or lightly worn
+typography.
+
+Overt horror: High-contrast grunge backgrounds, visible claw marks,
+dark splatter near focal points, strong distressed type. Let damage
+cross through faces or logos to feel active and invasive.
+
+
+LIGHTING AND CONTRAST FOR DREAD
+=================================
+
+Dread comes from low-key, high-contrast lighting that hides more
+than it shows and forces the viewer to search the frame.
+
+Low-key lighting and exposure
+Use low-key lighting: 1-2 lights, minimal fill, dark background so
+large portions fall into shadow.
+
+Keep high contrast ratio between key and fill; let blacks stay deep
+so details disappear.
+
+Direction, silhouettes, and shadows
+Place the key to the side, behind, or below the subject to carve
+harsh shadows and obscure facial details.
+
+Use backlighting and silhouettes so subjects become dark shapes
+with minimal detail.
+
+Exploit projected and exaggerated shadows on walls or floors so the
+shadow becomes more menacing than the subject.
+
+Pools of light and negative space
+Create small pools of light (lamp, flashlight cone, narrow spotlight)
+in otherwise dark space so only fragments of environment are visible.
+
+Let the rest of the frame drop toward black so corners and
+backgrounds feel like unknown territory.
+
+Color and contrast for dread
+Favor cool or mixed color temperatures: cold blue ambience against
+warmer sickly practical light creates emotional dissonance.
+
+Use saturated red sparingly as signal of impending peril — strongest
+when punctuating otherwise subdued dark palettes.
+
+Movement, flicker, and change over time
+Introduce slow changes — lights dimming, shadows creeping, color
+shifting — to build dread rather than jump scares.
+
+Use irregular practicals (flickering bulbs, TV glow, moving
+flashlight) so illumination feels unstable and unreliable.
+
+
+SHAPE AND FORM CREATING DANGER IN LAYOUTS
+===========================================
+
+Danger in layouts comes from sharp, unstable forms and unbalanced
+compositions that keep the eye working and never fully "at rest."
+
+Sharp shapes and contours
+Angular forms (triangles, spikes, jagged polygons) are implicitly
+associated with threat, unlike soft curves which feel safe.
+
+Downward-pointing acute angles (V shapes, hanging spikes) are
+especially tied to unpleasantness and danger in lab studies.
+
+Repeating sharp motifs (teeth-like borders, shard patterns) across
+a layout amplifies hostility.
+
+Diagonals, tilt, and implied motion
+Diagonal lines and tilted blocks disrupt the calm of horizontal/
+vertical grids, adding tension, motion, and instability.
+
+Strong diagonals that "fall" toward the viewer or off the page feel
+like something is slipping, crashing, or attacking.
+
+Using diagonals to lead the eye into dark areas or toward dangerous
+imagery makes movement through the layout feel risky.
+
+Asymmetry and visual imbalance
+Asymmetrical balance with one heavy focal element and weaker
+counterweights creates controlled unease.
+
+Placing key elements outside comfortable central axes or too close
+to edges produces subtle anxiety and tension.
+
+Clustered objects on one side with emptiness (especially dark
+emptiness) on the other feels like encroaching threat vs vulnerable
+space.
+
+Fragmentation and distortion
+Broken or fragmented forms — split faces, shattered shapes, sliced
+panels — signal damage and conflict.
+
+Slightly warped or stretched shapes (elongated limbs, skewed
+rectangles) evoke the uncanny by breaking expected proportions.
+
+Combining fragmentation with sharp angles (shards, cracked glass
+motifs) intensifies danger and instability.
+
+Practical layout tactics
+Swap rounded cards and buttons for angled, irregular containers in
+horror branding or posters, especially around titles or warnings.
+
+Build compositions around strong diagonals and off-center focal
+points, letting heavy shapes lean into or away from negative space.
+
+Keep one or two elements deliberately "wrong" — a tilted block, a
+skewed image, an off-axis frame — so the imbalance becomes the
+emotional focal point.

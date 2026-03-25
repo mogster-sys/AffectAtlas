@@ -1,0 +1,182 @@
+Disgust — Perplexity Design Research
+======================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR DISGUST
+============================================
+
+Disgust in visual design is usually expressed through dirty,
+contaminated, or distorted aesthetics: think rotten, slimy,
+sickly, or bodily references, rather than just "ugly" or "bad."
+
+
+CORE VISUAL LEVERS
+-------------------
+Semantic cues: Imagery of contamination (mold, rot, infestation),
+bodily fluids, insects, decay, and spoiled food reliably elicit
+disgust because they tap evolved avoidance mechanisms.
+
+Context framing: The same disgusting motifs are more acceptable
+and even enjoyable when framed as art, horror, or satire, where
+users expect and "consent" to the experience.
+
+
+COLOR AND TEXTURE
+-----------------
+Dark, dirty greens, olive tones, browns, and yellow-green are
+repeatedly linked to rotten food, feces, and disgust in
+color-emotion studies. Brown also associated with disgust more
+than other basic colors.
+
+Slimy, sticky, crusty, moldy, or granular textures trigger
+contamination intuitions — rendered via noise, bump maps,
+organic gradients, and gloss highlights.
+
+
+FORM, COMPOSITION, AND MOTION
+------------------------------
+Asymmetric, bulbous, swollen, or deformed shapes read as
+diseased or parasitic.
+
+Clusters of small repeated elements (holes, bumps, spores)
+can evoke trypophobia-like revulsion.
+
+Overcrowded, cluttered layouts, visual "overgrowth," and
+creeping encroachment toward the viewer reinforce invasive
+contamination.
+
+Slow oozing, pulsating, writhing, or dripping animations
+amplify disgust more than fast, clean, ballistic motion —
+they mimic organic decay or infestation.
+
+
+UI-LEVEL DESIGN SYSTEM CUES
+----------------------------
+Color system: muted greys with sickly accent colors (dirty
+green, bile-yellow, murky brown) and low saturation, reserving
+rare saturated notes for shock moments.
+
+"Contaminated" states: buttons or cards gaining stains, cracks,
+or growing organic edges as the user makes "wrong" choices.
+
+Uneasy affordances: hover states that feel slightly too sticky,
+crowded, or encroached, rather than crisp and airy.
+
+Iconography: Twists on standard icons (warning triangles that
+look corroded, trash icons that appear overfull and leaking).
+
+
+SAFELY USING DISGUST IN DESIGN
+-------------------------------
+Protective framing: Position disgust as playful, educational,
+or aesthetic so users understand it as intentional and constrained.
+
+Intensity control: Keep disgust localized and time-bounded
+(specific screens, one-off effects) rather than pervasive —
+negative cues strongly shape judgments and purchasing decisions.
+
+
+COLORS THAT RELIABLY EVOKE DISGUST
+====================================
+
+Most reliable disgust hues
+- Yellow-green / chartreuse: frequently rated as "sick" and
+  "disgusting," linked to vomit, mucus, slime, illness.
+- Olive and murky greens: darker, dirtier greens associated
+  with rot, mold, stagnant water, contamination.
+- Browns tied to decay: mid/dark browns linked to spoiled food
+  and digested material.
+
+Value and saturation patterns
+- Low/medium saturation, dirty mixes: colors between green,
+  yellow, and brown with muddied saturation are "pukey," "slimy."
+- Moderate darkness: very dark tones lean toward fear/anger;
+  middle-dark murky green-yellow/brown more reliably = disgust.
+
+Practical guidelines
+- Lean on yellow-green -> olive -> brown gradients with low
+  saturation for disgust accents.
+- Avoid clean, fresh greens and cheerful yellows; introduce
+  brown/grey contamination, unevenness, or "swampy" shifts.
+
+
+FORM AND TEXTURE PATTERNS SIGNALING ROT/DECAY
+===============================================
+
+Macro form cues
+- Warping and deformation: sagging, bowing, swelling, collapsing
+  silhouettes suggest internal integrity has failed.
+- Fragmentation and loss: missing chunks, crumbling edges,
+  flaking layers, exposed inner material.
+
+Surface texture cues
+- Cracks, fissures, peeling: networks of cracks, crazing,
+  peeling paint, spalling surfaces.
+- Soft, spongy, crumbly: porous, friable, powdery, or
+  water-logged textures imply structural rot.
+
+Biological overgrowth
+- Fungi and mold: fuzzy growth, spots, patches, blooms,
+  mycelium, mushrooms, shelf fungi, lichens.
+- Stains and bloom patterns: irregular dark patches, halos,
+  tide lines, mottled "bloom" textures.
+
+Cluster and hole patterns
+- Clustered bumps/holes: dense clusters of cavities, pits,
+  nodules, blister-like bumps = infestation or disease.
+- Trypophobic arrangements: repeated roughly circular elements
+  with irregular spacing tap disgust in non-phobic viewers.
+
+Applying in visual/UX design
+- Introduce uneven erosion on edges, subtle crack maps, peeling
+  overlays, and mold-like mottling.
+- Use organic, non-uniform distributions: localized "hot spots"
+  of damage rather than uniform noise.
+
+
+LIGHTING AND CONTRAST FOR REVULSION
+=====================================
+
+Direction and placement
+- Uplighting (from below): exaggerates eye sockets, nostrils,
+  wrinkles — corpse-like, monstrous.
+- Raking side light: brings out bumps, cracks, slime, pores —
+  makes organic matter more tactile and repellant.
+
+Contrast and exposure
+- High contrast, minimal fill: deep dirty shadows, sharp edges
+  around filth, wounds, or rot.
+- Local hotspots on "gross" detail: overexpose wet/shiny/
+  decomposing areas while surroundings stay darker.
+
+Color and cast
+- Sickly green or yellow casts: pushes skin toward jaundiced,
+  infectious, poisoned looks.
+- Dirty mixed color temperatures: cold blue/green ambience with
+  warm sodium-like highlights = polluted, unsanitary spaces.
+
+Temporal effects
+- Creeping changes in cast/contrast: gradually increasing
+  contrast or phasing in greenish cast makes environment feel
+  like it is visually "rotting."
+
+
+CULTURAL DIFFERENCES IN DISGUST-COLOR ASSOCIATIONS
+====================================================
+
+Shared tendencies
+- Yellow-green / dirty green + some browns cluster near "disgusting"
+  across many countries, reflecting pathogen-avoidance.
+
+Where cultures diverge
+- Brown-disgust links are stronger in German samples than
+  non-European groups.
+- White, black, red, yellow swing more with culture (mourning
+  vs purity vs sacred).
+
+Design implications
+- For cross-cultural audiences, dirty yellow-greens and browns
+  are relatively robust disgust signals.
+- Pair with explicit cues of rot, stains, contamination rather
+  than relying on color alone.

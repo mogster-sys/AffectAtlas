@@ -1,0 +1,135 @@
+Submission -- Perplexity Design Research
+=========================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR SUBMISSION
+================================================
+
+Submission is usually conveyed by aesthetics that feel yielding,
+quiet, and low-agency: soft forms, low contrast, and deferential
+hierarchy rather than bold, assertive moves.
+
+Overall visual posture
+Low visual dominance: avoid full-bleed, high-impact hero elements;
+use smaller, contained components that feel like they "hold back"
+rather than push forward.
+
+Strong hierarchy that places "others" above "self": content about
+the other party or environment should be visually emphasized over
+the "speaker."
+
+Stable, low-energy composition: centered or gently bottom-weighted
+layouts, limited diagonals, and minimal dynamic angles.
+
+
+COLOR
+------
+
+Muted, desaturated palette: soft neutrals, gentle blues/greens, and
+greys communicate calm, deference, and low emotional arousal.
+
+Low contrast between foreground and background except where hierarchy
+truly matters, to avoid aggressive "shouting" elements.
+
+Warm accents only in very small doses (e.g., a soft beige or muted
+terracotta) to keep the tone submissive rather than fearful or cold.
+
+
+SHAPE AND FORM
+---------------
+
+Rounded, soft geometry: circles, rounded rectangles, and curved
+borders suggest yielding, safety, and non-threatening intent.
+
+Avoid sharp, spear-like triangles and extreme diagonals that imply
+attack, speed, or dominance.
+
+Use tapering or downward-softening shapes (wider top, narrower
+bottom) to subtly echo bowing or lowering gestures.
+
+Curves are read as non-threatening: circles and rounded forms are
+associated with softness, comfort, and nurturing, so they feel
+low-agency and non-aggressive.
+
+People prefer curvature: experiments show that curved shapes are
+rated as more pleasant and beautiful than angular ones, which
+supports a more accepting, compliant vibe.
+
+Rounded environments reduce tension: rounded art and interiors
+correlate with more relaxed, cooperative, less aggressive behaviour,
+which aligns with a submissive, deferent emotional tone.
+
+
+TYPOGRAPHY
+-----------
+
+Lower contrast, humanist or rounded sans-serifs to feel approachable
+and non-imposing.
+
+Smaller sizes with generous line-height and letter-spacing; avoid
+condensed, heavy weights that feel commanding.
+
+Sentence case rather than ALL CAPS; minimal use of bold, and reserve
+it for acknowledging others rather than self-assertion.
+
+
+LAYOUT AND INTERACTION
+-----------------------
+
+Generous white space to signal restraint and respect, not emptiness.
+
+Predictable, conventional patterns (e.g., simple vertical flows) that
+communicate "I'm not trying to control you; I follow your
+expectations."
+
+Microinteractions that are slow and smooth (ease-in-out, longer
+durations) so nothing feels abrupt or demanding.
+
+
+DOMINANCE VS SUBMISSION CONTRAST
+==================================
+
+Dominance and power are the visual opposite of submission:
+
+Color: dark bases with strong accents (black, deep navy, saturated
+red, gold, white) -- high contrast, large fields of dominant color.
+
+Shape: angular geometry (triangles, sharp corners, hard-edged
+polygons), verticality and upward movement, solid blocks and dense
+clustering.
+
+Typography: bold, heavy weights, condensed or geometric grotesques,
+tight deliberate hierarchy with emphatic titles.
+
+Layout: clear focal dominance, asymmetrical balance with a "heavy"
+side, strong grid and alignment suggesting control and discipline.
+
+Motion: snappy, decisive transitions; scale and impact on entry;
+limited but strong animation.
+
+These contrasts help define submission by inversion: where power
+pushes forward, submission pulls back. Where power is heavy and
+angular, submission is light and curved.
+
+
+ASYMMETRY AND BALANCE
+======================
+
+Asymmetrical balance gives controlled energy: unequal visual weights
+arranged so composition still feels resolved and harmonious. This
+creates movement and vitality without chaos.
+
+Visual tension comes from pushing elements off-center, closer to
+edges/corners, or closer together so spatial forces feel unresolved.
+Tension raises arousal and drama; too much makes the design feel
+unbalanced or anxious.
+
+For submission: avoid strong asymmetric tension. Use centered or
+gently balanced compositions that feel stable and non-confrontational.
+Reserve asymmetry for dominant design contexts.
+
+Asymmetrical designs tend to improve engagement because they create
+controlled novelty and tension. But for submission contexts, the
+goal is NOT engagement through tension -- it is comfort through
+predictability and deference.

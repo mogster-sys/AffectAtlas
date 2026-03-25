@@ -1,0 +1,274 @@
+Depression — Perplexity Design Research
+========================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR DEPRESSION
+================================================
+
+Depression in visual design is usually conveyed through low-energy,
+withdrawn, "drained" aesthetics: muted cool/neutral color, low
+contrast, heavy or sinking compositions, and typography that feels
+tired or constrained rather than dramatic.
+
+Overall mood
+Low arousal, low contrast: Depressed aesthetics feel flat, heavy,
+and low-stimulation, avoiding bright, shouty, or highly saturated
+visuals that can feel overwhelming to people in low mood.
+
+Negative aesthetic bias: Depressed viewers more often judge faces as
+"ugly" and are conservative in calling things beautiful, which
+suggests designs that foreground discomfort, flatten beauty, or
+deliberately withhold visual reward.
+
+Color and light
+Subdued, greyed hues: Desaturated blues, blue-grays, browns, and
+especially greys are frequently used to symbolise depressed or low
+mood. "Grey" was the dominant self-chosen mood color in anxious and
+depressed groups.
+
+Dull, darkened palettes: Dark or mid-dark, slightly muddy colors
+feel more depressing or anhedonic than clear primaries; brighter
+and cleaner hues are kept minimal or absent.
+
+Avoid intense brightness: Young people with depression report that
+overly bright, high-intensity colors feel shouty, painful, and
+cognitively overloading, so calmer softer luminance is preferred.
+
+Form, composition, and motion
+Heavy, sinking layouts: Bottom-weighted layouts, elements that seem
+to drop or sag, and dense stacking in corners communicate feeling
+weighed down or falling into a void.
+
+Static, repetitive forms: Simple, static shapes with blurred
+overlapping edges or "foggy" layering can express exhaustion,
+fatigue, and cognitive blur.
+
+Low stimulation: Sparse compositions with few focal points and
+minimal motion reduce sensory load and align with the withdrawn,
+low-initiative state of depression.
+
+Typography
+Quiet, constrained type: Neutral sans-serifs or sober serifs in
+regular or slightly condensed widths, moderate-small sizes, and
+limited variation feel serious, low-energy, and subdued.
+
+Distorted or off-kilter when symptomatic: In expressive work about
+depression, off-kilter spacing, cramped or overly heavy type, and
+blurred or partially obscured letters suggest mental fog, discomfort,
+or self-directed hostility.
+
+UX-specific considerations
+Unobtrusive, blending style: Depressed young users often prefer
+designs that visually "blend in" with other apps and do not
+broadcast that they are using a mental health tool, to avoid stigma.
+
+Therapeutic, not oppressive: Engagement with supportive aesthetics
+can modestly reduce depressive symptoms, so depressed visuals in UX
+are often balanced with small hints of calm or hope (e.g., a single
+soft accent) rather than pure despair.
+
+
+COLORS MOST ASSOCIATED WITH DEPRESSION
+========================================
+
+Design and psychology studies most consistently associate grey with
+depression, with some work also implicating dull blacks and other
+neutral, low-saturation tones.
+
+Strongest association: grey
+The Manchester Color Wheel studies found that anxious and depressed
+participants overwhelmingly chose mid-dark grey swatches to represent
+their current mood, while healthy participants tended to choose
+yellow.
+
+"Depressed people feel more gray than blue" — grey implies a dark,
+monotonous, colorless life and disinterest in experience.
+
+Neutral/dull colors and depression
+Participants with the highest depression scores most often preferred
+neutral colors (black, white, grey), with grey especially linked to
+elevated Beck Depression Inventory scores.
+
+Highly depressed individuals tended to avoid shiny or highly
+saturated colors, preferring dull, low-chroma tones.
+
+Role of "blue" and other hues
+Blue was the most common "favorite" color even among depressed
+participants, suggesting blue per se is not a reliable diagnostic
+depression color, even though culturally "feeling blue" is linked
+to sadness.
+
+Dark, desaturated colors (including some blues) are more likely to
+be read as sad or depressed than their bright saturated counterparts.
+
+Design application
+Products addressing depression often avoid bright yellows, oranges,
+and reds, leaning on greys and muted tones to mirror users'
+self-reported mood colors while adding softer calm accents.
+
+Grey is strongly associated with feelings of depression, emptiness,
+and formality, especially when used in large flat areas without
+contrasting accents.
+
+
+TYPOGRAPHY AND PERCEPTIONS OF SADNESS/DEPRESSION
+==================================================
+
+Typography can make text feel noticeably sadder by lowering visual
+energy and fluency.
+
+Typeface features linked to sadness
+Weight and width: Wide/extended bold styles were significantly
+associated with sadness and fear, while ultra-light weights were
+linked to desire and more positive feelings.
+
+Condensed or cramped forms increase reported dissatisfaction,
+boredom, and negative affect, bleeding into a general sad or
+"pressed-in" tone.
+
+Legibility, fluency, and mood
+Reduced legibility (odd letterforms, overly decorative styles, poor
+spacing) lowers processing fluency; disfluent text tends to feel
+less pleasant and more effortful, which readers may interpret as
+serious, heavy, or emotionally negative.
+
+Irregular or hard-to-parse forms dampen positive emotional responses.
+
+Serif vs sans, curves vs angles
+Serif faces are broadly perceived as serious, traditional, and
+solemn, reinforcing sadness when combined with low-energy layout.
+
+Angular, sharp forms feel more serious and harsh; rounded soft-edged
+letters read as friendlier and comforting, softening a sad message.
+
+Scale, spacing, and emphasis
+Small sizes, tight leading, and narrow measure make text feel
+constrained or suffocating, supporting a sad withdrawn mood.
+
+Minimal bolding or emphasis keeps visual "loudness" low; heavy
+all-caps or very bold settings are read as urgent or aggressive
+rather than quietly sad.
+
+
+IMAGERY AND COMPOSITION SIGNALING LOW MOOD
+============================================
+
+Low-mood UI imagery and composition are typically quiet, sparse, and
+low-stimulation.
+
+Imagery style and content
+Avoid cliched distress images: Guidelines for mental-health visuals
+discourage stereotypical "head in hands" or hyper-dramatic photos,
+recommending more subtle, non-stigmatizing imagery such as abstract
+shapes, soft gradients, or ordinary scenes with subdued lighting.
+
+Everyday but subdued environments: Natural scenes (trees, sky, water)
+or simple interiors with soft even light and minimal clutter support
+mood in people with depression and anxiety.
+
+Scale, space, and placement
+Small focal point in large space: A single card, icon, or
+illustration surrounded by generous whitespace suggests withdrawal
+or low energy without explicit "sad" symbols.
+
+Bottom-weighted or "sinking" layouts: Key elements slightly low on
+the canvas with more space above than below subtly conveys heaviness
+or being weighed down.
+
+Detail level and motion
+Low visual detail: Simplified illustrations, minimal texture, and
+reduced on-screen elements lower cognitive load and align with
+concentration and motivation difficulties common in depression.
+
+Gentle or minimal animation: Slow fades and infrequent motion,
+avoiding rapid transitions or attention-grabbing effects.
+
+Iconography and symbolic cues
+Neutral, metaphorical icons: Mood-tracking and self-care apps use
+neutral faces, simple curves, or metaphors (weather, battery/energy
+level, waves) rather than extreme expressions.
+
+Hopeful but quiet elements: Subtle hints of support or hope (small
+"help" icon, gentle upward path illustration) so imagery
+acknowledges low mood without reinforcing despair.
+
+
+DESIGNING CALMING INTERFACES FOR DEPRESSION
+=============================================
+
+Calming interfaces use low-stimulation visuals, highly predictable
+flows, and strong user control so the product feels gentle, safe,
+and manageable.
+
+Visual tone and motion
+Soft muted palettes: Soft blues, greens, lavenders, and neutrals.
+Avoid red-dominant or neon schemes that increase arousal.
+
+Limit motion and visual noise: Slow minimal animations, no flashing
+or flickering, simple backgrounds.
+
+Layout and cognitive load
+Simple linear flows: Short step-by-step tasks with few options per
+screen reduce cognitive load.
+
+Predictable navigation: Consistent button placement, clear
+affordances, immediate but gentle feedback.
+
+Language and interaction style
+Validating, non-pressuring copy: Empathetic, non-judgmental language
+that acknowledges difficulty. Avoid toxic positivity or
+guilt-inducing prompts.
+
+Small wins: Short achievable exercises and micro-tasks increase
+self-efficacy and reduce avoidance.
+
+Control, personalization, and safety
+User control over stimulation: Adjustable color theme, font size,
+notification frequency, animation intensity.
+
+Privacy and crisis support: Clear data-use explanations, discreet
+branding, easy access to crisis resources.
+
+Supportive features
+Gentle self-regulation tools: Breathing exercises, brief mindfulness,
+mood logging with calm visuals and optional reminders.
+
+Design for bad days: "Low-effort modes" (short sessions, "skip for
+now," minimal notifications) so the app remains usable when energy
+is especially low.
+
+
+COLOR PALETTES TO AVOID FOR MENTAL HEALTH APPS
+================================================
+
+Overstimulating and alarming palettes
+Strong red as base: Saturated reds increase physiological arousal
+and are linked to danger and anxiety. Advised against as primary or
+background colors.
+
+Bright warm floods: Large areas of intense yellow, orange, or
+magenta feel energetic and tip into restlessness or anxiety. Better
+kept as small accents only.
+
+Neon and clashing schemes
+Neon and ultra-saturated palettes: Increase arousal and attention,
+becoming sensory overload in mental-health apps.
+
+Clashing complements at full saturation: Bright red-green or
+blue-orange create strong visual tension.
+
+"Too happy" or clinical looks
+Overly cheerful UIs for low mood: Young people with depression
+report discomfort with intensely bright color schemes, preferring
+darker or more muted palettes that blend in.
+
+Harsh clinical palettes: Pure white with sharp medical blues/greens
+and little warmth feels sterile and stigmatizing.
+
+Safer direction
+Muted mid-saturation palettes: Softened blues, greens, and neutrals
+with moderate saturation.
+
+Reserve strong colors for small roles: Red and intense hues only for
+compact error states, alerts, or CTAs, balanced by large calm base.

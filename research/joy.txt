@@ -1,0 +1,184 @@
+Joy / Happy — Perplexity Design Research
+=========================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR JOY
+========================================
+
+Happy emotions in visual systems are usually expressed through
+bright warm colors, rounded friendly forms, playful motion,
+and light, open layouts.
+
+
+COLOR
+-----
+Use warm hues: saturated yellows, oranges, and warm reds tend
+to signal joy, enthusiasm, and playfulness.
+
+Add brightness and contrast: lighter tints and higher brightness
+feel more uplifting than dark, muted palettes.
+
+Use accents, not overload: small bursts of warm color on a neutral
+base keep happiness feeling energetic rather than chaotic.
+
+
+SHAPE AND ICONOGRAPHY
+---------------------
+Favor rounded shapes: circles, soft pills, and curves are strongly
+associated with positive, non-threatening feelings and "bubbly" fun.
+
+Avoid sharp angles for happy moments: hard, jagged shapes
+subconsciously hint at danger or tension, which can undercut joy.
+
+Use simple, recognizable icons: clear, friendly metaphors (stars,
+suns, confetti, hearts) support feelings of delight and celebration.
+
+
+TYPOGRAPHY
+----------
+Choose humanist or rounded sans-serifs: softer terminals and
+generous curves feel more approachable and cheerful than rigid,
+condensed faces.
+
+Use light to medium weights with larger sizes: airy, open type
+with comfortable spacing feels relaxed and optimistic.
+
+Add small expressive touches: occasional playful display fonts
+or emphasized words can create moments of joy when used sparingly.
+
+
+LAYOUT, MOTION, AND IMAGERY
+----------------------------
+Keep layouts spacious and clear: intuitive hierarchy and breathing
+room support a pleasurable, low-friction experience that users
+associate with positive feelings.
+
+Use micro-animations for delight: small celebratory motions on
+success states (checkmarks popping, confetti bursts) reliably
+evoke happiness and accomplishment.
+
+Select joyful imagery: photos or illustrations with smiling faces,
+upward curves, natural light, and slightly exaggerated, vibrant
+palettes reinforce a happy tone.
+
+
+QUICK "HAPPY" SYSTEM RECIPE
+----------------------------
+Palette: bright yellow + warm coral accent on a soft neutral base.
+Shapes: circular buttons, pill-shaped chips, rounded cards, curved dividers.
+Type: rounded sans-serif for UI, playful display font for key celebratory moments.
+Motion: subtle bounces and easing-out transitions on positive actions and success screens.
+
+
+COLOR PALETTES THAT EVOKE JOY
+==============================
+
+Principles for "Happy" Palettes
+- Use warm highs: saturated yellows and oranges are strongly
+  associated with joy, optimism, and fun.
+- Add fresh cools: greens and blue-greens support feelings of
+  relaxed, comfortable happiness and balance warmth.
+- Keep it light: tints, pastels, and off-whites feel airy and
+  uplifting, while heavy darks can dampen the mood.
+
+Example High-Energy Palettes
+- Sunny Confetti: bright yellow (#FFD447), tangerine (#FF8A3D),
+  teal (#44D9E6), warm off-white (#FFF8E8).
+  Works for celebratory states, onboarding success, gamified UI.
+- Bubblegum Arcade: candy pink (#FF5D9E), light magenta (#FF8AD8),
+  lemon yellow (#FFD447), aqua (#44D9E6).
+  Ideal for youth-focused, kawaii, or nostalgic interfaces.
+
+Example Soft-Happy Palettes
+- Lemon Sherbet: soft lemon (#FFF7AE), peach (#FFE0C2),
+  blush (#FFD1E3), baby blue (#CCEAF5).
+  Good for productivity, lifestyle, or education apps.
+- Soft Skies: misty lilac (#F9F5FF), light sky blue (#D7F3FF),
+  minty aqua (#C4F8FF), cotton pink white (#FFEEF2).
+  Suits minimal UIs where gentle joy and clarity matter.
+
+
+SHAPES THAT COMMUNICATE JOY
+============================
+
+Core Friendly Shapes
+- Circles and ovals: signal warmth, unity, community, friendliness;
+  no threatening angles; consistently rated as pleasant and "good."
+- Rounded rectangles/pills: combine stability with softness,
+  making buttons and cards feel approachable and safe.
+- Hearts, spirals, sun-like forms: associated with love, growth,
+  and playful happiness.
+
+Curves vs Angles
+- Curved lines and organic blobs: comfort, safety, reduced stress,
+  positive affect.
+- Sharp angles (V-shapes, spikes): alertness, caution, threat —
+  undermine joyful tone if overused.
+
+
+YELLOW USAGE WITHOUT EYE STRAIN
+================================
+
+Choose the right yellow
+- Prefer muted or light yellows (butter, cream, honey) for large
+  areas; save intense canary/neon for small highlights.
+- Shift toward amber/mustard for better readability and less glare,
+  especially on mobile.
+
+Manage contrast and placement
+- Pair yellow with dark text (charcoal, navy, deep purple) and
+  verify at least 4.5:1 contrast for normal text (WCAG).
+- Avoid yellow text on light backgrounds.
+- Limit large full-screen yellow backgrounds; use strips, cards,
+  CTAs, or gradients so the eye can rest.
+
+Layout and theming
+- On yellow backgrounds, choose heavier weights and larger sizes
+  with clean sans-serifs to improve legibility.
+- Provide darker or reduced-brightness theme where possible.
+
+
+JOYFUL PALETTE EXAMPLES FROM POPULAR APPS
+==========================================
+
+Social and media
+- Instagram: hot-pink to orange to yellow to violet gradient —
+  energy, playfulness, warmth.
+- Snapchat: electric yellow (#FFFC00) with black — fun,
+  attention-grabbing, readable.
+
+Learning and productivity
+- Duolingo: Feather Green (bright pistachio), sunny yellow
+  (#FFC715), warm orange (#FAA918), turquoise (#14D4F4),
+  purples — game-like, optimistic.
+- Spotify (dynamic contexts): brand green (#1DB954) plus dark
+  grays and mood-specific accent schemes.
+
+Resources
+- Happy Hues, Color Hunt "happy" collections, Coolors
+- Figma "playful" and "zesty lemon/freshly squeezed" sets
+
+
+ONBOARDING PALETTE GUIDELINES
+==============================
+
+60-30-10 Rule
+- Base (60%): very light warm neutrals — cream, soft peach,
+  warm gray — for backgrounds.
+- Primary (30%): one warm happy color (golden yellow #FFC936,
+  tangerine #FF8A3D, peach #FFD9C2) for illustrations and UI blocks.
+- Accent (10%): 1-2 brighter hues (coral, pink, aqua) for CTAs
+  and highlights.
+
+Example Onboarding Palette
+- Backgrounds: #FFF7EC (warm cream), #FFEDE2 (very light peach)
+- Primary: #FFB74D (warm orange), #FFE65A (sunny yellow)
+- Accents: #FF6F61 (coral), #3BB9FF (sky blue)
+- Text: #2B2B33 (charcoal)
+
+Balance delight with legibility
+- Reserve strongest yellow/orange for primary actions and highlights.
+- Keep body text in dark neutrals; let illustrations carry cheer.
+- Test in both light and dark modes; tone saturation down if
+  first impression feels "shouty" on mobile.

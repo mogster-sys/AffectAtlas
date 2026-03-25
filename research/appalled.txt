@@ -1,0 +1,303 @@
+Appalled — Perplexity Design Research
+=======================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR APPALLED
+=============================================
+
+Appalled generally maps to the disgust family of emotions in
+affective design, so visual systems that feel contaminated, violated,
+or "wrong" tend to express it best.
+
+Core visual qualities
+Disrupted order: Broken grids, misalignment, visual "errors," and
+jarring proximity between elements can create a sense that something
+is off or unacceptable.
+
+Contamination cues: Visual metaphors of dirt, rot, stains, or
+infestation (textures, overlays, image treatments) tap directly into
+disgust/appalled responses.
+
+Moral violation signals: Imagery or composition that implies broken
+norms or threat (harsh contrasts, confrontational focal points)
+strengthens an appalled reading.
+
+Color system
+Desaturated, "sickly" hues: Yellow-greens, murky browns, greyish
+cyans tend to be associated with disgust and impurity rather than
+calm nature.
+
+Clashing combinations: Intentional disharmony (e.g., sickly green
+against raw magenta or dirty orange) produces visual revulsion
+rather than pleasant contrast.
+
+Low-chroma backgrounds + sharp accents: Dirty neutrals with small,
+aggressive accent colors (acid green, bile-like yellow) can make
+specific elements feel contaminating.
+
+Shape, layout, and motion
+Irregular, spiky, or oozing forms: Jagged edges, drips, smears, and
+warped contours visually echo bodily or environmental contamination.
+
+Crowded or invasive layouts: Elements that press into each other,
+overlap uncomfortably, or intrude into personal "space" create a
+violated feeling.
+
+Unsettling motion: Slight buzzing, jitter, delayed or sticky
+transitions, and non-linear easing can make interfaces feel wrong
+or unsafe, amplifying appalled responses.
+
+Typography and imagery
+Typographic dissonance: Distorted type, uneven baselines, cramped
+leading, and harsh weight contrast undermine readability in a way
+that feels abrasive rather than playful.
+
+"Inappropriate" pairings: Combining refined serif or corporate sans
+with grotesque or disturbing imagery heightens the sense of moral
+or social violation.
+
+Graphic detail of the "disgusting": Close-ups, texture emphasis
+(mold, grime, bodily residues), or deliberately unflattering angles
+reliably elicit disgust/appalled reactions.
+
+System-level guidelines
+Define appalled as: "high-arousal disgust with a strong violation
+cue" so teams distinguish it from simple dislike or anger.
+
+Encode it as a theme across tokens: Color tokens (polluted greens,
+dirty browns, clashing highlights), shape tokens (irregular radii,
+asymmetric spacing, broken grid), type tokens (distortion, cramped
+tracking, weight shocks).
+
+
+COLOR PALETTES THAT EVOKE SHOCK AND DISGUST
+=============================================
+
+Shock and disgust tend to emerge when "sick" or dirty hues are
+combined with high contrast, harsh saturation, or unexpected pairings
+that feel wrong or contaminated.
+
+Key disgust colors
+Yellow-green / green-yellow: Frequently linked specifically to
+disgust (e.g., bile, rot, illness), especially at medium-low
+lightness and medium saturation.
+
+Dirty browns and murky olives: Brown is often associated with
+disgust in color-emotion surveys, especially when dull and
+low-chroma.
+
+Greyed "sick" neutrals: Sludgy greys with a green or yellow cast
+feel polluted rather than clean.
+
+Colors that amplify shock
+High-contrast complements: Opposites like electric blue vs maximum
+yellow or red vs acidic green visually "shout" and can feel shocking
+when pushed to full saturation.
+
+Very dark backgrounds: Black and near-black carry strong negative,
+high-power associations and intensify any toxic accent color.
+
+Overbright accents: Maximum yellow or neon-like reds create sensory
+overload, especially on dark or dirty bases.
+
+Palette patterns
+"Toxic hazard" palette: Near-black charcoal or very dark brown base
++ neon or high-saturation yellow-green and green-yellow accents.
+Feels poisonous, biohazardous, contaminated.
+
+"Rot and bile" palette: Muddy brown, khaki, and olive base + acidic
+yellow-green, dull mustard accents. Strong association with decay,
+dirt, and bodily fluids.
+
+"Clinical wrongness" palette: Cold grey and off-white with greenish
+tint base + small areas of sharp red and sickly cyan or
+yellow-green. Feels like illness, infection, contaminated medical
+environments.
+
+How to tune shock vs disgust
+To increase disgust, push hues toward brownish, yellow-green, and
+dirty neutrals; lower chroma slightly so they feel more organic and
+rotten than playful neon.
+
+To increase shock, heighten contrast (light vs dark), use highly
+saturated accents sparingly, and place them next to complements so
+they visually clash.
+
+
+TYPEFACE CHOICES FOR APPALLED EMOTION
+=======================================
+
+Appalled sits in the disgust-anger family, so type needs to feel
+"wrong," abrasive, or contaminated rather than merely sad or scary.
+
+Overall type personality
+Display, not body: Appalled works best in expressive display faces
+rather than neutral text families.
+
+Low fluency, high tension: Fonts that are harder to process (awkward
+shapes, uneven rhythm) generate cognitive strain and discomfort.
+
+Structural features to use
+Heavy or extreme weights: Very bold or ultra-black styles tend to be
+linked with fear, dissatisfaction, and other intense negative states.
+
+Condensed or distorted width: Condensed or irregularly scaled letters
+create pressure and claustrophobia.
+
+Sharp, angular details: Hard terminals, spikes, and broken curves
+feel more hostile and unsettling than rounded humanist forms.
+
+Rhythm, spacing, and texture
+Uneven baselines and x-heights: Slight vertical misalignment or
+inconsistent letter heights produce a subtle visual "gag reflex."
+
+Tight tracking and cramped leading: Overly tight letterspacing and
+line spacing heighten tension and perceived aggression, especially
+in uppercase.
+
+Rough, eroded, or smeared edges: Grunge or corroded textures on
+strokes echo physical decay or contamination.
+
+Combinations and contrasts
+Inappropriate pairings: Combining formal serif or geometric sans
+with disturbing imagery or "sick" color palettes increases the sense
+of moral or social violation.
+
+Abrupt style shifts: Sudden jumps between light and ultra-bold, or
+between rigid caps and warped lowercase, make typography feel
+unstable and confrontational.
+
+
+IMAGERY STYLES THAT MAKE VIEWERS FEEL APPALLED
+================================================
+
+Imagery styles that make viewers feel appalled almost always tap
+into disgust plus some shock: they suggest contamination, bodily
+threat, or violated norms.
+
+Disgust triggers in content
+Pathogen/contamination cues: Rot, mold, spoiled food, bodily fluids,
+infected wounds, parasites, filth, and unhygienic spaces are among
+the most reliable visual elicitors.
+
+Corruption of the clean or sacred: Dirty hospitals, contaminated
+kitchens, desecrated religious or moral symbols, or ruined
+bodies/clothing make viewers feel something pure has been violated.
+
+Framing and proximity
+Forced closeness: Tight macro crops on slime, sores, crawling
+insects, or decay force the viewer into intimate contact, strongly
+activating pathogen-disgust.
+
+No safe distance: Filling the frame with the disgusting element
+removes psychological distance and makes the threat feel immediate.
+
+Texture, detail, and sensory suggestion
+Hyper-detailed organic texture: Visible pores, cracks, pus, mold
+spots, hair, and insects increase perceived "realness" and intensify
+visceral revulsion.
+
+Wet + wrong material mixes: Slime on metal, blood on porcelain,
+waste on fabric — combinations that imply contamination of everyday
+materials are especially appalling.
+
+Human expression and body language
+Disgust + shock faces: Wrinkled nose, raised upper lip, narrowed
+eyes, head pulled back (disgust) combined with wide eyes or open
+mouth (shock) communicate "appalled" instantly.
+
+Recoil and avoidance: People leaning away, shielding themselves, or
+pushing something out of view cue the viewer to share that reaction.
+
+Stylistic treatments
+Harsh lighting and sickly color: Strong directional light
+emphasizing surface irregularities, paired with yellow-green, dirty
+brown, or grey-green grading.
+
+Minimal visual escape: Compositions with little neutral space where
+disgusting content dominates most of the frame keep the viewer
+locked in the appalled state.
+
+
+SPACING AND COMPOSITION FOR ALARM
+===================================
+
+Spacing and composition increase alarm when they disrupt comfort:
+crowding, imbalance, and edge-heavy layouts create tension that the
+visual system reads as potential threat.
+
+Crowding and low white space
+Reduced white space makes information harder to parse and raises
+cognitive load, increasing tension and alertness.
+
+Visual crowding (many elements packed close together) impairs
+recognition in peripheral vision and can feel overwhelming.
+
+Asymmetry and imbalance
+Deliberate imbalance (one side visually heavier) creates
+compositional tension that feels unstable.
+
+Breaking harmony rules (ignoring grids, golden ratio, regular
+alignments) increases unease.
+
+Proximity, edges, and "no safe zone"
+Objects near or cut by the edge of the frame generate suspense,
+implying motion off-screen or loss of control.
+
+Elements pressed together or touching (tangencies) produce ambiguous
+boundaries that feel unresolved and stressful.
+
+Scale and contrast in composition
+Extreme size contrast (one huge element crowding several small ones)
+encodes dominance and vulnerability, reading as looming threat.
+
+Dense focal zones against emptier areas pull attention sharply,
+creating a "hot spot" of tension that can feel alarming.
+
+
+TEXTURE AND CONTRAST FOR VISCERAL REACTIONS
+=============================================
+
+Texture and contrast can create visceral reactions when they push
+surfaces and light-dark relationships toward the edge of comfort.
+
+Texture that feels visceral
+Rough and noisy overlays: Heavy grain, grit, and speckle increase
+arousal and make UI surfaces feel abrasive or dirty, especially on
+large panels.
+
+Organic, imperfect materials: Scratches, smears, paper fibers, rust,
+and concrete-like noise give digital elements a physical presence;
+in darker or "sick" palettes, this reads as contaminated or unsafe.
+
+Using contrast to jolt the viewer
+High luminance contrast for urgency: Very bright elements on very
+dark backgrounds produce strong visceral salience, pulling instant
+attention.
+
+Localized contrast spikes: Concentrating extreme contrast only around
+critical elements creates hot spots that feel intense without
+fatiguing the whole UI.
+
+Combining texture and contrast in UI
+Harsh contrast + coarse texture: Dark bases with bright saturated
+accents overlaid with coarse grain or glitch textures — useful for
+error screens, horror themes, or "hostile" modes.
+
+Dirty mid-contrast zones: Mid-contrast backgrounds with uneven
+mottled texture behind content suggest grime or wear.
+
+Motion and state feedback
+Textured error feedback: Brief bursts of grain, glitch, or noisy
+overlays on error toasts turn feedback into a small shock.
+
+Contrast pulses: Short subtle contrast pulses or flickers around
+high-risk actions produce a gut-level "are you sure?" reaction.
+
+Guardrails
+Keep baseline surfaces smooth and medium-contrast for readability.
+Reserve heavy texture and extreme contrast only for intentional
+emotional peaks. Test with users for accessibility and fatigue —
+over-bright, clashing, or highly textured interfaces can trigger
+eye strain or migraines.

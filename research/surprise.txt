@@ -1,0 +1,172 @@
+Surprise — Perplexity Design Research
+=======================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR SURPRISE
+==============================================
+
+Surprise in visual design is usually created by breaking
+expectations in a controlled way: sharp contrasts, unusual
+combinations, and small unexpected motions or details that
+appear at just the right moment.
+
+
+CORE VISUAL LEVERS
+-------------------
+Contrast and disruption: Sudden shifts in color, scale, or
+style (e.g., a single bold object in a calm composition)
+instantly signal the unexpected and pull attention.
+
+Asymmetry and broken patterns: Repeating grids or rhythms that
+are subtly interrupted feel surprising without becoming chaotic.
+
+Ambiguity and hidden elements: Easter eggs, images that resolve
+on a second look, or concealed messages create an "aha" surprise
+when the viewer decodes them.
+
+
+COLOR AESTHETICS
+----------------
+High-contrast palettes: Bright accents against muted or dark
+fields (e.g., neon on charcoal) generate visual "pops" that
+read as energetic and surprising.
+
+Warm, high-energy hues: Vivid yellows, oranges, and reds are
+tied to attention, arousal, and excitement, which amplify the
+feeling of suddenness.
+
+Unusual combinations: Pairings that feel slightly off-norm
+(e.g., teal with red, yellow with black tempered by gray)
+convey uniqueness and alertness.
+
+
+FORM, LAYOUT, AND IMAGERY
+--------------------------
+Exaggerated scale and proportion: Oversized elements, extreme
+cropping, or tiny focal objects in large empty space signal
+something out of the ordinary.
+
+Juxtaposition: Putting objects or ideas together that "don't
+belong" creates cognitive surprise.
+
+Expressive shapes: Sharp angles, sudden directional changes,
+or visual "bursts" echo the startle aspect of surprise more
+than soft, continuous forms.
+
+
+MOTION AND INTERACTION (UX/UI)
+------------------------------
+Microinteractions with twist: Small animations or responses to
+actions that do something slightly more than expected create
+low-friction surprise and delight.
+
+Timed reveals: Content that appears just after a key action
+(completion confetti, witty loading messages, animated success
+states) attaches surprise to meaningful moments.
+
+Non-linear motion: Easing curves that overshoot, bounce, or
+briefly pause mirror a quick startle followed by resolution.
+
+
+TYPOGRAPHY AND VOICE
+--------------------
+Type disruptions: One word in a markedly different typeface,
+size, or orientation (rotated, broken baseline) punctuates a
+layout with a surprising visual accent.
+
+Playful or witty copy: Short, unexpected microcopy in buttons,
+empty states, or loaders pairs verbal surprise with visual
+treatment.
+
+
+VISUAL CUES THAT TRIGGER SURPRISE IN UI
+=========================================
+
+Visual feedback on actions
+- Animated button states: scaling, color shifts, or playful
+  morphs on tap/hover signal responsiveness with flourish.
+- Success celebrations: confetti bursts, fireworks, animated
+  icons on task completion — standard confirmation becomes
+  mini-reward.
+- Dynamic progress/loading: custom loaders or witty progress
+  animations replace generic spinners.
+
+Microinteractions and Easter eggs
+- Hidden interactions: elements that react only when explored
+  (hover on avatar triggers playful animation).
+- Easter eggs: rare, context-aware visuals or messages tucked
+  into flows feel like secret rewards.
+- Contextual transformations: UI that subtly changes visuals
+  after milestones feels unexpectedly alive.
+
+Motion and change cues
+- Localized animated change: sliding, fading, or bouncing new
+  elements near user's focal area.
+- Nonlinear motion curves: slight overshoot, bounce, or delay
+  gives "startle then settle" quality.
+- Attention-grabbing highlights: brief glows, pulses, or scale
+  pops on newly appeared content.
+
+Copy and visual personality
+- Playful microcopy: unexpectedly humorous or warm phrases in
+  loaders, success messages, or errors.
+- Character reactions: mascots or illustrated characters that
+  respond visually to user actions.
+
+Guardrails
+- Tie surprise to user intent: trigger only after clear user
+  actions, not at random.
+- Keep intensity moderate: short, lightweight animations; avoid
+  screen-wide disruptions.
+
+
+COLOR PALETTES THAT EVOKE SURPRISE AND CURIOSITY
+==================================================
+
+Core principles
+- High contrast: strong light-dark or complementary contrasts
+  feel alert, "popping," and slightly provocative.
+- Novel combinations: "familiar with a twist" triggers curiosity
+  without feeling chaotic.
+- Confetti accenting: sprinkling small bright accents into calm
+  palette creates micro-surprises.
+
+Surprise-forward palettes
+- Neon on dark: electric cyan, hot pink, chartreuse over deep
+  charcoal/black — bold, futuristic, attention-grabbing.
+- Pop-art brights: electric blue + hot pink + neon yellow —
+  high-energy, graphic, immediately surprising.
+- Firework mixes: scarlet, vivid orange, saturated purples —
+  dramatic, "explosive," suited to highlight/celebratory states.
+
+Curiosity-leaning palettes
+- Yellow-purple tension: yellow = outward exploration,
+  purple = inward reflection, combined feels "wrong-but-right."
+- Moody intrigue: emerald/dark teal + charcoal + subtle gold
+  or coral — mystery and "hidden depth."
+- Whimsical mystery: teal, coral, lilac — playful, imaginative,
+  nudges users to explore.
+
+How to apply in UI
+- Use bold hues as accents: keep base neutral/muted, reserve
+  surprising colors for CTAs and discovery components.
+- Localize novelty: place unusual pairings where you want
+  exploration (cards, tooltips, onboarding).
+
+
+ANIMATION BUDGET AND PERFORMANCE
+==================================
+
+Note: Perplexity went on a tangent about CPU/GPU budgets and
+Android/iOS profiling tools. Relevant design takeaways:
+
+- Keep surprise animations short (150-400ms), triggered by
+  user actions, not running constantly.
+- Target 60fps — budget ~10-12ms per frame on mid-range phones.
+- Queue or stagger heavy effects so they don't all peak in the
+  same frame.
+- Degrade gracefully on low-end devices: reduce motion or switch
+  to simpler variants.
+- Prefer GPU-friendly properties (transforms, opacity) over
+  layout-triggering ones (top, left, size, heavy blur).

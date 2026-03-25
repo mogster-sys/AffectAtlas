@@ -1,0 +1,214 @@
+Love -- Perplexity Design Research
+====================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR LOVE
+==========================================
+
+Love is usually expressed through warm, soft, and harmonious visual
+systems: warm colors (especially pinks/reds), rounded shapes, gentle
+motion, and intimate, human-centered imagery.
+
+Core emotional qualities of "love"
+Warmth and intimacy: evoked by warm hues, soft gradients, and low
+contrast backgrounds.
+
+Safety and trust: created by clear hierarchy, generous spacing, and
+predictable interaction patterns.
+
+Tenderness and care: suggested by soft edges, tactile textures, and
+human/organic motifs.
+
+Color and light
+Primary palette: pinks, soft reds, peach, warm neutrals, sometimes
+muted purples for romantic or intimate love.
+
+Accents: small areas of saturated red for passion, or gold for
+preciousness and commitment.
+
+Treatment: gradients, glow, and low-contrast overlays help create a
+gentle atmosphere rather than a harsh one.
+
+Shape, layout, and motion
+Shapes: rounded corners, circles, ovals, heart-like curves, and
+flowing lines signal softness and approachability.
+
+Layout: balanced, stable compositions with clear focal points feel
+secure and "held together," aligning with supportive love.
+
+Motion: easing that is slow-in/slow-out, microinteractions that
+"breathe" or gently pulse, and subtle parallax create a feeling of
+living connection.
+
+Typography and imagery
+Typography: humanist sans-serifs or soft serifs, moderate stroke
+contrast, open letterforms, and slightly looser tracking to feel
+open and inviting.
+
+Voice: copy in first person, direct address ("you", "we"), and simple
+sentences enhances emotional closeness.
+
+Imagery: close crops of people interacting, touch, eye contact, and
+small everyday moments (not just grand gestures) convey authentic love.
+
+
+ROMANTIC LOVE BETWEEN ADULT PARTNERS
+======================================
+
+For romantic love between adult partners, aim for a sensual, intimate,
+and slightly cinematic system rather than "cute Valentine's Day"
+visuals.
+
+Color and light
+Use a core of blush pinks, rose, berry, wine, and soft cream or
+champagne; this reads as warm, intimate, and grown-up.
+
+Keep backgrounds very light and warm, then reserve deep reds/wines
+for key focal points (names, CTAs, key illustrations) so the
+interface feels intentional, not "all pink."
+
+Introduce subtle gradients (e.g., blush to coral, plum to midnight)
+to create a dreamy, cinematic glow around important content.
+
+Shape, layout, and textures
+Favor smooth curves, elongated ovals, organic blobs, and pill-shaped
+buttons to suggest sensuality and softness.
+
+Use a stable, centered or slightly asymmetric layout with clear focal
+couples/pairs, reinforcing "two people together."
+
+Add very soft shadows, grain, or paper-like texture so surfaces feel
+tactile and close to the body, not sterile.
+
+Typography and microcopy
+Pair an elegant serif for headings (thin to moderate contrast, slightly
+tall x-height) with a clean humanist sans for body; this feels refined
+but still approachable.
+
+Use moderate letterspacing and line-height; tight but not cramped,
+conveying closeness without anxiety.
+
+Let the voice be intimate, direct, and concrete rather than generic
+romantic cliches.
+
+Imagery and motion
+Focus imagery on close physical proximity: hands touching, leaning in,
+shared private spaces (bedroom, balcony at night, candlelight), rather
+than generic hearts or roses.
+
+Use shallow depth-of-field, warm directional lighting, and crops that
+feel like a partner's-eye view to increase emotional intimacy.
+
+Keep motion slow, easing-heavy, and minimal: soft fades, gentle
+parallax, subtle pulses on key CTAs instead of bouncy or playful
+animations.
+
+Avoiding cliches while staying romantic
+Do less of: flat bright red everywhere, heart spam, cartoonish icons,
+chunky playful type, grand gesture visuals only.
+Do more of: refined palettes (blush + wine + cream), one subtle heart
+mark, cinematic gradients, elegant serif/sans pairing, restrained
+iconography, everyday closeness and small rituals.
+
+
+DATING AND MATCHMAKING APP AESTHETICS
+=======================================
+
+For a dating/matchmaking app, you want a Lover-archetype aesthetic
+that balances spark (excitement, desire) with enough calm to feel
+safe and trustworthy for adults.
+
+Color and light
+Palette: warm, rich hues (coral, rose, berry, plum, deep teal) with
+dark neutrals for contrast; avoid neon so it stays adult, not teeny.
+
+Use light, warm backgrounds in most flows (onboarding, profile editing,
+messaging) and introduce darker, more dramatic backgrounds selectively
+in discovery/match moments to heighten drama.
+
+Gradients and lighting: soft, directional gradients and subtle glow
+behind key cards/CTAs can feel like spotlighting people, but keep it
+restrained.
+
+Layout, cards, and interaction
+Discovery cards: large, cinematic profile cards with generous imagery,
+clear name/age, and 1-2 key prompts to humanize, not just "stats."
+
+Primary actions should be visually obvious, emotionally labeled, and
+consistent across screens; avoid cramming too many gestures.
+
+Navigation: keep flows shallow and obvious; emotional energy should go
+into connection, not orientation.
+
+Motion and microinteractions
+Swipe/decision animations: smooth, slightly elastic but not cartoonish,
+with subtle color cues (soft green for interest, soft neutral for pass).
+
+Match moments: a small, cinematic flourish that lasts only a second or
+two, then transitions quickly into messaging; celebrate connection, not
+the app itself.
+
+
+COUPLES RELATIONSHIP APP AESTHETICS
+=====================================
+
+An ongoing relationship app for couples should feel like a shared,
+intimate space for "us": romantic, but also calm and lived-in so it
+is safe to open every day.
+
+Visual tone: romantic but sustainable
+Palette: blush/rose + warm neutrals + one deeper wine/plum or inky
+accent; reserve intense reds for rare emphasis.
+
+Atmosphere: soft gradients, gentle shadows, and a bit of cinematic
+contrast (creamy surfaces with darker text/headers) to suggest
+intimacy without visual overload.
+
+Shapes: rounded, elongated pills, circles, and organic curves; avoid
+sharp, grid-heavy layouts.
+
+Layout and motion
+Home screen as a shared "Today" space: daily prompt, upcoming plans,
+small surprises, and suggestions.
+
+Emphasize paired elements: dual avatars, "our stats," mutual streaks
+of effort rather than individual gamification.
+
+Motion: slow, easing-heavy transitions and subtle highlight animations
+to evoke warmth and anticipation, not urgency.
+
+Typography and interaction language
+Type: elegant serif for headings/names and humanist sans for body;
+romantic but grounded.
+
+Interaction labels should feel like gestures: "Send a love note,"
+"Save this moment," "Add to our list," "Surprise them later."
+
+
+SPECIAL OCCASIONS PLANNER AESTHETICS
+======================================
+
+A special-occasions planner for couples should feel like a romantic
+concierge: elevated, celebratory, and a bit luxurious, but still
+warm and easy to use.
+
+Color, light, and atmosphere
+Palette: romantic + festive -- blush, rose, champagne, warm beige,
+with touches of gold or copper for "specialness," grounded by
+charcoal/plum for text and anchors.
+
+Use soft, glowing gradients and subtle blur or bokeh hints to evoke
+candlelight, fairy lights, or city-at-night vibes.
+
+Reserve the richest accents (gold, deep berry, dark teal) for key
+"event" elements.
+
+Typography, voice, and microcopy
+Type: elegant serif for headings (moments, dates, anniversaries) and
+readable sans for details so it feels romantic but not fussy.
+
+Voice: intimate, specific, and optimistic.
+
+Microcopy should reduce planning anxiety and frame the app as
+amplifying care, not measuring worth.

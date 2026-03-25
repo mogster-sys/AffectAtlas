@@ -1,0 +1,551 @@
+AFFECTATLAS -- DIGITAL ASSET GENERATION BRIEF
+================================================
+
+You are generating the complete digital asset suite
+for AffectAtlas, a mobile and web app that transforms
+emotions into complete design systems. The user
+selects an emotion on Plutchik's Wheel of Emotions
+and the entire interface transforms -- colors,
+typography, spacing, motion, shadows, depth, shapes,
+layout, iconography -- to EMBODY that emotion. It
+then provides a deep design advisory with
+research-backed guidance and exports production-ready
+design tokens in 9 formats.
+
+It is a design advisory tool for designers,
+therapists, brand strategists, and anyone who works
+with emotional communication.
+
+The visual identity centers on Plutchik's Wheel: a
+flower-shaped diagram of 8 primary emotions arranged
+in opposing pairs, each with 3 intensity levels
+(mild outer ring, moderate middle, intense center).
+The wheel is the app's core interaction -- users tap
+or rotate to select emotions.
+
+
+THE PLUTCHIK WHEEL (reference for all assets)
+----------------------------------------------
+8 primary emotions in opposing pairs, each with a
+signature color:
+
+  Joy ........... #FFD700 (warm yellow-gold)
+  Trust ......... #8BC34A (olive green)
+  Fear .......... #9C27B0 (deep violet)
+  Surprise ...... #03A9F4 (sky blue)
+  Sadness ....... #5C6BC0 (blue-indigo)
+  Disgust ....... #795548 (muddy brown-green)
+  Anger ......... #F44336 (hot red)
+  Anticipation .. #FF9800 (warm orange)
+
+8 dyad emotions sit between the primaries:
+  Love (Joy+Trust), Submission (Trust+Fear),
+  Alarm (Fear+Surprise), Disappointment
+  (Surprise+Sadness), Remorse (Sadness+Disgust),
+  Contempt (Disgust+Anger), Aggressiveness
+  (Anger+Anticipation), Optimism
+  (Anticipation+Joy)
+
+The wheel shape: concentric petal-like segments
+radiating from center, each primary occupying a
+45-degree arc. Intense emotions are at the center
+(smaller, saturated), mild emotions at the outer
+edge (larger, pastel). The overall shape resembles
+an 8-petaled flower.
+
+PLUS 13 extra "deepened" emotions that orbit the
+wheel as contextual extensions: Awe, Frustration,
+Contentment, Pride, Guilt, Inspiration,
+Embarrassment, Depression, Loneliness, Jealousy,
+Fright, Appalled, Confusion.
+
+TOTAL: 29 emotions, each with 3 intensity levels,
+each with a unique design system and deep advisory.
+
+
+WHAT THE APP ACTUALLY DOES (critical for accuracy)
+---------------------------------------------------
+When a user selects an emotion, they get:
+
+1. LIVE PREVIEW -- The entire screen transforms to
+   embody that emotion. Joy becomes warm gold with
+   bouncy rounded shapes. Fear becomes clinical
+   violet with sharp edges. Each of the 29 emotions
+   has a completely unique visual identity designed
+   by Stitch (an AI design tool), including:
+   - Unique headline + body font pairing
+   - Full color palette (7 semantic + 5 palette)
+   - Shape language (corner radii, corner style)
+   - Motion character (duration, easing, feel)
+   - Depth approach (shadows, glows, layers)
+   - Layout density and alignment
+   - Iconography style and weight
+
+2. DEEP ADVISORY -- A scrollable panel with 11+
+   sections of design guidance per emotion:
+   - Hero section with North Star concept
+   - Philosophy and rationale
+   - Color tokens with mildToIntense spectrum
+   - Typography specimens at multiple scale levels
+   - Spacing scale with density guidance
+   - Motion with bezier curve visualization
+   - Depth/shadow approach with live examples
+   - Shape/corner radius recommendations
+   - Layout alignment and density rules
+   - Iconography with Material Symbols examples
+   - Do's and Don'ts rules
+   - Thesaurus word cloud
+   - Emotional context (how this emotion relates
+     to and differs from similar emotions)
+
+3. VARIANT ADVISORIES -- Some emotions have bonus
+   variant screens. Love has 3 variants:
+   - Love (base): warm rose, candlelit intimacy
+   - Passion: deep wine, smoldering hearth
+   - Lust: neon violet, electric midnight
+   Users switch between variants via chip tabs at
+   the top of the advisory panel.
+
+4. EXPORT PANEL -- 9 production-ready export
+   formats, selectable via horizontally scrollable
+   tabs:
+   - CSS Custom Properties
+   - JSON (raw design system)
+   - Swift (iOS UIKit/SwiftUI)
+   - Kotlin (Jetpack Compose)
+   - AI Prompt (natural language design brief)
+   - Figma (Tokens Studio plugin format)
+   - Tailwind (theme extend config)
+   - SCSS (variables)
+   - W3C Design Tokens (DTCG standard)
+
+Each export includes the full design system:
+colors, typography, shapes, spacing, motion, and
+design guidance where available.
+
+
+BRAND PERSONALITY
+-----------------
+- Dark UI theme (background: #0A0A0B) with the
+  wheel as the chromatic centerpiece
+- Sophisticated but accessible -- not clinical,
+  not playful
+- The wheel GLOWS against the dark background
+- Typography: clean geometric sans-serifs
+- Tone: "Your emotions have a design language.
+  Discover it."
+- The app transforms in real-time -- the entire
+  screen shifts color, type, spacing, and motion
+  to match the selected emotion. This transformation
+  is the hero feature.
+- Each emotion has its own font pairing, creating
+  29 distinct typographic identities
+
+
+ASSET LIST
+==========
+
+1. APP ICON (1024x1024, required for stores)
+-----------------------------------------------
+Design a square app icon at 1024x1024 pixels.
+
+Concept: A simplified, stylized Plutchik wheel on
+a dark background (#0A0A0B or very dark charcoal).
+The wheel should be abstracted -- not a literal
+diagram but an artistic interpretation. Think of
+8 gradient petals radiating from center, each in
+its emotion's color, with soft glow/bloom effects
+where colors meet. The center could have a subtle
+"A" letterform or simply be the bright convergence
+point of all 8 colors.
+
+Requirements:
+- Must read clearly at 48x48px (phone home screen)
+- No text in the icon
+- The 8 Plutchik colors should all be present
+- Dark background with the wheel as glowing element
+- Avoid flat/clipart style -- this should feel like
+  a premium design tool
+- Rounded corners will be applied by the OS, so
+  design to the full square with important content
+  away from corners
+- The petals should have depth -- luminous, layered,
+  not flat fills. Think light emitting from within.
+
+Variations needed:
+- Standard (dark bg, colored wheel)
+- Monochrome (for system UI contexts)
+- Light background variant (for light mode contexts)
+
+
+2. SPLASH / LAUNCH SCREEN (1290x2796, iPhone 15 Pro)
+------------------------------------------------------
+A minimal launch screen shown while the app loads.
+
+Concept: Dark background (#0A0A0B) with the Plutchik
+wheel centered, rendered as a soft luminous glow --
+as if the wheel is emerging from darkness. Very
+minimal. No text except possibly "AffectAtlas" in
+a thin geometric sans-serif beneath the wheel.
+
+The wheel should feel like it is mid-rotation,
+slightly blurred at the edges to suggest motion.
+Colors bleeding softly into the dark background.
+
+
+3. APP STORE SCREENSHOTS (1290x2796, set of 6)
+------------------------------------------------
+Six screenshots that tell the app's story. Each
+should have a brief headline at top and show the
+app in use. Dark theme throughout.
+
+IMPORTANT: These must look like real app screenshots
+with a phone frame or device bezel, not abstract
+illustrations. Show actual UI elements -- the wheel,
+cards, text, buttons, panels.
+
+Screenshot 1: "Feel it. Design it."
+  The emotion wheel in its default state, glowing
+  against the dark background. The wheel is the
+  hero. Show the full app UI with the wheel
+  prominent in the lower portion and a preview area
+  above showing a neutral/default state.
+
+Screenshot 2: "Joy transforms everything."
+  The app with Joy selected -- warm golds and
+  yellows flooding the UI. The preview area shows
+  bouncy, celebratory design tokens. Typography
+  samples in Plus Jakarta Sans. Color palette strip
+  in warm ambers. The wheel is rotated to Joy.
+
+Screenshot 3: "Fear has a design language."
+  The app with Fear selected -- cold violets and
+  clinical whites. The preview shifts to tense,
+  atmospheric design. Typography in Epilogue.
+  The contrast with the Joy screenshot is dramatic.
+
+Screenshot 4: "29 emotions. 29 design systems."
+  Split-screen or grid showing 4 emotions side by
+  side (Joy, Fear, Anger, Sadness) -- each with
+  their distinct color, typography, and mood. Shows
+  the breadth of the system. Could be a 2x2 grid
+  of phone-sized previews.
+
+Screenshot 5: "Deep advisory for every emotion."
+  Show the advisory panel scrolled to a rich
+  section -- color tokens, typography specimens,
+  motion curves. Demonstrate the depth of design
+  guidance. Show one of the deepened emotions
+  (Trust or Inspiration) with its full advisory
+  panel open.
+
+Screenshot 6: "Export to 9 formats."
+  Show the export panel with the scrollable tab
+  strip visible (CSS, JSON, Swift, Kotlin, AI,
+  Figma, Tailwind, SCSS, Tokens). One tab selected
+  with formatted code visible in the output area.
+  A "copy" interaction. The message: this is a
+  practical production tool, not just a
+  visualization.
+
+
+4. PLAY STORE FEATURE GRAPHIC (1024x500)
+------------------------------------------
+Wide landscape banner for Google Play Store listing.
+
+Concept: The Plutchik wheel on the left side,
+partially cropped, with color rays extending across
+the dark background to the right. Text overlay:
+
+  "AffectAtlas"
+  (smaller) "Emotions have a design language"
+
+The 8 emotion colors should streak or bloom across
+the width, creating a spectrum effect. Premium,
+editorial feel. Not busy.
+
+
+5. OPEN GRAPH / SOCIAL PREVIEW (1200x630)
+-------------------------------------------
+Used when the app or landing page URL is shared on
+social media, Slack, Discord, etc.
+
+Similar to the feature graphic but optimized for
+the 1200x630 ratio. The wheel, the app name, the
+tagline. Must look compelling as a small thumbnail
+in a chat message.
+
+
+6. LANDING PAGE HERO (1440x900 or responsive)
+-----------------------------------------------
+A hero section graphic for a web landing page.
+
+Concept: Full-width dark background. The Plutchik
+wheel floats at center-left with a soft glow. To
+the right, a phone mockup showing the app with an
+emotion selected (Joy or Trust -- something warm
+and inviting for first impression). Emotional design
+tokens float around the phone: color swatches,
+typography samples, bezier curves, spacing guides.
+
+Headline copy suggestions:
+- "Your emotions have a design language. Discover it."
+- "29 emotions. 11 design dimensions. One wheel."
+- "From feeling to design system in one rotation."
+- "The design tool that feels what you feel."
+
+Sub-headline copy:
+- "AffectAtlas transforms Plutchik's Wheel of
+  Emotions into complete design advisories --
+  color, typography, spacing, motion, depth, shapes,
+  and more. Export to CSS, Figma, Tailwind, Swift,
+  Kotlin, and 4 more formats. Every emotion has a
+  visual language. We mapped it."
+
+
+7. ONBOARDING ILLUSTRATIONS (393x400, set of 3)
+-------------------------------------------------
+Three simple illustrations for first-launch
+onboarding screens within the app.
+
+Screen 1: "Spin the wheel"
+  A hand gesture (finger) touching and rotating
+  the Plutchik wheel. Motion lines suggest rotation.
+  The wheel's colors trail behind the spin. Simple,
+  dark background.
+
+Screen 2: "Watch it transform"
+  A before/after split: left side shows neutral
+  grey UI, right side shows the same UI flooded
+  with emotion color (e.g., warm gold for Joy).
+  An arrow or morphing effect connects the two.
+
+Screen 3: "Design with feeling"
+  Design artifacts floating: a color palette strip,
+  a typography specimen card, a bezier motion curve,
+  a spacing ruler. All tinted with different emotion
+  colors. The message: rich, multi-dimensional
+  design guidance.
+
+
+8. EMOTION FONT SPECIMENS (393x200, set of 29)
+-------------------------------------------------
+One card per deepened emotion showing its signature
+typography pairing. These appear in the app's
+advisory panels but could also be used for
+marketing.
+
+Each card:
+- Background in the emotion's surface color
+- Headline font name rendered IN that font at
+  display size
+- Body font name rendered in that font beneath
+- A short evocative phrase in the headline font
+- The emotion name as a subtle watermark or label
+
+Complete list of all 29 emotion font pairings:
+
+  JOY: Plus Jakarta Sans + Be Vietnam Pro
+    "The Radiant Conservatory" on warm amber bg
+  TRUST: Newsreader + Inter
+    "The Architectural Anchor" on blue-slate bg
+  FEAR: Epilogue + Inter
+    "The Clinical Void" on cold violet bg
+  ANGER: Oswald + Inter
+    "The Kinetic Furnace" on hot red-black bg
+  SADNESS: Lora + DM Sans
+    "The Fragile Editorial" on blue-grey bg
+  SURPRISE: DM Serif Display + Inter
+    "The Sudden Flash" on electric blue bg
+  DISGUST: Playfair Display + Inter
+    "The Organic Ruin" on murky brown-green bg
+  CONFUSION: Outfit + DM Sans
+    "The Shifting Ground" on warm muddied bg
+  ANTICIPATION: Urbanist + Nunito Sans
+    "The Forward Lean" on warm orange bg
+  CONTENTMENT: Lexend + Karla
+    "The Settled Basin" on warm cream bg
+  APPALLED: Chakra Petch + Overpass
+    "The Contaminated Surface" on sickly brown bg
+  GUILT: Spectral + Public Sans
+    "The Quiet Reckoning" on dark maroon bg
+  AWE: Cormorant + Source Sans 3
+    "The Vast Threshold" on deep navy bg
+  INSPIRATION: Sora + Figtree
+    "The Open Sky" on atmospheric blue-white bg
+  EMBARRASSMENT: Quicksand + Mulish
+    "The Exposed Nerve" on blush pink bg
+  DEPRESSION: Space Grotesk + Work Sans
+    "The Heavy Grey" on flat grey bg
+  LONELINESS: Josefin Sans + Cabin
+    "The Empty Room" on cold blue bg
+  JEALOUSY: Bodoni Moda + Archivo
+    "The Green Mirror" on dark envious green bg
+  FRIGHT: Saira Condensed + Libre Franklin
+    "The Sudden Dark" on void-black bg
+  FRUSTRATION: Barlow Condensed + IBM Plex Sans
+    "The Blocked Path" on blocked red-brown bg
+  PRIDE: Bitter + Manrope
+    "The Elevated Stage" on regal purple bg
+  LOVE: Crimson Pro + Rubik
+    "The Warm Embrace" on blush rose bg
+  SUBMISSION: Maven Pro + Lato
+    "The Lowered Gaze" on muted dove bg
+  ALARM: Exo 2 + Fira Sans
+    "The Red Signal" on urgent red bg
+  DISAPPOINTMENT: Vollkorn + Jost
+    "The Falling Short" on faded warm bg
+  REMORSE: Fraunces + Albert Sans
+    "The Heavy Reckoning" on deep brown bg
+  CONTEMPT: Prata + Red Hat Text
+    "The Cold Elevation" on cool grey bg
+  AGGRESSIVENESS: Teko + Titillium Web
+    "The Forward Strike" on dark aggressive bg
+  OPTIMISM: DM Sans + Nunito
+    "The Open Horizon" on warm golden-white bg
+
+
+EMOTIONAL COPY SUGGESTIONS
+============================
+
+App Store Description (Short):
+"AffectAtlas maps the invisible architecture of
+emotions. Select from 29 emotions on Plutchik's
+Wheel and watch as every design dimension --
+color, typography, spacing, motion, depth, shape --
+transforms to embody your selection.
+
+Joy bounces in warm gold with generous curves.
+Fear tightens into clinical violet with sharp edges.
+Anger explodes in crushing red with zero-radius
+corners. Sadness drifts in blue-grey with soft,
+rounded forms.
+
+Deep advisory panels with research-backed guidance
+across 11 design dimensions. Export production-ready
+tokens in 9 formats: CSS, Figma, Tailwind, Swift,
+Kotlin, SCSS, JSON, AI prompts, and W3C Design
+Tokens.
+
+For designers, therapists, brand strategists, and
+anyone who communicates through visual design.
+
+Every emotion has a design language. Discover yours."
+
+App Store Description (Long -- for Google Play):
+"AffectAtlas is a design advisory tool built on
+Plutchik's Wheel of Emotions. It maps 29 emotions
+to complete, production-ready design systems.
+
+SELECT an emotion -- any of the 8 primaries
+(Joy, Trust, Fear, Surprise, Sadness, Disgust,
+Anger, Anticipation), 8 dyads (Love, Submission,
+Alarm, Disappointment, Remorse, Contempt,
+Aggressiveness, Optimism), or 13 extended emotions
+(Awe, Contentment, Pride, Guilt, Inspiration,
+Embarrassment, Depression, Loneliness, Jealousy,
+Fright, Frustration, Appalled, Confusion).
+
+TRANSFORM -- the entire interface shifts to embody
+your selected emotion. Each emotion has a unique
+font pairing, color palette, corner radius, motion
+character, shadow style, spacing density, layout
+approach, and iconography. 29 distinct design
+identities, each researched and crafted by AI
+design tools.
+
+EXPLORE -- deep advisory panels provide design
+guidance across 11 dimensions: color tokens,
+typography specimens, spacing scales, motion
+curves, depth/shadow approaches, shape rules,
+layout alignment, iconography, do's and don'ts,
+thesaurus word clouds, and emotional context
+explaining how each emotion relates to similar
+ones.
+
+EXPORT -- production-ready design tokens in 9
+formats: CSS Custom Properties, JSON, Swift,
+Kotlin (Jetpack Compose), Figma (Tokens Studio),
+Tailwind config, SCSS variables, AI design prompts,
+and W3C Design Tokens (DTCG standard).
+
+Some emotions include variant advisories. Love
+offers three intensity variants -- Love (warm
+intimacy), Passion (deep smoldering), and Lust
+(electric midnight) -- each with its own complete
+advisory.
+
+Works fully offline. No account required. No
+server. Your emotions, your design language."
+
+Tagline options:
+- "Emotions have a design language."
+- "Feel it. Design it."
+- "The atlas of emotional design."
+- "From emotion to design system."
+- "Design that feels."
+- "29 emotions. 9 export formats. One wheel."
+
+Feature bullets:
+- Plutchik's Wheel with 8 primaries + 8 dyads + 13 extras (29 total)
+- Real-time UI transformation for each emotion
+- 29 unique font pairings (58 Google Fonts total)
+- Deep advisory panels: 11 design dimensions per emotion
+- Research-backed design guidance with do's, don'ts, and philosophy
+- Export to 9 formats: CSS, JSON, Swift, Kotlin, Figma, Tailwind, SCSS, AI, W3C Tokens
+- Variant advisories (Love includes Passion and Lust variants)
+- 87 design guidance entries (29 emotions x 3 intensities)
+- Emotional context cards showing how emotions relate
+- Works offline -- fully client-side, no account needed
+- Dark theme with emotion-driven color shifts
+
+
+STYLE GUIDELINES FOR ALL ASSETS
+=================================
+- Dark backgrounds (#0A0A0B or near-black)
+- The Plutchik wheel is always the chromatic hero
+- Prefer glow/bloom effects over flat color fills
+- Typography: geometric sans-serifs (Inter, Sora,
+  or similar) for marketing materials
+- Avoid clipart, cartoons, or emoji-style imagery
+- Premium, editorial, design-tool aesthetic
+- Think: if Figma and a psychology textbook had
+  a beautiful, emotionally intelligent child
+- The wheel should always feel like it could be
+  rotating -- suggest motion even in stills
+- Color should feel like it emerges from darkness,
+  not placed on top of it
+- No emojis anywhere in generated assets
+
+
+COMMON GPT MISTAKES TO AVOID
+==============================
+These are errors from previous generation attempts.
+Do NOT repeat them:
+
+- Do not render the wheel as a flat pie chart or
+  segmented circle. It is a FLOWER with PETALS --
+  organic, overlapping, luminous.
+- Do not use generic stock-photo phone mockups with
+  random UI. The app has a specific look: dark bg,
+  glowing wheel at bottom, preview area above.
+- Do not make the icon too detailed. At 48px it
+  must still read as "glowing flower shape."
+- Do not use bright white backgrounds anywhere.
+  The brand is DARK. Even light-mode variants
+  should use warm off-whites, not pure #FFFFFF.
+- Do not add drop shadows to the wheel. It GLOWS.
+  It emits light. Shadows darken; this wheel
+  illuminates.
+- Do not use generic sans-serif for emotion
+  examples. Each emotion has a SPECIFIC font pair
+  listed above. Joy is Plus Jakarta Sans, not Arial.
+- Do not show only 4-5 emotions. The app has 29.
+  When showing breadth, show at least 6-8 distinct
+  emotion states.
+- Do not make screenshots look like wireframes or
+  flat mockups. They should look like actual
+  rendered app screens with real content.
+- The export panel has 9 tabs, not 3. Do not show
+  only "CSS, JSON, Swift" -- show the full
+  scrollable tab strip.

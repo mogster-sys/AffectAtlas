@@ -1,0 +1,229 @@
+Jealousy — Perplexity Design Research
+=======================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR JEALOUSY
+==============================================
+
+Jealousy is most often expressed visually through tense, aggressive
+compositions using sharp contrasts and saturated greens or reds, with
+cramped layouts and "watching" motifs that suggest social threat and
+comparison.
+
+Core visual levers
+Hue: Dark green, yellow-green, and sickly green tones are strongly
+linked to envy and jealousy in Western contexts. Red also appears
+frequently in cross-cultural studies as a jealousy color (often
+overlapping with anger). Accents of black can reinforce intensity,
+secrecy, and hostility.
+
+Saturation and value: High saturation with mid-to-dark values feels
+intense and obsessive, suitable for "hot" jealous rage. Dirtied or
+greyed greens and yellows (murky, acidic palettes) imply sickness,
+toxicity, and corrosive envy.
+
+Shape, line, and motion
+Geometry: Acute angles, spikes, and jagged lines convey threat and
+aggression that map well to the hostile, defensive side of jealousy.
+Converging lines pointing toward a rival or object of desire
+emphasize fixation and comparison.
+
+Motion / animation cues: Subtle pulsing, twitchy micro-motions, or
+oscillation between target and rival can suggest rumination and
+checking behavior. Sudden, sharp transitions (snaps, jumps) echo the
+reactive flare-ups associated with jealousy and social threat
+reactivity.
+
+Layout and composition
+Spatial relationships: Triadic layouts (self-other-rival) with the
+viewer slightly excluded or pushed to the edge reflect classical
+"jealous triangle" structures. Overlapping elements where the rival
+partially occludes the desired object emphasize displacement and
+loss.
+
+Density and constraint: Crowded, off-balance compositions with
+cramped negative space increase tension and anxiety. Asymmetric
+weight toward the "rival" side of the screen can visually encode
+perceived unfairness.
+
+Texture, imagery, and UI cues
+Texture and surface: Rough, grainy, or scratched textures suggest
+irritation and corrosion, fitting jealous resentment. Glossy but
+slightly distorted reflections can reference comparison and
+self-image.
+
+Iconography / metaphors: Eyes, sideways glances, and peeking motifs
+align with heightened sensitivity to social threat and scrutiny.
+Locks, keys, and chains hint at possessiveness; cracks or fractures
+in shared objects hint at relationship strain.
+
+Practical palettes and patterns
+Toxic jealousy: dark green + yellow-green accents + black background.
+Romantic jealousy: deep red + dark green + muted skin tones, with
+high contrast focal areas.
+
+When to soften: For educational or reflective work, reduce
+saturation, add more neutral greys, and use smoother curves so the
+emotion reads as introspective envy rather than outright hostility.
+
+
+COLOR PALETTES THAT CONVEY JEALOUSY IN BRANDING
+=================================================
+
+Jealousy-oriented branding palettes usually center on dirty or dark
+greens, sometimes edged with yellow or red.
+
+Core jealousy hues
+Green is the primary jealousy/envy signal in Western branding; think
+mid-dark greens, yellow-greens, and slightly "sour" or murky tones.
+
+Yellow and yellow-green can add associations of betrayal,
+covetousness, and deception when used sparingly with green.
+
+Red, used minimally, can hint at possessive or romantic jealousy
+when paired with green or brass/gold.
+
+Palette templates
+Toxic envy: Deep forest green (#21422A) + near-black green (#051E0C)
++ muted yellow-green accent (#D2CC90). Reads as secretive,
+competitive, slightly menacing.
+
+Aspirational envy: Rich emerald or bottle green + gold/brass
+(#BDAC46) + dark claret red (#771229). Feels luxurious and
+status-coded, hinting at "I want what they have."
+
+Subtle jealous tension: Desaturated sage/olive (#9BB0A0, #829C88) +
+soft neutrals as base. Acidic yellow-green accent only on
+competitive/comparison elements.
+
+How to tune intensity
+Use jealous greens as 10-20% accent color, with neutrals carrying
+most surfaces for mild envy.
+
+Push toward darker, cooler greens with sharper contrast and add
+yellow or brass highlights for explicit jealousy.
+
+Pair color with scarcity cues (limited edition, exclusivity) and
+status imagery, which marketing research links to envy-driven
+purchasing.
+
+
+TYPOGRAPHY STYLES THAT EVOKE ENVY OR JEALOUSY
+===============================================
+
+Type for envy or jealousy tends to feel sharp, exclusive, and
+slightly "off," rather than warm or welcoming.
+
+Overall typographic tone
+Prefer expressive display or headline faces for jealous moments,
+with more neutral sans/serifs for body copy.
+
+Aim for a mix of sophistication and edge: jealousy is social and
+comparative, so typography should feel aspirational but a bit hostile
+or competitive.
+
+Serif and contrasty styles
+High-contrast modern serifs (Didone-style, fashion-adjacent) can
+evoke status, luxury, and social comparison that supports envy
+narratives.
+
+Tight letterspacing and tall x-heights intensify the "high-status
+but cold" effect, suggesting exclusivity and distance.
+
+Sharp sans and geometric forms
+Condensed, sharp-terminal sans-serifs (or rigid geometrics) convey
+competitiveness and emotional restraint, fitting resentful or
+controlled jealousy.
+
+Slightly reduced tracking and strong vertical emphasis make type feel
+more intense and watchful, echoing the comparative "me vs them"
+stance.
+
+Script and handwritten options
+Angular or spiky scripts communicate emotional volatility and
+dramatic jealousy, especially in titles.
+
+Avoid soft, rounded, bouncy scripts — those read as friendly or
+romantic rather than resentful.
+
+Micro-details that add jealousy
+Spacing: Slightly tight spacing (especially in caps) feels tense and
+competitive. Uneven or intentionally "off" spacing in display words
+can suggest instability or obsession.
+
+Weight and distortion: Medium-bold weights with sharp edges feel
+assertive and judgmental. Subtle vertical stretch, lean, or shadow
+(suggesting a "second self" or rival) reinforces duplicity and
+comparison themes.
+
+
+GREEN SHADE VARIATIONS AND EMOTIONAL MEANING
+==============================================
+
+Different greens can feel fresh, calm, luxurious, sickly, or jealous
+depending on lightness, saturation, and yellow content.
+
+Light and soft greens
+Mint, sea green, and pale "spring" greens signal freshness, peace,
+and renewal. These tints are linked with calm, healing, and balance,
+rarely with envy.
+
+Natural and earthy greens
+Sage, moss, and olive read as grounded, organic, and mature. Push
+them too dull and they start to feel stagnant or joyless.
+
+Deep and dark greens
+Forest, bottle, and dark emerald greens represent wealth, ambition,
+and luxury while also carrying potential associations with greed and
+possessiveness. With sharp contrast and competitive contexts, they
+lean toward envy or jealousy.
+
+Bright, vivid, and yellow-leaning greens
+Lime, chartreuse, and strong yellow-greens feel energetic and
+attention-grabbing. The same range is also tied to illness, toxicity,
+and envy — increasing yellow and saturation pushes the shade toward
+jealous or sickly.
+
+How to dial toward envy vs calm
+For calm/health: Lighter value, lower saturation, slightly
+blue-shifted greens (mint, soft jade, sage) plus plenty of neutral
+space.
+
+For envy/jealousy: Mid-to-dark greens with noticeable yellow or
+murkiness, higher contrast, and supporting cues (competitive imagery,
+status, scarcity).
+
+
+RED VERSUS GREEN FOR JEALOUSY IN UI
+=====================================
+
+Green is the clearer, more culturally consistent jealousy signal,
+while red is already overloaded with "error/danger/anger" meaning.
+
+How users read red vs green
+Red in UI: Strongly tied to errors, danger, and high arousal (anger,
+urgency, stopping).
+
+Green in UI: Widely used for success, "go," growth, and harmony, but
+culturally also linked to jealousy and envy.
+
+When to use green for jealousy
+Best for subtle envy states (comparisons, rankings, social status).
+Use darker, slightly yellow or "murky" greens, not bright success
+green. Combine with envious context (leaderboards, rival avatars,
+exclusivity copy).
+
+When red can work for jealousy
+Best for jealousy close to rage or possessiveness (dramatic narrative
+UI, warnings about destructive jealousy). Short-lived spotlight
+states: overlays, alerts, or narrative beats, not base theme. Risk:
+users may read red as generic error/danger, missing the jealousy
+nuance.
+
+Practical patterns for UI
+Keep green as success/neutral base. Introduce a slightly dirty dark
+green or yellow-green accent only in jealousy-tinged components.
+Reserve red for errors and critical events so its meaning stays
+clear. Support the color with iconography (eyes, triangles, exclusion
+scenes) and microcopy so the emotional intent is explicit.

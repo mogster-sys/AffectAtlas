@@ -1,0 +1,219 @@
+Inspiration — Perplexity Design Research
+=========================================
+Source: Perplexity AI research, early 2026
+
+Note: Perplexity interpreted "inspired" broadly as general emotional
+design mapping rather than the specific emotion of inspiration. The
+research below covers the general framework but also contains useful
+material on the specific aesthetics of uplift, openness, and
+motivation that distinguish inspiration from adjacent emotions.
+
+
+VISUAL DESIGN SYSTEM AESTHETICS — GENERAL EMOTIONAL MAPPING
+=============================================================
+
+Certain recurring visual patterns tend to evoke specific emotional
+responses, especially when systematized in a design system.
+
+Key dimensions in a design system
+Color (hue, saturation, brightness, contrast)
+Typography (type category, weight, spacing, case)
+Shape and components (rounded vs sharp, dense vs spacious)
+Layout and whitespace (minimal vs busy, aligned vs chaotic)
+Imagery and illustration style (abstract vs literal, playful vs
+serious)
+
+A design system's emotional profile comes from consistent choices
+across these axes, not from any one element alone.
+
+Example mappings: emotion to aesthetics
+Calm / trust / clarity: Muted blues, greens, desaturated palettes;
+sans-serif, regular weight, generous spacing; large whitespace, clear
+grids; rounded corners, soft shadows, slow animations.
+
+Energy / excitement / urgency: Saturated reds, oranges, high
+contrast; bold or condensed display type, tight spacing, uppercase;
+dense layouts with prominent CTAs; sharper corners, diagonal motifs,
+snappy microinteractions.
+
+Warmth / friendliness / play: Warm hues (peach, coral, yellow) with
+soft gradients; rounded sans-serifs or hand-drawn styles; asymmetry,
+organic shapes, illustrated icons; microinteractions with delight.
+
+Seriousness / authority: Cool or neutral palettes (navy, charcoal);
+serif or geometric sans, consistent hierarchy; strong grid, minimal
+ornament; limited motion, conservative iconography.
+
+Luxury / exclusivity: Deep dark bases with metallic or high-contrast
+accents; high-contrast serifs, wide tracking, large display sizes;
+sparse layouts, oversized imagery, slow transitions.
+
+Safety / comfort / reassurance: Soft mid-value colors (teals, soft
+greens, dusty blues); humanist sans or gentle serifs; clear
+affordances, forgiving error states, calm illustrations.
+
+System-level patterns to lock in emotion
+Color tokens: Mapping semantic roles to emotionally tuned swatches.
+Elevation and shadow scales: Softer shadows feel calm; sharp
+high-elevation shadows feel dramatic.
+Radius and corner tokens: Larger radii = friendly; sharp corners =
+technical or decisive.
+Motion guidelines: Duration, easing, and overshoot specify whether
+interactions feel playful, neutral, or efficient.
+Illustration and iconography style guides: Flat vs skeuomorphic,
+line vs filled, character design.
+
+
+COLORS THAT EVOKE TRUST, JOY, URGENCY, OR CALM
+================================================
+
+Trust: Medium to deep blues (navies, royal blues) signal reliability,
+stability, and professionalism. Cooler, slightly desaturated blue
+palettes feel secure and competent.
+
+Joy: Bright, saturated yellows and oranges are strongly linked to
+happiness, optimism, and playfulness as accents. Warm light tints
+feel friendly and sunny; overuse tips into anxiety.
+
+Urgency: Red is the canonical urgency color — high visibility, high
+arousal. Strong reds or red-orange accents against neutral
+backgrounds draw immediate attention. Keep sparse to avoid alarm
+fatigue.
+
+Calm: Soft blues (light to mid, not overly saturated) promote
+serenity and focus. Greens, especially natural tones, are linked to
+relaxation and balance, particularly paired with whites or soft
+neutrals.
+
+
+TYPOGRAPHY AND EMOTIONAL TONES
+================================
+
+Serif vs sans vs script
+Serif: Formal, trustworthy, stable, mature, authoritative.
+Sans serif: Modern, simple, straightforward, neutral, approachable.
+Script / decorative: Emotional, personal, artistic, romantic, playful.
+
+Shape: round vs angular
+Rounded: Friendly, casual, youthful, emotionally warm.
+Angular / rigid: Rational, technical, serious, professional.
+High contrast (thick-thin): Elegant, refined, luxurious, dramatic.
+
+Weight, spacing, and case
+Light weights: Subtle, airy, calm; can signal fragility.
+Bold weights: Confident, assertive, urgent.
+Generous spacing: Comfort and ease.
+Tight spacing: Tense, energetic, crowded.
+Sentence case: Natural, trustworthy, comfortable.
+ALL CAPS: Loud, emphatic, authoritative.
+
+Quick mapping: tone to typographic choices
+Calm / reassuring: Humanist or serif/sans hybrids, light-regular
+weights, sentence case, generous leading and tracking.
+
+Trust / authority: Classic serifs or neutral sans, moderate weight,
+consistent hierarchy, minimal decorative features.
+
+Joy / play: Rounded sans or expressive scripts, brighter color,
+looser layouts, occasional display faces.
+
+Urgency / impact: Bold weights, tighter spacing, short uppercase
+labels or strong sans display fonts.
+
+
+LAYOUT PATTERNS: OPENNESS VS CLAUSTROPHOBIA
+=============================================
+
+Patterns that feel open / spacious
+Generous whitespace: Consistent margins, padding, and gaps reduce
+cognitive load and create "breathing room."
+
+Clear grouping and hierarchy: Using proximity (tight within group,
+larger gaps between groups) helps users parse content quickly.
+
+Simple, regular grids: Consistent column and baseline grids produce
+order and ease of scanning.
+
+Limited simultaneous choices: Few key actions per screen, secondary
+options in menus or progressive disclosure.
+
+Patterns that feel cramped / claustrophobic
+High information density: Too many elements, tight padding, minimal
+gaps force users to process everything at once.
+
+Irregular spacing and misalignment: Inconsistent gaps and off-grid
+elements create visual noise.
+
+Complex grids and busy screens: More complex grids increase perceived
+spatial constraint.
+
+Overlapping or boxed-in regions: Too many card borders, dividers, or
+overlapping panels feel boxed-in.
+
+Practical layout levers
+To increase openness: Start from generous spacing and trim only where
+needed. Use larger gutters between columns.
+
+To reduce claustrophobia: Remove nonessential elements, combine
+related information, avoid stacking competing focal points. Ensure
+consistent vertical rhythm.
+
+
+MICROINTERACTIONS: DELIGHT VS REASSURANCE
+===========================================
+
+Delightful microinteraction examples
+Animated reactions and likes: Tap-and-hold emoji reactions, bouncing
+icons reward effort with a tiny "show."
+
+Playful hover and press states: Cards that "lift," buttons that
+squish or ripple, icons that wobble lightly.
+
+Characterful success moments: Brief character animation or
+celebratory tick after completing an action.
+
+Charming loaders and transitions: Branded loading animations
+transform wait time into brand storytelling.
+
+Reassuring microinteraction examples
+Instant, clear action feedback: Buttons that change state
+immediately (pressed, loading, success).
+
+Real-time validation and guidance: Inline checkmarks, strength
+meters, gentle error hints as you type.
+
+Calm success confirmations: Short success toasts, checkmark
+animations, smooth progress bars.
+
+Gentle error handling: Inputs that softly shake, highlight, and
+explain in plain language.
+
+Design traits
+Delight: More expressive motion, character/illustration, occasional
+sound, tied to non-critical or celebratory moments.
+
+Reassurance: Minimal but immediate motion, clear state changes,
+predictable patterns, focused on reliability.
+
+
+MEASURING USER EMOTION RESPONSE TO VISUAL DESIGN
+==================================================
+
+Standardized emotion scales: Valence-arousal ratings (SAM, PANAS),
+visual instruments (PrEmo, Emocards).
+
+In-product self reports: Micro-surveys ("How did this page make you
+feel?"), experience sampling.
+
+Behavioral and task performance: Completion time, error rates,
+abandonment, hesitation, rage-clicks, scroll depth, backtracking.
+
+Facial, eye-tracking, and physiological data: Facial expression
+analysis, eye-tracking (fixation, pupil dilation), heart rate, GSR,
+EEG.
+
+Controlled studies: A/B testing with emotion outcomes, task-based
+lab sessions with structured emotion tools.
+
+Emotion scorecard: Map findings onto axes like "calm-stressed,"
+"trusting-doubtful," "delighted-bored." Track release over release.

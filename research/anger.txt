@@ -1,0 +1,209 @@
+Anger — Perplexity Design Research
+====================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR ANGER
+==========================================
+
+Anger in visual design is usually expressed through high-intensity,
+high-contrast visuals: saturated warm colors (especially red),
+sharp/angular shapes, dense or chaotic layouts, and aggressive
+motion or interaction patterns. Designers often combine these with
+visual "stressors" like abrupt changes, jarring animations, or
+harsh typography to communicate urgency, conflict, or hostility.
+
+
+COLOR AND CONTRAST
+------------------
+Use saturated red as the dominant cue for anger, often paired
+with black or very dark neutrals to suggest danger, aggression,
+or hostility.
+
+Push contrast (bright on dark or dark on bright) to make elements
+feel urgent, loud, and hard to ignore.
+
+Limit the palette to a few clashing or very close warm hues
+(reds, oranges) to create a sense of heat, pressure, or tension.
+
+
+SHAPES, LINES, AND COMPOSITION
+-------------------------------
+Favor sharp, angular forms (triangles, jagged edges, spikes)
+over rounded shapes to imply threat, conflict, and aggression.
+
+Use diagonal or off-balance compositions to convey instability
+or volatility instead of calm symmetry.
+
+Introduce visual noise or density — crowded elements, overlapping
+shapes, or compressed spacing — to create a feeling of congestion
+and irritation.
+
+
+TYPOGRAPHY AND ICONOGRAPHY
+--------------------------
+Choose heavy, condensed, or blocky type with sharp terminals and
+tight tracking to feel loud and forceful rather than friendly.
+
+Use uppercase, bold, and short, punchy words to signal shouting,
+warnings, or commands.
+
+Icons can mirror angry facial cues (downturned brows, tight mouths)
+or hazard symbolism (exclamation marks, hazard triangles, flames)
+to make the emotional intent explicit.
+
+
+MOTION, INTERACTION, AND FEEDBACK
+----------------------------------
+Apply sudden, snappy transitions and microinteractions (quick
+shakes, sharp scaling, flashes of red) to simulate outbursts
+or "spikes" of anger.
+
+Use vibrating, jittery, or rapidly oscillating motion to convey
+agitation or simmering tension.
+
+Couple negative events (errors, destructive actions) with strong
+visual feedback: red overlays, harsh sounds, and full-screen
+warnings to embody intense negative affect.
+
+
+PRACTICAL USAGE NOTES
+---------------------
+Anger-related aesthetics are effective for warning states,
+conflict visualization, alerts, and narrative UI moments,
+but they quickly fatigue or stress users if used as a baseline.
+
+In most design systems, angry visual tokens are scoped to error,
+danger, or escalation states while the default system remains
+more neutral or positively "activated."
+
+
+AGGRESSIVE VISUAL ELEMENTS
+===========================
+
+Color and light
+- Saturated red (often with black/dark gray) strongly suggests
+  aggression, danger, anger when used prominently.
+- Very high contrast creates visual "shouting" and makes the
+  design feel intense and demanding.
+- Harsh combinations like red + black + acid yellow push the
+  palette toward "toxic" rather than harmonious.
+
+Shape, line, and layout
+- Sharp, angular shapes (triangles, spikes, hard-edged polygons)
+  are read as threatening or aggressive.
+- Jagged lines, strong diagonals, and off-balance compositions
+  introduce instability and tension.
+- Dense, crowded layouts with minimal breathing room, overlapping
+  elements, and compressed whitespace feel claustrophobic/hostile.
+
+Typography and texture
+- Fonts with sharp, pointed terminals, hard angles, and condensed
+  proportions feel harsh, angry, or intimidating.
+- Heavy weights, all caps, tight tracking, and short punchy words
+  intensify the sense of shouting or confrontation.
+- Distressed or rough textures — scratches, grunge, noisy
+  backgrounds — add a raw, hostile, "battle-worn" quality.
+
+Motion and interaction
+- Snappy, abrupt transitions, fast in-out animations, and
+  shake/error jolt effects make interactions feel aggressive.
+- Jittery or oscillating motion, flashing red states, and rapid
+  pulsing reinforce agitation or rage-like energy.
+- Harsh feedback on errors (full-screen red, strong vibration,
+  loud alerts) amplifies perceived hostility.
+
+Dialing aggression down
+- Invert: cooler/muted colors, rounded shapes, stable grids,
+  generous spacing, open mixed-case type with softer contrast.
+
+
+COLOR PALETTES ASSOCIATED WITH ANGER
+=====================================
+
+Core anger hues
+- Dominant red (mid to dark): widely associated with anger,
+  aggression, dominance, and danger.
+- Deep crimson / blood red: feels more serious, violent, or
+  vengeful than bright candy reds.
+- Very bright scarlet: reads as explosive, urgent, "shouting."
+
+Supporting colors that amplify anger
+- Black and very dark gray: intensify red's danger associations;
+  red-on-black or black-on-red is common in aggressive branding.
+- Dark or burnt orange: bridges from warning into heated aggression.
+- Dirty warm neutrals (maroon, brownish reds): "blood-and-mud"
+  feel without eye-searing intensity.
+
+Typical UX palettes for anger states
+- Error/danger: strong red for icon/border/text + light red/rose
+  background for legibility while maintaining critical tone.
+- Severity ramps: yellow (caution) -> orange (serious) -> red
+  (critical), visually mapping rising risk/anger.
+- Hostile dashboards: neutral/cool base with red reserved for
+  out-of-range metrics and critical incidents.
+
+Branding patterns
+- Bold red + black/white: extreme sports, gaming, automotive —
+  confrontational, dominant look.
+- Red + metallics (silver, gunmetal): weaponlike, high-tech
+  aggression for combat/action/power-tool brands.
+- Red-heavy logos increase perceived aggression and anger
+  compared with blue or gray.
+
+When to soften
+- Use lighter reds (coral, pink) or shift toward warm oranges
+  when you want energy without outright anger.
+- In trust-critical domains (health, finance, mental health),
+  keep pure "anger red" minimal.
+
+
+RED CTA CONTRAST RATIOS
+========================
+
+Minimums
+- Text on red button: at least 4.5:1 contrast (WCAG AA).
+  Large/bold labels (18-24px+) can drop to 3:1 but 4.5:1 safer.
+- Button vs surrounding surface: at least 3:1 for clear
+  perception as a UI component.
+
+Visibility sweet spot
+- Text-on-button: roughly 5:1-7:1 — crisp but not painfully stark.
+- Button vs page: around 3.5:1-6:1 — pops without looking like
+  a visual error state.
+
+Avoid extremes
+- Very low contrast (<3:1) makes red CTAs easy to miss.
+- Maximal stark contrast (pure red + pure black/white + black
+  text) can feel visually "shouty" and cause strain.
+
+
+SATURATION AND CONTRAST EFFECTS ON ANGER PERCEPTION
+====================================================
+
+Saturation
+- High saturation = stronger anger cue. Vivid reds are more
+  strongly associated with anger than desaturated versions.
+- Saturated + bright colors produce higher arousal, aligning
+  with high-energy emotions like anger or rage.
+- In low-saturation ranges, hue matters less; darker versions
+  can still heighten perceived anger.
+- Lowering brightness in low-saturation schemes can intensify
+  perceived anger to levels similar to vivid red ("dark anger").
+
+Contrast
+- More contrast = stronger emotional impact. Increasing scene
+  contrast generally increases emotional response.
+- For negative content, higher contrast makes anger/fear/tension
+  feel sharper and more impactful.
+- Red elements around faces or scenes make anger cues easier
+  to detect — consistent with "seeing red" metaphor.
+- When contrast is reduced, anger cues feel more muted.
+
+To amplify anger (critical errors, hostile states):
+- Use saturated red with strong contrast against neutrals.
+- Keep brightness either clearly high or clearly low, not muddy.
+
+To soften anger (frequent errors, sensitive flows):
+- Lower saturation, lighten reds toward pink/coral.
+- Avoid extreme contrast, surround with calming blue/green.

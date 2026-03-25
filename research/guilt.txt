@@ -1,0 +1,275 @@
+Guilt — Perplexity Design Research
+====================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR GUILT
+===========================================
+
+Guilt in visual design usually reads as negative, self-focused, and
+slightly agitated, but with a strong reparative or "making amends"
+undertone rather than pure collapse or rage.
+
+Emotional position
+In circumplex/valence-arousal terms, guilt sits in unpleasant,
+moderately aroused territory, near shame and embarrassment but more
+action-focused ("I did something wrong; I should fix it").
+
+Compared with shame ("I am bad"), guilt is more tied to specific
+acts and tends to prompt repair, apology, and responsibility-taking.
+
+Color tendencies
+Palettes lean toward muted, slightly dirty or cooled warm hues
+(browns, muted reds, grayish blues), suggesting burden and
+seriousness without the full collapse of deep depression or the heat
+of anger.
+
+Darker or grayer reds, maroons, or brown-reds rather than
+ultra-saturated red (reads as anger). Sometimes paired with cool
+neutrals to signal reflection and moral weight.
+
+Layout and composition
+Compositions that feel constrained, "weighed down," or slightly
+off-center, echoing moral imbalance and preoccupation.
+
+A primary element pulled slightly low in the frame (heaviness).
+
+Reduced openness compared with "sad" loneliness (less vast void,
+more inward pressure).
+
+Subtle crowding or overlap that hints at unresolved tension rather
+than chaotic aggression.
+
+Typography and voice
+Quiet, controlled, and a bit tense: clean sans or restrained serifs
+in lighter weights, with slightly tight line or letter spacing
+compared with relaxed "content" states.
+
+Overly playful faces undercut guilt; fully broken or "contaminated"
+type pushes toward disgust or appalled rather than morally troubled.
+
+Motion and interaction
+Subdued but not inert: small hesitations, micro "pull-backs," or
+soft decelerations suggest reluctance, second thoughts, weight of
+conscience.
+
+Strong shakes, flashes, or violent snaps read as anger or alarm.
+Guilt is better expressed with slow fades, slight shrinking, or
+gentle dimming, implying withdrawal and reflection.
+
+
+COLOR PALETTES THAT CONVEY GUILT
+==================================
+
+Guilt color tends to live in a muted, heavy, morally "serious"
+space: darker or grayer reds, browns, charcoals, and blue-grays
+rather than bright primaries or cheerful warmth.
+
+Hue choices
+Blended red-blue-black family: Survey work ties guilt and regret to
+combinations of red (moral heat, wrongdoing), blue (sadness), and
+black (burden/darkness).
+
+Grayed reds and maroons: desaturated crimson, wine, oxblood, and
+brown-red read as remorseful or morally serious rather than rage.
+
+Blue-grays and slate: guilt borrows somber blues but pushes them
+darker or dirtier to indicate weight and self-reproach.
+
+Lightness and saturation
+Low-medium saturation with medium-low lightness: colors feel dimmed
+and heavy, not fresh or energetic.
+
+Avoid very bright pure hues (pushes toward joy/excitement) and
+extremely dark fully black schemes (reads as nihilistic or horror).
+
+Neutrals and supporting tones
+Charcoal, dark gray, and "dirty" neutrals (warm gray, taupe,
+brown-gray) signal ambiguity, remorse, and internal conflict.
+
+Small accents of muted red or rust stand in for the "sting" of
+regret or error, especially in text or icons.
+
+Practical palette pattern for UX
+Base background: dark blue-gray or charcoal (slate, graphite) to
+anchor seriousness and introspection.
+
+Surfaces/cards: slightly lighter cool or neutral gray with hint of
+blue or brown to keep the scene heavy but legible.
+
+Primary guilt accent: desaturated deep red/maroon or brown-red for
+key markers, avoiding neon or fire-engine reds.
+
+Secondary accent: muted teal or dull blue for links/actions, keeping
+them subdued so the palette feels contrite rather than confident.
+
+
+TYPOGRAPHY CHOICES TO EVOKE GUILT OR REMORSE
+=============================================
+
+Typography that evokes guilt or remorse usually feels quiet, heavy,
+and slightly tense: controlled rather than chaotic, self-critical
+rather than confident or playful.
+
+Font category and personality
+Humanist or transitional serifs and soft sans-serifs that feel
+serious and reflective. Avoid exuberant display faces, casual
+scripts, or "happy" rounded fonts.
+
+Very harsh aggressive type (ultra-condensed all-caps, brutalist
+grotesks) tips into anger or hostility. Overly decorative scripts
+feel melodramatic rather than genuinely contrite.
+
+Weight, case, and spacing
+Lighter to regular weights for body text and apologies to signal
+vulnerability. Bold reserved for short painful words or key
+admissions ("sorry", "I was wrong").
+
+Avoid shouty all-caps. Mixed case or occasional small caps reads as
+more self-controlled and introspective.
+
+Slightly tighter tracking and modest line spacing introduce inward
+pressure while keeping readability intact.
+
+Layout, rhythm, and hierarchy
+Downward motion in type layout (lines that step or slope down,
+headlines that "sit low") supports feelings of regret and emotional
+descent.
+
+Understated hierarchy (smaller headings, fewer loud size jumps)
+makes the interface feel restrained and self-aware.
+
+Color and contrast on type
+Dark gray, muted maroon, and blue-gray for headings and key phrases.
+Avoid bright saturated hues.
+
+Slightly softened contrast (dark gray on off-white or slate instead
+of pure black on white) feels less confrontational and more
+confessional.
+
+Micro-stylistic cues
+Small visual hesitations — ellipsis, soft line breaks, slightly
+indented or "pulled back" apology lines — echo second thoughts and
+self-questioning when used sparingly.
+
+
+IMAGERY AND ICONOGRAPHY SUGGESTING GUILT
+==========================================
+
+Imagery and iconography that suggest guilt draw on metaphors of
+weight, stain, shadow, and blame, plus self-protective body language.
+
+Core metaphors
+Burden / weight: Heavy chains, anchors, backpacks, or a "guilt
+monster" on someone's back. Stones or loads strapped to the body
+make guilt feel like something literally dragging down.
+
+Shadow / cloud / haunting: Dark storm clouds hovering over or
+following a figure. Silhouettes with elongated shadows or a darker
+duplicate figure behind suggest guilt that lingers and haunts.
+
+Stain / "blood on the hands": Marks, dirt, blood spots, or ink
+stains on hands, clothes, or a surface reference classic
+"damned spot" guilt imagery. Persistent smudges on otherwise clean
+UI elements stand in for actions that cannot be undone.
+
+Figure, posture, and blame imagery
+Body language: Hunched shoulders, bowed heads, figures covering
+faces or eyes with hands. Self-hugging, inward-turned legs, or
+sitting with head on table code as inward self-blaming guilt.
+
+Being judged or blamed: Hands pointing accusatorily at a small
+central figure, or ring of pointing fingers around them. Composition
+where guilty figure is much smaller than pointing hands or gavel
+underscores power imbalance and social condemnation.
+
+Iconography patterns for UI
+Person icon with drooped head or slumped posture.
+Head with hands over face or eyes.
+Small figure under cloud, rain, or spotlight.
+Simplified silhouette with lowered head.
+Single finger-point icon next to small person icon.
+Cloud-over-head badge for "we did something wrong" states.
+
+Environmental and narrative cues
+Trails, knots, and locks: Footprints or smears following a character
+signal consequences that follow them. Knots in rope, locks on
+chests, choked vines = "knot in the stomach" and "trapped by guilt."
+
+Mirror and reflection: Cracked mirrors or distorted reflections
+where guilt forces self-confrontation. Subtle reflected or ghosted
+duplicate of an avatar hints at inner judgment.
+
+
+SPACING AND LAYOUT FOR GUILT
+==============================
+
+Spacing and layout can make guilt feel like being quietly singled out
+and slightly compressed — under a soft spotlight rather than chaos.
+
+Negative space and exposure
+A guilt screen works well when one key element (apology text,
+consequence summary, avatar) sits alone in calm negative space,
+feeling exposed but not theatrically humiliated.
+
+Compared with loneliness layouts (huge emptiness, tiny subject),
+guilt benefits from a "spotlight" feel: clear field around focal
+card, secondary content present but visually quiet.
+
+Compression and "weight" in spacing
+Slight vertical compression around the main card — less padding
+above and below than neutral screens — conveys heaviness like a low
+ceiling pressing down.
+
+Local proximity a touch tighter: supporting lines close to the
+headline so the message feels concentrated and serious rather than
+airy or dismissible.
+
+Positioning and hierarchy
+Placing primary guilt element slightly lower than center with more
+empty space above than below visually suggests weight bearing down.
+
+Headings and CTAs clear but not triumphant: smaller titles than
+success states. One primary action ("Make this right", "Review and
+fix") plus a neutral secondary path.
+
+Flow and perceived control
+Guilt moment works as a narrower, slower step: fewer elements, more
+explanation, slightly reduced visual width to create a pause for
+reflection.
+
+To keep it guilt, not manipulative shame: use neutral labels for
+alternative actions (no snarky "No, I don't care"), make exit paths
+visible, frame as "what happened and what you can do" not "you are a
+bad person."
+
+
+INTERFACES DESIGNED TO TRIGGER GUILT (CAUTIONARY)
+===================================================
+
+Several interface patterns are documented as trying to make users
+feel guilty so they choose the "preferred" action. These are
+cautionary examples of what NOT to do in ethical design.
+
+Confirmshaming dialogs
+Opt-out labels framed as self-insulting ("No, I don't want to stay
+alive," "No, I prefer to bleed to death," "No, I hate saving
+money"). Opting out means explicitly endorsing a foolish or uncaring
+statement.
+
+Guilt-based unsubscribe and retention flows
+Unsubscribe emails where leaving requires clicking emotionally loaded
+text ("I'm ready to let go"), paired with imagery of suffering
+animals. Staying framed as warm and responsible; leaving framed as
+rejecting help.
+
+Donation interfaces leaning on guilt
+"Guilt principle" designs where donors receive gifts or emotionally
+loaded content that makes them feel bad if they don't donate.
+Headlines implying "if you walk away now, who will help them?"
+
+Pattern-level criticism
+Confirmshaming described as "guilt-inducing language that manipulates
+or shames users into making a choice that benefits the business."
+These tactics can produce short-term conversions but damage trust and
+brand reputation. Regulators are starting to target these patterns.

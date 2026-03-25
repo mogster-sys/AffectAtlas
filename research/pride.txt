@@ -1,0 +1,289 @@
+Pride — Perplexity Design Research
+====================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR PRIDE
+==========================================
+
+Pride in visual design tends to read as elevated, expansive, and
+luminous: strong verticals, upward or center-focused compositions,
+confident contrast, and rich warm or regal tones.
+
+Core visual qualities
+Upward / vertical emphasis: Tall proportions, vertical lines, and
+elements that "rise" on the page echo the bodily posture of pride
+(head up, chest open).
+
+Expansive spacing: Generous white space around key elements suggests
+importance and status rather than crowding or neediness.
+
+Clear hierarchy: A strong focal point, with secondary elements
+clearly subordinated, mirrors a sense of earned prominence.
+
+Color and light
+Warm, saturated hues: Deep reds, rich golds, and warm accents signal
+energy, confidence, and celebration.
+
+Regal / "royal" palettes: Combinations of purple, deep blue, and red
+communicate luxury, dignity, and ceremonial pride.
+
+High contrast and luminosity: Bright highlights against darker
+grounds make key elements feel spotlit, like being "on stage."
+
+Typography
+Sturdy, confident type: Moderate-to-heavy weights and well-structured
+serif or geometric sans faces communicate authority and reliability.
+
+Vertical stress and tight alignment: Upright, well-aligned type
+blocks feel disciplined and dignified rather than casual or playful.
+
+Limited, purposeful variety: One or two typefaces with clear
+hierarchy avoids visual "insecurity" and reinforces a composed,
+assured tone.
+
+Layout, form, and imagery
+Symmetry and balance: Centered layouts or symmetrical frames evoke
+ceremony, honor, and stability.
+
+Strong geometric forms: Columns, pedestals, arches, shields, and
+crests visually encode status, achievement, and tradition.
+
+Representations of peak or elevation: Imagery that implies summits,
+podiums, flags, or upward motion reads as triumph and pride.
+
+Interaction and motion
+Deliberate, smooth transitions: Ease-in-out animations and slight
+"lift" or scale on key achievements create ceremonial
+acknowledgement.
+
+Reward-focused microcopy and states: Highlighting milestones with
+visually distinct states (glow, wreaths, or frames) reinforces
+pride.
+
+
+VISUAL DESIGN ELEMENTS THAT CONVEY PRIDE IN BRANDING
+======================================================
+
+Pride in branding usually reads as confident, elevated, and
+dignified: bold structure, clear hierarchy, and rich, distinctive
+color and type choices.
+
+Color and contrast
+Rich, saturated palettes: Deep reds, purples, blues, and golds
+signal status, confidence, and premium value.
+
+High contrast emphasis: Strong contrast between brand colors and
+backgrounds helps key marks feel important and "spotlit."
+
+Consistent signature color: A recognizable hero color across
+touchpoints builds distinctiveness and pride of ownership.
+
+Typography
+Bold, clean letterforms: Typefaces with strong construction and
+clear strokes convey confidence, inspiration, and pride.
+
+Limited, disciplined type system: One primary and one secondary face
+with consistent hierarchy communicates self-assurance.
+
+Upright, well-aligned layouts: Tight alignment and stable baselines
+feel authoritative and composed.
+
+Logo, shapes, and composition
+Strong central marks: Logos that sit clearly and confidently (often
+centered or with generous clearspace) assert importance and status.
+
+Geometric, shield, or crest-like forms: These shapes reference
+heritage, achievement, and institutional pride.
+
+Structured grids and white space: Clear structure and ample negative
+space make the brand feel in control and high-value.
+
+Imagery and graphic language
+Heroic or celebratory imagery: Photography showing people in upright
+postures, achievements, or ceremonial moments reinforces pride.
+
+Consistent visual motifs: Repeated patterns, textures, or icon
+systems build recognizability and a sense of owning a strong visual
+world.
+
+Elevated styling: High production values in lighting, composition,
+and retouching push imagery toward aspirational.
+
+Systems and application
+Rigorous consistency: Tightly controlled logo use, color, and
+typography create a brand that people feel proud to represent.
+
+Confident motion: Smooth, purposeful, restrained motion supports a
+composed, dignified expression of pride.
+
+
+COLOR PALETTES THAT EVOKE PRIDE
+================================
+
+Color palettes that evoke pride lean toward rich, saturated,
+"elevated" hues, often combining warmth (energy, success) with depth
+(status, dignity).
+
+Core "pride" hues
+Purple / violet: Frequently associated with power, luxury, and
+pride, giving a dignified, ceremonial feel.
+
+Deep red: Conveys passion, power, and dominance; useful as accent
+or primary when pride is competitive or triumphant.
+
+Gold / amber: Reads as success, high value, and confidence; supports
+pride when paired with darker grounding tones.
+
+Example palette directions
+Regal pride: Deep violet (#4B0082) + royal blue (#1F3C88) + rich
+crimson (#B11226) + metallic gold (#D4AF37) for dignified,
+status-oriented pride.
+
+Celebratory pride: Bright red (#FF3B30) + vivid orange (#FF8A00) +
+sunshine yellow (#FFD60A) + emerald green (#00A86B) for energetic,
+communal pride.
+
+Inclusive pride (rainbow-inspired): The classic six Pride flag colors
+— red, orange, yellow, green, blue, purple — signal diversity,
+unity, and community pride.
+
+Supporting tones and contrast
+Dark bases: Charcoal, deep navy, or black help bright or metallic
+accents feel more ceremonial.
+
+Controlled neutrals: Warm greys, cream, or off-white give space for
+saturated accents to "stand tall" without visual chaos.
+
+How to build a pride-focused palette
+Start with 1-2 dominant colors (e.g., purple + gold, or deep red +
+gold) that signal status and confidence. Add 1-2 supporting brights
+for energy, plus 2-3 neutrals for balance and usability.
+
+
+TYPOGRAPHY STYLES ASSOCIATED WITH PRIDE
+========================================
+
+Typography that evokes pride tends to look confident, structured,
+and elevated: bold, clean forms with clear hierarchy and strong
+presence.
+
+Typeface categories
+Bold serif and slab serif: Traditional serifs signal formality,
+respectability, and authority. Slab serifs add robustness and
+strength.
+
+Geometric / neo-grotesque sans: Clean, well-built sans-serifs with
+clear strokes feel modern yet confident.
+
+Weight, scale, and spacing
+Strong weight and size: Larger, bolder fonts are consistently linked
+to confidence, importance, and power.
+
+Upright, non-italic forms: Regular upright styles feel more stable
+and authoritative than italics.
+
+Controlled tracking and leading: Moderate letterspacing and line
+spacing create a composed, deliberate look.
+
+Shape and detail
+Clean, precise contours: Type with sharp, well-defined edges and
+consistent stroke weight reads as professional and competent.
+
+Limited ornament: Minimal flourishes keep the voice serious and
+self-assured.
+
+Vertical emphasis: Fonts with relatively tall x-height and upright
+proportions visually echo a "standing tall" posture.
+
+Hierarchy and composition
+Clear typographic hierarchy: Strong, differentiated heading levels
+help headlines feel like declarations or statements of achievement.
+
+Centered or hero headlines: Prominent headings placed centrally or
+in hero areas create a ceremonial, announcement-like feel.
+
+
+IMAGERY AND ICONOGRAPHY THAT COMMUNICATE PRIDE
+================================================
+
+Imagery and iconography that communicate pride often show people or
+symbols that are elevated, expanded, and openly displaying
+achievement or identity.
+
+Human posture and gestures
+Expanded posture: Upright stance, chest out, head slightly tilted
+back, arms raised or on hips — empirically linked to nonverbal
+expression of pride.
+
+Hero moments: Figures on a podium, at a summit, crossing a finish
+line, or holding a trophy above their head.
+
+Achievement symbols
+Trophies, medals, and ribbons: Gold medals, cups, stars, and laurel
+wreaths are widely used shorthand for success and earned pride.
+
+Podiums, flags, and banners: Standing on a podium or raising a flag
+"high" is a common metaphor for visible, public pride.
+
+Identity and community pride
+Pride flags and rainbows: Rainbow flags and related iconography
+explicitly signal LGBTQ+ pride, belonging, and positive identity.
+
+Groups celebrating together: Teams or communities smiling, embracing,
+or marching under shared symbols show collective pride and
+solidarity.
+
+Icon and symbol styles
+Elevated or "crowned" icons: Crowns, halos, rays, or light bursts
+around a figure or symbol emphasize importance.
+
+Strong, upright shapes: Shields, tall rectangles, mountains, and
+upward arrows suggest standing tall and upward status movement.
+
+
+LAYOUT AND COMPOSITION CUES FOR PROUD AESTHETICS
+==================================================
+
+Layouts that feel proud usually look elevated, centered, and clearly
+hierarchical: one element "stands tall" with strong support.
+
+Axis, symmetry, and balance
+Vertical emphasis: Strong vertical axes and upward-leading lines are
+linked to "noble, dramatic, inspirational" and "successful" moods.
+
+Symmetry and stable balance: Centered or near-symmetrical
+compositions create formality and gravitas.
+
+Hierarchy and focal point
+Singular, clear hero: A dominant focal element larger, higher, or
+more contrasting than anything else acts as the "hierarch" in the
+layout, visually asserting status.
+
+Tiered support elements: Subheads, imagery, and details arranged in
+clear secondary and tertiary tiers reinforce the idea that everything
+exists to support the central achievement or identity.
+
+Spacing and proportion
+Generous white space around the hero: Ample negative space isolates
+the main subject, signaling importance and confidence.
+
+Tall formats and proportions: Portrait or vertically elongated
+frames, tall columns, and stacked structures subtly echo a "standing
+tall" posture.
+
+Shape and directional cues
+Upright, solid shapes: Rectangles, columns, and shield-like forms
+suggest stability, strength, and status.
+
+Upward movement: Diagonals and compositional flow that rise
+left-to-right or bottom-to-top support feelings of optimism,
+success, and "rising above."
+
+Practical layout patterns
+Centered hero layout: Central headline or mark, vertically aligned
+with supporting copy below and generous margins — ceremonial /
+award-like pride.
+
+Vertical banner layout: Strong top section (badge, logo, or figure)
+with stacked sections beneath, implying hierarchy from "crown" down.

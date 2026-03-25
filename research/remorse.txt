@@ -1,0 +1,156 @@
+Remorse -- Perplexity Design Research
+=======================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR REMORSE
+=============================================
+
+Remorse tends to map to a restrained, heavy, reflective aesthetic:
+muted, desaturated, and slow rather than loud or energetic.
+
+Color and tone
+Use low-saturation, cool or neutral hues: blue-greys, charcoal,
+muted browns, and off-whites signal heaviness, ambiguity, and
+"shadow" without cartoon villainy.
+
+Avoid high-chroma primaries; if you use red, keep it deep, dark,
+or sparing to suggest a sting of guilt rather than aggression or
+urgency.
+
+Work with strong value contrast but narrow palettes: dark fields
+with small islands of lighter text or elements can imply weight
+and introspection.
+
+
+SHAPE, COMPOSITION, AND MOTION
+---------------------------------
+
+Favor verticals and downward diagonals, which have been linked with
+sadness and decline in abstract art, over energetic diagonals or
+radial bursts.
+
+Use constrained, closed shapes, off-center or "sinking" compositions,
+and negative space around the subject to suggest isolation and inward
+focus.
+
+If motion is involved, keep transitions slow, easing-out, and
+slightly delayed; fast, springy motion feels playful or aggressive
+rather than remorseful.
+
+
+TYPOGRAPHY AND LAYOUT
+-----------------------
+
+Choose somber typefaces: understated serifs or humanist grotesques
+with moderate contrast and soft terminals read as serious and
+reflective.
+
+Set key words in heavier weights with subtle downward baselines or
+stepped layout to convey emotional "heaviness."
+
+Use generous line spacing, tighter but not cramped letter-spacing,
+and plenty of breathing space; dense, busy type layouts feel anxious
+rather than remorseful.
+
+
+TEXTURE, IMAGERY, AND INTERACTION
+------------------------------------
+
+Prefer soft, grainy, or slightly worn textures over glossy ones to
+give a sense of aftermath and vulnerability instead of confidence.
+
+Imagery should be indirect and symbolic (shadows, fading light,
+aftermath of an action) rather than graphic punishment or melodrama,
+keeping a "protective frame" around the negative affect.
+
+In UI, reflect remorse through reduced visual noise, fewer bright
+affordances, and clear but subdued call-to-action styles (muted
+buttons with soft focus states).
+
+
+NARRATIVE GAME UI APPLICATION
+================================
+
+Remorse works best as a restrained, reflective "after the event"
+layer that does not fight core usability.
+
+Palette and lighting:
+- Mostly dark, cool base (blue-grey, charcoal, muted teal) with
+  low saturation
+- Reserve warm hue (deep red, amber) for small "wound" accents
+  like damage, consequences, or regret markers
+- 60-70% dark neutrals, 20-30% soft mid-tones, 5-10% accent on
+  the source of remorse
+
+Layout and motion:
+- Remorseful moments "close in": tighter margins, more negative
+  space around key lines of text, slightly off-center or sinking
+  panels
+- Slow the UI down: longer fades, slight delays before confirming,
+  softer ease-in/out on overlays
+
+Typography:
+- Calm, legible primary typeface (humanist sans or understated serif)
+- For remorse screens: slightly increase line spacing, reduce size
+  a notch, avoid all-caps
+- Let key words use heavier weight or darker color instead of
+  larger size
+
+System hooks:
+- Tie aesthetic to specific states: post-choice summaries,
+  consequence logs, aftermath screens
+- Surface guilt quietly: small persistent marks, crossed-out text,
+  faded portraits rather than loud popups
+
+
+ABSTRACT VISUAL COMPOSITION FOR REMORSE
+=========================================
+
+"Pressure, fracture, and absence" expressed with color, shape, and
+space:
+
+Structure: simple asymmetrical composition with one dominant "weight"
+shape, a smaller "wound" shape, and surrounding emptiness. Main
+shape feels off-balance (low, skewed, almost sliding) implying
+sinking or collapse.
+
+Color: dark, muddy or cool colors (deep blues, blue-black, dirty
+greens or browns), low saturation. One sharp limited accent (dark
+red, rust, sickly yellow) where the guilt "lives."
+
+Shapes: one heavy solid block (guilt as weight) with fractured or
+tangled elements (cracked bands, splintered triangles, tangled
+lines). Downward diagonals and subtle distortions. Avoid circles
+and perfect symmetry.
+
+Space: let negative space do emotional work -- a conspicuously empty
+area where a form "should" be stands in for loss. Restrained texture
+(thin scratches, layered translucent washes, torn-edge effects).
+
+
+TYPOGRAPHY FOR REMORSE POSTERS
+================================
+
+Type as "body language": one heavy word under gravity, surrounded
+by quieter intrusive fragments.
+
+Main word (REMORSE/REGRET/SORRY) as visual anchor, placed slightly
+low or "sliding" down the canvas to imply emotional decline.
+
+Smaller text (thought snippets, dates, names) orbit or fragment
+around it, loosely spaced and irregular, like circling thoughts.
+
+Serious, robust typeface for main word: weighty grotesque or sober
+serif with solid strokes and minimal decoration.
+
+Distort structure, not legibility: stagger baseline, subtly scale
+or stretch letters downward, darken a single letter as locus of
+guilt, while keeping word readable.
+
+One accent color only -- deep red, dirty gold, sickly yellow -- on
+a single letter, underline, or small fragment to localise the
+"wound."
+
+Generous negative space: push secondary text toward edges, leaving
+focal word in a quiet "spotlight" of emptiness.

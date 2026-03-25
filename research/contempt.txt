@@ -1,0 +1,175 @@
+Contempt -- Perplexity Design Research
+========================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR CONTEMPT
+==============================================
+
+Contempt in visual design is usually conveyed through "cold
+superiority": sharp, distancing, and slightly mocking aesthetics
+rather than outright aggression or chaos.
+
+Core emotional profile
+Contempt = a rejection emotion: you judge something as inferior
+and distance yourself from it rather than engage or fix it.
+
+It tends to feel certain, cold, and externally blaming ("you are
+beneath me"), not confused or self-blaming.
+
+
+COLOR CUES
+-----------
+
+Desaturated, cold palettes: greys, dirty whites, cold blues, and
+black often signal negative, distancing emotions.
+
+Accents of toxic green or dull yellow can echo disgust/disdain
+without the intensity of pure red anger.
+
+Low overall saturation with a few hard, high-contrast accents
+(e.g., black + a single harsh color) can feel cutting and
+judgmental.
+
+
+SHAPE, LINE, AND COMPOSITION
+------------------------------
+
+Angular, downward, or "pointing down" shapes communicate negative,
+hostile or rejecting emotion; downward-pointing triangles are
+frequently used to depict negative states like hate, reproach,
+resentment, shame.
+
+Sharp, thin, precise lines, tight spacing, and visually "boxed out"
+regions reinforce exclusion and distance.
+
+Asymmetry where one area is visually dominant and "above" another
+(top-heavy layouts, elevated panels) can read as hierarchical and
+patronizing.
+
+
+TYPOGRAPHY AND MICRO-AESTHETICS
+---------------------------------
+
+Condensed, high-contrast serif or grotesque sans faces with sharp
+terminals can feel cold and severe when paired with cool, dark
+palettes.
+
+Excess tracking, all-caps, and rigid alignment can imply emotional
+distance and formality rather than warmth.
+
+Avoid playful curvature or handwritten styles; these usually
+communicate friendliness or vulnerability rather than disdain.
+
+
+PRACTICAL DESIGN RECIPE FOR CONTEMPT
+======================================
+
+Palette: off-white + slate/black base, with a small accent of
+acidic green or dirty yellow.
+
+Forms: thin, downward-angled rules, triangles pointing down or
+away, and elements visually "looking down on" others via vertical
+placement.
+
+Layout: lots of cold negative space around a dominant block,
+pushing secondary elements low or small to feel "beneath" it.
+
+Type: sharp, highly controlled typography (condensed, high-contrast,
+or geometric), slightly loose letterspacing and minimal ornament,
+no rounded corners.
+
+
+COMPACT CONTEMPT SPEC
+=======================
+
+1. Emotion definition
+Label: Contempt
+Core appraisal: "You (or this group) are intrinsically inferior /
+beneath me."
+Direction: Other-focused, socially rejecting; not self-blaming.
+Typical blend: Sits between anger (moral offense) and disgust
+(moral/physical revulsion), but colder and more controlled.
+
+2. Visual identity tokens
+
+2.1 Color
+Base hues: off-white / bone, cool grey (light and dark), cold
+blue-grey.
+
+Accent hues (sparingly): acidic green (hint of disgust), dirty
+yellow (optional, for "smug" or "sour" tone).
+
+System notes: low to medium saturation overall, high contrast
+between light background and dark details. Avoid warm reds/oranges
+(anger) and heavy browns (pure disgust) except in blends.
+
+Token examples:
+cont-01-bg: #ECEFF1
+cont-02-ink: #1C1F24
+cont-03-acid: #8BC34A (or sharper variant)
+cont-04-muted: #90A4AE
+
+2.2 Shape and layout
+Primary shape: downward-pointing triangle (narrow, tall).
+Secondary shapes: stacked downward chevrons, thin vertical
+rectangles / pillars.
+
+Line style: thin, precise, straight; almost no curvature.
+
+Layout logic: top-heavy compositions (dominant element high,
+secondary elements small and low). Asymmetry: weight biased to
+one side to echo "one-sided lip raise." Ample cold negative space
+around the dominant element.
+
+Icon/graphic rules: default contempt glyph is tall, narrow
+triangle pointing down, 1-2px outline in dark ink color.
+Background motif: repeated, faint downward chevrons, low opacity.
+
+
+MOTION AND INTERACTION
+========================
+
+Timing: slightly delayed responses (small beat before reacting)
+to read as "unimpressed." Slow, smooth easing; avoid snappy,
+bouncy animations.
+
+Directionality: dismissive motions that move elements down or
+away from the character/player. When entering a scene, character
+may appear from a higher position and descend slowly.
+
+UI overlays when contempt is active: cold tint pass (very subtle
+blue-grey), thin angular frames or underlines near the speaking
+character's nameplate/portrait. Optional micro-animation: a
+narrow triangle icon briefly appears then fades.
+
+
+CONTEMPT VS ANGER VS DISGUST
+===============================
+
+Contempt: cold, controlled, distancing. Feels certain and
+superior. Visual: sharp, clean, asymmetric, cold.
+
+Anger: hot, reactive, confrontational. Wants to change or
+destroy. Visual: bold, dense, aggressive, warm/hot colors.
+
+Disgust: visceral, recoiling, contamination-focused. Wants to
+expel or avoid. Visual: organic distortion, sickly colors,
+textural corruption.
+
+Key distinction: contempt judges intrinsic worth ("you ARE
+inferior"), anger judges actions ("you DID wrong"), disgust
+judges contamination ("you are TAINTED").
+
+
+CONTEXT AND USAGE NOTES
+=========================
+
+Narrative meaning: use contempt when the character judges another
+as inherently lesser, not just wrong. Good for: aristocratic
+rivals, elitist technocrats, moralistic inquisitors.
+
+Avoid overuse: too much contempt can make a character irredeemably
+alienating; reserve for key beats or clearly antagonistic roles.
+For more nuance, mix small amounts into anger or disappointment
+instead of running at 100%.

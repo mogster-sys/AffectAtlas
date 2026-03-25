@@ -1,15 +1,13 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
 # dependencies
 node_modules/
 
-# Expo
+# Expo (legacy React Native app)
 .expo/
 dist/
 web-build/
 expo-env.d.ts
 
-# Native
+# Native (legacy RN)
 .kotlin/
 *.orig.*
 *.jks
@@ -36,6 +34,25 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-# generated native folders
+# generated native folders (legacy RN)
 /ios
 /android
+
+# Vite build output
+affect-atlas-web/dist/
+affect-atlas-web/dist-ssr/
+
+# Debug / review screenshots (root level)
+/*.png
+
+# Stitch reference material (63MB, not source)
+stitch-exports/
+stitch-prompts/
+STITCH_*.txt
+STITCH_*.md
+
+# Playwright MCP tooling
+.playwright-mcp/
+
+# Claude Code project memory
+.claude/

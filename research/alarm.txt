@@ -1,0 +1,154 @@
+Alarm -- Perplexity Design Research
+=====================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR ALARM
+===========================================
+
+Alarm is typically expressed through high-contrast, high-arousal
+visuals: intense warm colors, sharp shapes, strong motion, and urgent,
+high-priority hierarchy.
+
+Core visual attributes
+Color: Dominant reds and oranges signal urgency, danger, or immediate
+action, often paired with dark or neutral backgrounds for contrast.
+
+Contrast: Very high contrast between foreground and background to
+demand attention and cut through visual noise (e.g., red on near-black
+or white).
+
+Saturation: Highly saturated primaries rather than muted tones to keep
+arousal high and feel "emergency" rather than informational.
+
+
+SHAPE AND LAYOUT
+-----------------
+
+Shape language: Angular forms (triangles, sharp chevrons, pointed
+icons) feel more threatening and urgent than rounded shapes.
+
+Motion: Rapid, repeating micro-animations (pulses, flashes, quick
+scale or opacity shifts) cue urgency but should be short and sparing
+to avoid overload.
+
+Layout: Alerts occupy prominent, interruptive zones (top banners,
+centered modals, sticky bars) with minimal surrounding content to
+remove ambiguity.
+
+
+TYPOGRAPHY AND COPY
+--------------------
+
+Typeface: Bold, high-weight sans-serifs with clean geometry support
+legibility at a glance and reinforce a serious tone.
+
+Hierarchy: Very clear headline (ALERT / WARNING) plus a single-line
+explanation and one primary action, with reduced decoration and
+minimal subtext.
+
+Text treatment: All-caps or small caps for the label, tight line
+lengths, and slightly reduced letter-spacing to keep blocks compact
+and glanceable.
+
+
+INTERACTION AND FEEDBACK
+--------------------------
+
+Sound: Short, sharp, high-frequency tones that trigger attention but
+stop quickly; avoid continuous or repeating alarms to prevent anxiety
+and habituation.
+
+State changes: Clear before/after states (normal to alarm to resolved)
+using distinct color shifts (e.g., blue/gray to red to green/neutral)
+to mark transitions.
+
+Acknowledgement: Strong visual feedback (button press ripple, banner
+fade) when the user dismisses or responds to the alert, to reduce
+lingering tension.
+
+
+DESIGN SYSTEM ENCODING
+------------------------
+
+In a design system, "alarm" can be encoded as a specific tokenized
+set of choices:
+
+Color tokens: alarm/bg, alarm/fg, alarm/icon, alarm/border built on
+red-orange hues with strict contrast ratios.
+
+Component variants: Alert banners, toasts, modals, and badges with
+severity="critical" or tone="alarm" variant that adjusts color,
+border radius, and animation.
+
+Motion tokens: An "urgent" motion curve (fast-in, short duration,
+maybe 1-2 pulses) distinct from "gentle" or "informational"
+animations.
+
+
+DOMINANCE AESTHETICS (CONTRAST WITH SUBMISSION)
+=================================================
+
+Dominance and power read as visually assertive, high-contrast, and
+control-oriented:
+
+Color: Dark bases with strong accents (black, deep navy, saturated
+red, gold, white) feel authoritative and high-status. High contrast
+and large fields of dominant color reinforce visual control.
+
+Shape: Angular geometry (triangles, sharp corners, hard-edged
+polygons) signal strength, precision, and toughness. Verticality and
+upward movement imply power and ambition. Solid blocks and dense
+clustering look heavy, stable, and hard to move.
+
+Typography: Bold, heavy weights communicate confidence and authority.
+Condensed or geometric grotesques, or strong serifs feel serious,
+institutional, and controlled. Tight, deliberate hierarchy with
+emphatic titles.
+
+Layout: Clear focal dominance with one primary hero element. Strong
+grid and alignment suggest control and discipline.
+
+Motion: Snappy, decisive transitions feel more powerful. Scale and
+impact on entry. Limited, restrained animation -- a few strong
+movements beat many fussy ones.
+
+
+SEVERITY SCALE AND TOKENS
+===========================
+
+A concrete severity specification for alarm design systems:
+
+Severity levels (low to high):
+- info: status updates, confirmations (light blue, info-circle icon)
+- success: completed actions (light green, check-circle icon)
+- warning: potential issues (amber/yellow, warning-triangle icon)
+- error: blocking app issues (red background tint, error-triangle)
+- critical: high-impact, time-sensitive (strong red bg, white text,
+  large warning icon)
+- emergency: real-world threat to life (very dark red bg, white text,
+  full-screen takeover)
+
+Token patterns:
+- Color: color.status.{severity}.{bg|border|text}
+- Icon: icon.status.{severity}
+- Border radius: decreases with severity (8px info down to 4px
+  emergency -- sharper = more urgent)
+- Border width: increases with severity (1px default, 2px critical)
+- Motion: motion.status.appear.duration (150ms default), critical
+  gets a pulse (400ms, scale 1.05), emergency gets fast overlay
+  (120ms)
+
+Typography:
+- Status title: 600 weight, 14px/20px
+- Status body: 400 weight, 13px/18px
+- Emergency title: 700 weight, 18px/24px
+
+Spacing:
+- Inline padding: 12px horizontal, 8px vertical
+- Icon gap: 8px
+- Stack gap: 4px between title/body/action
+
+Key principle: visual intensity should scale with severity. Reserve
+the most aggressive visual treatment (full-screen red, pulsing icons,
+ALL CAPS) for genuine emergencies to prevent desensitisation.

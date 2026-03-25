@@ -1,0 +1,185 @@
+Anticipation -- Perplexity Design Research
+===========================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR ANTICIPATION
+==================================================
+
+Anticipation in visual design is expressed through open-ended,
+directional, and slightly unresolved aesthetics: movement cues,
+incompleteness, and subtle tension rather than closure.
+
+Core visual qualities
+Directionality and guidance: Arrows, leading lines, progressive
+disclosure, and "next-step" affordances signal that something is
+about to happen or be revealed.
+
+Incompleteness: Cropped elements, partial reveals behind masks or
+frosted panels, and content that fades off-screen leave users
+expecting more.
+
+Temporal cues: Progress indicators, staged animations, and
+microinteractions that hint at an upcoming state (e.g., a button
+that subtly "charges" on hover) imply imminent change.
+
+Light tension, not comfort: Slight asymmetry, off-center focal
+points, and controlled whitespace create a feeling of "about to
+resolve" rather than calm equilibrium.
+
+
+COLOR AND TONE
+--------------
+High-energy but not urgent: Warm but softened hues (yellow-orange,
+coral, soft magenta) read as energetic and optimistic without the
+alarm of pure red.
+
+Gradients and transitions: Gradients, especially from cool to warm
+or dark to light, visually encode movement from "now" to "soon."
+
+Contrast for focus: Using contrast on interactive or future-facing
+elements (next step, upcoming feature, CTA) draws the eye toward
+what's coming rather than what's current.
+
+
+MOTION AND MICROINTERACTIONS
+-----------------------------
+Easing that overshoots or delays: Slight anticipation curves (a
+small backward motion or scale-down before expanding) mirror
+physical anticipation and are common in emotional UX.
+
+Sequential reveal: Staggered animations, step-by-step transitions,
+and storytelling sequences build a narrative that users expect to
+continue.
+
+Responsive hints: Hover states, subtle pulsing, or shimmer effects
+indicate latent potential -- something will happen if the user
+commits.
+
+
+COMPOSITION AND LAYOUT
+-----------------------
+Narrative flow: Layouts that clearly read left-to-right or top-to-
+bottom as a story (hero -> teaser -> teaser continuation) keep
+attention flowing forward.
+
+Visible but locked content: Teasers, blurred previews, and "next
+chapter" tiles that are visible but gated naturally evoke
+anticipation.
+
+Hierarchy toward the future: Emphasis on upcoming actions or
+timelines (e.g., "next match," "tomorrow's tasks") through size
+and placement shifts emotional weight to the future.
+
+
+MAPPING INTO A DESIGN SYSTEM
+------------------------------
+A "future/next" color role (e.g., accent gradient or optimistic
+warm hue) used consistently for upcoming states.
+
+A motion token set with anticipation-like easing, delays, and
+stagger patterns for reveals and state changes.
+
+Pattern primitives: partial cards, teaser modules, progress
+indicators, and arrows/chevrons as standard components guiding
+toward "what's next."
+
+
+MOBILE APP TOKENS FOR ANTICIPATION
+====================================
+
+Token naming strategy
+Use semantic, stateful names: color.accent.next, motion.reveal.
+anticipation, opacity.surface.teaser. Keep platform-neutral.
+
+Color tokens
+color.accent.next -- primary "future/next" accent (soft orange/coral)
+color.accent.next.hover -- slightly darker or more saturated
+color.bg.teaser -- subtle tinted background for upcoming content cards
+color.border.future -- used on "next step" buttons, timeline items
+color.text.future -- for labels like "Up next," "Tomorrow"
+
+Usage: color.accent.next only for elements that advance state or
+reveal something. Pair color.bg.teaser with reduced opacity imagery.
+
+Motion tokens
+motion.reveal.anticipation -- Duration 220-260ms, ease-in then
+ease-out (anticipation-like: quick scale down 0.96 -> 1.0, or
+small backward translation -> forward)
+
+motion.hover.future -- Duration 120-160ms, ease-out
+
+motion.progress.nextStep -- Duration 400-800ms loops, linear for
+looping progress, expressive ease for step change
+
+Usage: motion.reveal.anticipation on components that appear as
+user navigates forward. Expressive curves only for "forward" or
+"reveal" transitions; back navigation stays neutral.
+
+Layout/elevation/opacity tokens
+elevation.card.teaser -- slightly higher than normal content
+radius.card.future -- marginally more rounded for "future" tiles
+opacity.surface.teaser -- 0.7-0.85 for upcoming items
+opacity.scrim.futureOverlay -- 0.1-0.2 for "coming soon" states
+
+State tokens for "next"
+state.current -- active, in-use items
+state.next -- soon-to-be-active (upcoming, next level, tomorrow)
+state.lockedFuture -- visible but inaccessible (coming soon)
+
+Each state binds to specific visual tokens: state.next uses
+color.accent.next + motion.reveal.anticipation + elevation.card.teaser
+
+
+WEB UI COMPONENT PATTERNS FOR ANTICIPATION
+============================================
+
+Next-step CTA pattern
+A button or bar that clearly points to the most likely next action.
+Primary "Next" CTA at end of flows with copy naming the upcoming
+state. Directional affordances: right-chevrons, forward arrows,
+steppers showing current + highlighted "next" step.
+
+Key behavior: animate with brief slide/scale-in (translateY 6px -> 0,
+scale 0.96 -> 1, ~220ms ease-in-out). On hover, subtle forward nudge.
+
+Teaser card for upcoming content
+Cards showing just enough about something coming next. "Up next,"
+"Coming soon," "Tomorrow" badges. Visually differentiated: lighter
+background tint, subtle lock/time icon for not-yet-available. Optional
+partial blur/scrim over imagery for incomplete access.
+
+Behavior: on scroll into view, anticipation reveal motion (small
+offset + opacity 0 -> 1). On hover, raise elevation and reveal one
+extra metadata line.
+
+Progressive disclosure "peek" pattern
+Start with concise summary + visible "Show more." On expand, animate
+height/opacity and rotate icon. Content slides in staggered (titles
+first, then details). Accent underline or arrow animates on hover
+like it's "pulling" into next layer.
+
+Predictive suggestion panel
+Pre-offering likely next actions. "Next best actions" strip with 2-4
+buttons. Appears after main action resolves with soft slide/fade.
+Secondary styling so it feels like a helpful nudge.
+
+Anticipatory stepper/timeline
+Emphasize the next step (not all future steps): slightly brighter,
+pulsing dot or glow. Hover future steps to see preview tooltip.
+
+
+EMOTION WHEEL INTEGRATION NOTES
+=================================
+
+Anticipation as a semantic layer: when a designer picks "anticipation"
+from the emotion wheel, show a gallery with next-step CTAs, teaser
+cards, progressive disclosure, and predictive panels already skinned
+in anticipation colors and motions.
+
+Interpolation: emotions near each other on the wheel can blend tokens.
+Anticipation + Joy -> optimistic playful future state.
+Intensity (distance from center) controls saturation and motion energy.
+
+One canonical "emotion definition" per wheel segment. Visual
+consistency from WebGL mood to Figma preview to React/Tailwind UI.

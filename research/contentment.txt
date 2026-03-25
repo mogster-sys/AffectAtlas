@@ -1,0 +1,235 @@
+Contentment — Perplexity Design Research
+==========================================
+Source: Perplexity AI research, early 2026
+
+Note: Perplexity interpreted "content" (the emotion) as a general
+emotional design question rather than the specific feeling of
+contentment. The research covers broad emotional mapping frameworks
+but contains useful material on the calm, satisfied, low-arousal
+positive state that distinguishes contentment from adjacent emotions
+like joy or trust.
+
+
+VISUAL DESIGN SYSTEM AESTHETICS — GENERAL EMOTIONAL MAPPING
+=============================================================
+
+Core mapping idea
+In most frameworks, emotions can be plotted on valence (pleasant to
+unpleasant) and arousal (calm to intense). Design systems express
+those coordinates through systematic choices in foundations (tokens)
+and components.
+
+Aesthetic axes that carry emotion
+Color: Hue, saturation, and brightness strongly affect perceived
+valence and arousal. Consistent color roles (primary, accent,
+feedback) let you "dial" emotional intensity.
+
+Typography: Rounded open sans-serifs feel friendly and optimistic;
+sharp condensed or high-contrast faces feel tense, formal, or
+aggressive. Scale, weight, and spacing modulate arousal.
+
+Shape and icon style: Rounded organic shapes read as safe and joyful;
+angular jagged forms read as hostile or frustrated; sparse small
+elements in large space feel lonely or introspective.
+
+Layout and density: Clear hierarchy, alignment, and generous
+whitespace support calm or optimistic states; clutter, weak
+hierarchy, and conflicting groupings evoke confusion or tension.
+
+Imagery and illustration: Warm lighting, smiling faces, scenes of
+connection map to happiness; dim light, isolation, or decay motifs
+map to sadness, loneliness, or disgust.
+
+Motion and microinteractions: Smooth responsive motion enhances
+positive affect; jittery, abrupt, or delayed animations feel
+anxious, angry, or frustrating.
+
+
+COLORS MAPPED TO VALENCE AND AROUSAL
+======================================
+
+Valence (pleasant to unpleasant)
+Higher valence aligns with brighter, more saturated colors. Dull,
+dark, or grayish colors feel more negative or neutral. Warm hues
+(yellow, orange) are often rated more positive than cool hues.
+
+Arousal (calm to intense)
+Higher arousal is associated with higher saturation and often darker
+lightness. Warm hues (red, orange) generally feel more energetic
+than cool hues.
+
+Practical mapping rules
+Low valence: lower lightness, low chroma (dark, grayish, muddy).
+Neutral valence: mid-lightness, mid chroma (muted or mid-tone).
+High valence: higher lightness, higher chroma (clear, bright, clean).
+
+Low arousal: low chroma, mid-to-high lightness (soft pastels,
+grayish blues/greens).
+Medium arousal: moderate chroma, mid-range lightness.
+High arousal: high chroma; lightness shifted very bright (neon-like)
+or somewhat dark (deep, vivid).
+
+Hue tendencies on the circumplex
+Warm hues (red, orange, yellow): Typically higher arousal, often
+higher valence for yellows/oranges (joy, energy). Red spans both
+positive (excitement) and negative (anger, danger).
+
+Cool hues (blue, green, cyan): Often higher valence but lower
+arousal when desaturated and light (calm, relaxation).
+
+Violet / purple: Ambiguous; can be neutral or slightly positive,
+often mid arousal; strongly context-dependent.
+
+Achromatic (black-gray-white): White and light gray skew to higher
+valence, low arousal (clean, pure). Mid and dark grays map to low
+valence, low arousal (dull, monotonous).
+
+
+DESIGN PATTERNS: TRUST VS EXCITEMENT
+======================================
+
+Trust patterns (positive + calm)
+Color: Cooler, desaturated palettes (blues, greens). Limited accent
+colors, gentle contrast, restrained red.
+
+Layout: Consistent navigation, familiar patterns, clear hierarchy.
+Generous whitespace, clean grids, uncluttered forms.
+
+Copy: Transparent microcopy for pricing, permissions, data use.
+Clear error messages, inline validation, reversible actions.
+
+Signals: Security cues (https/lock, trusted payment logos). Visible
+but not overwhelming social proof.
+
+Excitement patterns (positive + high arousal)
+Color: Warm saturated colors (reds, oranges, yellows), high-contrast
+accents. Bold accent colors on CTAs.
+
+Layout: Strong focal hierarchy, dynamic diagonals, slightly denser
+compositions. Microinteractions, animated states, snappy transitions.
+
+Copy: Action-oriented microcopy ("Start now", "Limited time").
+Gamification elements (progress bars, achievements, streaks).
+
+
+MICROINTERACTIONS THAT INCREASE POSITIVE EMOTIONS
+===================================================
+
+Core principles
+Instant, clear feedback: Visual, haptic, or audio confirmation
+reassures users, reduces anxiety, boosts confidence.
+
+Positive reinforcement: Rewarding actions with small delights
+(confetti, heart bursts) taps reward mechanisms.
+
+Guidance without friction: Microinteractions that reveal affordances
+and show progress make flows feel easier.
+
+Sparking joy / delight
+Success celebrations: Short confetti bursts, animated checkmarks,
+cheerful character reactions after completing tasks.
+
+Heart or reaction animations on likes and favorites.
+
+Playful but optional flourishes: Easter-egg hover states, friendly
+empty states that animate subtly.
+
+Building trust and calm
+Reassuring confirmations: Clear "success" states for payments,
+logins, form submissions.
+
+Transparent system status: Progress indicators, pull-to-refresh
+spinners, skeleton screens.
+
+Inline validation and password-strength meters.
+
+Increasing engagement / motivation
+Streak indicators, badges, level-up animations.
+
+Responsive controls: Buttons that scale, change color, or "snap"
+into place. Elastic pull-to-refresh.
+
+Guardrails
+Keep microinteractions short, local, and skippable.
+
+Match intensity to context: softer for serious domains, more playful
+for learning or entertainment.
+
+Maintain consistency in timing and style.
+
+
+TYPOGRAPHY AND VISCERAL EMOTIONAL RESPONSE
+===========================================
+
+Visceral reactions are fast, automatic judgments based on sensory
+appearance. Type is part of this "first impression" and nudges
+feelings within milliseconds.
+
+Cognitive fluency: Fonts that are easy to process feel pleasant,
+trustworthy, and high quality. Difficult or irregular fonts raise
+cognitive load and feel frustrating.
+
+Font category
+Serif: Traditional, serious, credible. Triggers reliability and
+authority.
+
+Sans serif: Modern, clean, approachable. Calmer, more informal
+positive affect.
+
+Script / decorative: Playfulness, romance, nostalgia. Fun or
+dramatic but less serious.
+
+Letterform shape
+Rounded, open shapes: Friendly and soft.
+Sharp, angular forms: Aggressive or tense.
+Consistent stroke rhythm: More pleasant.
+Irregular shapes: Unease or irritation.
+
+Weight and spacing
+Heavy weights and large sizes: Louder, more urgent, higher arousal.
+Lighter weights, generous spacing: Calmer, more reflective.
+Cramped tracking or leading: Stressful and claustrophobic.
+
+Personality congruence
+When font personality matches content, readers experience the
+message as more emotionally coherent and credible. Incongruent
+pairings create discomfort and lower trust.
+
+
+UI LAYOUTS THAT REDUCE ANXIETY
+================================
+
+Calm dashboard / home screen layouts
+Minimal, spacious dashboards: Main content column with one clear
+primary metric, secondary panels in simple grid, generous whitespace.
+
+Single-focus hero sections: Headline stating "What you should do
+next," one prominent CTA, short subtext.
+
+Step-by-step guided flows
+Wizard-style forms: Complex forms broken into 3-6 small steps with
+clear progress indicator.
+
+Inline help and preview layouts: Contextual help text, expandable
+"Learn more" sections, live previews.
+
+Clear feedback and status
+Transparent loading: Skeleton screens or progress bars in same layout
+region instead of blank screens.
+
+Reversible interactions: "Review and confirm" pages before
+irreversible actions with inline summaries and visible "Edit" links.
+
+Calm visual structure
+Soft, coherent palettes with restrained accents. Muted blues/greens,
+limited accent colors, consistent color roles.
+
+Readable, consistent typography: 2-3 type sizes, clear hierarchy,
+left-aligned text, ample line spacing.
+
+Real-product examples
+Headspace: Soft gradients, large single-focus cards, slow smooth
+transitions explicitly designed to soothe.
+
+Mental health and mindfulness apps: Minimal layouts, calm colors,
+step-by-step flows following trauma-informed patterns.

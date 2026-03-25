@@ -1,0 +1,126 @@
+Disappointment -- Perplexity Design Research
+==============================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR DISAPPOINTMENT
+====================================================
+
+Disappointment tends to map to muted, desaturated, low-energy
+aesthetics: greys, low-contrast compositions, and "deflated" visual
+structures that suggest something missing or falling short.
+
+Core visual levers
+Color: Cool, low-saturation palettes (greys, dark neutrals, cool
+blues) with small accents of black are strongly associated with
+disappointment and related low-valence emotions.
+
+Lightness/saturation: Darker, less saturated colors feel more
+negative and flat, which supports a disappointed or let-down mood.
+
+Temperature: Cooler hues (blue-grey, blue-green) lean toward
+sadness/indifference; shifting slightly warmer but still dull pushes
+toward "stale" or "used up" rather than hopeful.
+
+
+LAYOUT AND COMPOSITION
+-----------------------
+
+Structure: Rigid grids with too much empty or misused space can
+suggest absence, loss, or something that never arrived.
+
+Asymmetry: Slightly unbalanced layouts, "sagging" elements, or
+off-center key objects can feel subtly wrong or unsatisfying.
+
+Scale: Small focal elements in large empty fields, or content that
+feels "shrunk back," evoke a sense of diminished outcome.
+
+
+TYPOGRAPHY
+-----------
+
+Weight: Thin or regular weights with generous tracking can feel
+distant, resigned, or depleted compared to bold "confident" type.
+
+Tone: Neutral grotesques or sober serifs, set with low contrast in
+size and weight, tend to read as understated and anti-climactic.
+
+Treatment: Strikethroughs, faded text, or ghosted states can visually
+encode "missed expectations" or "no longer available."
+
+
+IMAGERY AND TEXTURE
+---------------------
+
+Imagery: Scenes that have lost their former glory (empty spaces,
+abandoned/unused objects) convey disappointment and unfulfilled hopes.
+
+Weather/metaphors: Cloudy, rainy, or overcast motifs visually
+parallel the "let-down" sensation.
+
+Texture: Flat, matte, slightly worn textures feel more resigned than
+sharp, glossy surfaces, which convey energy and promise.
+
+
+INTERACTION AND MOTION
+------------------------
+
+Motion: Easing that decelerates into small, anticlimactic end states
+(e.g., an element animates in then subtly droops or fades) can embody
+a promise that does not quite pay off.
+
+Feedback: Low-intensity, delayed, or minimal feedback expresses a
+lack of payoff.
+
+States: "Almost arrived then fell short" animations encode the gap
+between expectation and reality.
+
+
+DISAPPOINTMENT VS SADNESS
+===========================
+
+Sadness: Broad response to loss or misfortune, often inward,
+reflective, and about letting go or accepting change. Visuals:
+gentle, reflective, comforting. Cool soft palettes with depth in
+shadows. Stable balanced compositions. Soft human-centric type.
+Slow smooth motion.
+
+Disappointment: More cognitive and specific; it needs an expectation
+that fails, often with a subtle undertone of "this should have gone
+differently." Visuals: shows a visible "gap" between expectation and
+reality. Higher contrast than sadness to foreground the "before vs
+after." Visual structures that highlight the gap. Utilitarian type
+with corrective marks (strikethrough, dimming). Short motions that
+almost arrive and then undershoot.
+
+Key distinction: sadness wants visuals that support reflection and
+comfort; disappointment shows a visible gap between expectation and
+reality.
+
+
+TYPOGRAPHY FOR PRODUCT VS NARRATIVE CONTEXTS
+=============================================
+
+Shared type foundations:
+- Regular and Light weights are the disappointment core
+- Bold reserved for emphasis and critical errors, not disappointment
+- Sentence case, short lines, calm factual copy
+
+Product/system usage (subtle):
+- Title: slightly smaller than neutral, regular weight, mid-grey
+- Body: regular or light, slightly lighter grey, factual copy
+- Disappointment = color + weight + restrained hierarchy
+
+Narrative/game usage (dramatic):
+- Same tokens but with composition and motion added
+- Droop: text sits lower than expected, stepped down line by line
+- Shrink: title starts celebratory then fades to disappointed state
+- Glitch: briefly show ideal text then scramble into reality
+- Repeated failures: gradually increase tracking or reduce opacity
+
+Mapping:
+- Neutral product: standard title/body, standard layout
+- Disappointed product: grey mid-weight title, lighter body, calm
+- Critical product: bold title, alert color, may use icon
+- Disappointed narrative: animated from neutral to disappointed,
+  droop, glitch, shrink, cross-out effects

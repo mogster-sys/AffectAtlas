@@ -1,0 +1,177 @@
+Sadness — Perplexity Design Research
+======================================
+Source: Perplexity AI research, early 2026
+
+
+VISUAL DESIGN SYSTEM AESTHETICS FOR SADNESS
+============================================
+
+Sadness in a visual design system is usually expressed with
+low-energy, muted aesthetics: desaturated cool colors (especially
+blues and grays), soft contrast, and restrained, downturned or
+drooping forms. These choices tend to feel quiet, heavy, and
+introspective rather than dramatic or aggressive.
+
+
+COLOR
+-----
+Desaturated blues, blue-grays, and cool purples often read as
+melancholy or reflective.
+
+Neutral or dull grays (especially slate or "lifeless" gray) are
+strongly associated with monotony, depression, and low energy.
+
+Overall low saturation and limited color variety help convey a
+washed-out, "drained" emotional state.
+
+
+SHAPE AND ICONOGRAPHY
+---------------------
+Downturned or drooping curves (like an inverted smile) visually
+echo facial expressions of sadness.
+
+Thin, fragile lines and slight asymmetry can suggest vulnerability
+or emotional imbalance.
+
+Organic, soft shapes work better than sharp geometric ones when
+the intent is tender sadness rather than anxiety or anger.
+
+
+TYPOGRAPHY
+----------
+Lighter weights and narrower letterforms can feel delicate, quiet,
+or subdued rather than bold or confident.
+
+Larger line spacing, generous margins, and slower-reading layouts
+support a reflective, contemplative mood.
+
+Avoid loud display fonts; understated, simple type styles better
+align with low-arousal emotions like sadness.
+
+
+LAYOUT, IMAGERY, MOTION
+------------------------
+Spacious layouts with significant negative space can evoke
+emptiness or isolation.
+
+Imagery that uses overcast lighting, cool color grading, or
+minimal scenes reinforces a somber tone.
+
+Slow, easing animations and subtle transitions feel more fitting
+than snappy microinteractions for sad or reflective states.
+
+
+SYSTEM-LEVEL TOKENS AND PATTERNS
+---------------------------------
+Create a "melancholy" or "low mood" palette in your design tokens
+with cool, desaturated hues and gentle contrast ratios.
+
+Pair that palette with a quiet typography scale (smaller headings,
+no shouty all-caps) and reduced motion presets.
+
+Use these tokens contextually (e.g., loss, memorial, or reflection
+states), and avoid overuse so sadness remains a specific,
+intentional emotional mode.
+
+
+COLOR PALETTES THAT CONVEY SADNESS
+====================================
+
+Core hues
+- Grays as the base: medium-dark neutral or blue-grays suggest
+  emptiness, overcast skies, lack of stimulation.
+- Dark, muted blues and indigos for melancholy and distance
+  ("feeling blue").
+- Very dark neutrals (near-black) reference mourning or loss
+  but should be used sparingly for legibility.
+
+Typical sad UI palette structures
+- Monochrome gray scale: soft mid-gray background, darker gray
+  for text, slightly lighter gray for surfaces; overall washed.
+- Cool muted scheme: blue-gray background, dark desaturated navy
+  for text, light dove-gray for cards, faint misty blue accent.
+- Dusty "faded" colors: any hue with low saturation (dusty
+  lavender, muted teal) plus gray — nostalgic, quietly sad.
+
+Tone controls
+- Lower saturation across the system makes interface feel drained.
+- Mid-to-low value (no pure white, few bright colors) reinforces
+  gloomy, overcast atmosphere.
+- Gentle contrast between surfaces avoids punchy, high-energy feel.
+
+Example HEX ranges
+- Grays: #1F2125-#2C2F33 (dark), #4A4F57 (mid), #A0A4AC (light).
+- Blues: #1B2A3A (deep navy), #3A4A5C (muted steel blue),
+  #7C8A99 (soft blue-gray).
+- Faded accents: #B0A9C4 (dusty lavender), #9FB3BD (muted
+  blue-teal) — used very lightly.
+
+UI usage tips
+- Reserve any saturated color only for critical CTAs so it reads
+  as hope amid a generally subdued interface.
+- Keep success/warning/error colors as desaturated variants so
+  they don't break the emotional tone.
+- Always check accessibility: even in sad palettes, text-background
+  pairs must meet at least WCAG AA contrast ratios.
+
+
+SHAPES AND COMPOSITIONS THAT EVOKE MELANCHOLY
+===============================================
+
+Shape language
+- Downward movement: lines, curves, or clusters that slope or
+  "sink" downward suggest emotional heaviness and loss of energy.
+- Soft, simple forms: low-complexity, rounded or gently curved
+  shapes feel quiet and low-arousal.
+- Fragile geometry: thin outlines, elongated shapes, or slightly
+  distorted symmetry imply vulnerability.
+
+Composition and spacing
+- Isolated focal point: single small element far from center,
+  surrounded by large negative space, evokes loneliness.
+- Imbalanced layouts: visual weight pushed to one side with
+  emptiness on the other feels off-kilter, emotionally unsettled.
+- Repetition with little variation: repeating nearly identical
+  shapes suggests monotony, rumination, being trapped.
+
+Use of negative space
+- Vast emptiness: large unbroken background areas around a subject
+  emphasize absence, distance, emotional void.
+- Barriers and gaps: empty strips between groups or between
+  subject and others read as disconnection or separation.
+- Depth through emptiness: receding empty space (corridor, fading
+  gradient) suggests being swallowed by environment or thought.
+
+Direction, posture, and line
+- Downward or inward orientation: elements "looking" or pointing
+  down echo slumped body language.
+- Static, low-energy lines: horizontal or gently sloping lines
+  feel still and resigned vs dynamic diagonals.
+- Turned-away figures or icons: silhouettes facing away reinforce
+  introspection and withdrawal.
+
+Applying in UI
+- Small content islands in large empty canvases convey solitude
+  more strongly than dense grids.
+- Cards or modules that sit slightly "low" in their container,
+  with more space above than below, subtly feel weighed down.
+- Soft, low-detail icons with thin strokes and minimal decorative
+  complexity keep the tone quiet and melancholy.
+
+
+MEMORIAL AND MOURNING DESIGN PATTERNS (VR/AR CONTEXT)
+======================================================
+
+Note: Perplexity went on a tangent about VR memorial apps here.
+The relevant design patterns for sadness UX are:
+
+- Highly personalized, symbolic environments rather than generic
+  layouts help express unique relationships and memories.
+- Private, controllable access is critical for emotional safety
+  in deeply sensitive contexts.
+- Use explorable spaces populated with photos, videos, keepsakes
+  instead of static walls of content.
+- Controlled, calming environments that can be revisited during
+  difficult periods — atmosphere over interaction.
+- Overcast lighting, cool color grading, minimal scenes reinforce
+  somber tone without being oppressive.
