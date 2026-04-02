@@ -6,19 +6,16 @@
  *   Without advisory: preview area (55%) + wheel (45%)
  */
 
-import type { PrimaryEmotionType } from '@/types/emotion';
 import { emotionStore } from '@/store/emotionStore';
 import { settingsStore } from '@/store/settingsStore';
 import { getEmotionThemeOrFallback } from '@/constants/designTokens';
 import { getEmotionWordsOrFallback, getEmotionFeelOrFallback } from '@/constants/emotionWords';
-import { isExtraEmotion, getExtraEmotion } from '@/constants/extraEmotions';
 import { applyTheme, applyDefaultTheme } from '@/ui/background';
 import { mountWheel } from '@/ui/wheel';
 import { openExport } from '@/ui/exportPanel';
 import { renderAdvisory } from '@/ui/advisoryPanel';
 import { getAdvisory, type EmotionAdvisory } from '@/constants/advisoryData';
 import { createSettingsToggle } from '@/ui/settingsToggle';
-import { mountChipTray, updateChips, hideChips, refreshChipActive } from '@/ui/extraChips';
 import { el } from '@/utils/dom';
 
 // Import advisory data (self-registers on import)
@@ -64,6 +61,13 @@ let headerBar: HTMLElement;
 let headerLabel: HTMLElement;
 
 let currentMode: 'default' | 'preview' | 'advisory' = 'default';
+
+function hexToRgba(hex: string, alpha: number): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
 
 // Variant selection -- local UI state, not persisted
 let currentVariantIndex = -1;  // -1 = base, 0+ = variant index
@@ -120,11 +124,14 @@ function setMode(mode: 'default' | 'preview' | 'advisory'): void {
     previewArea.classList.add('preview-area-hidden');
     advisoryScroll.classList.remove('advisory-scroll-hidden');
     wheelContainer.classList.add('wheel-container-small');
+    // Pad bottom so content doesn't hide behind the fixed wheel
+    advisoryScroll.style.paddingBottom = '32vh';
   } else {
     headerBar.classList.add('header-bar-hidden');
     previewArea.classList.remove('preview-area-hidden');
     advisoryScroll.classList.add('advisory-scroll-hidden');
     wheelContainer.classList.remove('wheel-container-small');
+    advisoryScroll.style.paddingBottom = '';
   }
 }
 
@@ -153,27 +160,6 @@ function renderPalette(palette: [string, string, string, string, string]): void 
   }
 }
 
-/**
- * Determine which primary emotion to show chips for.
- * If the selected emotion is an extra, use its parent primary.
- * If it's a primary emotion itself, use it directly.
- * If it's a dyad, return null (no chips for dyads).
- */
-function getChipPrimary(emotion: string): PrimaryEmotionType | null {
-  if (isExtraEmotion(emotion)) {
-    const extra = getExtraEmotion(emotion);
-    return extra?.parent ?? null;
-  }
-  const primaries: PrimaryEmotionType[] = [
-    'joy', 'trust', 'fear', 'surprise',
-    'sadness', 'disgust', 'anger', 'anticipation',
-  ];
-  if (primaries.includes(emotion as PrimaryEmotionType)) {
-    return emotion as PrimaryEmotionType;
-  }
-  return null; // dyad -- no chips
-}
-
 function renderAdvisoryWithVariants(advisory: EmotionAdvisory): void {
   const variants = advisory.variants ?? [];
   const hasVariantOptions = variants.length > 0;
@@ -185,12 +171,15 @@ function renderAdvisoryWithVariants(advisory: EmotionAdvisory): void {
   advisoryScroll.innerHTML = '';
 
   if (hasVariantOptions) {
+    const primaryColor = advisory.colors?.tokens?.['primary'] || '#888';
     const tray = el('div', { className: 'variant-chips-tray' });
+    tray.style.backgroundColor = hexToRgba(primaryColor, 0.12);
 
     // Base chip
     const baseChip = el('button', {
       className: `variant-chip${currentVariantIndex === -1 ? ' variant-chip-active' : ''}`,
     }, advisory.label);
+    if (currentVariantIndex === -1) baseChip.style.backgroundColor = primaryColor;
     baseChip.addEventListener('click', () => {
       currentVariantIndex = -1;
       renderAdvisoryWithVariants(advisory);
@@ -203,6 +192,7 @@ function renderAdvisoryWithVariants(advisory: EmotionAdvisory): void {
       const chip = el('button', {
         className: `variant-chip${currentVariantIndex === i ? ' variant-chip-active' : ''}`,
       }, variants[i].variantLabel);
+      if (currentVariantIndex === i) chip.style.backgroundColor = primaryColor;
       chip.addEventListener('click', () => {
         currentVariantIndex = i;
         renderAdvisoryWithVariants(advisory);
@@ -221,11 +211,21 @@ function renderAdvisoryWithVariants(advisory: EmotionAdvisory): void {
   }
 
   advisoryScroll.appendChild(renderAdvisory(activeAdvisory));
+
+  // When the advisory is dark-themed but designTokens has a light background,
+  // override the scroll area + header background so text isn't light-on-light.
+  const advBg = activeAdvisory.colors.tokens['background'];
+  if (advBg) {
+    advisoryScroll.style.backgroundColor = advBg;
+    headerBar.style.backgroundColor = advBg;
+  } else {
+    advisoryScroll.style.backgroundColor = '';
+    headerBar.style.backgroundColor = '';
+  }
 }
 
 function onStoreChange(): void {
   const { primaryEmotion, intensity } = emotionStore.get();
-  const displayMode = settingsStore.get().extraDisplayMode;
 
   if (!primaryEmotion) {
     applyDefaultTheme();
@@ -236,7 +236,8 @@ function onStoreChange(): void {
     wordCloud.innerHTML = '';
     paletteStrip.innerHTML = '';
     advisoryScroll.innerHTML = '';
-    hideChips();
+    advisoryScroll.style.backgroundColor = '';
+    headerBar.style.backgroundColor = '';
     return;
   }
 
@@ -247,15 +248,6 @@ function onStoreChange(): void {
 
   const labelText = primaryEmotion.charAt(0).toUpperCase() + primaryEmotion.slice(1);
   applyTheme(theme);
-
-  // Update chips
-  if (displayMode === 'chips') {
-    const chipPrimary = getChipPrimary(primaryEmotion);
-    updateChips(chipPrimary);
-    refreshChipActive();
-  } else {
-    hideChips();
-  }
 
   if (advisory && advisory.deepened) {
     // Advisory mode: show scrollable advisory
@@ -279,14 +271,13 @@ function onStoreChange(): void {
     renderWordCloud(words, theme.typography.headlineFont);
     renderPalette(theme.colors.palette);
     advisoryScroll.innerHTML = '';
+    advisoryScroll.style.backgroundColor = '';
+    headerBar.style.backgroundColor = '';
   }
 }
 
 export function initApp(): void {
   buildLayout();
-
-  // Mount chip tray between advisory/preview and wheel
-  mountChipTray(document.getElementById('app')!);
 
   emotionStore.subscribe(onStoreChange);
   settingsStore.subscribe(onStoreChange);

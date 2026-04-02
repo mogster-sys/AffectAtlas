@@ -1,12 +1,12 @@
 /**
- * Love: Passion variant advisory -- extracted from Stitch output.
+ * Love: Passion variant advisory -- extracted from The design output.
  * Source: stitch-exports/love-advisory/passion.html + DESIGN-passion.md
- * Values reflect what Stitch ACTUALLY produced.
+ * Values reflect what The design ACTUALLY produced.
  *
  * NOTE: This is a variant of Love, not an independent emotion.
  * It does NOT self-register -- loveAdvisory.ts attaches it as a variant.
  *
- * Stitch faithfully loaded Noto Serif + Be Vietnam Pro (matching prompt).
+ * The design faithfully loaded Noto Serif + Be Vietnam Pro (matching prompt).
  * Primary #ffb3b4 (warm rose) and surface #1e0f16 (deep wine) match.
  * Glass panels: rgba(66, 47, 56, 0.4) with 12px backdrop-blur.
  * "No-Line" rule: boundaries via tonal shifts only, no 1px dividers.
@@ -16,14 +16,14 @@
 import type { EmotionAdvisory } from './advisoryData';
 
 export const LOVE_PASSION_ADVISORY: EmotionAdvisory = {
-  emotion: 'love' as any,
+  emotion: 'love',
   label: 'Passion',
   northStar: 'The Living Hearth',
   philosophy: {
     brief:
       'A fire that begins with a soft, flickering candle and grows into a deep, smoldering coal. The UI feels warm, immersive, and intentional -- organic asymmetry where elements overlap like stacked stationery.',
     rationale:
-      'Passion moves away from sterile "app-like" interfaces toward a high-end editorial experience that feels tactile and alive. We reject the rigid grid in favor of organic asymmetry. Typography carries the weight of a prestige literary journal. Deep wine backgrounds create a "private room" feeling -- the firelight of a hearth in an empty room, where everything is close and nothing is casual. Stitch rendered this as a dark-mode editorial with glass panels, ambient radiance, and signature gradients that mimic the uneven glow of a flame.',
+      'Passion moves away from sterile "app-like" interfaces toward a high-end editorial experience that feels tactile and alive. We reject the rigid grid in favor of organic asymmetry. Typography carries the weight of a prestige literary journal. Deep wine backgrounds create a "private room" feeling -- the firelight of a hearth in an empty room, where everything is close and nothing is casual. The design rendered this as a dark-mode editorial with glass panels, ambient radiance, and signature gradients that mimic the uneven glow of a flame.',
   },
   deepened: true,
   source: 'stitch:love_passion_advisory',
@@ -80,7 +80,7 @@ export const LOVE_PASSION_ADVISORY: EmotionAdvisory = {
       '#680016',
     ],
     rationale:
-      'Stitch rendered four prominent color swatches: #680016 Deep Wine, #D84050 Passion Rose, #FFB3B4 Tender Blush, and #180A11 Midnight Void. The palette inverts base Love -- instead of warm rose on light cream, it places warm rose on deep wine darkness. Primary #ffb3b4 glows as luminous blush against the #1e0f16 surface. Secondary-container #76343e provides the "Ember Chip" tone. The Signature Gradient (from #ffb3b4 to #f95866 at 135deg) mimics the uneven glow of a flame -- used on primary CTAs and navigation active states.',
+      'The design rendered four prominent color swatches: #680016 Deep Wine, #D84050 Passion Rose, #FFB3B4 Tender Blush, and #180A11 Midnight Void. The palette inverts base Love -- instead of warm rose on light cream, it places warm rose on deep wine darkness. Primary #ffb3b4 glows as luminous blush against the #1e0f16 surface. Secondary-container #76343e provides the "Ember Chip" tone. The Signature Gradient (from #ffb3b4 to #f95866 at 135deg) mimics the uneven glow of a flame -- used on primary CTAs and navigation active states.',
   },
 
   typography: {
@@ -143,7 +143,7 @@ export const LOVE_PASSION_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: Noto Serif at 400 italic with loose leading -- literary warmth, gentle editorial presence. Moderate: 700 with tight tracking (-0.02em) and line-height 1.0 -- authoritative, heavy, the weight of a prestige journal. Intense: 700 italic, even tighter, with on-surface (#f8dbe6) against deep wine -- maximum contrast, maximum presence.',
     rationale:
-      'Stitch loaded Noto Serif at wght 400+700, italic variants. Display headline "Passionate Love" rendered at text-5xl (3rem) font-serif italic tracking-tighter. Section headers at text-2xl italic. Body text in Be Vietnam Pro at text-sm/text-lg with leading-relaxed. Label text in Be Vietnam Pro at text-xs uppercase with tracking-widest (0.2em). Both fonts matched the prompt exactly -- a rare win. Noto Serif carries more editorial authority than base Love\'s Crimson Pro, matching Passion\'s intensified voice.',
+      'The design loaded Noto Serif at wght 400+700, italic variants. Display headline "Passionate Love" rendered at text-5xl (3rem) font-serif italic tracking-tighter. Section headers at text-2xl italic. Body text in Be Vietnam Pro at text-sm/text-lg with leading-relaxed. Label text in Be Vietnam Pro at text-xs uppercase with tracking-widest (0.2em). Both fonts matched the prompt exactly -- a rare win. Noto Serif carries more editorial authority than base Love\'s Crimson Pro, matching Passion\'s intensified voice.',
   },
 
   spacing: {
@@ -158,7 +158,7 @@ export const LOVE_PASSION_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: LG at 32px, gentle warmth with breathing room. Moderate: LG at 24px, pressing closer -- intimate urgency. Intense: LG at 16px, elements pulled together, almost overlapping -- the closeness of bodies.',
     rationale:
-      'Stitch rendered "Pressing Spacing" with the note "Closer proximity for intimacy." Section margins at mb-16/mb-20 (64-80px) between major sections, p-8 (32px) inside cards. The spacing is tighter than base Love -- elements press closer together, creating a sense of being drawn in. Where Love is comfortable proximity, Passion is magnetic pull.',
+      'The design rendered "Pressing Spacing" with the note "Closer proximity for intimacy." Section margins at mb-16/mb-20 (64-80px) between major sections, p-8 (32px) inside cards. The spacing is tighter than base Love -- elements press closer together, creating a sense of being drawn in. Where Love is comfortable proximity, Passion is magnetic pull.',
   },
 
   motion: {
@@ -169,7 +169,7 @@ export const LOVE_PASSION_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 360ms, nearly identical to base Love -- slow, embracing, settling in. Moderate: 280ms fast-twitch response -- still smooth but quicker, like a body leaning forward. Intense: 200ms with a rose color flash on state change -- urgent, immediate, the sudden heat of eye contact.',
     rationale:
-      'Stitch rendered "Responsive Easing" at "280ms fast-twitch response" alongside a bolt icon (filled). Transitions use duration-300 and active:scale-90 for navigation items. The 280ms is 80ms faster than base Love\'s 360ms -- the same smooth deceleration but with more urgency. Elements respond faster because passion is more alert, more responsive to touch.',
+      'The design rendered "Responsive Easing" at "280ms fast-twitch response" alongside a bolt icon (filled). Transitions use duration-300 and active:scale-90 for navigation items. The 280ms is 80ms faster than base Love\'s 360ms -- the same smooth deceleration but with more urgency. Elements respond faster because passion is more alert, more responsive to touch.',
   },
 
   depth: {
@@ -194,7 +194,7 @@ export const LOVE_PASSION_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 8px 20px rgba(216, 64, 80, 0.3)',
     ghostBorder: '1px solid rgba(89, 64, 65, 0.15)',
     rationale:
-      'Stitch rendered "Ambient Radiance" with the note "Shadows in the Passion mode are never black. They are deep, warm rosy glows that imply a light source just out of reach -- the hearth." Glass panels use rgba(66, 47, 56, 0.4) with 12px backdrop-blur. Hero shadow: 0 20px 50px rgba(64,0,10,0.5). Section deep shadow: 0 32px 64px rgba(64,0,10,0.6). Active navigation glow: 0 0 15px rgba(216,64,80,0.4). All shadow colors derive from the wine/rose palette -- never grey, never black.',
+      'The design rendered "Ambient Radiance" with the note "Shadows in the Passion mode are never black. They are deep, warm rosy glows that imply a light source just out of reach -- the hearth." Glass panels use rgba(66, 47, 56, 0.4) with 12px backdrop-blur. Hero shadow: 0 20px 50px rgba(64,0,10,0.5). Section deep shadow: 0 32px 64px rgba(64,0,10,0.6). Active navigation glow: 0 0 15px rgba(216,64,80,0.4). All shadow colors derive from the wine/rose palette -- never grey, never black.',
   },
 
   shapes: {
@@ -208,14 +208,14 @@ export const LOVE_PASSION_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 24px, maximum softness -- total warmth, all edges dissolve. Moderate: 18px, the standard -- generously rounded, every card feels like it curves toward you. Intense: 12px, slightly more defined -- still clearly soft but with more presence.',
     rationale:
-      'Stitch used rounded-[1.125rem] (18px) for all section cards and rounded-[1.5rem] (24px) for the hero image container. Tailwind config sets DEFAULT to 0.25rem (4px), lg to 0.5rem (8px), xl to 0.75rem (12px). But Stitch consistently overrode these with custom 18px -- matching the base Love recommended radius. The "No-Line" rule means corners are the primary boundary indicator, so they must be soft enough to feel like transitions rather than edges.',
+      'The design used rounded-[1.125rem] (18px) for all section cards and rounded-[1.5rem] (24px) for the hero image container. Tailwind config sets DEFAULT to 0.25rem (4px), lg to 0.5rem (8px), xl to 0.75rem (12px). But The design consistently overrode these with custom 18px -- matching the base Love recommended radius. The "No-Line" rule means corners are the primary boundary indicator, so they must be soft enough to feel like transitions rather than edges.',
   },
 
   layout: {
     alignment: 'asymmetric',
     density: 'normal',
     rationale:
-      'DESIGN-passion.md specifies "Intentional Asymmetry -- offset images by spacing-8 from the text alignment to break the Bootstrap grid feel." Stitch rendered a mostly centered composition but with the grid-cols-2 spacing/motion section creating intentional asymmetry. Elements overlap like stacked stationery. The layout breathes (spacing-16 = 5.5rem between sections) but with asymmetric offsets that feel organic, not mechanical.',
+      'DESIGN-passion.md specifies "Intentional Asymmetry -- offset images by spacing-8 from the text alignment to break the Bootstrap grid feel." The design rendered a mostly centered composition but with the grid-cols-2 spacing/motion section creating intentional asymmetry. Elements overlap like stacked stationery. The layout breathes (spacing-16 = 5.5rem between sections) but with asymmetric offsets that feel organic, not mechanical.',
   },
 
   iconography: {
@@ -232,7 +232,7 @@ export const LOVE_PASSION_ADVISORY: EmotionAdvisory = {
     weight: 400,
     fill: true,
     rationale:
-      'Stitch rendered icons with font-variation-settings FILL 1 (filled) at weight 400. Content icons: flare (branded header icon), favorite (philosophy divider), bolt (motion intensity). The fill treatment contrasts with base Love\'s 300-weight outlined icons -- Passion fills its icons completely, like a coal that has been fully ignited. Rose primary color against wine backgrounds creates warm, glowing icon presence.',
+      'The design rendered icons with font-variation-settings FILL 1 (filled) at weight 400. Content icons: flare (branded header icon), favorite (philosophy divider), bolt (motion intensity). The fill treatment contrasts with base Love\'s 300-weight outlined icons -- Passion fills its icons completely, like a coal that has been fully ignited. Rose primary color against wine backgrounds creates warm, glowing icon presence.',
   },
 
   rules: {

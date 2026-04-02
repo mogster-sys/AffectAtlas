@@ -131,6 +131,7 @@ body {
 .wheel-container {
   flex: 0 0 45%;
   position: relative;
+  z-index: 2;
   overflow: hidden;
   display: flex;
   align-items: flex-start;
@@ -378,7 +379,12 @@ body {
 /* ─── Wheel container small (advisory mode) ───────── */
 
 .wheel-container-small {
-  flex: 0 0 30% !important;
+  position: fixed !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30% !important;
+  z-index: 5;
 }
 
 /* ─── Advisory panel styles ───────────────────────── */
@@ -394,8 +400,6 @@ body {
 .adv-hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: calc(70vh - 48px);
   padding: 16px 0 32px;
   margin-bottom: 24px;
 }
@@ -521,24 +525,17 @@ body {
   color: #42474b;
 }
 
-/* Dark-themed advisory card overrides */
+/* Dark-themed advisory overrides -- cascade advisory tokens to all children */
+.adv-dark {
+  --ea-text: var(--adv-card-text, #e0e0e0);
+  --ea-text-secondary: var(--adv-card-text-secondary, #b0b0b0);
+}
 .adv-dark .adv-card {
   background: var(--adv-card-bg, rgba(255,255,255,0.5));
   border: 1px solid color-mix(in srgb, var(--adv-card-border, transparent) 20%, transparent);
 }
-.adv-dark .adv-card .adv-body,
-.adv-dark .adv-card .adv-rationale,
-.adv-dark .adv-card .adv-mti-desc,
-.adv-dark .adv-card .adv-label,
-.adv-dark .adv-card .adv-kv-key,
-.adv-dark .adv-card .adv-rules-item {
-  color: var(--adv-card-text-secondary);
+.adv-dark .adv-card .adv-rationale {
   opacity: 1;
-}
-.adv-dark .adv-card .adv-quote,
-.adv-dark .adv-card .adv-kv-val,
-.adv-dark .adv-card .adv-rules-heading {
-  color: var(--adv-card-text);
 }
 .adv-dark .adv-context-card {
   background: rgba(255,255,255,0.92);
@@ -795,10 +792,20 @@ body {
   border-radius: 4px;
   padding: 12px;
 }
+.adv-dark .adv-bezier-wrap {
+  background: rgba(0,0,0,0.25);
+}
+.adv-dark .adv-bezier-svg line {
+  stroke: rgba(255,255,255,0.12);
+}
 
 .adv-bezier-svg {
   width: 100%;
   height: 60px;
+}
+
+.adv-bezier-dot {
+  transition: opacity 0.2s;
 }
 
 .adv-motion-sample {
@@ -839,12 +846,18 @@ body {
   letter-spacing: 0.15em;
   color: var(--ea-text-secondary);
 }
+.adv-dark .adv-depth-label {
+  color: var(--adv-card-text, var(--ea-text-secondary));
+}
 
 .adv-depth-desc {
   font-family: var(--ea-font-body);
   font-size: 0.6rem;
   color: var(--ea-text-secondary);
   opacity: 0.7;
+}
+.adv-dark .adv-depth-desc {
+  color: var(--adv-card-text-secondary, var(--ea-text-secondary));
 }
 
 /* ── Shapes section ─────────────────────────────── */
@@ -893,10 +906,13 @@ body {
   grid-template-rows: repeat(6, 1fr);
   gap: 4px;
   aspect-ratio: 3 / 4;
-  background: rgba(0,0,0,0.03);
+  background: rgba(0,0,0,0.06);
   padding: 8px;
   border-radius: 4px;
   margin-bottom: 12px;
+}
+.adv-dark .adv-layout-wireframe {
+  background: rgba(255,255,255,0.04);
 }
 
 .adv-layout-block {
@@ -1067,52 +1083,6 @@ body {
   font-weight: 600;
 }
 
-/* ─── Extra emotion chips ─────────────────────────── */
-
-.extra-chips-tray {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding: 8px 16px;
-  justify-content: center;
-  min-height: 0;
-  overflow: hidden;
-  transition: opacity 250ms ease-out, max-height 250ms ease-out;
-  max-height: 80px;
-  opacity: 1;
-}
-.extra-chips-tray-hidden {
-  max-height: 0;
-  opacity: 0;
-  padding: 0 16px;
-}
-
-.extra-chip {
-  background: rgba(128, 128, 128, 0.12);
-  border: 1px solid rgba(128, 128, 128, 0.2);
-  border-radius: 999px;
-  padding: 5px 14px;
-  cursor: pointer;
-  font-family: var(--ea-font-body, sans-serif);
-  font-size: 0.75rem;
-  color: var(--ea-text, #e0e0e0);
-  transition: background 200ms ease-out, transform 200ms ease-out, opacity 200ms ease-out;
-  opacity: 0;
-  transform: translateY(6px);
-}
-.extra-chip-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.extra-chip:hover {
-  background: rgba(128, 128, 128, 0.25);
-}
-.extra-chip-active {
-  background: var(--ea-primary, #888);
-  color: #fff;
-  border-color: transparent;
-}
-
 /* ─── Variant chips (advisory bonus screens) ─────── */
 
 .variant-chips-tray {
@@ -1156,4 +1126,127 @@ body {
   background: var(--ea-primary, #888);
   color: #fff;
   border-color: transparent;
+}
+
+/* ─── Upgrade sheet ──────────────────────────────── */
+
+.upgrade-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  z-index: 100;
+  transition: background 300ms ease-out;
+}
+.upgrade-backdrop-visible {
+  background: rgba(0,0,0,0.6);
+}
+
+.upgrade-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1A1A1B;
+  border-radius: 16px 16px 0 0;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px 24px;
+  transform: translateY(100%);
+  transition: transform 300ms ease-out;
+}
+.upgrade-sheet-visible {
+  transform: translateY(0);
+}
+
+.upgrade-handle {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.15);
+  margin: 12px auto 16px;
+}
+
+.upgrade-title {
+  font-family: var(--ea-font-headline);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.upgrade-subtitle {
+  font-family: var(--ea-font-body);
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.upgrade-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.upgrade-feature {
+  font-family: var(--ea-font-body);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #ccc;
+  padding-left: 20px;
+  position: relative;
+}
+.upgrade-feature::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ea-primary, #3B82F6);
+}
+
+.upgrade-buy-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--ea-primary, #3B82F6);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-family: var(--ea-font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 150ms;
+  margin-bottom: 12px;
+}
+.upgrade-buy-btn:active {
+  opacity: 0.8;
+}
+.upgrade-buy-btn[disabled] {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.upgrade-restore-link {
+  background: none;
+  border: none;
+  color: #666;
+  font-family: var(--ea-font-body);
+  font-size: 0.75rem;
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 0 env(safe-area-inset-bottom, 0px);
+}
+
+/* ─── Settings divider ───────────────────────────── */
+
+.settings-divider {
+  height: 1px;
+  background: rgba(128, 128, 128, 0.2);
+  margin: 4px 0;
 }

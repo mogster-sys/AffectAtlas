@@ -1,9 +1,9 @@
 /**
- * Pride advisory -- extracted from Stitch output.
+ * Pride advisory -- extracted from The design output.
  * Source: stitch-exports/pride-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  *
- * NOTE: Stitch shifted primary to #dab9ff (light lavender) and placed
+ * NOTE: The design shifted primary to #dab9ff (light lavender) and placed
  * our #6a3ca0 as primary-container. Secondary shifted to #f0c047
  * (brighter gold). Advisory uses prompt's researched palette for tokens.
  * Spotlit purple and gold shadows are faithfully captured.
@@ -13,7 +13,7 @@ import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const PRIDE_ADVISORY: EmotionAdvisory = {
-  emotion: 'pride' as any,
+  emotion: 'pride',
   label: 'Pride',
   northStar: 'The Elevated Stage',
   philosophy: {
@@ -77,13 +77,13 @@ export const PRIDE_ADVISORY: EmotionAdvisory = {
       '#a07810',
     ],
     rationale:
-      'Stitch rendered the palette as five tall swatches: Surface Deep (#0e0c14), Sovereign Purple (#6a3ca0), Ceremonial Gold (#c49820), Regal Red (#a83040), and Archival White (#e8e4f0). The 7-step intensity gradient shifts through purples from #14121a (near-black) through #6a3ca0 to #dab9ff (light lavender). Regal purple is the historic color of royalty, ceremony, and elevated status. Ceremonial gold is the universal color of achievement -- medals, trophies, gilded frames. The warm undertone in the darks is critical: Fear\'s darkness is cold and clinical, Anger\'s darkness is charred and hostile, but Pride\'s darkness is rich and velvety.',
+      'The design rendered the palette as five tall swatches: Surface Deep (#0e0c14), Sovereign Purple (#6a3ca0), Ceremonial Gold (#c49820), Regal Red (#a83040), and Archival White (#e8e4f0). The 7-step intensity gradient shifts through purples from #14121a (near-black) through #6a3ca0 to #dab9ff (light lavender). Regal purple is the historic color of royalty, ceremony, and elevated status. Ceremonial gold is the universal color of achievement -- medals, trophies, gilded frames. The warm undertone in the darks is critical: Fear\'s darkness is cold and clinical, Anger\'s darkness is charred and hostile, but Pride\'s darkness is rich and velvety.',
   },
 
   typography: {
     headlineFont: 'Bitter',
     headlineFallback: 'serif',
-    bodyFont: 'Manrope',
+    bodyFont: 'Source Sans 3',
     bodyFallback: 'sans-serif',
     scale: {
       display: {
@@ -138,7 +138,7 @@ export const PRIDE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: Bitter at weight 400-500 with line-height 1.3, letter-spacing 0 -- quiet confidence, understated achievement. Moderate: weight 600 with line-height 1.1, slight negative tracking. Intense: weight 700 with line-height 1.0, tracking -0.02em -- declarations, not suggestions. Type carved into the stone of permanence.',
     rationale:
-      'Stitch rendered Bitter at text-5xl font-bold for the hero "DESIGN ADVISORY" and text-4xl font-bold for the specimen "Bitter Slab." The type scale shows Display "PRIDE" at text-2xl, Headline "Achievement" at text-lg, both in Bitter. Body "Permanent Archive" and labels in Manrope. The italic quote "An awards ceremony at twilight" uses Bitter italic. Section headers like "TONAL SOVEREIGNTY" and "EDITORIAL AUTHORITY" show Bitter at text-xl in secondary gold. Slab serifs signal institutional weight and earned permanence -- type carved into stone rather than typed on a screen.',
+      'The design rendered Bitter at text-5xl font-bold for the hero "DESIGN ADVISORY" and text-4xl font-bold for the specimen "Bitter Slab." The type scale shows Display "PRIDE" at text-2xl, Headline "Achievement" at text-lg, both in Bitter. Body "Permanent Archive" and labels in Manrope. The italic quote "An awards ceremony at twilight" uses Bitter italic. Section headers like "TONAL SOVEREIGNTY" and "EDITORIAL AUTHORITY" show Bitter at text-xl in secondary gold. Slab serifs signal institutional weight and earned permanence -- type carved into stone rather than typed on a screen.',
   },
 
   spacing: {
@@ -153,7 +153,7 @@ export const PRIDE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: lg at 28px, slightly tighter, more approachable, less formal -- quiet achievement that does not need a stage. Moderate: lg at 36px, ceremonial spacing, each element has room to breathe. Intense: lg at 44px, maximum clearspace -- every element is a monument. Museum-quality isolation.',
     rationale:
-      'Stitch used space-y-12 (48px) between sections and p-6 (24px) padding inside cards -- generous and presidential. The spacing ruler shows vertical bars of increasing height in secondary gold for XS through XL. The note reads: "Generous clearspace is a luxury. In the Archive, we breathe with prestige." The hero section has mb-16 (64px) below it. This is the opposite of Anger\'s crushing density and Frustration\'s cramped obstruction. Pride gives space as a mark of status.',
+      'The design used space-y-12 (48px) between sections and p-6 (24px) padding inside cards -- generous and presidential. The spacing ruler shows vertical bars of increasing height in secondary gold for XS through XL. The note reads: "Generous clearspace is a luxury. In the Archive, we breathe with prestige." The hero section has mb-16 (64px) below it. This is the opposite of Anger\'s crushing density and Frustration\'s cramped obstruction. Pride gives space as a mark of status.',
   },
 
   motion: {
@@ -164,7 +164,7 @@ export const PRIDE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 400ms, very smooth, almost meditative. Achievement acknowledged quietly. Moderate: 320ms with ceremonial easing, confident arrivals. Intense: 250ms, crisper, with slight upward lift overshoot to 1.03 -- the crowd is cheering.',
     rationale:
-      'Stitch created a .transition-ceremonial class with 320ms cubic-bezier(0.4, 0, 0.2, 1). The ELEVATE card uses hover:scale-[1.02] hover:-translate-y-2 -- elements RISE on interaction. "HOVER TO MATERIALIZE" -- the upward lift is uniquely Pride\'s. While Anger slams down and Sadness drifts away, Pride rises. The export button uses hover:scale-105 active:scale-95. The 320ms gives elements time to be noticed arriving -- faster would feel casual (Joy\'s springs), slower would feel hesitant (Guilt\'s reluctant dragging). Everything is gravitas.',
+      'The design created a .transition-ceremonial class with 320ms cubic-bezier(0.4, 0, 0.2, 1). The ELEVATE card uses hover:scale-[1.02] hover:-translate-y-2 -- elements RISE on interaction. "HOVER TO MATERIALIZE" -- the upward lift is uniquely Pride\'s. While Anger slams down and Sadness drifts away, Pride rises. The export button uses hover:scale-105 active:scale-95. The 320ms gives elements time to be noticed arriving -- faster would feel casual (Joy\'s springs), slower would feel hesitant (Guilt\'s reluctant dragging). Everything is gravitas.',
   },
 
   depth: {
@@ -189,7 +189,7 @@ export const PRIDE_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 12px 48px rgba(106, 60, 160, 0.15)',
     ghostBorder: '1px solid rgba(46, 40, 64, 0.15)',
     rationale:
-      'Stitch created .spotlit-shadow-purple (0 12px 48px rgba(106,60,160,0.15)) and .spotlit-shadow-gold (0 12px 48px rgba(240,192,71,0.1)). The three depth cards show: Pedestal at 0 12px 48px rgba(106,60,160,0.2), Podium at 0 24px 64px rgba(106,60,160,0.3) -- deeper and more dramatic, and Spotlight at 0 12px 48px rgba(240,192,71,0.15) with a secondary gold border. The gold-tinted heavy shadow is the signature move: the most important elements feel literally gilded. Unlike Anger\'s crushing black shadows or Frustration\'s hard industrial offsets, Pride\'s shadows lift elements up into the light.',
+      'The design created .spotlit-shadow-purple (0 12px 48px rgba(106,60,160,0.15)) and .spotlit-shadow-gold (0 12px 48px rgba(240,192,71,0.1)). The three depth cards show: Pedestal at 0 12px 48px rgba(106,60,160,0.2), Podium at 0 24px 64px rgba(106,60,160,0.3) -- deeper and more dramatic, and Spotlight at 0 12px 48px rgba(240,192,71,0.15) with a secondary gold border. The gold-tinted heavy shadow is the signature move: the most important elements feel literally gilded. Unlike Anger\'s crushing black shadows or Frustration\'s hard industrial offsets, Pride\'s shadows lift elements up into the light.',
   },
 
   shapes: {
@@ -203,14 +203,14 @@ export const PRIDE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 10-12px (warmer, more approachable). Moderate: 8px (ceremonial standard). Intense: 4-6px (more monumental, more institutional -- like cornerstones and columns).',
     rationale:
-      'Stitch rendered four shapes in a 2x2 grid: SHARP (0), SOFT (4px), PRIDE (8px, highlighted with secondary border and bold gold text), and ROUND (16px). The section title is "GEOMETRIC DIGNITY." 8px is the ceremonial standard: enough softness to feel refined, enough structure to feel permanent. Compare to Joy\'s 24px (too casual), Anger\'s 0px (too hostile), Trust\'s 12px (too editorial). Pride\'s 8px says it was designed with care.',
+      'The design rendered four shapes in a 2x2 grid: SHARP (0), SOFT (4px), PRIDE (8px, highlighted with secondary border and bold gold text), and ROUND (16px). The section title is "GEOMETRIC DIGNITY." 8px is the ceremonial standard: enough softness to feel refined, enough structure to feel permanent. Compare to Joy\'s 24px (too casual), Anger\'s 0px (too hostile), Trust\'s 12px (too editorial). Pride\'s 8px says it was designed with care.',
   },
 
   layout: {
     alignment: 'center',
     density: 'sparse',
     rationale:
-      'Stitch created a centered hierarchical layout titled "AXIAL HIERARCHY." The wireframe shows a strong vertical center axis (rendered as a 1px line) with a gold accent at the apex, a wide hero element below, a narrower sub-element, then a 3-column grid at the bottom. The centered composition is uniquely Pride\'s. Trust uses measured left-aligned grids. Anger shoves things asymmetrically. But Pride centers -- because ceremony centers. The hero section uses mb-16 (64px) for maximum clearspace.',
+      'The design created a centered hierarchical layout titled "AXIAL HIERARCHY." The wireframe shows a strong vertical center axis (rendered as a 1px line) with a gold accent at the apex, a wide hero element below, a narrower sub-element, then a 3-column grid at the bottom. The centered composition is uniquely Pride\'s. Trust uses measured left-aligned grids. Anger shoves things asymmetrically. But Pride centers -- because ceremony centers. The hero section uses mb-16 (64px) for maximum clearspace.',
   },
 
   iconography: {
@@ -227,7 +227,7 @@ export const PRIDE_ADVISORY: EmotionAdvisory = {
     weight: 500,
     fill: false,
     rationale:
-      'Stitch rendered Material Symbols at text-3xl in secondary gold with the section titled "SIGILS" -- a word choice that reinforces the ceremonial, heraldic quality. The star icon uses FILL 1 (filled) while others are outlined. Icons are: military_tech (honor medal), workspace_premium (premium badge), shield (protection), emoji_events (trophy), star (distinction), diamond (prestige). Weight at 500 is substantial without being aggressive. Gold rendering is the key differentiator -- where other emotions use on-surface or primary for icons, Pride uses secondary gold because achievement is the central metaphor.',
+      'The design rendered Material Symbols at text-3xl in secondary gold with the section titled "SIGILS" -- a word choice that reinforces the ceremonial, heraldic quality. The star icon uses FILL 1 (filled) while others are outlined. Icons are: military_tech (honor medal), workspace_premium (premium badge), shield (protection), emoji_events (trophy), star (distinction), diamond (prestige). Weight at 500 is substantial without being aggressive. Gold rendering is the key differentiator -- where other emotions use on-surface or primary for icons, Pride uses secondary gold because achievement is the central metaphor.',
   },
 
   rules: {

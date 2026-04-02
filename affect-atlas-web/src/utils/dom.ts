@@ -26,7 +26,3 @@ export function el<K extends keyof HTMLElementTagNameMap>(
   }
   return element;
 }
-
-export function $(selector: string): HTMLElement | null {
-  return document.querySelector(selector);
-}

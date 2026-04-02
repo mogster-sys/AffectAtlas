@@ -1,9 +1,9 @@
 /**
- * Alarm advisory -- extracted from Stitch output.
+ * Alarm advisory -- extracted from The design output.
  * Source: stitch-exports/alarm-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  *
- * NOTE: Stitch used the prompt's full MD3 token set directly this time --
+ * NOTE: The design used the prompt's full MD3 token set directly this time --
  * no shifts. Font-family keys are "exo-2" / "fira-sans" (hyphenated)
  * instead of "headline" / "body". Red alarm glow shadows, pulse-red
  * animation, and 150ms pulsing motion are faithfully captured.
@@ -13,7 +13,7 @@ import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const ALARM_ADVISORY: EmotionAdvisory = {
-  emotion: 'alarm' as any,
+  emotion: 'alarm',
   label: 'Alarm',
   northStar: 'The Red Signal',
   philosophy: {
@@ -77,7 +77,7 @@ export const ALARM_ADVISORY: EmotionAdvisory = {
       '#f0a010',
     ],
     rationale:
-      'Stitch rendered the palette as five sharp columns: Primary (#d03020), Primary Container (#501410), Secondary (#d89020), Surface Highest (#221e24), and Surface Lowest (#040406) with abbreviated labels (PRI, CTR, SEC, SRF, LST). The zebra-striped token list shows PRIMARY_SIGNAL #D03020, SURFACE_BASE #0C0A0E, and WARNING_AMBER #D89020. The mild-to-intense gradient strip runs from dark zinc through primary red to white. Alarm red (#d03020) is the universal emergency signal -- the specific saturated red of sirens and stop signs. Warning amber (#d89020) is the pre-alarm signal: hazard tape, caution lights. Surface (#0c0a0e) is control-room darkness -- warm enough to feel heated (alarm is hot, not cold) and dark enough for maximum contrast.',
+      'The design rendered the palette as five sharp columns: Primary (#d03020), Primary Container (#501410), Secondary (#d89020), Surface Highest (#221e24), and Surface Lowest (#040406) with abbreviated labels (PRI, CTR, SEC, SRF, LST). The zebra-striped token list shows PRIMARY_SIGNAL #D03020, SURFACE_BASE #0C0A0E, and WARNING_AMBER #D89020. The mild-to-intense gradient strip runs from dark zinc through primary red to white. Alarm red (#d03020) is the universal emergency signal -- the specific saturated red of sirens and stop signs. Warning amber (#d89020) is the pre-alarm signal: hazard tape, caution lights. Surface (#0c0a0e) is control-room darkness -- warm enough to feel heated (alarm is hot, not cold) and dark enough for maximum contrast.',
   },
 
   typography: {
@@ -138,7 +138,7 @@ export const ALARM_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: Exo 2 at weight 500-600 with line-height 1.1 -- alert but not shouting, like an amber warning state. Moderate: weight 700 with line-height 1.0, uppercase throughout. Intense: weight 800 with line-height 0.95, letter-spacing 0.06em -- maximum broadcast volume. Every word is a signal.',
     rationale:
-      'Stitch rendered Exo 2 at text-5xl font-extrabold uppercase italic for the specimen "URGENCY" and Fira Sans at text-2xl font-light for "Tactical data deployment." The weight ramp shows 6 bars of increasing height in primary red. Section headers use font-exo-2 text-xl font-extrabold uppercase tracking-widest throughout. Exo 2\'s geometric precision makes headlines feel like instrument panel readouts -- engineered for maximum clarity under pressure. At 800 weight with wide tracking, text feels like it is being broadcast.',
+      'The design rendered Exo 2 at text-5xl font-extrabold uppercase italic for the specimen "URGENCY" and Fira Sans at text-2xl font-light for "Tactical data deployment." The weight ramp shows 6 bars of increasing height in primary red. Section headers use font-exo-2 text-xl font-extrabold uppercase tracking-widest throughout. Exo 2\'s geometric precision makes headlines feel like instrument panel readouts -- engineered for maximum clarity under pressure. At 800 weight with wide tracking, text feels like it is being broadcast.',
   },
 
   spacing: {
@@ -153,7 +153,7 @@ export const ALARM_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: md 14px, lg 24px -- still dense but with fractionally more scanning room. Alert readiness. Moderate: md 12px, lg 20px -- standard alarm density. Intense: md 10px, lg 16px -- maximum information density, zero wasted space. Every pixel carries signal.',
     rationale:
-      'Stitch used gap-16 (64px) between major sections but tight internal spacing: gap-1 for color grids, gap-px for rules. The spacing ruler shows XS through XL as proportionally sized red squares. The quote reads: "Dense information layouts maximize signal over noise. Use compressed padding for primary telemetry data." Alarm spacing is emergency spacing -- elements packed close because alarm communicates everything at once. Unlike Frustration\'s cramped obstruction, Alarm\'s density is the efficient compression of emergency systems that prioritize signal over comfort.',
+      'The design used gap-16 (64px) between major sections but tight internal spacing: gap-1 for color grids, gap-px for rules. The spacing ruler shows XS through XL as proportionally sized red squares. The quote reads: "Dense information layouts maximize signal over noise. Use compressed padding for primary telemetry data." Alarm spacing is emergency spacing -- elements packed close because alarm communicates everything at once. Unlike Frustration\'s cramped obstruction, Alarm\'s density is the efficient compression of emergency systems that prioritize signal over comfort.',
   },
 
   motion: {
@@ -164,7 +164,7 @@ export const ALARM_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 200ms with less aggressive pulse (scale 1.03). Alert but not jarring. Moderate: 150ms with full pulse (scale 1.05) and red glow. Intense: 100ms with visible red flash on every state change -- full alarm mode. Every interaction is a siren.',
     rationale:
-      'Stitch created a .pulse-red animation with 1.5s infinite cubic-bezier(0.7, 0, 0.9, 0.3) that expands a red box-shadow from 0 to 10px then fades. The ACTIVATE button combines this pulse animation with active:scale-95 and transition-all duration-150. The SVG bezier visualization shows hard acceleration then sharp stop. The alarm-ease timing function is defined in Tailwind config: cubic-bezier(0.7, 0, 0.9, 0.3). Unlike Anger\'s explosive slam (energy released outward) and Fear\'s slow 400ms creep, Alarm\'s 150ms is a pulse -- a throb of urgency demanding attention.',
+      'The design created a .pulse-red animation with 1.5s infinite cubic-bezier(0.7, 0, 0.9, 0.3) that expands a red box-shadow from 0 to 10px then fades. The ACTIVATE button combines this pulse animation with active:scale-95 and transition-all duration-150. The SVG bezier visualization shows hard acceleration then sharp stop. The alarm-ease timing function is defined in Tailwind config: cubic-bezier(0.7, 0, 0.9, 0.3). Unlike Anger\'s explosive slam (energy released outward) and Fear\'s slow 400ms creep, Alarm\'s 150ms is a pulse -- a throb of urgency demanding attention.',
   },
 
   depth: {
@@ -189,7 +189,7 @@ export const ALARM_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 0 16px rgba(208, 48, 32, 0.15)',
     ghostBorder: '1px solid rgba(208, 48, 32, 0.2)',
     rationale:
-      'Stitch defined three custom alarm shadows in Tailwind config: alarm-sm (0 0 8px rgba(208,48,32,0.1)), alarm-md (0 0 16px rgba(208,48,32,0.15)), alarm-lg (0 0 28px rgba(208,48,32,0.2)). The three depth cards show Alert Level Low/Active/Critical with increasing red glow intensity and border opacity (10%/20%/40%). Critical level includes animate-pulse. Alarm shadows are not traditional drop shadows -- they are red-tinted radial glows that make elements feel like alarm lights. Each card is a signal source emitting urgency. Unlike Anger\'s crushing downward shadows, Alarm\'s glow radiates outward.',
+      'The design defined three custom alarm shadows in Tailwind config: alarm-sm (0 0 8px rgba(208,48,32,0.1)), alarm-md (0 0 16px rgba(208,48,32,0.15)), alarm-lg (0 0 28px rgba(208,48,32,0.2)). The three depth cards show Alert Level Low/Active/Critical with increasing red glow intensity and border opacity (10%/20%/40%). Critical level includes animate-pulse. Alarm shadows are not traditional drop shadows -- they are red-tinted radial glows that make elements feel like alarm lights. Each card is a signal source emitting urgency. Unlike Anger\'s crushing downward shadows, Alarm\'s glow radiates outward.',
   },
 
   shapes: {
@@ -203,14 +203,14 @@ export const ALARM_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 6-8px (still hard, fractionally less aggressive). Moderate: 4px (standard alarm sharpness -- tactical). Intense: 0-2px (maximum emergency aesthetic, pure industrial).',
     rationale:
-      'Stitch rendered four shapes in a 2x2 grid: 0px (Industrial), 2px (Machine), 4px (Tactical), and 8px (marked "PROHIBITED" in error color). The Tailwind config defines alarm radius as 4px. Section titled "GEOMETRY." Sharp corners signal seriousness -- rounded corners feel safe, and alarm is not safe. 4px is the radius of emergency signage: functional urgency, not weaponized aggression.',
+      'The design rendered four shapes in a 2x2 grid: 0px (Industrial), 2px (Machine), 4px (Tactical), and 8px (marked "PROHIBITED" in error color). The Tailwind config defines alarm radius as 4px. Section titled "GEOMETRY." Sharp corners signal seriousness -- rounded corners feel safe, and alarm is not safe. 4px is the radius of emergency signage: functional urgency, not weaponized aggression.',
   },
 
   layout: {
     alignment: 'center',
     density: 'dense',
     rationale:
-      'Stitch created a centered, dense layout titled "CENTRIC STRUCTURE." The wireframe shows a full-width header bar, a central pulsing element (animate-ping in a circle), a 3-column grid with primary red center, and baseline rules below. A radial gradient overlay from primary radiates from center. The centered axis says "look HERE" -- authoritative. Unlike Frustration\'s left-aligned utility, Alarm\'s centering is a single focal point demanding attention. The dense stacking means the eye moves rapidly down through sections scanning for the most critical signal.',
+      'The design created a centered, dense layout titled "CENTRIC STRUCTURE." The wireframe shows a full-width header bar, a central pulsing element (animate-ping in a circle), a 3-column grid with primary red center, and baseline rules below. A radial gradient overlay from primary radiates from center. The centered axis says "look HERE" -- authoritative. Unlike Frustration\'s left-aligned utility, Alarm\'s centering is a single focal point demanding attention. The dense stacking means the eye moves rapidly down through sections scanning for the most critical signal.',
   },
 
   iconography: {
@@ -227,7 +227,7 @@ export const ALARM_ADVISORY: EmotionAdvisory = {
     weight: 600,
     fill: false,
     rationale:
-      'Stitch rendered Material Symbols at text-3xl in text-primary with font-variation-settings confirming weight 600. Icons are in a 3x2 grid with mono-spaced uppercase labels: WARNING, NOTIF_ACT, CRISIS, ERROR, CAMPAIGN, FLASH. All icons are warning/alert/emergency signals. Heavy weight at 600 makes them feel like they are forcing their way into awareness. Unlike Fear\'s fragile thin icons (200 weight) which barely dare to appear, Alarm\'s icons SHOUT.',
+      'The design rendered Material Symbols at text-3xl in text-primary with font-variation-settings confirming weight 600. Icons are in a 3x2 grid with mono-spaced uppercase labels: WARNING, NOTIF_ACT, CRISIS, ERROR, CAMPAIGN, FLASH. All icons are warning/alert/emergency signals. Heavy weight at 600 makes them feel like they are forcing their way into awareness. Unlike Fear\'s fragile thin icons (200 weight) which barely dare to appear, Alarm\'s icons SHOUT.',
   },
 
   rules: {

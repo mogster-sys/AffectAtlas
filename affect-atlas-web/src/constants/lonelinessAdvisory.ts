@@ -1,14 +1,14 @@
 /**
- * Loneliness advisory -- extracted from Stitch output.
+ * Loneliness advisory -- extracted from The design output.
  * Source: stitch-exports/loneliness-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  */
 
 import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const LONELINESS_ADVISORY: EmotionAdvisory = {
-  emotion: 'loneliness' as any,
+  emotion: 'loneliness',
   label: 'Loneliness',
   northStar: 'The Empty Room',
   philosophy: {
@@ -72,7 +72,7 @@ export const LONELINESS_ADVISORY: EmotionAdvisory = {
       '#504858',
     ],
     rationale:
-      'Stitch shifted the primary from the requested muted steel blue (#5078a0) to a brighter sky blue (#a2caf6) in the MD3 system, placing the original request as primary-container. The palette swatches in the visual layout faithfully show the requested values: #121418 (vast dark), #5078A0 (distant blue), #706878 (twilight lavender), #887868 (faded memory), #B8BCC8 (dim light). Each swatch is rendered as an isolated circle with gap-20 (80px) between them -- each color is an island. On cool blue-black (#111317, not Depression\'s neutral #161618 -- specifically cool and blue like the sky long after sunset), the palette reads as a window at night reflecting your own face.',
+      'The design shifted the primary from the requested muted steel blue (#5078a0) to a brighter sky blue (#a2caf6) in the MD3 system, placing the original request as primary-container. The palette swatches in the visual layout faithfully show the requested values: #121418 (vast dark), #5078A0 (distant blue), #706878 (twilight lavender), #887868 (faded memory), #B8BCC8 (dim light). Each swatch is rendered as an isolated circle with gap-20 (80px) between them -- each color is an island. On cool blue-black (#111317, not Depression\'s neutral #161618 -- specifically cool and blue like the sky long after sunset), the palette reads as a window at night reflecting your own face.',
   },
 
   typography: {
@@ -133,7 +133,7 @@ export const LONELINESS_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: weight 300-400, tracking 0.06em -- thin but present. Alone but visible. Moderate: weight 300, tracking 0.08em -- letters drifting apart. Intense: weight 300, tracking 0.1em -- letters dissolving into the void between them. Each character barely acknowledges the next.',
     rationale:
-      'Stitch rendered Josefin Sans at weight 300 (font-light) for the header and all major headings with the .letter-spaced class (0.06em). The weight ramp shows Light 300 at text-4xl, Regular 400 at text-3xl, Bold 700 at text-2xl -- the lightest weight gets the largest size, emphasizing the thin fragility. The "The Empty Room" philosophy heading is text-2xl font-light. Cabin appears as body text at text-sm font-light with opacity-60 and leading-relaxed (1.8) -- a modest human presence. The wide letter-spacing physically separates each letter from its neighbors. This is the opposite of Anger\'s condensed -0.03em (characters forced together). Even the CHARACTERS are alone.',
+      'The design rendered Josefin Sans at weight 300 (font-light) for the header and all major headings with the .letter-spaced class (0.06em). The weight ramp shows Light 300 at text-4xl, Regular 400 at text-3xl, Bold 700 at text-2xl -- the lightest weight gets the largest size, emphasizing the thin fragility. The "The Empty Room" philosophy heading is text-2xl font-light. Cabin appears as body text at text-sm font-light with opacity-60 and leading-relaxed (1.8) -- a modest human presence. The wide letter-spacing physically separates each letter from its neighbors. This is the opposite of Anger\'s condensed -0.03em (characters forced together). Even the CHARACTERS are alone.',
   },
 
   spacing: {
@@ -148,7 +148,7 @@ export const LONELINESS_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: lg 36px -- alone with the walls closer. Still distant but contained. Moderate: lg 48px -- each element an island, standard loneliness. Intense: lg 64px -- elements barely visible in the vastness. The distance becomes the dominant visual feature.',
     rationale:
-      'Stitch used mb-[12rem] to mb-[14rem] (192-224px) between sections -- by far the largest gaps of any advisory. Content is constrained to max-w-xs (~320px) within the 393px viewport, with enormous px-6 padding and pt-32 top offset. The spacing ruler shows 6/14/28/48/72px with space-y-12 (48px) between ruler entries -- even the spacing demonstration is sparse. The color palette uses gap-20 (80px) between individual swatches. This is NOT Contentment\'s generous spacing (which feels full and satisfied) -- this is the aching spacing of absence. Something should be here. No one came.',
+      'The design used mb-[12rem] to mb-[14rem] (192-224px) between sections -- by far the largest gaps of any advisory. Content is constrained to max-w-xs (~320px) within the 393px viewport, with enormous px-6 padding and pt-32 top offset. The spacing ruler shows 6/14/28/48/72px with space-y-12 (48px) between ruler entries -- even the spacing demonstration is sparse. The color palette uses gap-20 (80px) between individual swatches. This is NOT Contentment\'s generous spacing (which feels full and satisfied) -- this is the aching spacing of absence. Something should be here. No one came.',
   },
 
   motion: {
@@ -159,7 +159,7 @@ export const LONELINESS_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 380ms, slightly more responsive -- still alone but still responding to contact. Moderate: 450ms, drifting -- unhurried because there is no one to hurry for. Intense: 550ms, slower, with deeper opacity drop -- elements barely acknowledge interaction. Touch and the element fades.',
     rationale:
-      'Stitch created a .slow-transition class with the exact 450ms cubic-bezier(0.25, 0.1, 0.25, 1) easing and a .sink-hover class (translateY(4px)) that makes elements SINK away from touch -- reach out and things pull away. The "Reach" button combines both: sink on hover, slow transition timing. The bottom nav links use the same 450ms timing. Unlike Awe\'s 450ms (which drifts with cathedral curves and slow reverence), Loneliness\'s 450ms is unhurried because there is no one to hurry for. The standard ease-out is unremarkable -- nothing about the motion demands attention.',
+      'The design created a .slow-transition class with the exact 450ms cubic-bezier(0.25, 0.1, 0.25, 1) easing and a .sink-hover class (translateY(4px)) that makes elements SINK away from touch -- reach out and things pull away. The "Reach" button combines both: sink on hover, slow transition timing. The bottom nav links use the same 450ms timing. Unlike Awe\'s 450ms (which drifts with cathedral curves and slow reverence), Loneliness\'s 450ms is unhurried because there is no one to hurry for. The standard ease-out is unremarkable -- nothing about the motion demands attention.',
   },
 
   depth: {
@@ -184,7 +184,7 @@ export const LONELINESS_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 20px 40px rgba(80, 120, 160, 0.08)',
     ghostBorder: '1px solid rgba(66, 71, 78, 0.1)',
     rationale:
-      'Stitch created a .empty-room-shadow class (0 20px 40px rgba(80, 120, 160, 0.08)) -- cold blue-tinted with a very wide blur radius (40px) relative to the small offset (20px), creating diffuse, distant light like streetlight through a window at 3am. All three depth cards (Glimmer, Pool, Island) use the same shadow with icons at primary/40 opacity. The header also uses this shadow. Unlike Depression\'s flat tonal depth (no shadows at all), Loneliness has a faint cold light. It is not warm (Pride\'s gold spotlight) or atmospheric (Fear\'s ethereal vignette) -- it is the specific cold blue of a single lamp in an empty room.',
+      'The design created a .empty-room-shadow class (0 20px 40px rgba(80, 120, 160, 0.08)) -- cold blue-tinted with a very wide blur radius (40px) relative to the small offset (20px), creating diffuse, distant light like streetlight through a window at 3am. All three depth cards (Glimmer, Pool, Island) use the same shadow with icons at primary/40 opacity. The header also uses this shadow. Unlike Depression\'s flat tonal depth (no shadows at all), Loneliness has a faint cold light. It is not warm (Pride\'s gold spotlight) or atmospheric (Fear\'s ethereal vignette) -- it is the specific cold blue of a single lamp in an empty room.',
   },
 
   shapes: {
@@ -198,14 +198,14 @@ export const LONELINESS_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 10-12px (a small softening, a small hope). Moderate: 8px (contained standard). Intense: 6px (shapes withdrawing into themselves, edges tightening).',
     rationale:
-      'Stitch set DEFAULT to 4px, lg to 8px, and xl to 12px. The shapes grid highlights lg (8px) as the recommended radius with a primary-colored outline. Shapes are smooth enough to avoid hostility but contained enough to avoid warmth. Each element is clearly bounded -- a discrete unit surrounded by emptiness. Compare to Contentment\'s 16px (inviting, open) and Embarrassment\'s 14px (defensive, curling inward). Loneliness\'s 8px is closed-off: not hostile, not welcoming. Just self-contained.',
+      'The design set DEFAULT to 4px, lg to 8px, and xl to 12px. The shapes grid highlights lg (8px) as the recommended radius with a primary-colored outline. Shapes are smooth enough to avoid hostility but contained enough to avoid warmth. Each element is clearly bounded -- a discrete unit surrounded by emptiness. Compare to Contentment\'s 16px (inviting, open) and Embarrassment\'s 14px (defensive, curling inward). Loneliness\'s 8px is closed-off: not hostile, not welcoming. Just self-contained.',
   },
 
   layout: {
     alignment: 'center',
     density: 'sparse',
     rationale:
-      'Stitch created a center-aligned layout with max-w-xs constraining content to ~320px within the 393px viewport. The wireframe section is a 400px-tall container with a single 4x4px blurred primary element centered within it -- the ultimate demonstration of loneliness: one tiny thing, surrounded by nothing. Content blocks are narrow and isolated. The centering is not Pride\'s ceremonial centering (important, spotlit). Loneliness\'s centering is the single object in a room -- centered because you are the ONLY thing.',
+      'The design created a center-aligned layout with max-w-xs constraining content to ~320px within the 393px viewport. The wireframe section is a 400px-tall container with a single 4x4px blurred primary element centered within it -- the ultimate demonstration of loneliness: one tiny thing, surrounded by nothing. Content blocks are narrow and isolated. The centering is not Pride\'s ceremonial centering (important, spotlit). Loneliness\'s centering is the single object in a room -- centered because you are the ONLY thing.',
   },
 
   iconography: {
@@ -222,7 +222,7 @@ export const LONELINESS_ADVISORY: EmotionAdvisory = {
     weight: 200,
     fill: false,
     rationale:
-      'Stitch rendered icons at weight 200 (confirmed in font-variation-settings) -- thinner than Depression\'s 300, thinner than Guilt\'s 400. The icon grid uses gap-y-16 (64px) between rows and renders in on-surface-variant at 40% opacity -- extremely faint ghostly outlines. Each icon is a singular object: one person, one chair, one moon, one body of water, one point of light, one dusk. The footer nav icons also use opacity-0 on inactive labels -- they exist but their names are invisible. Loneliness\'s icons are poetic and singular -- each one a small meditation on aloneness.',
+      'The design rendered icons at weight 200 (confirmed in font-variation-settings) -- thinner than Depression\'s 300, thinner than Guilt\'s 400. The icon grid uses gap-y-16 (64px) between rows and renders in on-surface-variant at 40% opacity -- extremely faint ghostly outlines. Each icon is a singular object: one person, one chair, one moon, one body of water, one point of light, one dusk. The footer nav icons also use opacity-0 on inactive labels -- they exist but their names are invisible. Loneliness\'s icons are poetic and singular -- each one a small meditation on aloneness.',
   },
 
   rules: {

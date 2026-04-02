@@ -1,9 +1,9 @@
 /**
- * Remorse advisory -- extracted from Stitch output.
+ * Remorse advisory -- extracted from The design output.
  * Source: stitch-exports/remorse-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  *
- * NOTE: Stitch used Work Sans instead of Albert Sans for body font.
+ * NOTE: The design used Work Sans instead of Albert Sans for body font.
  * Primary shifted to #b1cadc (lighter); our #587080 placed as
  * primary-container. Limited Tailwind config (~12 colors vs full set).
  * .sinking-easing bezier, .wound-glow crimson shadow, and heavy
@@ -14,7 +14,7 @@ import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const REMORSE_ADVISORY: EmotionAdvisory = {
-  emotion: 'remorse' as any,
+  emotion: 'remorse',
   label: 'Remorse',
   northStar: 'The Heavy Reckoning',
   philosophy: {
@@ -78,7 +78,7 @@ export const REMORSE_ADVISORY: EmotionAdvisory = {
       '#601828',
     ],
     rationale:
-      'Stitch rendered the palette as five smooth columns: #141618, #587080, #6a5848, #803040 (with wound-glow), and #b8bcc0. Primary shifted to #b1cadc (lighter blue) with #587080 placed as primary-container. The advisory uses the prompt\'s researched values. Primary #587080 is muted steel blue -- the color of heavy reflection, late-night introspection. Secondary #6a5848 is deep muted brown -- earth, aftermath, surfaces that show the marks of what happened. Tertiary #803040 is dark crimson -- the wound, appearing sparingly where guilt concentrates. A stain that cannot be washed out.',
+      'The design rendered the palette as five smooth columns: #141618, #587080, #6a5848, #803040 (with wound-glow), and #b8bcc0. Primary shifted to #b1cadc (lighter blue) with #587080 placed as primary-container. The advisory uses the prompt\'s researched values. Primary #587080 is muted steel blue -- the color of heavy reflection, late-night introspection. Secondary #6a5848 is deep muted brown -- earth, aftermath, surfaces that show the marks of what happened. Tertiary #803040 is dark crimson -- the wound, appearing sparingly where guilt concentrates. A stain that cannot be washed out.',
   },
 
   typography: {
@@ -138,7 +138,7 @@ export const REMORSE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: Fraunces at weight 300-400 with more line height (1.2), Albert Sans at 300 -- the weight is present but you can carry it. A wistful looking back. Moderate: Fraunces 500-600 with line-height 1.15 -- weighted, settling, organic irregularity visible. Intense: Fraunces 600-700, slightly tighter -- words feel heavy in the mouth. The full weight presses down.',
     rationale:
-      'Stitch rendered Fraunces at text-[30px] font-semibold for the specimen and showed a weight ramp from 300 through 600. Body uses Work Sans (Stitch substituted for Albert Sans) at text-[15px] with leading-relaxed. The advisory uses the prompt\'s researched body font (Albert Sans). Fraunces\' soft old-style serif with slightly irregular "wonky" proportions carries something unresolved within its structure -- letterforms that are organic and imperfect. Albert Sans provides honest, clear body text for the straightforward accounting of what happened.',
+      'The design rendered Fraunces at text-[30px] font-semibold for the specimen and showed a weight ramp from 300 through 600. Body uses Work Sans (The design substituted for Albert Sans) at text-[15px] with leading-relaxed. The advisory uses the prompt\'s researched body font (Albert Sans). Fraunces\' soft old-style serif with slightly irregular "wonky" proportions carries something unresolved within its structure -- letterforms that are organic and imperfect. Albert Sans provides honest, clear body text for the straightforward accounting of what happened.',
   },
 
   spacing: {
@@ -153,7 +153,7 @@ export const REMORSE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: lg at 36px, more room, more breath, slightly more distance from the weight. Moderate: lg at 30px, reflective weighted spacing -- adequate room, but the stillness itself feels heavy. Intense: lg at 24px, the weight closes in, less room to breathe, more inescapable.',
     rationale:
-      'Stitch used space-y-8 between philosophy elements and py-20 for section padding with space-y-12 between major elements. Density labeled "Normal." The spacing creates room for reflection -- not so tight it creates pressure (remorse is not fighting) and not so generous it suggests peace (remorse has not found peace). The space between elements is the silence between sentences when someone is telling a hard truth.',
+      'The design used space-y-8 between philosophy elements and py-20 for section padding with space-y-12 between major elements. Density labeled "Normal." The spacing creates room for reflection -- not so tight it creates pressure (remorse is not fighting) and not so generous it suggests peace (remorse has not found peace). The space between elements is the silence between sentences when someone is telling a hard truth.',
   },
 
   motion: {
@@ -164,7 +164,7 @@ export const REMORSE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 320ms, less pronounced sinking. The weight is there but manageable. Moderate: 380ms with sinking easing, elements settle downward past their intended resting point. Intense: 440ms, deeper sinking, more visible downward settling. Elements visibly struggle under their own weight.',
     rationale:
-      'Stitch created a .sinking-easing class with transition-timing-function: cubic-bezier(0.4, 0.1, 0.3, 0.8) and an SVG bezier visualization labeled "380ms Easing." The "Press to Settle" button uses active:translate-y-1 with transition-transform sinking-easing shadow-lg -- a pressing down, a sinking under weight. The 380ms is unhurried but not dramatic -- things take time because they are heavy, not because they are ceremonial. Elements arrive at their destination and then sink a fraction further.',
+      'The design created a .sinking-easing class with transition-timing-function: cubic-bezier(0.4, 0.1, 0.3, 0.8) and an SVG bezier visualization labeled "380ms Easing." The "Press to Settle" button uses active:translate-y-1 with transition-transform sinking-easing shadow-lg -- a pressing down, a sinking under weight. The 380ms is unhurried but not dramatic -- things take time because they are heavy, not because they are ceremonial. Elements arrive at their destination and then sink a fraction further.',
   },
 
   depth: {
@@ -189,7 +189,7 @@ export const REMORSE_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 6px 16px rgba(20, 22, 24, 0.3)',
     ghostBorder: '1px solid rgba(255, 255, 255, 0.05)',
     rationale:
-      'Stitch rendered three shadow levels: Light Recession (shadow-lg), Medium Settle (0 12px 24px rgba(0,0,0,0.5)), and Heavy Weight (0 24px 48px rgba(0,0,0,0.7)). All cards use surface-container-high background with border-white/5. The .wound-glow class adds 0 10px 40px -10px rgba(128, 48, 64, 0.4) -- a dark crimson glow on the tertiary swatch. Remorse shadows are the heaviest of any emotion -- deep, dark, gravitational. Unlike most shadow systems that suggest elevation, remorse shadows suggest weight, pulling elements down rather than lifting them up.',
+      'The design rendered three shadow levels: Light Recession (shadow-lg), Medium Settle (0 12px 24px rgba(0,0,0,0.5)), and Heavy Weight (0 24px 48px rgba(0,0,0,0.7)). All cards use surface-container-high background with border-white/5. The .wound-glow class adds 0 10px 40px -10px rgba(128, 48, 64, 0.4) -- a dark crimson glow on the tertiary swatch. Remorse shadows are the heaviest of any emotion -- deep, dark, gravitational. Unlike most shadow systems that suggest elevation, remorse shadows suggest weight, pulling elements down rather than lifting them up.',
   },
 
   shapes: {
@@ -203,14 +203,14 @@ export const REMORSE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 12-14px, a small softening, a small compassion. Moderate: 10px, smooth but constrained -- neither sharp (too aggressive for reflection) nor rounded (too comforting for guilt). Intense: 6-8px, more constrained, more closed off, heavier walls.',
     rationale:
-      'Stitch rendered four shapes in a 2x2 grid: 6px, 8px, 10px (highlighted with border-2 border-primary/40 and bold "10px Anchor" label), and 14px. The Tailwind config sets DEFAULT to 10px. Section titled "Geometric Softening." Remorse shapes are constrained shapes that have turned inward -- contained, closed, holding their weight within their own boundaries. The moderate 10px radius avoids both the hostility of sharp corners and the warmth of rounded ones. Not inviting, not pushing away. Just sitting with what is inside.',
+      'The design rendered four shapes in a 2x2 grid: 6px, 8px, 10px (highlighted with border-2 border-primary/40 and bold "10px Anchor" label), and 14px. The Tailwind config sets DEFAULT to 10px. Section titled "Geometric Softening." Remorse shapes are constrained shapes that have turned inward -- contained, closed, holding their weight within their own boundaries. The moderate 10px radius avoids both the hostility of sharp corners and the warmth of rounded ones. Not inviting, not pushing away. Just sitting with what is inside.',
   },
 
   layout: {
     alignment: 'center',
     density: 'normal',
     rationale:
-      'Stitch created a centered, bottom-weighted composition titled "The Sinking Weight." The wireframe shows elements settling toward the bottom of their container: a narrow element at top, heavy elements at bottom, and a radial gradient from top (transparent) to bottom (dark) creating visual gravity. The centering is not formal or grand -- it is the center of someone who has stopped moving and is sitting with the weight. Visual mass accumulates downward like sediment settling.',
+      'The design created a centered, bottom-weighted composition titled "The Sinking Weight." The wireframe shows elements settling toward the bottom of their container: a narrow element at top, heavy elements at bottom, and a radial gradient from top (transparent) to bottom (dark) creating visual gravity. The centering is not formal or grand -- it is the center of someone who has stopped moving and is sitting with the weight. Visual mass accumulates downward like sediment settling.',
   },
 
   iconography: {
@@ -227,7 +227,7 @@ export const REMORSE_ADVISORY: EmotionAdvisory = {
     weight: 300,
     fill: false,
     rationale:
-      'Stitch rendered Material Symbols at text-4xl in text-primary with font-variation-settings confirming weight 300 and FILL 0. Icons in a 3x2 grid: undo (wishing you could take it back), sentiment_very_dissatisfied (the face of "what did I do"), dark_mode (the weight of conscience), water_drop (the physical expression), history (replaying the moment), remove (what was lost). All six icons match the prompt exactly. The thin weight creates marks that feel scratched with effort, not drawn with confidence.',
+      'The design rendered Material Symbols at text-4xl in text-primary with font-variation-settings confirming weight 300 and FILL 0. Icons in a 3x2 grid: undo (wishing you could take it back), sentiment_very_dissatisfied (the face of "what did I do"), dark_mode (the weight of conscience), water_drop (the physical expression), history (replaying the moment), remove (what was lost). All six icons match the prompt exactly. The thin weight creates marks that feel scratched with effort, not drawn with confidence.',
   },
 
   rules: {

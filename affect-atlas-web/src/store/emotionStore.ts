@@ -18,7 +18,7 @@ const STORAGE_KEY = 'emotion-store';
 
 function loadState(): EmotionState {
   const defaults: EmotionState = {
-    primaryEmotion: null,
+    primaryEmotion: 'joy',
     secondaryEmotion: null,
     intensity: 'moderate',
     blendRatio: 0.5,

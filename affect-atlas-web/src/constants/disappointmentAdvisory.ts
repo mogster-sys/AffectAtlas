@@ -1,12 +1,12 @@
 /**
- * Disappointment advisory -- extracted from Stitch output.
+ * Disappointment advisory -- extracted from The design output.
  * Source: stitch-exports/disappointment-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  *
- * NOTE: Stitch shifted primary to #50606f (darker blue-grey), added
+ * NOTE: The design shifted primary to #50606f (darker blue-grey), added
  * Newsreader + Inter as font fallbacks before Vollkorn + Jost, and
  * substituted several icons. The advisory uses the prompt's researched
- * palette and icon set. Stitch's .sagging-content class (extra top
+ * palette and icon set. The design's .sagging-content class (extra top
  * padding to push content below center) and .deflating-ease bezier
  * are faithfully captured.
  */
@@ -15,7 +15,7 @@ import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const DISAPPOINTMENT_ADVISORY: EmotionAdvisory = {
-  emotion: 'disappointment' as any,
+  emotion: 'disappointment',
   label: 'Disappointment',
   northStar: 'The Falling Short',
   philosophy: {
@@ -79,7 +79,7 @@ export const DISAPPOINTMENT_ADVISORY: EmotionAdvisory = {
       '#806848',
     ],
     rationale:
-      'Stitch rendered the palette as five rounded swatches: #50606F (shifted primary), #5F5F5F (neutral grey), #6B5D41 (faded amber), #EBEEF2 (surface container), and #F0F0F2 (background). Below, three descriptor chips read "Muted," "Weary," "Settled." The mild-to-intense gradient runs from surface-container-low through primary to error/40. The advisory uses the prompt\'s researched values. Primary #687888 is the color of an overcast sky -- not blue enough to be interesting, not grey enough to be neutral. Secondary #808080 is literal grey, the most anticlimactic color possible. Tertiary #a09070 is the ghost of something warm that did not pan out.',
+      'The design rendered the palette as five rounded swatches: #50606F (shifted primary), #5F5F5F (neutral grey), #6B5D41 (faded amber), #EBEEF2 (surface container), and #F0F0F2 (background). Below, three descriptor chips read "Muted," "Weary," "Settled." The mild-to-intense gradient runs from surface-container-low through primary to error/40. The advisory uses the prompt\'s researched values. Primary #687888 is the color of an overcast sky -- not blue enough to be interesting, not grey enough to be neutral. Secondary #808080 is literal grey, the most anticlimactic color possible. Tertiary #a09070 is the ghost of something warm that did not pan out.',
   },
 
   typography: {
@@ -139,7 +139,7 @@ export const DISAPPOINTMENT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: Vollkorn at weight 400 with generous tracking, Jost at 300 -- text barely asserts itself. The mildest let-down. Moderate: Vollkorn 500-600 with standard spacing -- present but flat, adequate but uninspired. Intense: Vollkorn 600, slightly less tracking -- a deeper "is this really all there is." Still never bold enough to command.',
     rationale:
-      'Stitch rendered Vollkorn at text-[28px] font-semibold for the specimen with the label "28px / undersized." Jost appears at text-[15px] for body with "15px / adequate." The weight ramp shows Jost 300/400/600. Display at 28px is deliberately smaller than most emotions (which use 30-34px) because disappointment does not proclaim itself. Vollkorn at semibold is competent without being inspiring -- the typographic equivalent of "meets expectations."',
+      'The design rendered Vollkorn at text-[28px] font-semibold for the specimen with the label "28px / undersized." Jost appears at text-[15px] for body with "15px / adequate." The weight ramp shows Jost 300/400/600. Display at 28px is deliberately smaller than most emotions (which use 30-34px) because disappointment does not proclaim itself. Vollkorn at semibold is competent without being inspiring -- the typographic equivalent of "meets expectations."',
   },
 
   spacing: {
@@ -154,7 +154,7 @@ export const DISAPPOINTMENT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: lg at 32px, a small amount of room, a small amount of resignation. Moderate: lg at 28px, adequate spacing applied once and never reconsidered. Intense: lg at 24px, less room, less hope -- the gap between expectation and reality closes, but not in a good way.',
     rationale:
-      'Stitch used space-y-20 (80px) between sections and p-5 (20px) inside cards. The spacing ruler shows bars at xs, md (labeled "adequate"), lg (labeled "normal"), and 2xl. Disappointment spacing is adequate spacing -- not tight enough to create pressure, not generous enough to create comfort. It is the default: applied without intention, maintained without care. This adequacy is itself the disappointment.',
+      'The design used space-y-20 (80px) between sections and p-5 (20px) inside cards. The spacing ruler shows bars at xs, md (labeled "adequate"), lg (labeled "normal"), and 2xl. Disappointment spacing is adequate spacing -- not tight enough to create pressure, not generous enough to create comfort. It is the default: applied without intention, maintained without care. This adequacy is itself the disappointment.',
   },
 
   motion: {
@@ -165,7 +165,7 @@ export const DISAPPOINTMENT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 360ms, gentler deflation -- the let-down is subtle, barely perceptible. Moderate: 300ms with deflating easing, unremarkable duration. Intense: 240ms with more visible undershooting -- elements visibly fall short of their target position.',
     rationale:
-      'Stitch created a .deflating-ease class with cubic-bezier(0.25, 1, 0.5, 0.8) and an SVG visualization labeled "Fast Start" and "Premature Slow." The "Press to Settle" button uses active:scale-[0.95] focus:scale-[0.97] -- capturing the "never quite returning to full size" concept. The incomplete recovery is the physical metaphor: things that should bounce back but do not quite make it. The motion IS the disappointment: things almost arrive, then settle for less.',
+      'The design created a .deflating-ease class with cubic-bezier(0.25, 1, 0.5, 0.8) and an SVG visualization labeled "Fast Start" and "Premature Slow." The "Press to Settle" button uses active:scale-[0.95] focus:scale-[0.97] -- capturing the "never quite returning to full size" concept. The incomplete recovery is the physical metaphor: things that should bounce back but do not quite make it. The motion IS the disappointment: things almost arrive, then settle for less.',
   },
 
   depth: {
@@ -190,7 +190,7 @@ export const DISAPPOINTMENT_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 2px 8px rgba(64, 64, 64, 0.06)',
     ghostBorder: '1px solid rgba(200, 200, 200, 0.2)',
     rationale:
-      'Stitch rendered three shadow levels: Light (0 2px 8px rgba(45,51,56,0.02)), Medium "Regret" (0 10px 30px rgba(45,51,56,0.05)), and Heavy "Burdened" (0 20px 40px rgba(45,51,56,0.08)). Section cards use 0 4px 12px rgba(45,51,56,0.05). Shadows are barely visible -- elements do not float above their surface because floating requires energy and expectation. Everything has settled to the lowest possible elevation. The neutral grey tint and extremely low opacity make shadows feel like afterthoughts.',
+      'The design rendered three shadow levels: Light (0 2px 8px rgba(45,51,56,0.02)), Medium "Regret" (0 10px 30px rgba(45,51,56,0.05)), and Heavy "Burdened" (0 20px 40px rgba(45,51,56,0.08)). Section cards use 0 4px 12px rgba(45,51,56,0.05). Shadows are barely visible -- elements do not float above their surface because floating requires energy and expectation. Everything has settled to the lowest possible elevation. The neutral grey tint and extremely low opacity make shadows feel like afterthoughts.',
   },
 
   shapes: {
@@ -204,14 +204,14 @@ export const DISAPPOINTMENT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 12-14px, a small softening that offers a small comfort. Moderate: 10px, the unremarkable standard -- smooth enough to avoid hostility, not rounded enough to invite warmth. Intense: 8px, less inviting, more institutional -- more "this is what you get."',
     rationale:
-      'Stitch rendered four shapes in a 2x2 grid: 6px, 8px, 10px (highlighted with primary border and "RECOMMENDED" label), and 14px. 10px is the radius of adequate design -- neither sharp (too intentional) nor rounded (too friendly). It is the default radius of someone who picked a number and moved on. Not the deliberate softness of love (18px) or the sharp intentionality of frustration (4px). It sits in the middle, uncommitted and uninspired.',
+      'The design rendered four shapes in a 2x2 grid: 6px, 8px, 10px (highlighted with primary border and "RECOMMENDED" label), and 14px. 10px is the radius of adequate design -- neither sharp (too intentional) nor rounded (too friendly). It is the default radius of someone who picked a number and moved on. Not the deliberate softness of love (18px) or the sharp intentionality of frustration (4px). It sits in the middle, uncommitted and uninspired.',
   },
 
   layout: {
     alignment: 'center',
     density: 'normal',
     rationale:
-      'Stitch created a centered, bottom-weighted layout. The wireframe shows a dashed horizontal line at center with content elements sitting below it, and the note "Elements sit 12px below center." The .sagging-content class adds extra top padding (1.5rem) to push content fractionally below vertical center. This is not the grand formality of awe or the intimate pairing of love -- it is the default center of someone who did not consider alternatives. Elements have sagged slightly, settling lower than where they started.',
+      'The design created a centered, bottom-weighted layout. The wireframe shows a dashed horizontal line at center with content elements sitting below it, and the note "Elements sit 12px below center." The .sagging-content class adds extra top padding (1.5rem) to push content fractionally below vertical center. This is not the grand formality of awe or the intimate pairing of love -- it is the default center of someone who did not consider alternatives. Elements have sagged slightly, settling lower than where they started.',
   },
 
   iconography: {
@@ -228,7 +228,7 @@ export const DISAPPOINTMENT_ADVISORY: EmotionAdvisory = {
     weight: 300,
     fill: false,
     rationale:
-      'Stitch rendered Material Symbols at text-[28px] in text-primary with font-variation-settings confirming weight 300 and grade -25. Stitch substituted some icons (article, palette, architecture, low_priority, cloud, rebase_edit) but the advisory uses the prompt\'s researched set: sentiment_dissatisfied, cloud, hourglass_empty, trending_down, remove_circle_outline, schedule. These are deflation icons -- the unhappy face (not angry, just let down), clouds (overcast expectations), empty hourglasses (time invested without return), downward trends (less than hoped).',
+      'The design rendered Material Symbols at text-[28px] in text-primary with font-variation-settings confirming weight 300 and grade -25. The design substituted some icons (article, palette, architecture, low_priority, cloud, rebase_edit) but the advisory uses the prompt\'s researched set: sentiment_dissatisfied, cloud, hourglass_empty, trending_down, remove_circle_outline, schedule. These are deflation icons -- the unhappy face (not angry, just let down), clouds (overcast expectations), empty hourglasses (time invested without return), downward trends (less than hoped).',
   },
 
   rules: {

@@ -1,14 +1,14 @@
 /**
- * Embarrassment advisory -- extracted from Stitch output.
+ * Embarrassment advisory -- extracted from The design output.
  * Source: stitch-exports/embarrassment-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  */
 
 import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const EMBARRASSMENT_ADVISORY: EmotionAdvisory = {
-  emotion: 'embarrassment' as any,
+  emotion: 'embarrassment',
   label: 'Embarrassment',
   northStar: 'The Exposed Nerve',
   philosophy: {
@@ -66,7 +66,7 @@ export const EMBARRASSMENT_ADVISORY: EmotionAdvisory = {
       '#201a1d',
     ],
     rationale:
-      'Stitch shifted the primary from the requested #c45878 to a deeper #9c3958 in the Tailwind config -- darker and more restrained, like a flush that has been held back. The surface is #fff8f8 (warm pink-white, not pure white) with body bg at #fdf0f4 (blush). The primary-container (#bb5171) is brighter than the primary, creating the effect of the flush intensifying. The secondary (#755565) is a muted mauve-gray that reads as "looking away." The entire palette operates in a narrow warm-pink band -- no cool tones, no dramatic contrast. Unlike Anger\'s aggressive crimson or Joy\'s celebratory gold, Embarrassment\'s pink is involuntary and exposed.',
+      'The design shifted the primary from the requested #c45878 to a deeper #9c3958 in the Tailwind config -- darker and more restrained, like a flush that has been held back. The surface is #fff8f8 (warm pink-white, not pure white) with body bg at #fdf0f4 (blush). The primary-container (#bb5171) is brighter than the primary, creating the effect of the flush intensifying. The secondary (#755565) is a muted mauve-gray that reads as "looking away." The entire palette operates in a narrow warm-pink band -- no cool tones, no dramatic contrast. Unlike Anger\'s aggressive crimson or Joy\'s celebratory gold, Embarrassment\'s pink is involuntary and exposed.',
   },
 
   typography: {
@@ -127,7 +127,7 @@ export const EMBARRASSMENT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: weight 300, size stays small -- a whisper, barely there. Moderate: weight 400-500, slightly larger -- the voice finds itself but stays quiet. Intense: weight 600-700, still capped at text-lg maximum -- embarrassment NEVER shouts, even at full intensity it is forced to be listened to.',
     rationale:
-      'Stitch rendered Quicksand at semibold (600) for headings, capped at text-2xl for the hero and text-base for section headers -- deliberately small. The rules section explicitly states: "No Display-Large type. Keep the voice small, forced to be listened to." Mulish appears as body text at font-light (300) with italic for philosophy quotes, creating a whispered confessional quality. Plus Jakarta Sans and Manrope are loaded as fallbacks but not prominently used. The .awkward-offset class (translateX(4px)) on all headings creates a deliberate misalignment -- text that cannot quite look you in the eye.',
+      'The design rendered Quicksand at semibold (600) for headings, capped at text-2xl for the hero and text-base for section headers -- deliberately small. The rules section explicitly states: "No Display-Large type. Keep the voice small, forced to be listened to." Mulish appears as body text at font-light (300) with italic for philosophy quotes, creating a whispered confessional quality. Plus Jakarta Sans and Manrope are loaded as fallbacks but not prominently used. The .awkward-offset class (translateX(4px)) on all headings creates a deliberate misalignment -- text that cannot quite look you in the eye.',
   },
 
   spacing: {
@@ -142,7 +142,7 @@ export const EMBARRASSMENT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: generous spacing throughout -- comfortable distance, the blush has not arrived yet. Moderate: mixed -- some clustering begins as self-consciousness increases. Intense: full duality -- elements either cluster tight (gap-1, the hiding state) or stand painfully isolated (py-24, 6rem of empty space around a single exposed element).',
     rationale:
-      'Stitch created a brilliant spacing duality. The "Hiding State" uses gap-1 (4px) in a tight cluster of boxes huddled together -- the spatial equivalent of crossing your arms. The "Exposed" state uses py-24 (96px) of isolation around a single 8px dot -- painfully alone. Sections alternate between px-6/py-10 (comfortable) and px-8/pt-12 (extra air in the hero). Unlike Guilt\'s uniform compression or Inspiration\'s uniform generosity, Embarrassment\'s spacing is BIMODAL: hide or be seen.',
+      'The design created a brilliant spacing duality. The "Hiding State" uses gap-1 (4px) in a tight cluster of boxes huddled together -- the spatial equivalent of crossing your arms. The "Exposed" state uses py-24 (96px) of isolation around a single 8px dot -- painfully alone. Sections alternate between px-6/py-10 (comfortable) and px-8/pt-12 (extra air in the hero). Unlike Guilt\'s uniform compression or Inspiration\'s uniform generosity, Embarrassment\'s spacing is BIMODAL: hide or be seen.',
   },
 
   motion: {
@@ -153,7 +153,7 @@ export const EMBARRASSMENT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 320ms, smoother easing -- a gentle warm feeling, barely noticeable. Moderate: 260ms, standard flushing bezier -- the heat rises visibly. Intense: 200ms, more abrupt -- the flush arrives before you can stop it.',
     rationale:
-      'Stitch created a dedicated .flushing-transition class with the exact 260ms cubic-bezier(0.4, 0.2, 0.6, 0.8) easing and a Tailwind timing function token "flushing." The Export button uses hover:scale-95 active:scale-90 -- SHRINKING on interaction, the opposite of confidence (Inspiration rises, Embarrassment retreats). The hero image uses group-hover:scale-105 with flushing-transition -- a slow, involuntary expansion. The nerve progress bar glows with rgba(156,57,88,0.4) -- the flush spreading. Unlike Anger\'s explosive snap or Joy\'s bouncy overshoot, Embarrassment\'s motion is hesitant and withdrawing.',
+      'The design created a dedicated .flushing-transition class with the exact 260ms cubic-bezier(0.4, 0.2, 0.6, 0.8) easing and a Tailwind timing function token "flushing." The Export button uses hover:scale-95 active:scale-90 -- SHRINKING on interaction, the opposite of confidence (Inspiration rises, Embarrassment retreats). The hero image uses group-hover:scale-105 with flushing-transition -- a slow, involuntary expansion. The nerve progress bar glows with rgba(156,57,88,0.4) -- the flush spreading. Unlike Anger\'s explosive snap or Joy\'s bouncy overshoot, Embarrassment\'s motion is hesitant and withdrawing.',
   },
 
   depth: {
@@ -178,7 +178,7 @@ export const EMBARRASSMENT_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 4px 20px rgba(196, 88, 120, 0.08)',
     ghostBorder: '1px solid rgba(218, 192, 197, 0.2)',
     rationale:
-      'Stitch created a custom .blush-shadow class (0 4px 20px rgba(196, 88, 120, 0.08)) -- pink-tinted, warm, and diffuse. Every card uses this same soft blush shadow with a ghost border (outline-variant at 20% opacity). The header and bottom nav both use the same pink shadow formula with directional variants (upward for nav). The nerve progress bar has an inner glow (0 0 8px rgba(156, 57, 88, 0.4)) -- the flush made visible as light. Unlike Guilt\'s pressing inset shadows or Anger\'s crushing weight, Embarrassment\'s shadows are warm and involuntary -- a blush you cannot hide.',
+      'The design created a custom .blush-shadow class (0 4px 20px rgba(196, 88, 120, 0.08)) -- pink-tinted, warm, and diffuse. Every card uses this same soft blush shadow with a ghost border (outline-variant at 20% opacity). The header and bottom nav both use the same pink shadow formula with directional variants (upward for nav). The nerve progress bar has an inner glow (0 0 8px rgba(156, 57, 88, 0.4)) -- the flush made visible as light. Unlike Guilt\'s pressing inset shadows or Anger\'s crushing weight, Embarrassment\'s shadows are warm and involuntary -- a blush you cannot hide.',
   },
 
   shapes: {
@@ -192,14 +192,14 @@ export const EMBARRASSMENT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 14px throughout (uniform defensive curling). Moderate: 14px with some pill shapes (full radius for word chips). Intense: all 14px with tighter clustering -- corners curl inward as the hiding instinct intensifies.',
     rationale:
-      'Stitch set DEFAULT, lg, AND xl all to 14px -- every shape in the system uses the same defensive radius. The rules explicitly state: "14px defensive radii. All corners must curl inward." This uniformity is deliberate: embarrassment does not have the confidence for variety. Pills (rounded-full) appear only for word chips and the Export button. Unlike Anger\'s razor 0px or Joy\'s playful range (8px to 24px), Embarrassment has one radius and it is protective.',
+      'The design set DEFAULT, lg, AND xl all to 14px -- every shape in the system uses the same defensive radius. The rules explicitly state: "14px defensive radii. All corners must curl inward." This uniformity is deliberate: embarrassment does not have the confidence for variety. Pills (rounded-full) appear only for word chips and the Export button. Unlike Anger\'s razor 0px or Joy\'s playful range (8px to 24px), Embarrassment has one radius and it is protective.',
   },
 
   layout: {
     alignment: 'center',
     density: 'variable',
     rationale:
-      'Stitch created a center-aligned hero with the .awkward-offset (translateX(4px)) creating deliberate misalignment -- centered but not quite, like someone trying to stand straight but fidgeting. The bento grid (2-column) for color and typography creates intimate, contained spaces. The spacing duality (hiding clusters vs exposed isolation) drives the layout rhythm. The bottom nav uses rounded-t-[14px] with the same blush shadow. Unlike Inspiration\'s confident asymmetry or Pride\'s ceremonial center, Embarrassment\'s layout is self-conscious -- trying to be centered but never quite managing it.',
+      'The design created a center-aligned hero with the .awkward-offset (translateX(4px)) creating deliberate misalignment -- centered but not quite, like someone trying to stand straight but fidgeting. The bento grid (2-column) for color and typography creates intimate, contained spaces. The spacing duality (hiding clusters vs exposed isolation) drives the layout rhythm. The bottom nav uses rounded-t-[14px] with the same blush shadow. Unlike Inspiration\'s confident asymmetry or Pride\'s ceremonial center, Embarrassment\'s layout is self-conscious -- trying to be centered but never quite managing it.',
   },
 
   iconography: {
@@ -216,7 +216,7 @@ export const EMBARRASSMENT_ADVISORY: EmotionAdvisory = {
     weight: 300,
     fill: false,
     rationale:
-      'Stitch rendered icons at weight 300 with GRAD -25 (confirmed in font-variation-settings) at only 20px -- the smallest and lightest icon treatment of any advisory. The visibility_off icon anchors the hero and bottom nav, making "not being seen" the central metaphor. Icons in the rules section use close (x) for prohibitions and done (checkmark) for permissions at text-sm -- even smaller. Unlike Inspiration\'s confident 30px primary-colored icons or Anger\'s heavy 600-weight symbols, Embarrassment\'s icons whisper.',
+      'The design rendered icons at weight 300 with GRAD -25 (confirmed in font-variation-settings) at only 20px -- the smallest and lightest icon treatment of any advisory. The visibility_off icon anchors the hero and bottom nav, making "not being seen" the central metaphor. Icons in the rules section use close (x) for prohibitions and done (checkmark) for permissions at text-sm -- even smaller. Unlike Inspiration\'s confident 30px primary-colored icons or Anger\'s heavy 600-weight symbols, Embarrassment\'s icons whisper.',
   },
 
   rules: {

@@ -1,7 +1,7 @@
 /**
- * Surprise advisory -- extracted from Stitch output.
+ * Surprise advisory -- extracted from The design output.
  * Source: stitch-exports/surprise-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  */
 
 import type { EmotionAdvisory } from './advisoryData';
@@ -63,9 +63,9 @@ export const SURPRISE_ADVISORY: EmotionAdvisory = {
       'surface-tint': '#ff7cf5',
       'surface-variant': '#28195d',
       'on-surface': '#e9e1ff',
-      'on-surface-variant': '#afa4db',
-      'outline': '#786ea2',
-      'outline-variant': '#4a4171',
+      'on-surface-variant': '#ccc2f0',
+      'outline': '#9a8ec4',
+      'outline-variant': '#5e5490',
       'inverse-primary': '#a1259e',
       'inverse-surface': '#fdf8ff',
       'inverse-on-surface': '#574e7f',

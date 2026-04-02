@@ -1,14 +1,14 @@
 /**
- * Depression advisory -- extracted from Stitch output.
+ * Depression advisory -- extracted from The design output.
  * Source: stitch-exports/depression-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  */
 
 import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const DEPRESSION_ADVISORY: EmotionAdvisory = {
-  emotion: 'depression' as any,
+  emotion: 'depression',
   label: 'Depression',
   northStar: 'The Heavy Grey',
   philosophy: {
@@ -72,7 +72,7 @@ export const DEPRESSION_ADVISORY: EmotionAdvisory = {
       '#403838',
     ],
     rationale:
-      'Stitch rendered the palette strip as five nearly indistinguishable greys: #161618, #1C1C1E, #242426, #2E2E30, #383C40. You have to look closely to see any difference at all -- and that IS the point. The primary (#606870) is medium grey-blue, the color research most consistently associates with depression. Not a distinct blue (too interesting), not a warm grey (too comfortable). The grey of an overcast sky that will not change. Secondary (#585050) is warm grey-brown: weariness, fatigue. The entire palette operates in a narrow achromatic band. Unlike any other emotion in the system, Depression has no chromatic content.',
+      'The design rendered the palette strip as five nearly indistinguishable greys: #161618, #1C1C1E, #242426, #2E2E30, #383C40. You have to look closely to see any difference at all -- and that IS the point. The primary (#606870) is medium grey-blue, the color research most consistently associates with depression. Not a distinct blue (too interesting), not a warm grey (too comfortable). The grey of an overcast sky that will not change. Secondary (#585050) is warm grey-brown: weariness, fatigue. The entire palette operates in a narrow achromatic band. Unlike any other emotion in the system, Depression has no chromatic content.',
   },
 
   typography: {
@@ -133,7 +133,7 @@ export const DEPRESSION_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: weight 400, adequate spacing -- the text functions but does not engage. Moderate: weight 400, default everything -- typed and left, no one came back. Intense: weight 300, tighter spacing, lower opacity -- the text is beginning to fade. It might not finish.',
     rationale:
-      'Stitch rendered Space Grotesk at 1.75rem medium for the hero ("An Absence of Palette.") -- deliberately undersized compared to every other emotion (Anger 2.5rem, Pride 2.4rem, Guilt 1.875rem). Section headers use 0.875rem uppercase tracking-widest in on-surface-variant -- mechanical, categorizing, not emphasizing. The header shows "Depression" at only 1.25rem bold. Work Sans handles body text at 0.9375rem weight 400: "A font for reading instructions in a windowless room." The pairing communicates mechanical adequacy: everything is technically present, nothing is chosen with care.',
+      'The design rendered Space Grotesk at 1.75rem medium for the hero ("An Absence of Palette.") -- deliberately undersized compared to every other emotion (Anger 2.5rem, Pride 2.4rem, Guilt 1.875rem). Section headers use 0.875rem uppercase tracking-widest in on-surface-variant -- mechanical, categorizing, not emphasizing. The header shows "Depression" at only 1.25rem bold. Work Sans handles body text at 0.9375rem weight 400: "A font for reading instructions in a windowless room." The pairing communicates mechanical adequacy: everything is technically present, nothing is chosen with care.',
   },
 
   spacing: {
@@ -148,7 +148,7 @@ export const DEPRESSION_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: md 16px -- slightly more room, slightly less suffocating. Still functional, still grey. Moderate: md 14px -- the spacing of someone going through the motions. Adequate. Intense: md 12px -- slightly tighter but without Frustration\'s aggressive cramping. Just less room. Less everything.',
     rationale:
-      'Stitch used gap-12 (48px) between major sections and px-6 (24px) padding -- normal, neither generous nor tight. The .text-indent-center class applies 120px margin-top to the hero, pushing content well below the visual center -- empty space collects above like air that cannot reach the bottom. The spacing is described as "Indifferent density. Large gaps of silence." Unlike Guilt\'s intentional compression or Inspiration\'s intentional generosity, Depression\'s spacing is indifferent. Defaults applied and left alone.',
+      'The design used gap-12 (48px) between major sections and px-6 (24px) padding -- normal, neither generous nor tight. The .text-indent-center class applies 120px margin-top to the hero, pushing content well below the visual center -- empty space collects above like air that cannot reach the bottom. The spacing is described as "Indifferent density. Large gaps of silence." Unlike Guilt\'s intentional compression or Inspiration\'s intentional generosity, Depression\'s spacing is indifferent. Defaults applied and left alone.',
   },
 
   motion: {
@@ -159,7 +159,7 @@ export const DEPRESSION_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 400ms, slightly more responsive -- functional depression, still going through the motions. Moderate: 500ms, symmetrical dragging -- everything takes too long but not dramatically so. Intense: 650ms, with elements fading slightly during transition -- the animation feels like it might not finish.',
     rationale:
-      'Stitch created a .low-energy-transition class with the exact 500ms cubic-bezier(0.4, 0, 0.4, 1) timing. The symmetrical easing means nothing accelerates or decelerates with personality -- just steady, tired movement. The .active-scale reduces to only scale(0.99) on press -- the barest possible acknowledgment that an interaction happened. The ellipsis button ("...") is the punctuation of trailing off. Unlike Anger\'s explosive 150ms, Joy\'s bouncy 250ms, or even Guilt\'s reluctant 300ms, Depression\'s 500ms just drags. No snap, no bounce, no drift. Exhausted trudging from A to B.',
+      'The design created a .low-energy-transition class with the exact 500ms cubic-bezier(0.4, 0, 0.4, 1) timing. The symmetrical easing means nothing accelerates or decelerates with personality -- just steady, tired movement. The .active-scale reduces to only scale(0.99) on press -- the barest possible acknowledgment that an interaction happened. The ellipsis button ("...") is the punctuation of trailing off. Unlike Anger\'s explosive 150ms, Joy\'s bouncy 250ms, or even Guilt\'s reluctant 300ms, Depression\'s 500ms just drags. No snap, no bounce, no drift. Exhausted trudging from A to B.',
   },
 
   depth: {
@@ -184,7 +184,7 @@ export const DEPRESSION_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 2px 8px rgba(16, 16, 18, 0.3)',
     ghostBorder: '1px solid rgba(46, 46, 48, 0.1)',
     rationale:
-      'Stitch rendered ZERO box-shadows across the entire page. Depth is achieved exclusively through tonal shifts: three grey cards side by side (#1e1e20, #242426, #2a2a2c) that you have to look closely to distinguish. "Depth through tonal shift, never shadow." This flat tonal approach is uniquely Depression\'s. Every other emotion uses shadows for some purpose -- Anger crushes, Guilt presses, Pride spotlights, Inspiration lifts. Depression cannot even cast a shadow. The hero image uses grayscale + opacity-40 + mix-blend-luminosity -- color physically drained from the photograph.',
+      'The design rendered ZERO box-shadows across the entire page. Depth is achieved exclusively through tonal shifts: three grey cards side by side (#1e1e20, #242426, #2a2a2c) that you have to look closely to distinguish. "Depth through tonal shift, never shadow." This flat tonal approach is uniquely Depression\'s. Every other emotion uses shadows for some purpose -- Anger crushes, Guilt presses, Pride spotlights, Inspiration lifts. Depression cannot even cast a shadow. The hero image uses grayscale + opacity-40 + mix-blend-luminosity -- color physically drained from the photograph.',
   },
 
   shapes: {
@@ -198,14 +198,14 @@ export const DEPRESSION_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 8px (a small amount of care still present). Moderate: 6px (default, mechanical, the framework default that no one changed). Intense: 3-4px (the last bit of softness eroded).',
     rationale:
-      'Stitch set DEFAULT, lg, AND xl all to 6px -- the most uniform radius treatment possible. The Sadness comparison card uses 16px corners to show contrast. The Joy comparison card uses rounded-full. Depression\'s 6px is the radius of not having made a decision about radii. Compare to Anger\'s absolute 0px (weaponized choice), Contentment\'s generous 16px (caring choice). Depression\'s 6px is the absence of choice -- technically present, never considered.',
+      'The design set DEFAULT, lg, AND xl all to 6px -- the most uniform radius treatment possible. The Sadness comparison card uses 16px corners to show contrast. The Joy comparison card uses rounded-full. Depression\'s 6px is the radius of not having made a decision about radii. Compare to Anger\'s absolute 0px (weaponized choice), Contentment\'s generous 16px (caring choice). Depression\'s 6px is the absence of choice -- technically present, never considered.',
   },
 
   layout: {
     alignment: 'left',
     density: 'normal',
     rationale:
-      'Stitch created a left-aligned layout with content pushed below center via .text-indent-center (120px margin-top on the hero). Elements sink to the bottom of their sections -- empty space collects above. The layout is described as "indifferent density" with "large gaps of silence." Left alignment because that is the default. Normal density because no one adjusted it. Unlike Guilt\'s intentional sinking or Anger\'s crushing force, Depression\'s downward pull is accidental -- gravity is just slightly heavier here.',
+      'The design created a left-aligned layout with content pushed below center via .text-indent-center (120px margin-top on the hero). Elements sink to the bottom of their sections -- empty space collects above. The layout is described as "indifferent density" with "large gaps of silence." Left alignment because that is the default. Normal density because no one adjusted it. Unlike Guilt\'s intentional sinking or Anger\'s crushing force, Depression\'s downward pull is accidental -- gravity is just slightly heavier here.',
   },
 
   iconography: {
@@ -222,7 +222,7 @@ export const DEPRESSION_ADVISORY: EmotionAdvisory = {
     weight: 300,
     fill: false,
     rationale:
-      'Stitch rendered icons at weight 300 with GRAD -25 (confirmed in font-variation-settings) in on-surface-variant (#808084). The blur_on icon anchors the header and footer as Depression\'s signature symbol -- everything slightly out of focus. The battery_1_bar icon overlays the hero image (itself grayscale at 40% opacity): "Diminished Capacity." The footer blur_on at 48px and opacity-40 is the largest icon in the system but also the most ghostly. Depression\'s icons are everyday objects running out.',
+      'The design rendered icons at weight 300 with GRAD -25 (confirmed in font-variation-settings) in on-surface-variant (#808084). The blur_on icon anchors the header and footer as Depression\'s signature symbol -- everything slightly out of focus. The battery_1_bar icon overlays the hero image (itself grayscale at 40% opacity): "Diminished Capacity." The footer blur_on at 48px and opacity-40 is the largest icon in the system but also the most ghostly. Depression\'s icons are everyday objects running out.',
   },
 
   rules: {

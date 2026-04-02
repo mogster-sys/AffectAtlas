@@ -1,7 +1,7 @@
 /**
- * Disgust advisory -- extracted from Stitch output.
+ * Disgust advisory -- extracted from The design output.
  * Source: stitch-exports/disgust-advisory/stitch/disgust_advisory_screen/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  */
 
 import type { EmotionAdvisory } from './advisoryData';
@@ -88,7 +88,7 @@ export const DISGUST_ADVISORY: EmotionAdvisory = {
       '#1a1d00',
     ],
     rationale:
-      'Yellow-green is the most reliably \'disgusting\' hue in cross-cultural color-emotion research -- linked to vomit, mucus, mold, and illness. Stitch pushed the primary even brighter (#dfec6b) than requested, creating a more vivid toxic glow against the warm olive-black background (#141408). The warm undertone in every dark surface is critical: Fear\'s darkness is cold and alien, Anger\'s is hot and burning, but Disgust\'s darkness is the warm dampness of organic matter decomposing from within.',
+      'Yellow-green is the most reliably \'disgusting\' hue in cross-cultural color-emotion research -- linked to vomit, mucus, mold, and illness. The design pushed the primary even brighter (#dfec6b) than requested, creating a more vivid toxic glow against the warm olive-black background (#141408). The warm undertone in every dark surface is critical: Fear\'s darkness is cold and alien, Anger\'s is hot and burning, but Disgust\'s darkness is the warm dampness of organic matter decomposing from within.',
   },
 
   typography: {
@@ -152,7 +152,7 @@ export const DISGUST_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: Syne at weight 500 with line-height 1.2 -- slightly uncomfortable, something is off. Moderate: weight 600 with line-height 1.0, uppercase titles -- labeling contaminated specimens. Intense: weight 800 with line-height 0.9, aggressive tracking -- typography compressed by biological pressure, organisms crowding into every available space.',
     rationale:
-      'Syne is geometric but with subtle irregularities in its letterforms -- the kind of typeface that looks almost normal but feels slightly wrong on extended viewing. Its quirky proportions create the typographic equivalent of uncanny valley -- orderly enough to set up expectations, irregular enough to violate them. Work Sans as body text is deliberately impersonal -- the functional type of specimen labels and warning signs, not editorial warmth (Sadness) or authoritative precision (Trust). Stitch used the pairing as "biological voice" (Syne) versus "lab report" (Work Sans) -- the clinical detachment observing the organic mutation.',
+      'Syne is geometric but with subtle irregularities in its letterforms -- the kind of typeface that looks almost normal but feels slightly wrong on extended viewing. Its quirky proportions create the typographic equivalent of uncanny valley -- orderly enough to set up expectations, irregular enough to violate them. Work Sans as body text is deliberately impersonal -- the functional type of specimen labels and warning signs, not editorial warmth (Sadness) or authoritative precision (Trust). The design used the pairing as "biological voice" (Syne) versus "lab report" (Work Sans) -- the clinical detachment observing the organic mutation.',
   },
 
   spacing: {
@@ -168,7 +168,7 @@ export const DISGUST_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 16px between sections -- slightly too close, like sitting next to a stranger. Moderate: 8-12px, overcrowded -- elements pushing into each other\'s space like organisms competing. Intense: 4px, suffocating -- visual overgrowth, no breathing room, contamination everywhere.',
     rationale:
-      'Disgust spacing creates discomfort through proximity -- too many things too close together, like biological overgrowth. But unlike Anger\'s uniform compression (every element under equal pressure), Disgust spacing is IRREGULAR -- some elements nearly touching while others have small gaps, like mold that grows in patches. Stitch used 4px section gaps (space-y-4) throughout, tighter than any other emotion\'s advisory. The overcrowded layout mirrors the research finding that \'clusters of small repeated elements\' and \'visual overgrowth\' are core disgust triggers.',
+      'Disgust spacing creates discomfort through proximity -- too many things too close together, like biological overgrowth. But unlike Anger\'s uniform compression (every element under equal pressure), Disgust spacing is IRREGULAR -- some elements nearly touching while others have small gaps, like mold that grows in patches. The design used 4px section gaps (space-y-4) throughout, tighter than any other emotion\'s advisory. The overcrowded layout mirrors the research finding that \'clusters of small repeated elements\' and \'visual overgrowth\' are core disgust triggers.',
   },
 
   motion: {
@@ -179,7 +179,7 @@ export const DISGUST_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 600ms ease-out with subtle scale -- sluggish, slightly delayed response, like touching something damp. Moderate: 500ms ease-in-out with squash -- sticky, resistant, the interaction has viscosity. Intense: 400ms with pronounced squash and color spread -- oozing, the contamination responding to your touch and spreading.',
     rationale:
-      'Disgust motion is defined by VISCOSITY -- the sluggish, sticky quality of organic material. Where Anger snaps (150ms), Fear tenses (200ms), and Surprise pops (250ms with overshoot), Disgust oozes (500ms). The ease-in-out curve means elements resist movement at both ends -- they stick before they move and stick when they arrive. Stitch implemented the squash deformation (scaleX 1.04, scaleY 0.96) on press, suggesting softness and biological compliance -- things that yield when pressed, like touching something rotten.',
+      'Disgust motion is defined by VISCOSITY -- the sluggish, sticky quality of organic material. Where Anger snaps (150ms), Fear tenses (200ms), and Surprise pops (250ms with overshoot), Disgust oozes (500ms). The ease-in-out curve means elements resist movement at both ends -- they stick before they move and stick when they arrive. The design implemented the squash deformation (scaleX 1.04, scaleY 0.96) on press, suggesting softness and biological compliance -- things that yield when pressed, like touching something rotten.',
   },
 
   depth: {
@@ -204,7 +204,7 @@ export const DISGUST_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 10px 30px rgba(20, 20, 8, 0.8)',
     ghostBorder: '1px solid rgba(71, 72, 55, 0.1)',
     rationale:
-      'Stitch used three distinct shadow approaches for Disgust: heavy olive-tinted drop shadows (Damp: 0 10px 30px rgba(20,20,8,0.8)), inset green-tinted shadows (Stained: inset 0 2px 10px rgba(195,207,82,0.1)), and outer green glows (Infected: 0 0 20px rgba(195,207,82,0.15)). This mixed approach creates the feeling of contamination spreading -- shadows are not architectural (Trust) or crushing (Anger) but SPREADING like stains. The DESIGN.md calls this "Ambient Dampness" and describes shadows as "damp stains on the layer beneath."',
+      'The design used three distinct shadow approaches for Disgust: heavy olive-tinted drop shadows (Damp: 0 10px 30px rgba(20,20,8,0.8)), inset green-tinted shadows (Stained: inset 0 2px 10px rgba(195,207,82,0.1)), and outer green glows (Infected: 0 0 20px rgba(195,207,82,0.15)). This mixed approach creates the feeling of contamination spreading -- shadows are not architectural (Trust) or crushing (Anger) but SPREADING like stains. The DESIGN.md calls this "Ambient Dampness" and describes shadows as "damp stains on the layer beneath."',
   },
 
   shapes: {
@@ -216,16 +216,16 @@ export const DISGUST_ADVISORY: EmotionAdvisory = {
     ],
     cornerStyle: 'smooth',
     mildToIntense:
-      'All intensities: 6px. Stitch called it "The Rotten Corner" -- neither sharp nor soft. A structural failure of geometry. Unlike Anger\'s absolute 0px (blades) or Joy\'s generous 24px (friendly), Disgust has exactly ONE radius that never changes. The 6px corner is organic -- like something that was once sharper but has been softened by humidity and decay.',
+      'All intensities: 6px. The design called it "The Rotten Corner" -- neither sharp nor soft. A structural failure of geometry. Unlike Anger\'s absolute 0px (blades) or Joy\'s generous 24px (friendly), Disgust has exactly ONE radius that never changes. The 6px corner is organic -- like something that was once sharper but has been softened by humidity and decay.',
     rationale:
-      'Stitch enforced 6px everywhere with zero variation -- borderRadius DEFAULT, lg, and xl all set to 6px. The DESIGN.md explicitly forbids both 0px corners ("too sharp, too manufactured") and 20px corners ("too friendly"). The 6px "Rotten Corner" occupies the uncomfortable middle ground: soft enough to feel organic but not soft enough to feel inviting. It is the corner radius of something found in nature -- a mushroom cap, a swollen edge, a surface softened by moisture.',
+      'The design enforced 6px everywhere with zero variation -- borderRadius DEFAULT, lg, and xl all set to 6px. The DESIGN.md explicitly forbids both 0px corners ("too sharp, too manufactured") and 20px corners ("too friendly"). The 6px "Rotten Corner" occupies the uncomfortable middle ground: soft enough to feel organic but not soft enough to feel inviting. It is the corner radius of something found in nature -- a mushroom cap, a swollen edge, a surface softened by moisture.',
   },
 
   layout: {
     alignment: 'asymmetric',
     density: 'dense',
     rationale:
-      'Stitch implemented the "Anti-Grid Layout" described in its DESIGN.md -- cards offset by small amounts, elements rotated 2-3 degrees, overlapping containers. The wireframe section shows three cards at different rotations (-2, 3, -1 degrees) with overlapping positions. Unlike Anger\'s confrontational asymmetry (force and pressure) or Sadness\'s drifting asymmetry (exhaustion), Disgust\'s asymmetry is ORGANIC -- things growing in irregular patterns, competing for space, encroaching on each other\'s territory. The DESIGN.md calls this "the Petri dish layout."',
+      'The design implemented the "Anti-Grid Layout" described in its DESIGN.md -- cards offset by small amounts, elements rotated 2-3 degrees, overlapping containers. The wireframe section shows three cards at different rotations (-2, 3, -1 degrees) with overlapping positions. Unlike Anger\'s confrontational asymmetry (force and pressure) or Sadness\'s drifting asymmetry (exhaustion), Disgust\'s asymmetry is ORGANIC -- things growing in irregular patterns, competing for space, encroaching on each other\'s territory. The DESIGN.md calls this "the Petri dish layout."',
   },
 
   iconography: {
@@ -242,7 +242,7 @@ export const DISGUST_ADVISORY: EmotionAdvisory = {
     weight: 300,
     fill: false,
     rationale:
-      'Disgust icons reference contamination (water_damage), biological threat (science, skull, bug_report, pest_control), and warning (corrupted alerts). Stitch relabeled them with evocative names: "Infestation," "Clinical," "Dampness," "Irritant," "Taint," "Expiry" -- each suggesting a stage or aspect of contamination rather than a neutral description. The 300-weight outlined style creates icons that feel like they are losing definition, eroding at the edges.',
+      'Disgust icons reference contamination (water_damage), biological threat (science, skull, bug_report, pest_control), and warning (corrupted alerts). The design relabeled them with evocative names: "Infestation," "Clinical," "Dampness," "Irritant," "Taint," "Expiry" -- each suggesting a stage or aspect of contamination rather than a neutral description. The 300-weight outlined style creates icons that feel like they are losing definition, eroding at the edges.',
   },
 
   rules: {

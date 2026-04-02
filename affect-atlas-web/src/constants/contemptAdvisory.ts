@@ -1,12 +1,12 @@
 /**
- * Contempt advisory -- extracted from Stitch output.
+ * Contempt advisory -- extracted from The design output.
  * Source: stitch-exports/contempt-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  *
- * NOTE: Stitch shifted primary to #05080f (near-black), placed our
+ * NOTE: The design shifted primary to #05080f (near-black), placed our
  * #1c2028 as primary-container. Background correctly overridden to
  * #ecedf0 (cold bone). Custom clinical-shadow classes with cold
- * blue-grey tint. Stitch substituted 4 of 6 icons. The advisory
+ * blue-grey tint. The design substituted 4 of 6 icons. The advisory
  * uses the prompt's researched palette and icon set.
  */
 
@@ -14,7 +14,7 @@ import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const CONTEMPT_ADVISORY: EmotionAdvisory = {
-  emotion: 'contempt' as any,
+  emotion: 'contempt',
   label: 'Contempt',
   northStar: 'The Cold Elevation',
   philosophy: {
@@ -78,7 +78,7 @@ export const CONTEMPT_ADVISORY: EmotionAdvisory = {
       '#707810',
     ],
     rationale:
-      'Stitch rendered the palette as five sharp columns: #F8F9FC, #ECEDF0 (cold bone), #1C2028 (cold ink), #05080F (Stitch\'s shifted primary), and #8A9828 (acid green). The body background was correctly overridden to #ecedf0 via CSS. The advisory uses the prompt\'s researched values. Primary #1c2028 is cold ink -- near-black with a blue undertone, the color of a formal verdict. Secondary #687080 is cold distance grey -- the specific blue-grey of someone who has already looked away. Tertiary #8a9828 is acidic green -- the sting of disdain, appearing sparingly where contempt concentrates.',
+      'The design rendered the palette as five sharp columns: #F8F9FC, #ECEDF0 (cold bone), #1C2028 (cold ink), #05080F (The design\'s shifted primary), and #8A9828 (acid green). The body background was correctly overridden to #ecedf0 via CSS. The advisory uses the prompt\'s researched values. Primary #1c2028 is cold ink -- near-black with a blue undertone, the color of a formal verdict. Secondary #687080 is cold distance grey -- the specific blue-grey of someone who has already looked away. Tertiary #8a9828 is acidic green -- the sting of disdain, appearing sparingly where contempt concentrates.',
   },
 
   typography: {
@@ -139,7 +139,7 @@ export const CONTEMPT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: Red Hat Text 300 for body, lighter presence. The judgment is there but measured. Moderate: Prata 400 at standard tracking with Red Hat Text 400 body -- cold, sharp, precise. Intense: Prata at larger sizes with extreme tracking (0.06em), transforming headlines into pronouncements. Every letter holds itself apart from its neighbors.',
     rationale:
-      'Stitch rendered Prata at text-[34px] for the display specimen "The aristocratic flare of ice." and Red Hat Text at text-[15px] font-light for body. The weight ramp shows 700, 400, 300 in Red Hat Text. Left-aligned header uses Prata at text-3xl. Prata\'s extreme stroke contrast -- knife-like hairlines and heavy verticals -- creates letterforms that feel like they are looking down on the reader. Its single weight (400) is itself a statement: contempt does not adjust for you.',
+      'The design rendered Prata at text-[34px] for the display specimen "The aristocratic flare of ice." and Red Hat Text at text-[15px] font-light for body. The weight ramp shows 700, 400, 300 in Red Hat Text. Left-aligned header uses Prata at text-3xl. Prata\'s extreme stroke contrast -- knife-like hairlines and heavy verticals -- creates letterforms that feel like they are looking down on the reader. Its single weight (400) is itself a statement: contempt does not adjust for you.',
   },
 
   spacing: {
@@ -154,7 +154,7 @@ export const CONTEMPT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: lg at 28px -- the judgment is present but the distance is not yet absolute. Moderate: lg at 32px, xl at 48px -- cold, exclusionary spacing where negative space is a barrier. Intense: lg at 40px, xl at 60px -- maximum distance. Elements float in vast, cold space. You are very far beneath.',
     rationale:
-      'Stitch used gap-16 (64px) between major sections and gap-8 between sub-elements. Spacing bars show XS through XL matching prompt values. The generous negative space is not comfort -- it is cold distance. Each element is isolated in its own field of cold white space, maintaining distance from its neighbors. The space says "do not approach." This is the opposite of anger\'s dense confrontational spacing -- contempt does not crowd you, it simply refuses to let you in.',
+      'The design used gap-16 (64px) between major sections and gap-8 between sub-elements. Spacing bars show XS through XL matching prompt values. The generous negative space is not comfort -- it is cold distance. Each element is isolated in its own field of cold white space, maintaining distance from its neighbors. The space says "do not approach." This is the opposite of anger\'s dense confrontational spacing -- contempt does not crowd you, it simply refuses to let you in.',
   },
 
   motion: {
@@ -165,7 +165,7 @@ export const CONTEMPT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 280ms, less pronounced delay. The dismissal is quick, almost casual. Moderate: 340ms with dismissive easing -- a beat of unimpressed stillness before the element deigns to move. Intense: 400ms, longer initial pause before moving. The contempt is deliberate, making you wait.',
     rationale:
-      'Stitch created a bezier SVG visualization with endpoints at 0ms and 340ms, curve path showing delayed start then smooth arrival. The "Dismiss Action" button uses duration-340 ease-[cubic-bezier(0.4,0,1,1)] with active:scale-[0.98] active:opacity-70. The advisory uses the prompt\'s researched easing (0.5, 0, 0.1, 0.8). The motion starts with a deliberate delay -- a beat of unimpressed stillness before the element deigns to move. Then it arrives smoothly, controlled, without urgency. Nothing is reactive. Nothing is rushed.',
+      'The design created a bezier SVG visualization with endpoints at 0ms and 340ms, curve path showing delayed start then smooth arrival. The "Dismiss Action" button uses duration-340 ease-[cubic-bezier(0.4,0,1,1)] with active:scale-[0.98] active:opacity-70. The advisory uses the prompt\'s researched easing (0.5, 0, 0.1, 0.8). The motion starts with a deliberate delay -- a beat of unimpressed stillness before the element deigns to move. Then it arrives smoothly, controlled, without urgency. Nothing is reactive. Nothing is rushed.',
   },
 
   depth: {
@@ -190,7 +190,7 @@ export const CONTEMPT_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 2px 10px rgba(28, 32, 40, 0.08)',
     ghostBorder: '1px solid rgba(192, 196, 204, 0.08)',
     rationale:
-      'Stitch defined three custom clinical shadows: clinical-shadow-sm (0 4px 10px rgba(104, 112, 128, 0.04)), clinical-shadow-md (0 10px 20px rgba(104, 112, 128, 0.06)), clinical-shadow-lg (0 20px 40px rgba(104, 112, 128, 0.08)). Shadow cards labeled L-01 Clinical Light, L-02 Clinical Medium, L-03 Clinical Heavy with 2px corners and border-outline-variant/5. Cold, blue-grey-tinted shadows at very low opacity create clinical elevation. Elements float above the surface with the minimum acknowledgment of depth -- elevated because they are above you, but they do not need to prove it.',
+      'The design defined three custom clinical shadows: clinical-shadow-sm (0 4px 10px rgba(104, 112, 128, 0.04)), clinical-shadow-md (0 10px 20px rgba(104, 112, 128, 0.06)), clinical-shadow-lg (0 20px 40px rgba(104, 112, 128, 0.08)). Shadow cards labeled L-01 Clinical Light, L-02 Clinical Medium, L-03 Clinical Heavy with 2px corners and border-outline-variant/5. Cold, blue-grey-tinted shadows at very low opacity create clinical elevation. Elements float above the surface with the minimum acknowledgment of depth -- elevated because they are above you, but they do not need to prove it.',
   },
 
   shapes: {
@@ -203,14 +203,14 @@ export const CONTEMPT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 4-6px, a marginal softening, the faintest concession. Moderate: 2px, nearly zero -- sharp, precise, unwilling to soften. The corners of legal documents and formal verdicts. Intense: 0px, pure sharp corners. Absolute judgment, zero accommodation.',
     rationale:
-      'Stitch rendered three shapes vertically: 0px (Brutalist), 2px (Recommended, highlighted with acid green border-2), and 4px (Soft/Avoid). The Tailwind config sets DEFAULT to 2px. Sharp corners signal judgment and distance. Rounded corners invite touch and approach; contempt does neither. The 2px radius is just enough to feel intentional, but it offers nothing warm. Every shape is a boundary -- clean, hard, and absolute.',
+      'The design rendered three shapes vertically: 0px (Brutalist), 2px (Recommended, highlighted with acid green border-2), and 4px (Soft/Avoid). The Tailwind config sets DEFAULT to 2px. Sharp corners signal judgment and distance. Rounded corners invite touch and approach; contempt does neither. The 2px radius is just enough to feel intentional, but it offers nothing warm. Every shape is a boundary -- clean, hard, and absolute.',
   },
 
   layout: {
     alignment: 'asymmetric',
     density: 'sparse',
     rationale:
-      'Stitch created an asymmetric, top-heavy composition. The wireframe section shows a dominant element high and large (w-2/3 h-12), subordinate elements pushed low and small (w-1/3 h-32), with a large faded "C" letterform centered as a watermark. Caption reads: "Wireframe: Looking Down Asymmetry." The left-aligned header (not centered -- contempt does not address the room equally) reinforces the asymmetric brief. Cold negative space separates elements like social distance between classes.',
+      'The design created an asymmetric, top-heavy composition. The wireframe section shows a dominant element high and large (w-2/3 h-12), subordinate elements pushed low and small (w-1/3 h-32), with a large faded "C" letterform centered as a watermark. Caption reads: "Wireframe: Looking Down Asymmetry." The left-aligned header (not centered -- contempt does not address the room equally) reinforces the asymmetric brief. Cold negative space separates elements like social distance between classes.',
   },
 
   iconography: {
@@ -227,7 +227,7 @@ export const CONTEMPT_ADVISORY: EmotionAdvisory = {
     weight: 200,
     fill: false,
     rationale:
-      'Stitch rendered Material Symbols at text-3xl in text-secondary with font-variation-settings confirming FILL 0, wght 200, GRAD -25, opsz 20. Icons in a 3x2 grid: architecture, visibility_off, do_not_disturb_on, vertical_align_top, frame_inspect, layers. Stitch substituted 4 of 6 icons; the advisory uses the prompt\'s researched set: arrow_downward (looking down on), block (rejection), vertical_align_top (superiority), remove (dismissal), visibility_off (refusing to acknowledge), gavel (rendering verdict). The extremely thin weight makes them feel aristocratic -- so refined they barely exist, yet cut precisely.',
+      'The design rendered Material Symbols at text-3xl in text-secondary with font-variation-settings confirming FILL 0, wght 200, GRAD -25, opsz 20. Icons in a 3x2 grid: architecture, visibility_off, do_not_disturb_on, vertical_align_top, frame_inspect, layers. The design substituted 4 of 6 icons; the advisory uses the prompt\'s researched set: arrow_downward (looking down on), block (rejection), vertical_align_top (superiority), remove (dismissal), visibility_off (refusing to acknowledge), gavel (rendering verdict). The extremely thin weight makes them feel aristocratic -- so refined they barely exist, yet cut precisely.',
   },
 
   rules: {

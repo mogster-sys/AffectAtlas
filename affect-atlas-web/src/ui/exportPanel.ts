@@ -7,8 +7,10 @@
 import { emotionStore } from '@/store/emotionStore';
 import { getEmotionThemeOrFallback } from '@/constants/designTokens';
 import { getDesignGuidance } from '@/constants/designGuidance';
+import { getAdvisory } from '@/constants/advisoryData';
 import { generateDesignSystem, generateAIPrompt } from '@/engine/mapping/themeMapper';
 import { el } from '@/utils/dom';
+import { entitlementStore } from '@/store/entitlementStore';
 
 type ExportFormat = 'css' | 'json' | 'swift' | 'kotlin' | 'ai' | 'figma' | 'tailwind' | 'scss' | 'tokens';
 
@@ -30,7 +32,8 @@ function getThemeData() {
   if (!primaryEmotion) return null;
   const theme = getEmotionThemeOrFallback(primaryEmotion, intensity);
   const guidance = getDesignGuidance(primaryEmotion, intensity);
-  return { primaryEmotion, intensity, theme, guidance };
+  const advisory = getAdvisory(primaryEmotion);
+  return { primaryEmotion, intensity, theme, guidance, advisory };
 }
 
 // ─── Export generators ──────────────────────────────
@@ -38,7 +41,7 @@ function getThemeData() {
 function generateCSS(): string {
   const d = getThemeData();
   if (!d) return '';
-  const { primaryEmotion, intensity, theme, guidance } = d;
+  const { primaryEmotion, intensity, theme, guidance, advisory } = d;
   const ds = generateDesignSystem(primaryEmotion, intensity);
   const { semantic, palette } = ds.colors;
 
@@ -47,7 +50,7 @@ function generateCSS(): string {
     `  /* ${primaryEmotion} - ${intensity} */`,
     `  /* Source: ${theme.source} */`,
     '',
-    '  /* Colors */',
+    '  /* Semantic Colors */',
     `  --color-primary: ${semantic.primary};`,
     `  --color-secondary: ${semantic.secondary};`,
     `  --color-accent: ${semantic.accent};`,
@@ -61,15 +64,43 @@ function generateCSS(): string {
   Object.entries(palette).forEach(([shade, color]) => {
     lines.push(`  --color-${shade}: ${color};`);
   });
+  if (advisory) {
+    lines.push('');
+    lines.push('  /* M3 Color Tokens */');
+    for (const [key, val] of Object.entries(advisory.colors.tokens)) {
+      lines.push(`  --md-${key}: ${val};`);
+    }
+    lines.push('');
+    lines.push('  /* Spacing */');
+    for (const step of advisory.spacing.scale) {
+      lines.push(`  --spacing-${step.label.toLowerCase()}: ${step.value};`);
+    }
+    lines.push('');
+    lines.push('  /* Motion */');
+    lines.push(`  --motion-duration: ${advisory.motion.duration};`);
+    lines.push(`  --motion-easing: cubic-bezier(${advisory.motion.bezierPoints.join(', ')});`);
+  }
   lines.push('');
   lines.push('  /* Typography */');
   lines.push(`  --font-headline: "${theme.typography.headlineFont}", sans-serif;`);
   lines.push(`  --font-body: "${theme.typography.bodyFont}", sans-serif;`);
+  if (advisory) {
+    lines.push(`  --font-headline-weight: ${advisory.typography.scale.headline.weight};`);
+    lines.push(`  --font-body-weight: ${advisory.typography.scale.body.weight};`);
+    lines.push(`  --letter-spacing-headline: ${advisory.typography.letterSpacing.headline};`);
+    lines.push(`  --letter-spacing-body: ${advisory.typography.letterSpacing.body};`);
+    lines.push(`  --line-height-headline: ${advisory.typography.lineHeight.headline};`);
+    lines.push(`  --line-height-body: ${advisory.typography.lineHeight.body};`);
+  }
   lines.push('');
   lines.push('  /* Shapes */');
   lines.push(`  --border-radius: ${theme.shapes.borderRadius}px;`);
   lines.push(`  --border-radius-lg: ${theme.shapes.borderRadiusLg}px;`);
   lines.push(`  --border-radius-xl: ${theme.shapes.borderRadiusXl}px;`);
+  if (advisory) {
+    lines.push(`  --depth-shadow: ${advisory.depth.shadowIfNeeded};`);
+    lines.push(`  --depth-ghost-border: ${advisory.depth.ghostBorder};`);
+  }
   lines.push('}');
   if (guidance) {
     lines.push('');
@@ -82,29 +113,55 @@ function generateCSS(): string {
 function generateJSON(): string {
   const d = getThemeData();
   if (!d) return '';
-  const { primaryEmotion, intensity, theme, guidance } = d;
-  return JSON.stringify({
+  const { primaryEmotion, intensity, theme, guidance, advisory } = d;
+  const obj: Record<string, unknown> = {
     emotion: primaryEmotion,
     intensity,
     source: theme.source,
     isDark: theme.isDark,
-    colors: theme.colors,
-    typography: theme.typography,
+    colors: {
+      ...theme.colors,
+      ...(advisory ? { m3Tokens: advisory.colors.tokens } : {}),
+    },
+    typography: {
+      ...theme.typography,
+      ...(advisory ? {
+        scale: advisory.typography.scale,
+        letterSpacing: advisory.typography.letterSpacing,
+        lineHeight: advisory.typography.lineHeight,
+      } : {}),
+    },
     shapes: theme.shapes,
+    ...(advisory ? {
+      spacing: advisory.spacing.scale,
+      motion: {
+        duration: advisory.motion.duration,
+        easing: `cubic-bezier(${advisory.motion.bezierPoints.join(', ')})`,
+        character: advisory.motion.character,
+      },
+      depth: {
+        approach: advisory.depth.approach,
+        shadow: advisory.depth.shadowIfNeeded,
+        ghostBorder: advisory.depth.ghostBorder,
+      },
+    } : {}),
     ...(guidance ? { designGuidance: guidance } : {}),
-  }, null, 2);
+  };
+  return JSON.stringify(obj, null, 2);
 }
 
 function generateSwift(): string {
   const d = getThemeData();
   if (!d) return '';
-  const { primaryEmotion, intensity, theme } = d;
+  const { primaryEmotion, intensity, theme, advisory } = d;
   const c = theme.colors;
-  return [
+  const lines: string[] = [
     'import SwiftUI',
     '',
     `// ${primaryEmotion} - ${intensity}`,
     `// Source: ${theme.source}`,
+    '',
+    '// MARK: - Semantic Colors',
     'extension Color {',
     `    static let emotionPrimary = Color(hex: "${c.primary}")`,
     `    static let emotionSecondary = Color(hex: "${c.secondary}")`,
@@ -112,30 +169,51 @@ function generateSwift(): string {
     `    static let emotionBackground = Color(hex: "${c.background}")`,
     `    static let emotionSurface = Color(hex: "${c.surface}")`,
     `    static let emotionText = Color(hex: "${c.text}")`,
-    '}',
-    '',
-    'struct EmotionTypography {',
-    `    static let headlineFont = "${theme.typography.headlineFont}"`,
-    `    static let bodyFont = "${theme.typography.bodyFont}"`,
-    '}',
-    '',
-    'struct EmotionShapes {',
-    `    static let cornerRadius: CGFloat = ${theme.shapes.borderRadius}`,
-    `    static let cornerRadiusLg: CGFloat = ${theme.shapes.borderRadiusLg}`,
-    `    static let cornerRadiusXl: CGFloat = ${theme.shapes.borderRadiusXl}`,
-    '}',
-  ].join('\n');
+  ];
+  if (advisory) {
+    lines.push('');
+    lines.push('    // MARK: M3 Token Colors');
+    for (const [key, val] of Object.entries(advisory.colors.tokens)) {
+      const name = key.replace(/-([a-z])/g, (_, ch) => ch.toUpperCase());
+      lines.push(`    static let ${name} = Color(hex: "${val}")`);
+    }
+  }
+  lines.push('}');
+  lines.push('');
+  lines.push('struct EmotionTypography {');
+  lines.push(`    static let headlineFont = "${theme.typography.headlineFont}"`);
+  lines.push(`    static let bodyFont = "${theme.typography.bodyFont}"`);
+  if (advisory) {
+    lines.push(`    static let headlineWeight: Font.Weight = .init(rawValue: CGFloat(${advisory.typography.scale.headline.weight}))`);
+    lines.push(`    static let bodyWeight: Font.Weight = .init(rawValue: CGFloat(${advisory.typography.scale.body.weight}))`);
+  }
+  lines.push('}');
+  lines.push('');
+  lines.push('struct EmotionShapes {');
+  lines.push(`    static let cornerRadius: CGFloat = ${theme.shapes.borderRadius}`);
+  lines.push(`    static let cornerRadiusLg: CGFloat = ${theme.shapes.borderRadiusLg}`);
+  lines.push(`    static let cornerRadiusXl: CGFloat = ${theme.shapes.borderRadiusXl}`);
+  lines.push('}');
+  if (advisory) {
+    lines.push('');
+    lines.push('struct EmotionMotion {');
+    lines.push(`    static let duration: TimeInterval = ${parseFloat(advisory.motion.duration) / 1000}`);
+    lines.push(`    static let controlPoints: (CGFloat, CGFloat, CGFloat, CGFloat) = (${advisory.motion.bezierPoints.join(', ')})`);
+    lines.push('}');
+  }
+  return lines.join('\n');
 }
 
 function generateKotlin(): string {
   const d = getThemeData();
   if (!d) return '';
-  const { primaryEmotion, intensity, theme } = d;
+  const { primaryEmotion, intensity, theme, advisory } = d;
   const c = theme.colors;
-  return [
+  const lines: string[] = [
     'import androidx.compose.ui.graphics.Color',
     'import androidx.compose.foundation.shape.RoundedCornerShape',
     'import androidx.compose.ui.unit.dp',
+    'import androidx.compose.animation.core.CubicBezierEasing',
     '',
     `// ${primaryEmotion} - ${intensity}`,
     `// Source: ${theme.source}`,
@@ -148,19 +226,37 @@ function generateKotlin(): string {
     `    val Surface = Color(${hexToArgb(c.surface)})`,
     `    val Text = Color(${hexToArgb(c.text)})`,
     `    val TextSecondary = Color(${hexToArgb(c.textSecondary)})`,
-    '}',
-    '',
-    'object EmotionTypography {',
-    `    const val headlineFont = "${theme.typography.headlineFont}"`,
-    `    const val bodyFont = "${theme.typography.bodyFont}"`,
-    '}',
-    '',
-    'object EmotionShapes {',
-    `    val cornerRadius = RoundedCornerShape(${theme.shapes.borderRadius}.dp)`,
-    `    val cornerRadiusLg = RoundedCornerShape(${theme.shapes.borderRadiusLg}.dp)`,
-    `    val cornerRadiusXl = RoundedCornerShape(${theme.shapes.borderRadiusXl}.dp)`,
-    '}',
-  ].join('\n');
+  ];
+  if (advisory) {
+    lines.push('');
+    lines.push('    // M3 Token Colors');
+    for (const [key, val] of Object.entries(advisory.colors.tokens)) {
+      const name = key.replace(/-([a-z])/g, (_, ch: string) => ch.toUpperCase())
+                      .replace(/^([a-z])/, (_, ch: string) => ch.toUpperCase());
+      lines.push(`    val ${name} = Color(${hexToArgb(val)})`);
+    }
+  }
+  lines.push('}');
+  lines.push('');
+  lines.push('object EmotionTypography {');
+  lines.push(`    const val headlineFont = "${theme.typography.headlineFont}"`);
+  lines.push(`    const val bodyFont = "${theme.typography.bodyFont}"`);
+  lines.push('}');
+  lines.push('');
+  lines.push('object EmotionShapes {');
+  lines.push(`    val cornerRadius = RoundedCornerShape(${theme.shapes.borderRadius}.dp)`);
+  lines.push(`    val cornerRadiusLg = RoundedCornerShape(${theme.shapes.borderRadiusLg}.dp)`);
+  lines.push(`    val cornerRadiusXl = RoundedCornerShape(${theme.shapes.borderRadiusXl}.dp)`);
+  lines.push('}');
+  if (advisory) {
+    const bp = advisory.motion.bezierPoints;
+    lines.push('');
+    lines.push('object EmotionMotion {');
+    lines.push(`    const val durationMs = ${parseInt(advisory.motion.duration, 10)}`);
+    lines.push(`    val easing = CubicBezierEasing(${bp[0]}f, ${bp[1]}f, ${bp[2]}f, ${bp[3]}f)`);
+    lines.push('}');
+  }
+  return lines.join('\n');
 }
 
 function generateAI(): string {
@@ -172,19 +268,27 @@ function generateAI(): string {
 function generateFigma(): string {
   const d = getThemeData();
   if (!d) return '';
-  const { primaryEmotion, intensity, theme, guidance } = d;
+  const { primaryEmotion, intensity, theme, guidance, advisory } = d;
   const c = theme.colors;
 
+  const colorTokens: Record<string, { value: string; type: string }> = {
+    primary: { value: c.primary, type: 'color' },
+    secondary: { value: c.secondary, type: 'color' },
+    accent: { value: c.accent, type: 'color' },
+    background: { value: c.background, type: 'color' },
+    surface: { value: c.surface, type: 'color' },
+    text: { value: c.text, type: 'color' },
+    textSecondary: { value: c.textSecondary, type: 'color' },
+  };
+
+  if (advisory) {
+    for (const [key, val] of Object.entries(advisory.colors.tokens)) {
+      colorTokens[key] = { value: val, type: 'color' };
+    }
+  }
+
   const tokens: Record<string, unknown> = {
-    color: {
-      primary: { value: c.primary, type: 'color' },
-      secondary: { value: c.secondary, type: 'color' },
-      accent: { value: c.accent, type: 'color' },
-      background: { value: c.background, type: 'color' },
-      surface: { value: c.surface, type: 'color' },
-      text: { value: c.text, type: 'color' },
-      textSecondary: { value: c.textSecondary, type: 'color' },
-    },
+    color: colorTokens,
     palette: {} as Record<string, { value: string; type: string }>,
     fontFamilies: {
       headline: { value: theme.typography.headlineFont, type: 'fontFamilies' },
@@ -197,7 +301,18 @@ function generateFigma(): string {
     },
   };
 
-  // Add palette colors
+  if (advisory) {
+    tokens.spacing = {} as Record<string, { value: string; type: string }>;
+    const spacingTokens = tokens.spacing as Record<string, { value: string; type: string }>;
+    for (const step of advisory.spacing.scale) {
+      spacingTokens[step.label.toLowerCase()] = { value: step.value, type: 'spacing' };
+    }
+    tokens.motion = {
+      duration: { value: advisory.motion.duration, type: 'duration' },
+      easing: { value: `cubic-bezier(${advisory.motion.bezierPoints.join(', ')})`, type: 'cubicBezier' },
+    };
+  }
+
   const paletteTokens = tokens.palette as Record<string, { value: string; type: string }>;
   c.palette.forEach((color: string, i: number) => {
     paletteTokens[`swatch-${i + 1}`] = { value: color, type: 'color' };
@@ -208,7 +323,7 @@ function generateFigma(): string {
   };
 
   if (guidance) {
-    (output as Record<string, unknown>)['_metadata'] = {
+    output['_metadata'] = {
       northStar: guidance.northStar,
       philosophy: guidance.philosophy,
     };
@@ -220,7 +335,7 @@ function generateFigma(): string {
 function generateTailwind(): string {
   const d = getThemeData();
   if (!d) return '';
-  const { primaryEmotion, intensity, theme, guidance } = d;
+  const { primaryEmotion, intensity, theme, guidance, advisory } = d;
   const c = theme.colors;
 
   const lines: string[] = [
@@ -243,6 +358,15 @@ function generateTailwind(): string {
     `        surface: '${c.surface}',`,
     `        text: '${c.text}',`,
     `        'text-secondary': '${c.textSecondary}',`,
+  );
+  if (advisory) {
+    for (const [key, val] of Object.entries(advisory.colors.tokens)) {
+      if (!['primary', 'secondary', 'surface', 'background', 'error'].includes(key)) {
+        lines.push(`        '${key}': '${val}',`);
+      }
+    }
+  }
+  lines.push(
     '      },',
     '      fontFamily: {',
     `        headline: ['"${theme.typography.headlineFont}"', 'sans-serif'],`,
@@ -252,7 +376,29 @@ function generateTailwind(): string {
     `        DEFAULT: '${theme.shapes.borderRadius}px',`,
     `        lg: '${theme.shapes.borderRadiusLg}px',`,
     `        xl: '${theme.shapes.borderRadiusXl}px',`,
-    '      },',
+  );
+  if (advisory) {
+    for (const step of advisory.shapes.radii) {
+      if (!['base', 'lg', 'xl'].includes(step.label.toLowerCase())) {
+        lines.push(`        '${step.label.toLowerCase()}': '${step.value}',`);
+      }
+    }
+  }
+  lines.push('      },');
+  if (advisory) {
+    lines.push('      spacing: {');
+    for (const step of advisory.spacing.scale) {
+      lines.push(`        '${step.label.toLowerCase()}': '${step.value}',`);
+    }
+    lines.push('      },');
+    lines.push('      transitionDuration: {');
+    lines.push(`        emotion: '${advisory.motion.duration}',`);
+    lines.push('      },');
+    lines.push('      transitionTimingFunction: {');
+    lines.push(`        emotion: 'cubic-bezier(${advisory.motion.bezierPoints.join(', ')})',`);
+    lines.push('      },');
+  }
+  lines.push(
     '    },',
     '  },',
     '}',
@@ -263,7 +409,7 @@ function generateTailwind(): string {
 function generateSCSS(): string {
   const d = getThemeData();
   if (!d) return '';
-  const { primaryEmotion, intensity, theme, guidance } = d;
+  const { primaryEmotion, intensity, theme, guidance, advisory } = d;
   const c = theme.colors;
 
   const lines: string[] = [
@@ -275,7 +421,7 @@ function generateSCSS(): string {
   }
   lines.push(
     '',
-    '// Colors',
+    '// Semantic Colors',
     `$color-primary: ${c.primary};`,
     `$color-secondary: ${c.secondary};`,
     `$color-accent: ${c.accent};`,
@@ -283,9 +429,15 @@ function generateSCSS(): string {
     `$color-surface: ${c.surface};`,
     `$color-text: ${c.text};`,
     `$color-text-secondary: ${c.textSecondary};`,
-    '',
-    '// Palette',
   );
+  if (advisory) {
+    lines.push('');
+    lines.push('// M3 Color Tokens');
+    for (const [key, val] of Object.entries(advisory.colors.tokens)) {
+      lines.push(`$md-${key}: ${val};`);
+    }
+  }
+  lines.push('', '// Palette');
   c.palette.forEach((color: string, i: number) => {
     lines.push(`$palette-${i + 1}: ${color};`);
   });
@@ -294,35 +446,67 @@ function generateSCSS(): string {
     '// Typography',
     `$font-headline: "${theme.typography.headlineFont}", sans-serif;`,
     `$font-body: "${theme.typography.bodyFont}", sans-serif;`,
+  );
+  if (advisory) {
+    lines.push(`$font-headline-weight: ${advisory.typography.scale.headline.weight};`);
+    lines.push(`$font-body-weight: ${advisory.typography.scale.body.weight};`);
+    lines.push(`$letter-spacing-headline: ${advisory.typography.letterSpacing.headline};`);
+    lines.push(`$letter-spacing-body: ${advisory.typography.letterSpacing.body};`);
+    lines.push(`$line-height-headline: ${advisory.typography.lineHeight.headline};`);
+    lines.push(`$line-height-body: ${advisory.typography.lineHeight.body};`);
+  }
+  lines.push(
     '',
     '// Shapes',
     `$border-radius: ${theme.shapes.borderRadius}px;`,
     `$border-radius-lg: ${theme.shapes.borderRadiusLg}px;`,
     `$border-radius-xl: ${theme.shapes.borderRadiusXl}px;`,
     `$corner-style: "${theme.shapes.cornerStyle}";`,
-    '',
-    `$is-dark: ${theme.isDark};`,
   );
+  if (advisory) {
+    lines.push('');
+    lines.push('// Spacing');
+    for (const step of advisory.spacing.scale) {
+      lines.push(`$spacing-${step.label.toLowerCase()}: ${step.value};`);
+    }
+    lines.push('');
+    lines.push('// Motion');
+    lines.push(`$motion-duration: ${advisory.motion.duration};`);
+    lines.push(`$motion-easing: cubic-bezier(${advisory.motion.bezierPoints.join(', ')});`);
+    lines.push('');
+    lines.push('// Depth');
+    lines.push(`$depth-shadow: ${advisory.depth.shadowIfNeeded};`);
+    lines.push(`$depth-ghost-border: ${advisory.depth.ghostBorder};`);
+  }
+  lines.push('', `$is-dark: ${theme.isDark};`);
   return lines.join('\n');
 }
 
 function generateTokens(): string {
   const d = getThemeData();
   if (!d) return '';
-  const { primaryEmotion, intensity, theme, guidance } = d;
+  const { primaryEmotion, intensity, theme, guidance, advisory } = d;
   const c = theme.colors;
+
+  const colorTokens: Record<string, { $value: string; $type: string }> = {
+    primary: { $value: c.primary, $type: 'color' },
+    secondary: { $value: c.secondary, $type: 'color' },
+    accent: { $value: c.accent, $type: 'color' },
+    background: { $value: c.background, $type: 'color' },
+    surface: { $value: c.surface, $type: 'color' },
+    text: { $value: c.text, $type: 'color' },
+    textSecondary: { $value: c.textSecondary, $type: 'color' },
+  };
+
+  if (advisory) {
+    for (const [key, val] of Object.entries(advisory.colors.tokens)) {
+      colorTokens[key] = { $value: val, $type: 'color' };
+    }
+  }
 
   const dtcg: Record<string, unknown> = {
     $description: `${primaryEmotion} - ${intensity} (Source: ${theme.source})`,
-    color: {
-      primary: { $value: c.primary, $type: 'color' },
-      secondary: { $value: c.secondary, $type: 'color' },
-      accent: { $value: c.accent, $type: 'color' },
-      background: { $value: c.background, $type: 'color' },
-      surface: { $value: c.surface, $type: 'color' },
-      text: { $value: c.text, $type: 'color' },
-      textSecondary: { $value: c.textSecondary, $type: 'color' },
-    },
+    color: colorTokens,
     fontFamily: {
       headline: { $value: theme.typography.headlineFont, $type: 'fontFamily' },
       body: { $value: theme.typography.bodyFont, $type: 'fontFamily' },
@@ -335,6 +519,36 @@ function generateTokens(): string {
     cornerStyle: { $value: theme.shapes.cornerStyle, $type: 'string' },
     isDark: { $value: theme.isDark, $type: 'boolean' },
   };
+
+  if (advisory) {
+    dtcg.typography = {
+      headlineWeight: { $value: advisory.typography.scale.headline.weight, $type: 'fontWeight' },
+      bodyWeight: { $value: advisory.typography.scale.body.weight, $type: 'fontWeight' },
+      letterSpacing: {
+        headline: { $value: advisory.typography.letterSpacing.headline, $type: 'dimension' },
+        body: { $value: advisory.typography.letterSpacing.body, $type: 'dimension' },
+      },
+      lineHeight: {
+        headline: { $value: advisory.typography.lineHeight.headline, $type: 'number' },
+        body: { $value: advisory.typography.lineHeight.body, $type: 'number' },
+      },
+    };
+    dtcg.spacing = {} as Record<string, unknown>;
+    const spacingTokens = dtcg.spacing as Record<string, unknown>;
+    for (const step of advisory.spacing.scale) {
+      spacingTokens[step.label.toLowerCase()] = { $value: step.value, $type: 'dimension' };
+    }
+    dtcg.motion = {
+      duration: { $value: advisory.motion.duration, $type: 'duration' },
+      easing: { $value: advisory.motion.bezierPoints, $type: 'cubicBezier' },
+      character: { $value: advisory.motion.character, $type: 'string' },
+    };
+    dtcg.depth = {
+      approach: { $value: advisory.depth.approach, $type: 'string' },
+      shadow: { $value: advisory.depth.shadowIfNeeded, $type: 'shadow' },
+      ghostBorder: { $value: advisory.depth.ghostBorder, $type: 'string' },
+    };
+  }
 
   if (guidance) {
     dtcg['$extensions'] = {
@@ -405,6 +619,9 @@ function buildPanel(): HTMLElement {
       }, 1500);
     } catch {
       copyBtn.textContent = 'Failed';
+      setTimeout(() => {
+        copyBtn.textContent = 'Copy to clipboard';
+      }, 1500);
     }
   });
 
@@ -440,7 +657,8 @@ function updateTabs(): void {
 
 // ─── Public API ────────────────────────────────────
 
-export function openExport(): void {
+/** Open the export panel directly (bypasses entitlement gate). */
+export function openExportPanel(): void {
   if (panelEl) return;
 
   const { primaryEmotion } = emotionStore.get();
@@ -458,6 +676,15 @@ export function openExport(): void {
     backdropEl?.classList.add('export-backdrop-visible');
     panelEl?.classList.add('export-panel-visible');
   });
+}
+
+/** Public entry point -- checks entitlement before opening. */
+export function openExport(): void {
+  if (entitlementStore.get().isProUnlocked) {
+    openExportPanel();
+  } else {
+    import('@/ui/upgradeSheet').then(({ openUpgradeSheet }) => openUpgradeSheet());
+  }
 }
 
 export function closeExport(): void {

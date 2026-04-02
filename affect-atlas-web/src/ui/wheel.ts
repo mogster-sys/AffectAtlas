@@ -16,7 +16,7 @@ import { getEmotionColors } from '@/engine/mapping/colorMapper';
 import { emotionStore } from '@/store/emotionStore';
 import { settingsStore } from '@/store/settingsStore';
 import { getExtrasForPrimary } from '@/constants/extraEmotions';
-import type { PrimaryEmotionType, Intensity } from '@/types/emotion';
+import type { PrimaryEmotionType, AnyEmotionType, Intensity } from '@/types/emotion';
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const SEGMENT_ANGLE = 360 / PRIMARY_EMOTIONS.length; // 45 degrees
@@ -44,6 +44,8 @@ let wheelState: WheelState = {
 };
 
 let animationFrame: number | null = null;
+// Set by direct tap on a ring segment -- prevents snap from overriding the selection
+let skipNextUpdate = false;
 
 // ─── SVG arc math ──────────────────────────────────
 
@@ -132,7 +134,7 @@ function buildExtraRing(cx: number, cy: number, size: number): SVGGElement {
       const path = svgPath(
         createArcPath(cx, cy, arcStart, arcEnd, innerR, outerR),
         colors.mild,
-        0.55,
+        0.78,
       );
       path.style.cursor = 'pointer';
       path.style.transition = 'opacity 200ms ease-out';
@@ -140,6 +142,10 @@ function buildExtraRing(cx: number, cy: number, size: number): SVGGElement {
       // Hover highlight
       path.addEventListener('pointerenter', () => { path.setAttribute('opacity', '0.85'); });
       path.addEventListener('pointerleave', () => { path.setAttribute('opacity', '0.55'); });
+
+      // Stop pointer events from reaching the wheel's drag/snap handlers
+      path.addEventListener('pointerdown', (e) => { e.stopPropagation(); });
+      path.addEventListener('pointerup', (e) => { e.stopPropagation(); });
 
       // Click selects the extra emotion
       path.addEventListener('click', (e) => {
@@ -167,10 +173,78 @@ function buildExtraRing(cx: number, cy: number, size: number): SVGGElement {
   return group;
 }
 
+// ─── Extra emotions inner ring (chip mode) ─────────
+
+function buildInnerExtraRing(cx: number, cy: number, size: number): SVGGElement {
+  const group = document.createElementNS(SVG_NS, 'g');
+  group.setAttribute('class', 'inner-extra-ring');
+
+  const innerR = size * 0.20;
+  const outerR = size * 0.34;
+  const gap = 1.5;
+  const labelR = size * 0.27;
+
+  PRIMARY_EMOTIONS.forEach((emotion, segIdx) => {
+    const segStart = segIdx * SEGMENT_ANGLE - 90;
+    const extras = getExtrasForPrimary(emotion.type);
+    if (extras.length === 0) return;
+
+    const sliceAngle = SEGMENT_ANGLE / extras.length;
+    const colors = getEmotionColors(emotion.type);
+
+    extras.forEach((extra, i) => {
+      const arcStart = segStart + i * sliceAngle + gap / 2;
+      const arcEnd = segStart + (i + 1) * sliceAngle - gap / 2;
+
+      const path = svgPath(
+        createArcPath(cx, cy, arcStart, arcEnd, innerR, outerR),
+        colors.intense,
+        0.8,
+      );
+      path.style.cursor = 'pointer';
+      path.style.transition = 'opacity 200ms ease-out';
+
+      path.addEventListener('pointerenter', () => { path.setAttribute('opacity', '0.95'); });
+      path.addEventListener('pointerleave', () => { path.setAttribute('opacity', '0.8'); });
+
+      // Let pointer events propagate so wheel drag still works through this area.
+      // Only intercept click (tap) and use skipNextUpdate to prevent snap override.
+      path.addEventListener('click', (e) => {
+        e.stopPropagation();
+        skipNextUpdate = true;
+        emotionStore.setPrimaryEmotion(extra.type);
+      });
+
+      group.appendChild(path);
+
+      // Label
+      const midAngle = (arcStart + arcEnd) / 2;
+      const midRad = (midAngle * Math.PI) / 180;
+      const lx = cx + labelR * Math.cos(midRad);
+      const ly = cy + labelR * Math.sin(midRad);
+
+      let textRot = midAngle;
+      if (textRot > 90 && textRot < 270) textRot += 180;
+      if (textRot < -90 && textRot > -270) textRot += 180;
+
+      const label = svgText(lx, ly, extra.label, 8, 'rgba(255,255,255,0.85)', textRot);
+      group.appendChild(label);
+    });
+  });
+
+  return group;
+}
+
+let innerExtraRingGroup: SVGGElement | null = null;
+
 function updateExtraRingVisibility(): void {
-  if (!extraRingGroup) return;
   const mode = settingsStore.get().extraDisplayMode;
-  extraRingGroup.style.display = mode === 'ring' ? '' : 'none';
+  if (extraRingGroup) {
+    extraRingGroup.style.display = mode === 'ring' ? '' : 'none';
+  }
+  if (innerExtraRingGroup) {
+    innerExtraRingGroup.style.display = mode === 'chips' ? '' : 'none';
+  }
 }
 
 // ─── Build the wheel SVG ───────────────────────────
@@ -184,6 +258,7 @@ function buildWheel(size: number): SVGSVGElement {
   svgEl.setAttribute('height', String(size));
   svgEl.setAttribute('viewBox', `0 0 ${size} ${size}`);
   svgEl.style.display = 'block';
+  svgEl.style.overflow = 'visible'; // outer ring extends beyond viewBox
 
   wheelGroup = document.createElementNS(SVG_NS, 'g');
   wheelGroup.setAttribute('transform-origin', `${cx}px ${cy}px`);
@@ -204,31 +279,40 @@ function buildWheel(size: number): SVGSVGElement {
     const colors = getEmotionColors(emotion.type);
 
     // Mild ring (outer)
-    wheelGroup.appendChild(
-      svgPath(
-        createArcPath(cx, cy, startAngle + gap / 2, startAngle + SEGMENT_ANGLE - gap / 2, rings.mild.inner, rings.mild.outer),
-        colors.mild,
-        0.85,
-      ),
+    const mildPath = svgPath(
+      createArcPath(cx, cy, startAngle + gap / 2, startAngle + SEGMENT_ANGLE - gap / 2, rings.mild.inner, rings.mild.outer),
+      colors.mild, 1,
     );
+    mildPath.style.cursor = 'pointer';
+    mildPath.addEventListener('click', () => {
+      skipNextUpdate = true;
+      emotionStore.set({ primaryEmotion: emotion.type, intensity: 'mild' });
+    });
+    wheelGroup.appendChild(mildPath);
 
     // Moderate ring (middle)
-    wheelGroup.appendChild(
-      svgPath(
-        createArcPath(cx, cy, startAngle + gap / 2, startAngle + SEGMENT_ANGLE - gap / 2, rings.moderate.inner, rings.moderate.outer),
-        colors.moderate,
-        0.9,
-      ),
+    const modPath = svgPath(
+      createArcPath(cx, cy, startAngle + gap / 2, startAngle + SEGMENT_ANGLE - gap / 2, rings.moderate.inner, rings.moderate.outer),
+      colors.moderate, 1,
     );
+    modPath.style.cursor = 'pointer';
+    modPath.addEventListener('click', () => {
+      skipNextUpdate = true;
+      emotionStore.set({ primaryEmotion: emotion.type, intensity: 'moderate' });
+    });
+    wheelGroup.appendChild(modPath);
 
     // Intense ring (inner)
-    wheelGroup.appendChild(
-      svgPath(
-        createArcPath(cx, cy, startAngle + gap / 2, startAngle + SEGMENT_ANGLE - gap / 2, rings.intense.inner, rings.intense.outer),
-        colors.intense,
-        0.95,
-      ),
+    const intPath = svgPath(
+      createArcPath(cx, cy, startAngle + gap / 2, startAngle + SEGMENT_ANGLE - gap / 2, rings.intense.inner, rings.intense.outer),
+      colors.intense, 1,
     );
+    intPath.style.cursor = 'pointer';
+    intPath.addEventListener('click', () => {
+      skipNextUpdate = true;
+      emotionStore.set({ primaryEmotion: emotion.type, intensity: 'intense' });
+    });
+    wheelGroup.appendChild(intPath);
 
     // Label on the mild ring
     const labelAngle = startAngle + SEGMENT_ANGLE / 2;
@@ -256,13 +340,18 @@ function buildWheel(size: number): SVGSVGElement {
   // Extra emotions outer ring
   extraRingGroup = buildExtraRing(cx, cy, size);
   wheelGroup.appendChild(extraRingGroup);
+
+  // Extra emotions inner ring (chip mode alternative)
+  innerExtraRingGroup = buildInnerExtraRing(cx, cy, size);
+  wheelGroup.appendChild(innerExtraRingGroup);
+
   updateExtraRingVisibility();
 
-  // Center circle
+  // Center dot (on top of inner ring)
   const centerCircle = document.createElementNS(SVG_NS, 'circle');
   centerCircle.setAttribute('cx', String(cx));
   centerCircle.setAttribute('cy', String(cy));
-  centerCircle.setAttribute('r', String(size * 0.08));
+  centerCircle.setAttribute('r', String(size * 0.06));
   centerCircle.setAttribute('fill', '#1A1A1B');
   centerCircle.setAttribute('stroke', 'rgba(255,255,255,0.15)');
   centerCircle.setAttribute('stroke-width', '1');
@@ -351,6 +440,7 @@ function getDyadBetween(idx1: number, idx2: number): string | null {
 }
 
 function updateSelection(): void {
+  if (skipNextUpdate) { skipNextUpdate = false; return; }
   const { emotion, intensity } = getSegmentAtNotch();
 
   // Check if we're between two segments (dyad detection)
@@ -365,7 +455,7 @@ function updateSelection(): void {
     const dyadType = getDyadBetween(idx1, idx2);
     if (dyadType) {
       emotionStore.set({
-        primaryEmotion: dyadType as PrimaryEmotionType,
+        primaryEmotion: dyadType as AnyEmotionType,
         intensity,
       });
       return;

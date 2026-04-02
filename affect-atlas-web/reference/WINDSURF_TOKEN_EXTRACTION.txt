@@ -1,0 +1,214 @@
+TOKEN EXTRACTION TASK FOR WINDSURF
+====================================
+Extract design tokens from 29 Stitch HTML screens into designTokens.ts.
+
+
+WHAT THIS IS
+------------
+Each emotion has a Stitch-generated HTML screen with a Tailwind CSS config
+containing color tokens, fonts, border radii, and motion values. These need
+to be written into the TypeScript token file that the app uses at runtime.
+
+
+SOURCE FILES (read from these)
+------------------------------
+Each file is at: stitch-exports/v2-{NN}-{emotion}/code.html
+Look for the <script id="tailwind-config"> block. It contains a JS object
+with colors, fontFamily, borderRadius, and spacing.
+
+Motion values (easing, duration) are in a <style> block, typically in a
+class named after the emotion's motion character (e.g. .bouncy-ease,
+.deflating-ease). Extract the cubic-bezier and duration from there.
+
+Full list of source files:
+  stitch-exports/v2-01-joy/code.html
+  stitch-exports/v2-02-trust/code.html
+  stitch-exports/v2-03-fear/code.html
+  stitch-exports/v2-04-surprise/code.html
+  stitch-exports/v2-05-sadness/code.html
+  stitch-exports/v2-06-disgust/code.html
+  stitch-exports/v2-07-anger/code.html
+  stitch-exports/v2-08-anticipation/code.html
+  stitch-exports/v2-09-love/code.html
+  stitch-exports/v2-10-submission/code.html
+  stitch-exports/v2-11-alarm/code.html
+  stitch-exports/v2-12-disappointment/code.html
+  stitch-exports/v2-13-remorse/code.html
+  stitch-exports/v2-14-contempt/code.html
+  stitch-exports/v2-15-aggressiveness/code.html
+  stitch-exports/v2-16-optimism/code.html
+  stitch-exports/v2-17-awe/code.html
+  stitch-exports/v2-18-confusion/code.html
+  stitch-exports/v2-19-depression/code.html
+  stitch-exports/v2-20-loneliness/code.html
+  stitch-exports/v2-21-guilt/code.html
+  stitch-exports/v2-22-appalled/code.html
+  stitch-exports/v2-23-frustration/code.html
+  stitch-exports/v2-24-jealousy/code.html
+  stitch-exports/v2-25-inspiration/code.html
+  stitch-exports/v2-26-contentment/code.html
+  stitch-exports/v2-27-embarrassment/code.html
+  stitch-exports/v2-28-fright/code.html
+  stitch-exports/v2-29-pride/code.html
+
+
+TARGET FILE (write to this)
+---------------------------
+affect-atlas-web/src/constants/designTokens.ts
+
+This file has an array called ALL_THEMES containing EmotionTheme objects.
+Currently has entries for 16 emotions (v2-01 through v2-16).
+Need to ADD entries for v2-17 through v2-29 (13 emotions).
+Need to UPDATE entries for v2-12 through v2-16 (5 emotions with old tokens).
+Entries for v2-01 through v2-11 are already done -- DO NOT TOUCH THESE.
+
+
+FONT KEY QUIRKS IN HTML
+------------------------
+Most files use: fontFamily.headline and fontFamily.body
+Two exceptions:
+  v2-19-depression uses "display" instead of "headline"
+  v2-24-jealousy uses "serif" and "sans" instead of "headline" and "body"
+Map these to headlineFont and bodyFont regardless of key name.
+
+
+ENTRY FORMAT
+------------
+Each emotion needs exactly 3 entries (mild, moderate, intense).
+Each Stitch HTML file is ONE screen -- it represents the MODERATE intensity.
+
+For mild: desaturate/lighten the colors slightly from the HTML values.
+For intense: saturate/darken the colors slightly from the HTML values.
+Keep the same fonts and corner style across all 3 intensities.
+
+Here is the exact TypeScript shape for each entry:
+
+  {
+    emotion: 'emotionname',
+    intensity: 'mild',        // or 'moderate' or 'intense'
+    source: 'v2-NN-emotionname',
+    placeholder: false,
+    isDark: boolean,           // true if background is dark, false if light
+    colors: {
+      primary: '#hex',         // from Tailwind "primary"
+      secondary: '#hex',       // from Tailwind "secondary"
+      accent: '#hex',          // from Tailwind "tertiary" (mapped to accent)
+      background: '#hex',      // from Tailwind "surface" or body bg
+      surface: '#hex',         // from Tailwind "surface-container"
+      text: '#hex',            // from Tailwind "on-surface"
+      textSecondary: '#hex',   // from Tailwind "on-surface-variant"
+      palette: ['#hex','#hex','#hex','#hex','#hex'],
+        // 5 representative colors: [accent, primary, secondary, surface, background]
+    },
+    typography: {
+      headlineFont: 'Font Name',   // from fontFamily.headline[0]
+      bodyFont: 'Font Name',       // from fontFamily.body[0]
+    },
+    shapes: {
+      borderRadius: N,             // from borderRadius.DEFAULT or borderRadius.md (parse px to number)
+      borderRadiusLg: N,           // from borderRadius.lg (parse px to number)
+      borderRadiusXl: N,           // use borderRadius.full? or 2x lg. If not available, use 2x lg
+      cornerStyle: 'rounded',      // 'rounded' if radius >= 12, 'smooth' if 4-11, 'sharp' if 0-3, 'mixed' if varies
+    },
+  },
+
+
+MAPPING CHEAT SHEET: Tailwind config key -> TypeScript field
+------------------------------------------------------------
+  colors.primary            -> colors.primary
+  colors.secondary          -> colors.secondary
+  colors.tertiary           -> colors.accent
+  colors.surface            -> colors.background  (yes, surface maps to background)
+  colors.surface-container  -> colors.surface
+  colors.on-surface         -> colors.text
+  colors.on-surface-variant -> colors.textSecondary
+  fontFamily.headline[0]    -> typography.headlineFont
+  fontFamily.body[0]        -> typography.bodyFont
+  borderRadius.DEFAULT      -> shapes.borderRadius (strip "px", convert to number)
+  borderRadius.lg           -> shapes.borderRadiusLg (strip "px", convert to number)
+
+
+isDark DETERMINATION
+--------------------
+Look at the background color. If it is dark (luminance < 0.3), isDark = true.
+Quick rule: if the hex starts with #0, #1, #2, or #3 it is dark.
+Reference from existing entries and emotion table:
+
+  DARK: fear, anger, sadness, surprise, disgust, confusion, appalled,
+        guilt, awe, depression, loneliness, jealousy, fright, frustration,
+        pride, remorse, aggressiveness, alarm
+  LIGHT: joy, trust, anticipation, contentment, inspiration,
+         embarrassment, love, submission, disappointment, contempt, optimism
+
+
+MILD / MODERATE / INTENSE STRATEGY
+-----------------------------------
+The HTML gives you the MODERATE values directly. For mild and intense:
+
+MILD (lighter/softer version):
+  - background: lighten by ~5-10% (e.g. if moderate bg is #f0f0f2, mild is #f4f4f6)
+  - primary: desaturate slightly or use primary-container color from HTML
+  - Keep fonts, corner style, and shapes identical to moderate
+  - Keep same isDark value
+
+INTENSE (stronger/saturated version):
+  - background: darken slightly or use a more saturated variant
+  - primary: use a more saturated or contrasted version
+  - accent: pick the most vivid color from the HTML palette
+  - Keep fonts, corner style, and shapes identical to moderate
+  - Keep same isDark value
+
+If you cannot confidently derive mild/intense, just use the SAME values
+as moderate for all 3. Getting the moderate values right is the priority.
+
+
+EMOTION TYPE
+------------
+The EmotionType union in types/emotion.ts currently only includes:
+  'joy' | 'trust' | 'fear' | 'surprise' | 'sadness' | 'disgust' |
+  'anger' | 'anticipation' | 'love' | 'submission' | 'alarm' |
+  'disappointment' | 'remorse' | 'contempt' | 'aggressiveness' | 'optimism'
+
+The 13 new emotions (awe, confusion, depression, etc.) are NOT in this union.
+DO NOT try to add them to EmotionType. Instead, use a type assertion:
+  emotion: 'awe' as any,
+
+This is a known workaround documented in MEMORY.md. The union expansion
+is a separate task.
+
+
+ORDER IN THE FILE
+-----------------
+Add new entries AFTER the existing optimism entries, in this order:
+  awe (v2-17), confusion (v2-18), depression (v2-19), loneliness (v2-20),
+  guilt (v2-21), appalled (v2-22), frustration (v2-23), jealousy (v2-24),
+  inspiration (v2-25), contentment (v2-26), embarrassment (v2-27),
+  fright (v2-28), pride (v2-29)
+
+
+WHAT TO UPDATE (v2-12 through v2-16)
+-------------------------------------
+These 5 emotions already have entries but with OLD token values.
+Find each entry by its emotion name and replace the color/shape values
+with values from the v2 HTML. Update the source field to 'v2-NN-emotion'.
+Set placeholder to false.
+
+  disappointment: currently source 'mild_disappointment_affectatlas' etc
+  remorse: currently source 'mild_remorse_affectatlas' etc
+  contempt: currently source 'mild_contempt_affectatlas' etc
+  aggressiveness: currently source 'mild_aggressiveness_affectatlas' etc
+  optimism: currently source 'mild_optimism_affectatlas' etc
+
+
+DO NOT CHANGE
+-------------
+- Entries for v2-01 through v2-11 (already correct)
+- The interfaces at the top of the file
+- The helper functions at the bottom (getEmotionTheme, etc.)
+- Any imports
+
+
+VERIFICATION
+------------
+After making changes, run: npx tsc --noEmit
+from the affect-atlas-web/ directory to check for type errors.

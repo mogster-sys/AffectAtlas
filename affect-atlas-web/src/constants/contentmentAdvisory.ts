@@ -1,9 +1,9 @@
 /**
- * Contentment advisory -- extracted from Stitch output.
+ * Contentment advisory -- extracted from The design output.
  * Source: stitch-exports/contentment-advisory/contentment_design_advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  *
- * Stitch loaded three fonts (Lexend, Karla, Work Sans) instead of the
+ * The design loaded three fonts (Lexend, Karla, Work Sans) instead of the
  * requested two (Lexend, Karla). Work Sans is used for labels/captions.
  * DESIGN.md describes the system as "The Resonant Pool" and introduces
  * the "No-Line Rule" (no 1px borders) and "Ghost Border" pattern.
@@ -88,7 +88,7 @@ export const CONTENTMENT_ADVISORY: EmotionAdvisory = {
       '#00210f',
     ],
     rationale:
-      'The palette is a sophisticated interplay of warmth and organic vitality. Primary Deep Sage (#366548) is darker and more saturated than expected -- Stitch pushed the green from a gentle sage toward a confident forest tone. Secondary Steel (#50606f) provides cool grounding. Tertiary Warm Honey (#6d5935) adds lived-in warmth. The cream surface (#fef9ed) is the foundation of the "basin" metaphor -- warm enough to feel like natural light on paper.',
+      'The palette is a sophisticated interplay of warmth and organic vitality. Primary Deep Sage (#366548) is darker and more saturated than expected -- The design pushed the green from a gentle sage toward a confident forest tone. Secondary Steel (#50606f) provides cool grounding. Tertiary Warm Honey (#6d5935) adds lived-in warmth. The cream surface (#fef9ed) is the foundation of the "basin" metaphor -- warm enough to feel like natural light on paper.',
   },
 
   typography: {
@@ -152,7 +152,7 @@ export const CONTENTMENT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: Lexend at weight 300-400 with generous line-height 1.4, barely asserting itself -- the typographic equivalent of a murmur. Intense: Lexend at weight 700 with tight tracking -0.03em, the type settles into place with gravity and permanence.',
     rationale:
-      'Lexend has wide apertures and a stable baseline that evokes "settling" -- geometric stability without coldness. Stitch used it for headlines and anchors with tight tracking at display sizes for editorial authority. Karla provides humanist warmth for body text with generous x-height. Stitch also loaded Work Sans for labels and captions, adding a third voice for utilitarian elements.',
+      'Lexend has wide apertures and a stable baseline that evokes "settling" -- geometric stability without coldness. The design used it for headlines and anchors with tight tracking at display sizes for editorial authority. Karla provides humanist warmth for body text with generous x-height. The design also loaded Work Sans for labels and captions, adding a third voice for utilitarian elements.',
   },
 
   spacing: {
@@ -218,7 +218,7 @@ export const CONTENTMENT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: more rounded (20-24px), softer containers that feel like smooth stones. Intense: less rounded (8-12px), more contained and defined -- the basin walls are closer.',
     rationale:
-      'Stitch used 16px (xxl) as the primary card radius -- significantly rounder than the requested 14px. Cards ("Basin Containers") must never have borders; they use 1.5rem (24px) radii in the DESIGN.md specification. Pill-shaped buttons (rounded-full/9999px) are the "Pebble" pattern for primary actions. The overall shape language is smooth and organic, like water-worn stones.',
+      'The design used 16px (xxl) as the primary card radius -- significantly rounder than the requested 14px. Cards ("Basin Containers") must never have borders; they use 1.5rem (24px) radii in the DESIGN.md specification. Pill-shaped buttons (rounded-full/9999px) are the "Pebble" pattern for primary actions. The overall shape language is smooth and organic, like water-worn stones.',
   },
 
   layout: {

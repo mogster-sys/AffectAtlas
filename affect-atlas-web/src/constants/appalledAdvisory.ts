@@ -1,14 +1,14 @@
 /**
- * Appalled advisory -- extracted from Stitch output.
+ * Appalled advisory -- extracted from The design output.
  * Source: stitch-exports/appalled-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  */
 
 import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const APPALLED_ADVISORY: EmotionAdvisory = {
-  emotion: 'appalled' as any,
+  emotion: 'appalled',
   label: 'Appalled',
   northStar: 'The Contaminated Surface',
   philosophy: {
@@ -84,7 +84,7 @@ export const APPALLED_ADVISORY: EmotionAdvisory = {
       '#1b1d00',
     ],
     rationale:
-      'Stitch pushed the bile yellow-green brighter than requested (#c5ce59 vs #889020), creating a more vivid toxic glow. The clashing magenta tertiary (#ffb1c4) sits in deliberate disharmony next to the bile primary -- the color-theory violation that triggers the appalled response. Secondary (#e1c0ac) is dusty peach-brown, like something once clean now oxidized. Surface (#151311) is warm dark brown-black, dirtier than Fear\'s cold charcoal or Anger\'s hot crimson-black. Together the palette reads as "something has contaminated this surface" -- bile, dirt, wrong-pink, and warm darkness.',
+      'The design pushed the bile yellow-green brighter than requested (#c5ce59 vs #889020), creating a more vivid toxic glow. The clashing magenta tertiary (#ffb1c4) sits in deliberate disharmony next to the bile primary -- the color-theory violation that triggers the appalled response. Secondary (#e1c0ac) is dusty peach-brown, like something once clean now oxidized. Surface (#151311) is warm dark brown-black, dirtier than Fear\'s cold charcoal or Anger\'s hot crimson-black. Together the palette reads as "something has contaminated this surface" -- bile, dirt, wrong-pink, and warm darkness.',
   },
 
   typography: {
@@ -148,7 +148,7 @@ export const APPALLED_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: weight 300-400 with line-height 1.15 -- angular but less aggressive. Moderate: weight 500-600 with line-height 1.05 -- active cognitive friction. Intense: weight 700 with line-height 1.0, uppercase, tighter tracking -- maximum abrasiveness, text that feels mechanically wrong.',
     rationale:
-      'Stitch rendered Chakra Petch\'s angular geometry at display scale as "WRONG" -- a single word that demonstrates the font\'s capacity for cognitive friction. The angular terminals and geometric hardness create the typographic uncanny valley: text you can read but that does not feel right. Unlike Anger\'s condensed Oswald (which compresses with force), Appalled\'s Chakra Petch is angular and off-kilter (wrong rather than powerful). Overpass adds utilitarian detachment: highway gothic describing violations in flat, institutional language. Stitch used very tight tracking (-0.04em) on display text, pushing letters uncomfortably close.',
+      'The design rendered Chakra Petch\'s angular geometry at display scale as "WRONG" -- a single word that demonstrates the font\'s capacity for cognitive friction. The angular terminals and geometric hardness create the typographic uncanny valley: text you can read but that does not feel right. Unlike Anger\'s condensed Oswald (which compresses with force), Appalled\'s Chakra Petch is angular and off-kilter (wrong rather than powerful). Overpass adds utilitarian detachment: highway gothic describing violations in flat, institutional language. The design used very tight tracking (-0.04em) on display text, pushing letters uncomfortably close.',
   },
 
   spacing: {
@@ -163,7 +163,7 @@ export const APPALLED_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: md 14px, more consistent gaps -- still uncomfortable but predictable. Moderate: md 12px with intentionally uneven spacing. Intense: md 8px in crowded areas with sudden 20px gaps elsewhere -- maximum disruption, the spatial signature of contamination spreading unevenly.',
     rationale:
-      'Appalled spacing is inconsistent spacing. Stitch implemented intentionally uneven gaps -- some bars at 4px, some with extra margins, the ruler itself is disrupted. The alternation between too-tight (invasive) and too-loose (recoiling) is the spatial signature of visceral disgust. This is not Frustration\'s uniform tightness or Awe\'s uniform generosity. Appalled is a broken rhythm -- spacing that cannot settle because everything it touches feels contaminated.',
+      'Appalled spacing is inconsistent spacing. The design implemented intentionally uneven gaps -- some bars at 4px, some with extra margins, the ruler itself is disrupted. The alternation between too-tight (invasive) and too-loose (recoiling) is the spatial signature of visceral disgust. This is not Frustration\'s uniform tightness or Awe\'s uniform generosity. Appalled is a broken rhythm -- spacing that cannot settle because everything it touches feels contaminated.',
   },
 
   motion: {
@@ -174,7 +174,7 @@ export const APPALLED_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 260ms, scale 0.96, rotation -0.5deg -- controlled pull-back, a measured withdrawal. Moderate: 200ms, scale 0.93, rotation -1.5deg -- visible flinch, the body reacting before the mind. Intense: 140ms, scale 0.88, rotation -3deg with bile-green flash -- violent recoil, the design system physically rejecting contact.',
     rationale:
-      'Stitch implemented the recoiling easing with the -0.1 y1 control point, creating physical pull-back: elements briefly move BACKWARD before progressing. The flinch-transition class applies scale(0.93) rotate(-1.5deg) on active -- a twisting withdrawal. Unlike Anger\'s explosive slam (force outward), Appalled pulls AWAY. Unlike Fear\'s slow 400ms creep, Appalled is fast and reactive at 200ms -- immediate physical revulsion. The rotation adds wrongness, a slight twist that makes the recoil feel organic rather than mechanical.',
+      'The design implemented the recoiling easing with the -0.1 y1 control point, creating physical pull-back: elements briefly move BACKWARD before progressing. The flinch-transition class applies scale(0.93) rotate(-1.5deg) on active -- a twisting withdrawal. Unlike Anger\'s explosive slam (force outward), Appalled pulls AWAY. Unlike Fear\'s slow 400ms creep, Appalled is fast and reactive at 200ms -- immediate physical revulsion. The rotation adds wrongness, a slight twist that makes the recoil feel organic rather than mechanical.',
   },
 
   depth: {
@@ -199,7 +199,7 @@ export const APPALLED_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 20px 50px rgba(136, 144, 32, 0.15)',
     ghostBorder: '1px solid rgba(71, 72, 55, 0.1)',
     rationale:
-      'Stitch used contaminated shadows throughout -- bile-green tinted rgba(136,144,32) at low opacity creating the feeling of something leaking beneath elements. The header shadow (0 20px 50px rgba(136,144,32,0.15)) sets the tone: a wide, warm, sickly glow. The "Stain" card uses magenta-tinted shadow (rgba(192,72,112,0.15)), introducing the second contamination color. The "Contamination" card uses an even wider spread (0 30px 60px) at higher opacity. Unlike Anger\'s crushing downward shadows, Appalled\'s shadows seep and spread like actual stains.',
+      'The design used contaminated shadows throughout -- bile-green tinted rgba(136,144,32) at low opacity creating the feeling of something leaking beneath elements. The header shadow (0 20px 50px rgba(136,144,32,0.15)) sets the tone: a wide, warm, sickly glow. The "Stain" card uses magenta-tinted shadow (rgba(192,72,112,0.15)), introducing the second contamination color. The "Contamination" card uses an even wider spread (0 30px 60px) at higher opacity. Unlike Anger\'s crushing downward shadows, Appalled\'s shadows seep and spread like actual stains.',
   },
 
   shapes: {
@@ -213,14 +213,14 @@ export const APPALLED_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 6-8px consistently -- predictable but still awkward. Moderate: 5px with slight variation card-to-card (3px, 5px, 6px adjacent). Intense: deliberately mismatched radii (0px, 3px, 5px, 8px on adjacent elements) -- maximum visual dissonance, the system breaking down.',
     rationale:
-      'Stitch enforced inconsistent radii across the page: 5px on most cards, 3px on some containers, rounded-none on shape demos, and rounded-full (0.75rem) defined in config. This inconsistency IS the design -- clean consistent shapes feel hygienic, while inconsistent shapes feel contaminated. The 5px "recommended" radius sits in an uncomfortable middle ground: not sharp enough to be deliberate (like Anger\'s 0px), not rounded enough to be friendly (like Joy\'s 24px), just off -- the radius of a system that has been degraded by exposure.',
+      'The design enforced inconsistent radii across the page: 5px on most cards, 3px on some containers, rounded-none on shape demos, and rounded-full (0.75rem) defined in config. This inconsistency IS the design -- clean consistent shapes feel hygienic, while inconsistent shapes feel contaminated. The 5px "recommended" radius sits in an uncomfortable middle ground: not sharp enough to be deliberate (like Anger\'s 0px), not rounded enough to be friendly (like Joy\'s 24px), just off -- the radius of a system that has been degraded by exposure.',
   },
 
   layout: {
     alignment: 'left',
     density: 'variable',
     rationale:
-      'Stitch created a disrupted left-aligned layout with intentional inconsistencies. The shadow cards (section 6) use different offsets -- "Stain" has ml-4, "Contamination" has -mr-2 -- creating an asymmetric cascade. The spacing section uses a border-left anchor with uneven gap progression. The layout wireframe shows blocks at different widths and offsets, never aligning to a clean grid. This is not Anger\'s forceful asymmetry (deliberate power) -- it is the broken alignment of something that was supposed to be correct but has been contaminated. The grid has degraded.',
+      'The design created a disrupted left-aligned layout with intentional inconsistencies. The shadow cards (section 6) use different offsets -- "Stain" has ml-4, "Contamination" has -mr-2 -- creating an asymmetric cascade. The spacing section uses a border-left anchor with uneven gap progression. The layout wireframe shows blocks at different widths and offsets, never aligning to a clean grid. This is not Anger\'s forceful asymmetry (deliberate power) -- it is the broken alignment of something that was supposed to be correct but has been contaminated. The grid has degraded.',
   },
 
   iconography: {
@@ -237,7 +237,7 @@ export const APPALLED_ADVISORY: EmotionAdvisory = {
     weight: 400,
     fill: false,
     rationale:
-      'Stitch used contamination-themed Material Symbols: pest_control (infestation), warning (danger), delete_forever (irreversible removal), dangerous (hazard), report (violation), thumb_down (rejection). Rendered in tertiary magenta, primary bile-green, and on-surface white across a 3-column grid. The -25 grade makes icons look slightly eroded -- present but degrading. Unlike Anger\'s heavy 600-weight icons (which SHOUT), Appalled\'s are standard-weight but degraded (worn down by exposure).',
+      'The design used contamination-themed Material Symbols: pest_control (infestation), warning (danger), delete_forever (irreversible removal), dangerous (hazard), report (violation), thumb_down (rejection). Rendered in tertiary magenta, primary bile-green, and on-surface white across a 3-column grid. The -25 grade makes icons look slightly eroded -- present but degrading. Unlike Anger\'s heavy 600-weight icons (which SHOUT), Appalled\'s are standard-weight but degraded (worn down by exposure).',
   },
 
   rules: {

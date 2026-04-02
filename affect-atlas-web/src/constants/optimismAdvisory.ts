@@ -1,9 +1,9 @@
 /**
- * Optimism advisory -- extracted from Stitch output.
+ * Optimism advisory -- extracted from The design output.
  * Source: stitch-exports/optimism-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  *
- * NOTE: Stitch shifted primary to #815500 (darker amber), placed our
+ * NOTE: The design shifted primary to #815500 (darker amber), placed our
  * #d09020 as primary-container. Also loaded Plus Jakarta Sans + Be
  * Vietnam Pro (Joy's fonts) as fallbacks but uses font-dm/font-nunito
  * classes correctly. Custom 'buoyant' timing function matches prompt.
@@ -14,7 +14,7 @@ import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const OPTIMISM_ADVISORY: EmotionAdvisory = {
-  emotion: 'optimism' as any,
+  emotion: 'optimism',
   label: 'Optimism',
   northStar: 'The Open Horizon',
   philosophy: {
@@ -78,7 +78,7 @@ export const OPTIMISM_ADVISORY: EmotionAdvisory = {
       '#207040',
     ],
     rationale:
-      'Stitch rendered five swatch strips showing Stitch\'s shifted palette (#815500, #D09020, #A0F1BD, #CFE5FF, #EAE8E4) with a gradient labeled "Dormant" to "Radiant." Below, three gradient columns labeled "Sunlight," "Growth," and "Sky" show primary, secondary, and tertiary depth. The advisory uses the prompt\'s researched values. Sunlight amber (#d09020) is warm morning light -- optimistic without being childish. Growth green (#38885c) is fresh leaves and forward progress. Clear sky blue (#4888c0) is the open sky on a good day. Together: "a good morning."',
+      'The design rendered five swatch strips showing The design\'s shifted palette (#815500, #D09020, #A0F1BD, #CFE5FF, #EAE8E4) with a gradient labeled "Dormant" to "Radiant." Below, three gradient columns labeled "Sunlight," "Growth," and "Sky" show primary, secondary, and tertiary depth. The advisory uses the prompt\'s researched values. Sunlight amber (#d09020) is warm morning light -- optimistic without being childish. Growth green (#38885c) is fresh leaves and forward progress. Clear sky blue (#4888c0) is the open sky on a good day. Together: "a good morning."',
   },
 
   typography: {
@@ -138,7 +138,7 @@ export const OPTIMISM_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: DM Sans at lighter weights (300-400), more line height. Gentle, quiet confidence -- a warm suggestion. Moderate: DM Sans 600-700 at standard spacing -- bold, clear, capable. Intense: DM Sans 700 at slightly tighter tracking -- strong, declarative confidence. "This WILL work."',
     rationale:
-      'Stitch rendered DM Sans at text-[34px] font-bold for "The Horizon" display specimen and text-[28px] font-bold for the header. Nunito at text-[15px] leading-relaxed for body text. Weight ramp shows DM Sans Light, Normal, Medium, Bold. The .optimism-card class uses 14px rounded corners and 24px padding. DM Sans\' rounded geometry creates headlines that feel like a firm handshake with a genuine smile -- confident and friendly. Nunito\'s rounded terminals make body text feel encouraging and warm.',
+      'The design rendered DM Sans at text-[34px] font-bold for "The Horizon" display specimen and text-[28px] font-bold for the header. Nunito at text-[15px] leading-relaxed for body text. Weight ramp shows DM Sans Light, Normal, Medium, Bold. The .optimism-card class uses 14px rounded corners and 24px padding. DM Sans\' rounded geometry creates headlines that feel like a firm handshake with a genuine smile -- confident and friendly. Nunito\'s rounded terminals make body text feel encouraging and warm.',
   },
 
   spacing: {
@@ -153,7 +153,7 @@ export const OPTIMISM_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: lg at 40px -- maximum room, maximum openness. The horizon stretches. Moderate: lg at 34px, xl at 52px -- generous growth spacing where each element has room to succeed. Intense: lg at 28px -- more focused, more directed. Confidence becomes conviction.',
     rationale:
-      'Stitch used space-y-6 between card sub-elements and 24px margin-bottom between cards with px-5 page padding. The spacing section shows bars at XS, MD, LG, 2XL with a "GENEROUS" pill label. The generous spacing is not emptiness (loneliness) or distance (contempt) but opportunity -- space that says "there is room for more good things." The scale supports clear hierarchy and easy scanning, making complex information feel manageable.',
+      'The design used space-y-6 between card sub-elements and 24px margin-bottom between cards with px-5 page padding. The spacing section shows bars at XS, MD, LG, 2XL with a "GENEROUS" pill label. The generous spacing is not emptiness (loneliness) or distance (contempt) but opportunity -- space that says "there is room for more good things." The scale supports clear hierarchy and easy scanning, making complex information feel manageable.',
   },
 
   motion: {
@@ -164,7 +164,7 @@ export const OPTIMISM_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 340ms, gentler lift. A soft, almost imperceptible rising. Moderate: 280ms with buoyant easing -- brisk, responsive, elements gently lifted by a warm current. Intense: 220ms, more pronounced lift (1.06 scale, -3px translate). Confident, visible, unmistakable.',
     rationale:
-      'Stitch defined a custom buoyant timing function in Tailwind config: cubic-bezier(0.2, 0.8, 0.3, 1) -- matching the prompt exactly. The motion section shows duration 280ms and curve values as data cards. The "Release Tension" button uses duration-280 hover:scale-[1.04] hover:-translate-y-0.5 with a forward arrow icon. The buoyant easing starts with a gentle lift then settles smoothly -- elements rise into position as if gently carried upward. No bounce (too playful), no snap (too aggressive).',
+      'The design defined a custom buoyant timing function in Tailwind config: cubic-bezier(0.2, 0.8, 0.3, 1) -- matching the prompt exactly. The motion section shows duration 280ms and curve values as data cards. The "Release Tension" button uses duration-280 hover:scale-[1.04] hover:-translate-y-0.5 with a forward arrow icon. The buoyant easing starts with a gentle lift then settles smoothly -- elements rise into position as if gently carried upward. No bounce (too playful), no snap (too aggressive).',
   },
 
   depth: {
@@ -189,7 +189,7 @@ export const OPTIMISM_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 4px 16px rgba(40, 36, 32, 0.08)',
     ghostBorder: '1px solid rgba(216, 208, 200, 0.15)',
     rationale:
-      'Stitch defined custom warm shadows: warm-md (0 10px 30px -5px rgba(129, 85, 0, 0.08)) and warm-lg (0 20px 50px -10px rgba(129, 85, 0, 0.12)). Three shadow cards: Subtle/Light (0 4px 10px rgba(129,85,0,0.04)), Medium/Warm (0 10px 30px -5px rgba(129,85,0,0.1)), Deep/Radiant (0 25px 50px -12px rgba(129,85,0,0.15)). The amber-tinted (rgba(129,85,0,...)) warm shadows create gentle, natural elevation -- elements float comfortably, supported rather than weighed down. Shadows feel like natural sunlight rather than artificial depth.',
+      'The design defined custom warm shadows: warm-md (0 10px 30px -5px rgba(129, 85, 0, 0.08)) and warm-lg (0 20px 50px -10px rgba(129, 85, 0, 0.12)). Three shadow cards: Subtle/Light (0 4px 10px rgba(129,85,0,0.04)), Medium/Warm (0 10px 30px -5px rgba(129,85,0,0.1)), Deep/Radiant (0 25px 50px -12px rgba(129,85,0,0.15)). The amber-tinted (rgba(129,85,0,...)) warm shadows create gentle, natural elevation -- elements float comfortably, supported rather than weighed down. Shadows feel like natural sunlight rather than artificial depth.',
   },
 
   shapes: {
@@ -203,14 +203,14 @@ export const OPTIMISM_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 18-22px, more rounded, softer, more welcoming. Moderate: 14px, distinctly rounded -- friendly, approachable, safe. Every container says "come in, this will be good." Intense: 10-12px, still friendly but more structured, more decisive. Confidence that has made a plan.',
     rationale:
-      'Stitch rendered four shapes in a 2x2 grid: 8px, 12px, 14px (highlighted with primary border-2 and bold "14px (Rec.)" label), and 20px. The Tailwind config sets DEFAULT to 1rem (16px) and card to 14px. The .optimism-card CSS class uses border-radius: 14px. Rounded corners are the shape language of optimism -- safety, approachability, friendliness. The 14px radius is warm without being playful, soft without being vague.',
+      'The design rendered four shapes in a 2x2 grid: 8px, 12px, 14px (highlighted with primary border-2 and bold "14px (Rec.)" label), and 20px. The Tailwind config sets DEFAULT to 1rem (16px) and card to 14px. The .optimism-card CSS class uses border-radius: 14px. Rounded corners are the shape language of optimism -- safety, approachability, friendliness. The 14px radius is warm without being playful, soft without being vague.',
   },
 
   layout: {
     alignment: 'center',
     density: 'normal',
     rationale:
-      'Stitch created a centered, generous, upward-weighted composition. The wireframe section is labeled "Upward Weighting" and shows content elements positioned in the upper portion of the container with a floating primary-colored FAB at the bottom. The centered axis is not formal (as in awe) but inclusive -- it addresses the viewer directly and says "this is for you." Elements sit fractionally above vertical center, suggesting growth and positive momentum.',
+      'The design created a centered, generous, upward-weighted composition. The wireframe section is labeled "Upward Weighting" and shows content elements positioned in the upper portion of the container with a floating primary-colored FAB at the bottom. The centered axis is not formal (as in awe) but inclusive -- it addresses the viewer directly and says "this is for you." Elements sit fractionally above vertical center, suggesting growth and positive momentum.',
   },
 
   iconography: {
@@ -227,7 +227,7 @@ export const OPTIMISM_ADVISORY: EmotionAdvisory = {
     weight: 400,
     fill: false,
     rationale:
-      'Stitch rendered Material Symbols at text-4xl in text-primary with font-variation-settings confirming FILL 0, wght 400, GRAD 0, opsz 24. Icons in a 3x2 grid with lowercase labels: wb_sunny (Radiate), trending_up (Rise), check_circle (Confirm), thumb_up (Agree), lightbulb (Enlighten), rocket_launch (Launch). ALL SIX icons match the prompt exactly -- the best icon fidelity of any Stitch run. Balanced weight makes them dependable -- icons you can trust.',
+      'The design rendered Material Symbols at text-4xl in text-primary with font-variation-settings confirming FILL 0, wght 400, GRAD 0, opsz 24. Icons in a 3x2 grid with lowercase labels: wb_sunny (Radiate), trending_up (Rise), check_circle (Confirm), thumb_up (Agree), lightbulb (Enlighten), rocket_launch (Launch). ALL SIX icons match the prompt exactly -- the best icon fidelity of any The design run. Balanced weight makes them dependable -- icons you can trust.',
   },
 
   rules: {

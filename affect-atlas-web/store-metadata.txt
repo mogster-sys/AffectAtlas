@@ -1,0 +1,47 @@
+GOOGLE PLAY STORE METADATA
+==========================
+
+APP NAME: AffectAtlas
+
+SHORT DESCRIPTION (80 chars max):
+Transform emotions into complete design systems with typography, color and motion
+
+FULL DESCRIPTION:
+AffectAtlas turns emotions into production-ready design systems.
+
+Select any of 29 emotions on Plutchik's Wheel and watch the entire interface transform -- colors, typography, spacing, motion, shadows, depth and shapes all shift to embody that emotion. Then dive into a deep design advisory with research-backed guidance on how to apply emotional design in your own projects.
+
+What you get for each emotion:
+-- Complete color system (primary, secondary, accent, surface, background, text + 5-step palette)
+-- Curated font pairing (headline + body) from Google Fonts
+-- Spacing scale with density guidance
+-- Motion character with easing curves and interactive demos
+-- Shadow and depth system
+-- Shape language with border radius and corner style
+-- Design guidance with creative north star, philosophy, dos and donts
+-- Thesaurus word cloud for mood boarding
+
+Export your design system in 9 production formats:
+-- CSS custom properties
+-- JSON tokens
+-- Swift (iOS/macOS)
+-- Kotlin (Jetpack Compose)
+-- AI prompt (paste into any AI tool)
+-- Figma (Tokens Studio plugin)
+-- Tailwind CSS config
+-- SCSS variables
+-- W3C Design Tokens (DTCG standard)
+
+29 emotions across three intensity levels (mild, moderate, intense) means 87 unique design configurations. Love includes Passion and Lust variants with completely different design languages.
+
+Built for designers, brand strategists, therapists, educators and anyone who works with emotional communication.
+
+CATEGORY: Design
+CONTENT RATING: Everyone
+TAGS: design system, emotion, color palette, typography, design tokens, Plutchik, UX design, brand design
+
+PRIVACY POLICY NOTES:
+-- No user accounts, no login
+-- No data collection, no analytics
+-- No network requests (fully offline after install)
+-- No permissions beyond INTERNET (required by WebView shell)

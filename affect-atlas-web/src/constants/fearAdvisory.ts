@@ -1,7 +1,7 @@
 /**
- * Fear advisory -- extracted from Stitch output.
+ * Fear advisory -- extracted from The design output.
  * Source: stitch-exports/fear-advisory/stitch/fear_design_advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  */
 
 import type { EmotionAdvisory } from './advisoryData';

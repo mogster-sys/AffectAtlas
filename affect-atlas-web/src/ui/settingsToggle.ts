@@ -5,8 +5,10 @@
 
 import { settingsStore, type ExtraDisplayMode } from '@/store/settingsStore';
 import { el } from '@/utils/dom';
+import { VALIDATION_PERIOD_ACTIVE } from '@/store/entitlementStore';
 
 let popoverEl: HTMLElement | null = null;
+let outsideClickHandler: ((e: MouseEvent) => void) | null = null;
 
 const MODES: { value: ExtraDisplayMode; label: string }[] = [
   { value: 'chips', label: 'Chips' },
@@ -15,6 +17,10 @@ const MODES: { value: ExtraDisplayMode; label: string }[] = [
 ];
 
 function closePopover(): void {
+  if (outsideClickHandler) {
+    document.removeEventListener('click', outsideClickHandler);
+    outsideClickHandler = null;
+  }
   if (popoverEl) {
     popoverEl.remove();
     popoverEl = null;
@@ -42,17 +48,32 @@ function openPopover(anchor: HTMLElement): void {
     popoverEl.appendChild(option);
   }
 
+  // Restore purchases option (only visible when paywall is live)
+  if (!VALIDATION_PERIOD_ACTIVE) {
+    const divider = el('div', { className: 'settings-divider' });
+    popoverEl.appendChild(divider);
+
+    const restoreBtn = el('button', { className: 'settings-option' }, 'Restore Purchases');
+    restoreBtn.addEventListener('click', async () => {
+      restoreBtn.textContent = 'Restoring...';
+      const { restorePurchases } = await import('@/services/iapService');
+      const ok = await restorePurchases();
+      restoreBtn.textContent = ok ? 'Restored' : 'Nothing found';
+      setTimeout(() => closePopover(), 1200);
+    });
+    popoverEl.appendChild(restoreBtn);
+  }
+
   anchor.parentElement?.appendChild(popoverEl);
 
   // Close on outside click (next tick to avoid immediate close)
   requestAnimationFrame(() => {
-    const handler = (e: MouseEvent) => {
+    outsideClickHandler = (e: MouseEvent) => {
       if (!popoverEl?.contains(e.target as Node) && e.target !== anchor) {
         closePopover();
-        document.removeEventListener('click', handler);
       }
     };
-    document.addEventListener('click', handler);
+    document.addEventListener('click', outsideClickHandler);
   });
 }
 

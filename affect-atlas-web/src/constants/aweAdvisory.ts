@@ -1,14 +1,14 @@
 /**
- * Awe advisory -- extracted from Stitch output.
+ * Awe advisory -- extracted from The design output.
  * Source: stitch-exports/awe-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  */
 
 import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const AWE_ADVISORY: EmotionAdvisory = {
-  emotion: 'awe' as any,
+  emotion: 'awe',
   label: 'Awe',
   northStar: 'The Vast Threshold',
   philosophy: {
@@ -84,7 +84,7 @@ export const AWE_ADVISORY: EmotionAdvisory = {
       '#002956',
     ],
     rationale:
-      'Stitch shifted the palette brighter than requested -- primary became luminous periwinkle (#a8c8ff) instead of steel blue (#6e90c8), creating an even more ethereal, light-emitting quality. Secondary shifted to soft lavender (#d0bef4) from dusty violet, and tertiary to bright cyan (#6ad6e6) from muted teal. The effect is more luminous and celestial than the prompt specified. Surface (#0f1223) is deep cosmic navy-black. The custom "awe-" prefixed tokens preserve the original prompt colors for reference. Together the palette reads as "light traveling through deep space" -- luminous, clean, celestial.',
+      'The design shifted the palette brighter than requested -- primary became luminous periwinkle (#a8c8ff) instead of steel blue (#6e90c8), creating an even more ethereal, light-emitting quality. Secondary shifted to soft lavender (#d0bef4) from dusty violet, and tertiary to bright cyan (#6ad6e6) from muted teal. The effect is more luminous and celestial than the prompt specified. Surface (#0f1223) is deep cosmic navy-black. The custom "awe-" prefixed tokens preserve the original prompt colors for reference. Together the palette reads as "light traveling through deep space" -- luminous, clean, celestial.',
   },
 
   typography: {
@@ -145,7 +145,7 @@ export const AWE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: Cormorant at weight 300-400 with more letter spacing -- ethereal, barely there, text breathing like mist. Moderate: weight 500-600 with line-height 1.1 -- cathedral presence. Intense: weight 700 with tighter tracking (-0.03em) and larger scale -- text that towers over you.',
     rationale:
-      'Stitch rendered the headline specimen as "Monumental" in Cormorant bold at 3.2rem -- the word itself demonstrates the font\'s vertical grandeur. The weight ramp shows "Awe" at four sizes with increasing opacity (0.4 to 1.0), the smallest barely visible like a distant star and the largest bold in primary blue. Cormorant\'s tall vertical proportions make text reach upward like spires. Source Sans 3 provides invisible clarity -- body text that lets the monumental display elements command attention.',
+      'The design rendered the headline specimen as "Monumental" in Cormorant bold at 3.2rem -- the word itself demonstrates the font\'s vertical grandeur. The weight ramp shows "Awe" at four sizes with increasing opacity (0.4 to 1.0), the smallest barely visible like a distant star and the largest bold in primary blue. Cormorant\'s tall vertical proportions make text reach upward like spires. Source Sans 3 provides invisible clarity -- body text that lets the monumental display elements command attention.',
   },
 
   spacing: {
@@ -161,7 +161,7 @@ export const AWE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: lg 40px, xl 60px -- even more generous, almost meditative emptiness. The spacing of an empty cathedral. Moderate: standard scale -- monumental but not infinite. Intense: lg 24px, xl 36px -- slightly tighter, creating density and overwhelming richness.',
     rationale:
-      'Stitch used gap-10 (40px) between main sections and generous padding (p-8 / 32px) within cards -- confirming the monumental spacing approach. The spacing ruler uses vertical bars of increasing height, visualizing the scale as physical presence growing taller. Density labeled "Generous Sparse (24px - 80px)." Awe requires space to exist. The empty space is not wasted -- it IS the emotion.',
+      'The design used gap-10 (40px) between main sections and generous padding (p-8 / 32px) within cards -- confirming the monumental spacing approach. The spacing ruler uses vertical bars of increasing height, visualizing the scale as physical presence growing taller. Density labeled "Generous Sparse (24px - 80px)." Awe requires space to exist. The empty space is not wasted -- it IS the emotion.',
   },
 
   motion: {
@@ -172,7 +172,7 @@ export const AWE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 550ms+ with even slower deceleration -- barely perceptible, elements fade in like stars appearing. Moderate: 450ms with standard expansive easing -- cinematic. Intense: 350ms with dramatic overshoot -- elements expanding past final size before settling.',
     rationale:
-      'Stitch created a custom Tailwind easing token ("cosmic": "cubic-bezier(0.16, 1, 0.3, 1)") and applied it throughout via ease-cosmic. The "Enter the Void" button uses duration-[450ms] ease-cosmic active:scale-95. The SVG curve visualization shows the characteristic quick start then very slow deceleration -- elements drift into place as if moved by vast forces. Section cards use hover:scale-[1.01] at 450ms -- a barely perceptible expansion, breathing at cosmic scale.',
+      'The design created a custom Tailwind easing token ("cosmic": "cubic-bezier(0.16, 1, 0.3, 1)") and applied it throughout via ease-cosmic. The "Enter the Void" button uses duration-[450ms] ease-cosmic active:scale-95. The SVG curve visualization shows the characteristic quick start then very slow deceleration -- elements drift into place as if moved by vast forces. Section cards use hover:scale-[1.01] at 450ms -- a barely perceptible expansion, breathing at cosmic scale.',
   },
 
   depth: {
@@ -197,7 +197,7 @@ export const AWE_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: '0 12px 40px rgba(110, 144, 200, 0.12)',
     ghostBorder: '1px solid rgba(67, 71, 79, 0.15)',
     rationale:
-      'Stitch created a dedicated .awe-glow class (0 12px 40px rgba(110,144,200,0.12)) applied to most section cards. The three shadow levels use increasing spread and opacity: Shimmer (0 4px 20px, 0.08), Radiance (0 12px 40px, 0.18), Corona (0 20px 60px, 0.25 in cyan). The Corona level shifts from blue to cyan tint, matching the tertiary portal color. Unlike Anger\'s crushing downward shadows, Awe\'s luminous glow radiates outward. Every card is a window into light.',
+      'The design created a dedicated .awe-glow class (0 12px 40px rgba(110,144,200,0.12)) applied to most section cards. The three shadow levels use increasing spread and opacity: Shimmer (0 4px 20px, 0.08), Radiance (0 12px 40px, 0.18), Corona (0 20px 60px, 0.25 in cyan). The Corona level shifts from blue to cyan tint, matching the tertiary portal color. Unlike Anger\'s crushing downward shadows, Awe\'s luminous glow radiates outward. Every card is a window into light.',
   },
 
   shapes: {
@@ -211,14 +211,14 @@ export const AWE_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 18-22px (rounder, softer, more organic). Moderate: 14px (standard awe smoothness). Intense: 8-12px (slightly sharper, more monumental).',
     rationale:
-      'Stitch defined a custom "awe" radius token at 14px and applied rounded-awe to every card and button. The recommended shape demo pulses with a subtle luminous animation (animate-luminous). The 14px feels like observatory windows or spacecraft panels -- not fully rounded (playful) but clearly smooth. The bottom nav uses rounded-t-[14px] for consistency.',
+      'The design defined a custom "awe" radius token at 14px and applied rounded-awe to every card and button. The recommended shape demo pulses with a subtle luminous animation (animate-luminous). The 14px feels like observatory windows or spacecraft panels -- not fully rounded (playful) but clearly smooth. The bottom nav uses rounded-t-[14px] for consistency.',
   },
 
   layout: {
     alignment: 'center',
     density: 'sparse',
     rationale:
-      'Stitch created a centered single-column composition at exactly 393px width. The layout wireframe section shows a centered vertical stack with generous gaps -- labeled "Centered / Single Column / Sparse." The composition reads like a cathedral nave: formal, vertical, processional. Each section is a revelation encountered in sequence. The philosophy section is pure centered text with no card -- just words floating in cosmic space.',
+      'The design created a centered single-column composition at exactly 393px width. The layout wireframe section shows a centered vertical stack with generous gaps -- labeled "Centered / Single Column / Sparse." The composition reads like a cathedral nave: formal, vertical, processional. Each section is a revelation encountered in sequence. The philosophy section is pure centered text with no card -- just words floating in cosmic space.',
   },
 
   iconography: {
@@ -235,7 +235,7 @@ export const AWE_ADVISORY: EmotionAdvisory = {
     weight: 300,
     fill: false,
     rationale:
-      'Stitch rendered all six icons in tertiary cyan (#6ad6e6) at 300 weight in a 3-column grid. The auto_awesome icon also appears as a hero element in the philosophy section and as a fading footer ornament (opacity-20 with hover-to-full transition over 1000ms). Icons are whispers of vast ideas rather than assertive symbols.',
+      'The design rendered all six icons in tertiary cyan (#6ad6e6) at 300 weight in a 3-column grid. The auto_awesome icon also appears as a hero element in the philosophy section and as a fading footer ornament (opacity-20 with hover-to-full transition over 1000ms). Icons are whispers of vast ideas rather than assertive symbols.',
   },
 
   rules: {

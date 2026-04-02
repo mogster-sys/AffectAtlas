@@ -69,7 +69,7 @@ export interface Shapes {
     '2xl': string;
     full: string;
   };
-  cornerStyle: 'rounded' | 'sharp' | 'smooth';
+  cornerStyle: 'rounded' | 'sharp' | 'smooth' | 'mixed';
 }
 
 export interface Spacing {

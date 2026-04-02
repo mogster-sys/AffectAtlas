@@ -225,24 +225,89 @@ function renderMotion(a: EmotionAdvisory): HTMLElement {
   path.setAttribute('fill', 'none');
   svg.appendChild(path);
 
+  // Animated dot on the bezier curve
+  const dot = document.createElementNS(svgNs, 'circle');
+  dot.setAttribute('r', '3');
+  dot.setAttribute('cx', '0');
+  dot.setAttribute('cy', '40');
+  dot.setAttribute('fill', primary);
+  dot.setAttribute('class', 'adv-bezier-dot');
+  dot.style.opacity = '0';
+  svg.appendChild(dot);
+
+  let dotAnimating = false;
+  function animateDot(): void {
+    if (dotAnimating) return;
+    dotAnimating = true;
+    dot.style.opacity = '1';
+    const dur = parseFloat(a.motion.duration) || 350;
+    const startTime = performance.now();
+    function frame(now: number): void {
+      const t = Math.min((now - startTime) / dur, 1);
+      const t2 = t * t;
+      const t3 = t2 * t;
+      const mt = 1 - t;
+      const mt2 = mt * mt;
+      const cx = (3 * mt2 * t * x1 + 3 * mt * t2 * x2 + t3) * 100;
+      const cy = 40 - (3 * mt2 * t * y1 + 3 * mt * t2 * y2 + t3) * 40;
+      dot.setAttribute('cx', String(cx));
+      dot.setAttribute('cy', String(cy));
+      if (t < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        setTimeout(() => { dot.style.opacity = '0'; dotAnimating = false; }, 400);
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+
   // Interactive sample card
   const sampleCard = el('div', { className: 'adv-motion-sample' }, 'Tap to feel the motion');
   sampleCard.style.transition = `all ${a.motion.duration} ${a.motion.easing}`;
   sampleCard.style.backgroundColor = a.colors.tokens['surface-container'] || '#dbf1fe';
   sampleCard.style.color = a.colors.tokens['primary'] || '#002434';
-  const isDrifting = a.motion.character === 'drifting';
-  const isOozing = a.motion.character === 'oozing';
-  const isWavering = a.motion.character === 'wavering';
-  const isGathering = a.motion.character === 'gathering';
-  const isSettling = a.motion.character === 'settling';
-  const pressScale = a.motion.character === 'bouncy' ? 'scale(1.05)'
-    : a.motion.character === 'explosive' ? 'scale(0.92)'
-    : a.motion.character === 'snappy' ? 'scale(1.08)'
-    : isOozing ? 'scaleX(1.04) scaleY(0.96)'
-    : isWavering ? 'scale(1.03) translateX(2px)'
-    : isDrifting ? 'translateY(4px) scale(0.98)'
-    : isGathering ? 'scale(0.96) translateX(3px)'
-    : isSettling ? 'translateY(2px) scale(0.95)'
+  const ch = a.motion.character;
+  const pressScale =
+    // Original 8
+    ch === 'bouncy' ? 'scale(1.05)'
+    : ch === 'explosive' ? 'scale(0.92)'
+    : ch === 'snappy' ? 'scale(1.08)'
+    : ch === 'oozing' ? 'scaleX(1.04) scaleY(0.96)'
+    : ch === 'wavering' ? 'scale(1.03) translateX(2px)'
+    : ch === 'drifting' ? 'translateY(4px) scale(0.98)'
+    : ch === 'gathering' ? 'scale(0.96) translateX(3px)'
+    : ch === 'settling' ? 'translateY(2px) scale(0.95)'
+    // Trust, Fear, Love
+    : ch === 'restrained' ? 'scale(0.99)'
+    : ch === 'tense' ? 'scale(0.94) translateY(-2px)'
+    : ch === 'embracing' ? 'scale(1.03) translateY(-1px)'
+    // Alarm, Passion, Lust
+    : ch === 'pulsing' ? 'scale(0.94)'
+    : ch === 'electric' ? 'scale(1.06) translateX(1px)'
+    : ch === 'smoldering' ? 'scale(1.02)'
+    // Disappointment, Remorse, Depression
+    : ch === 'deflating' ? 'scale(0.93) translateY(3px)'
+    : ch === 'sinking' ? 'translateY(5px) scale(0.94)'
+    : ch === 'exhausted' ? 'translateY(2px) scale(0.97)'
+    // Contempt, Aggressiveness, Frustration
+    : ch === 'dismissive' ? 'scale(0.97) translateX(4px)'
+    : ch === 'striking' ? 'scale(0.88) translateX(-3px)'
+    : ch === 'halting' ? 'scale(0.93)'
+    // Submission, Embarrassment, Guilt
+    : ch === 'yielding' ? 'scale(0.92) translateY(3px)'
+    : ch === 'flushing' ? 'scale(0.95) translateX(3px)'
+    : ch === 'reluctant' ? 'scale(0.95) translateY(2px)'
+    // Loneliness, Jealousy, Appalled
+    : ch === 'isolated' ? 'scale(0.96) translateY(2px)'
+    : ch === 'fixating' ? 'scale(1.02) translateX(-2px)'
+    : ch === 'recoiling' ? 'scale(0.90) translateX(-4px)'
+    // Fright, Awe, Inspiration
+    : ch === 'startling' ? 'scale(0.88)'
+    : ch === 'expansive' ? 'scale(1.06) translateY(-2px)'
+    : ch === 'uplifting' ? 'scale(1.05) translateY(-4px)'
+    // Pride, Optimism
+    : ch === 'ceremonial' ? 'scale(1.03) translateY(-2px)'
+    : ch === 'buoyant' ? 'scale(1.04) translateY(-3px)'
     : 'scale(0.98)';
   const restBg = a.colors.tokens['surface-container'] || '#dbf1fe';
   const restColor = a.colors.tokens['primary'] || '#002434';
@@ -251,9 +316,10 @@ function renderMotion(a: EmotionAdvisory): HTMLElement {
 
   sampleCard.addEventListener('pointerdown', () => {
     sampleCard.style.transform = pressScale;
-    sampleCard.style.opacity = isDrifting ? '0.6' : '1';
+    sampleCard.style.opacity = (ch === 'drifting' || ch === 'exhausted' || ch === 'sinking' || ch === 'deflating') ? '0.6' : '1';
     sampleCard.style.backgroundColor = pressBg;
     sampleCard.style.color = pressColor;
+    animateDot();
   });
   sampleCard.addEventListener('pointerup', () => {
     sampleCard.style.transform = 'scale(1)';
@@ -263,6 +329,7 @@ function renderMotion(a: EmotionAdvisory): HTMLElement {
   });
   sampleCard.addEventListener('pointerleave', () => {
     sampleCard.style.transform = 'scale(1)';
+    sampleCard.style.opacity = '1';
     sampleCard.style.backgroundColor = restBg;
     sampleCard.style.color = restColor;
   });
@@ -341,11 +408,11 @@ function renderLayout(a: EmotionAdvisory): HTMLElement {
   const wireframe = el('div', { className: 'adv-layout-wireframe' });
   const primary = a.colors.tokens['primary'] || '#002434';
   const blocks = [
-    { col: '1 / 4', row: '1 / 3', opacity: 0.1 },
-    { col: '4 / 5', row: '1 / 5', opacity: 0.2 },
-    { col: '1 / 3', row: '3 / 6', opacity: 0.05 },
-    { col: '3 / 4', row: '3 / 5', opacity: 0.15 },
-    { col: '1 / 5', row: '6 / 7', opacity: 0.1 },
+    { col: '1 / 4', row: '1 / 3', opacity: 0.2 },
+    { col: '4 / 5', row: '1 / 5', opacity: 0.35 },
+    { col: '1 / 3', row: '3 / 6', opacity: 0.12 },
+    { col: '3 / 4', row: '3 / 5', opacity: 0.25 },
+    { col: '1 / 5', row: '6 / 7', opacity: 0.18 },
   ];
   for (const b of blocks) {
     const block = el('div', { className: 'adv-layout-block' });
@@ -480,14 +547,6 @@ function renderHero(a: EmotionAdvisory): HTMLElement {
     style: `font-family:${headlineFont}`,
   }, `"${a.philosophy.brief}"`);
 
-  // Palette strip
-  const palette = el('div', { className: 'adv-hero-palette' });
-  for (const hex of a.colors.palette) {
-    const swatch = el('div', { className: 'adv-hero-swatch' });
-    swatch.style.backgroundColor = hex;
-    palette.appendChild(swatch);
-  }
-
   // Word cloud
   const cloud = el('div', { className: 'adv-hero-words' });
   const sizes = [1.6, 1.1, 2.0, 1.3, 0.9, 1.5, 1.0, 1.8];
@@ -505,25 +564,11 @@ function renderHero(a: EmotionAdvisory): HTMLElement {
     cloud.appendChild(word);
   }
 
-  // Feel description
-  const feel = el('div', {
-    className: 'adv-hero-feel',
-    style: `font-family:${bodyFont}`,
-  }, a.words.feel);
-
-  // Scroll hint
-  const scrollHint = el('div', { className: 'adv-hero-scroll-hint' },
-    el('span', {}, 'Design Advisory'),
-  );
-
   return el('section', { className: 'adv-hero' },
     title,
     subtitle,
     quote,
-    palette,
     cloud,
-    feel,
-    scrollHint,
   );
 }
 

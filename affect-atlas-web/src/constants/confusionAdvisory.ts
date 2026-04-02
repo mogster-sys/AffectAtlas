@@ -1,5 +1,5 @@
 /**
- * Confusion advisory data -- extracted from Stitch output.
+ * Confusion advisory data -- extracted from The design output.
  */
 
 import type { EmotionAdvisory } from '@/constants/advisoryData';
@@ -82,7 +82,7 @@ export const CONFUSION_ADVISORY: EmotionAdvisory = {
       '#4d4160',
     ],
     rationale:
-      'Confusion\'s palette is built on near-neighbors -- colors that almost harmonize but never quite settle. Deep muted lavender (#625676), warm gray-brown (#655d56), and dark teal (#45615f) create a three-way tension where no single hue dominates. Stitch deepened all three accents from our suggestions, making the palette moodier and more sophisticated. The lowered text contrast (warm near-black #1f1b17 on warm off-white #fff8f4) creates cognitive friction that mirrors the experience.',
+      'Confusion\'s palette is built on near-neighbors -- colors that almost harmonize but never quite settle. Deep muted lavender (#625676), warm gray-brown (#655d56), and dark teal (#45615f) create a three-way tension where no single hue dominates. The design deepened all three accents from our suggestions, making the palette moodier and more sophisticated. The lowered text contrast (warm near-black #1f1b17 on warm off-white #fff8f4) creates cognitive friction that mirrors the experience.',
   },
 
   typography: {
@@ -197,7 +197,7 @@ export const CONFUSION_ADVISORY: EmotionAdvisory = {
       '0 32px 48px -4px rgba(31, 27, 23, 0.08)',
     ghostBorder: '1px solid rgba(203, 196, 205, 0.2)',
     rationale:
-      'Confusion shadows are SOFT and UNCERTAIN -- 32-48px blur radius with negative spread, making edges bleed into surfaces. You can\'t tell exactly where the elevation change happens. Stitch used much larger blur radii than typical, creating shadows that feel like suggestions rather than declarations.',
+      'Confusion shadows are SOFT and UNCERTAIN -- 32-48px blur radius with negative spread, making edges bleed into surfaces. You can\'t tell exactly where the elevation change happens. The design used much larger blur radii than typical, creating shadows that feel like suggestions rather than declarations.',
   },
 
   shapes: {
@@ -211,14 +211,14 @@ export const CONFUSION_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: consistent 8px everywhere. Moderate: 8px on some, 12px on others -- subtle inconsistency. Intense: 8px, 12px, and 24px mixed freely -- the system arguing with itself.',
     rationale:
-      'Confusion shapes reflect broken consistency. Stitch mixed 8px (utility), 12px (sections), and 24px (containers) within the same page. The intentional mismatch creates the visual equivalent of a typo -- small enough to miss consciously, enough to prevent comfortable certainty.',
+      'Confusion shapes reflect broken consistency. The design mixed 8px (utility), 12px (sections), and 24px (containers) within the same page. The intentional mismatch creates the visual equivalent of a typo -- small enough to miss consciously, enough to prevent comfortable certainty.',
   },
 
   layout: {
     alignment: 'left',
     density: 'variable',
     rationale:
-      'Confusion layout is ALMOST consistent with occasional deviations. Stitch used varying left margins (ml-2, ml-4, ml-8) and right margins (mr-4, mr-6) on different sections, creating a layout that drifts. Elements float toward edges of their containers. Not wild asymmetry -- a grid that seems to have shifted slightly.',
+      'Confusion layout is ALMOST consistent with occasional deviations. The design used varying left margins (ml-2, ml-4, ml-8) and right margins (mr-4, mr-6) on different sections, creating a layout that drifts. Elements float toward edges of their containers. Not wild asymmetry -- a grid that seems to have shifted slightly.',
   },
 
   iconography: {

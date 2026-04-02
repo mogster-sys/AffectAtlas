@@ -1,14 +1,14 @@
 /**
- * Guilt advisory -- extracted from Stitch output.
+ * Guilt advisory -- extracted from The design output.
  * Source: stitch-exports/guilt-advisory/code.html
- * Values reflect what Stitch ACTUALLY produced, not what was requested.
+ * Values reflect what The design ACTUALLY produced, not what was requested.
  */
 
 import type { EmotionAdvisory } from './advisoryData';
 import { registerAdvisory } from './advisoryData';
 
 export const GUILT_ADVISORY: EmotionAdvisory = {
-  emotion: 'guilt' as any,
+  emotion: 'guilt',
   label: 'Guilt',
   northStar: 'The Quiet Reckoning',
   philosophy: {
@@ -72,7 +72,7 @@ export const GUILT_ADVISORY: EmotionAdvisory = {
       '#2a3440',
     ],
     rationale:
-      'Stitch faithfully rendered the exact requested palette. Desaturated maroon (#6a3840) is the color of dried blood and old wounds -- not Anger\'s bright crimson (fresh, forceful) but the specific dark red of something that happened in the past and cannot be undone. Somber blue-gray (#485868) adds the distance of looking at a gray sky while thinking about what you did. Rust tertiary (#785040) is the stain metaphor. On dark gray-purple (#18161a), the palette reads as "confession written in dim light." The mild-to-intense gradient runs from uncomfortable-but-manageable to the sleepless night.',
+      'The design faithfully rendered the exact requested palette. Desaturated maroon (#6a3840) is the color of dried blood and old wounds -- not Anger\'s bright crimson (fresh, forceful) but the specific dark red of something that happened in the past and cannot be undone. Somber blue-gray (#485868) adds the distance of looking at a gray sky while thinking about what you did. Rust tertiary (#785040) is the stain metaphor. On dark gray-purple (#18161a), the palette reads as "confession written in dim light." The mild-to-intense gradient runs from uncomfortable-but-manageable to the sleepless night.',
   },
 
   typography: {
@@ -133,7 +133,7 @@ export const GUILT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: weights 300-400, line-height 1.6 -- guilt is present but not crushing. Moderate: weight 500, line-height 1.35 -- words have weight. Intense: weights 600-700, line-height 1.1 -- the words press down, each one heavier than the last.',
     rationale:
-      'Stitch rendered Spectral in italic for the hero ("Burden of Intent.") at light weight 300 -- confessional, literary, introspective. The italic creates a handwritten-confessional quality that pure roman would miss. Public Sans appears as "The Moral Ledger" -- sterile, clear, unfeeling, used for facts and metadata. Stitch labeled the pairing "Confession vs Ledger" -- the emotional voice (Spectral) versus the institutional record (Public Sans). Unlike Anger\'s brutalist Oswald (which shouts), Guilt\'s Spectral quietly states.',
+      'The design rendered Spectral in italic for the hero ("Burden of Intent.") at light weight 300 -- confessional, literary, introspective. The italic creates a handwritten-confessional quality that pure roman would miss. Public Sans appears as "The Moral Ledger" -- sterile, clear, unfeeling, used for facts and metadata. The design labeled the pairing "Confession vs Ledger" -- the emotional voice (Spectral) versus the institutional record (Public Sans). Unlike Anger\'s brutalist Oswald (which shouts), Guilt\'s Spectral quietly states.',
   },
 
   spacing: {
@@ -148,7 +148,7 @@ export const GUILT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: md 16px, lg 28px -- the weight is present but manageable, like carrying something you can still lift. Moderate: md 14px, lg 24px -- tighter than comfortable, the low ceiling you cannot quite stand up under. Intense: md 10px, lg 18px -- the walls close in, the compression is the physical sensation of a heavy chest.',
     rationale:
-      'Stitch used space-y-lg (24px) between sections and space-y-sm (8px) within cards -- slightly compressed throughout. The spacing config defines md as 0.875rem (14px), confirming the tighter-than-standard gaps. Unlike Frustration\'s external compression (someone blocking your path), Guilt\'s compression is self-imposed. There is room to read, room to understand. But no room to be comfortable.',
+      'The design used space-y-lg (24px) between sections and space-y-sm (8px) within cards -- slightly compressed throughout. The spacing config defines md as 0.875rem (14px), confirming the tighter-than-standard gaps. Unlike Frustration\'s external compression (someone blocking your path), Guilt\'s compression is self-imposed. There is room to read, room to understand. But no room to be comfortable.',
   },
 
   motion: {
@@ -159,7 +159,7 @@ export const GUILT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 360ms, smoother easing -- hesitation is present but subtle. Moderate: 300ms, uneven easing -- elements arrive without confidence, landing heavy. Intense: 240ms, more linear with abrupt stop -- the reckoning arrives whether you want it to or not.',
     rationale:
-      'Stitch created a dedicated .reluctant-motion class with the exact cubic-bezier(0.5, 0, 0.8, 0.5) easing. The Amend button uses active:translate-y-2 active:scale-[0.98] -- a sinking, pressing gesture. Cards use hover:translate-y-1 -- even hovering pushes things down. The bottom nav transitions at 700ms, deliberately slow and heavy. Unlike Anger\'s explosive slam (force outward), Guilt sinks (force inward). The downward translate on every interaction is the physical metaphor: guilt pulls you down.',
+      'The design created a dedicated .reluctant-motion class with the exact cubic-bezier(0.5, 0, 0.8, 0.5) easing. The Amend button uses active:translate-y-2 active:scale-[0.98] -- a sinking, pressing gesture. Cards use hover:translate-y-1 -- even hovering pushes things down. The bottom nav transitions at 700ms, deliberately slow and heavy. Unlike Anger\'s explosive slam (force outward), Guilt sinks (force inward). The downward translate on every interaction is the physical metaphor: guilt pulls you down.',
   },
 
   depth: {
@@ -184,7 +184,7 @@ export const GUILT_ADVISORY: EmotionAdvisory = {
     shadowIfNeeded: 'inset 0 4px 12px rgba(0, 0, 0, 0.6)',
     ghostBorder: '1px solid rgba(48, 44, 48, 0.15)',
     rationale:
-      'Stitch created a dedicated .sunken-shadow class (inset 0 4px 12px rgba(0,0,0,0.6)) for the heaviest level -- elements pressed INTO the surface rather than floating above it. The three shadow levels progress from subtle pressing (Burden) through visible weight (Weight, using shadow-lg) to full inset concavity (Reckoning). The bottom nav uses inset shadow too (inset 0 2px 4px rgba(0,0,0,0.6)). Unlike Pride\'s spotlit elevation or Joy\'s playful lift, Guilt\'s shadows all push DOWN and IN.',
+      'The design created a dedicated .sunken-shadow class (inset 0 4px 12px rgba(0,0,0,0.6)) for the heaviest level -- elements pressed INTO the surface rather than floating above it. The three shadow levels progress from subtle pressing (Burden) through visible weight (Weight, using shadow-lg) to full inset concavity (Reckoning). The bottom nav uses inset shadow too (inset 0 2px 4px rgba(0,0,0,0.6)). Unlike Pride\'s spotlit elevation or Joy\'s playful lift, Guilt\'s shadows all push DOWN and IN.',
   },
 
   shapes: {
@@ -198,14 +198,14 @@ export const GUILT_ADVISORY: EmotionAdvisory = {
     mildToIntense:
       'Mild: 8-10px (less tense, more reflective). Moderate: 6px (standard guilt containment). Intense: 3-4px (the edges of conscience cut closer).',
     rationale:
-      'Stitch set DEFAULT and md radius to 0.375rem (6px), confirming the contained corner approach. The 6px sits between comfort emotions (Contentment\'s 16px, Joy\'s 24px) and hostility (Anger\'s 0px). Shapes hold their boundaries tightly -- contained and measured, like someone sitting with arms crossed.',
+      'The design set DEFAULT and md radius to 0.375rem (6px), confirming the contained corner approach. The 6px sits between comfort emotions (Contentment\'s 16px, Joy\'s 24px) and hostility (Anger\'s 0px). Shapes hold their boundaries tightly -- contained and measured, like someone sitting with arms crossed.',
   },
 
   layout: {
     alignment: 'left',
     density: 'normal',
     rationale:
-      'Stitch created a left-aligned layout with the hero text ("Burden of Intent.") positioned at the BOTTOM of a tall header section (justify-end, h-[486px]) -- elements sink to the bottom rather than rising to the top. The emotional context section compares Guilt to Sadness and Anger in a grid, positioning Guilt as the inward-directed middle ground. Left alignment reads as written confession -- prose flowing naturally down the page.',
+      'The design created a left-aligned layout with the hero text ("Burden of Intent.") positioned at the BOTTOM of a tall header section (justify-end, h-[486px]) -- elements sink to the bottom rather than rising to the top. The emotional context section compares Guilt to Sadness and Anger in a grid, positioning Guilt as the inward-directed middle ground. Left alignment reads as written confession -- prose flowing naturally down the page.',
   },
 
   iconography: {
@@ -222,7 +222,7 @@ export const GUILT_ADVISORY: EmotionAdvisory = {
     weight: 400,
     fill: false,
     rationale:
-      'Stitch rendered icons in on-surface-variant (#908880) -- deliberately muted, not prominent. The 3-column grid with generous spacing gives each icon room but no emphasis. Labels are evocative rather than functional: "Alienation" not "person_off", "Compulsion" not "replay". The -25 grade (confirmed in CSS font-variation-settings) makes icons thinner than standard -- present but retreating.',
+      'The design rendered icons in on-surface-variant (#908880) -- deliberately muted, not prominent. The 3-column grid with generous spacing gives each icon room but no emphasis. Labels are evocative rather than functional: "Alienation" not "person_off", "Compulsion" not "replay". The -25 grade (confirmed in CSS font-variation-settings) makes icons thinner than standard -- present but retreating.',
   },
 
   rules: {

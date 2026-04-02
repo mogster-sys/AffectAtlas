@@ -207,21 +207,3 @@ export function getAdvisory(emotion: AnyEmotionType): EmotionAdvisory | undefine
   return advisoryRegistry.get(emotion);
 }
 
-export function hasDeepened(emotion: AnyEmotionType): boolean {
-  const a = advisoryRegistry.get(emotion);
-  return a !== undefined && a.deepened;
-}
-
-export function getAllAdvisories(): EmotionAdvisory[] {
-  return Array.from(advisoryRegistry.values());
-}
-
-export function hasVariants(emotion: AnyEmotionType): boolean {
-  const a = advisoryRegistry.get(emotion);
-  return (a?.variants?.length ?? 0) > 0;
-}
-
-export function getVariants(emotion: AnyEmotionType): AdvisoryVariant[] {
-  const a = advisoryRegistry.get(emotion);
-  return a?.variants ?? [];
-}

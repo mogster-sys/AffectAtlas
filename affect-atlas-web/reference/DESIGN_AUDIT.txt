@@ -1,0 +1,658 @@
+pefter getfhAffectAtlas Design System Audit
+================================
+March 2026 -- Pre-Release Quality Review
+
+This report compares DESIGN GUIDANCE (what the app promises)
+against ACTUAL IMPLEMENTATION (what the code delivers) for
+every emotion. Critical gaps that would be noticed by a
+designer audience are flagged.
+
+
+================================================================
+KEY FINDINGS SUMMARY
+================================================================
+
+CRITICAL FONT MISMATCHES: 12 of 16 emotions have headline
+fonts in designTokens.ts that do NOT match the Stitch prompts
+or design guidance.
+
+MISSING EMOTIONS: 13 expanded emotions (Awe, Confusion,
+Depression, Loneliness, Guilt, Appalled, Frustration,
+Jealousy, Inspiration, Contentment, Embarrassment, Fright,
+Pride) have Stitch prompts and design guidance but are NOT
+in designTokens.ts. They fall back to their parent primary
+emotion's theme. This means 13 of 29 emotions render with
+the WRONG design system.
+
+INTENSITY FLATTENING: Several emotions (Anger, Anticipation)
+show identical or near-identical tokens across all 3 intensity
+levels. The mild/moderate/intense progression is not visible.
+
+SHADOW SYSTEM: advisoryPanel.ts implements shadow rendering
+per-emotion, but the depth styles are advisory-level data,
+not theme-level. The actual app preview may not apply these.
+
+MOTION: Motion characters are well-implemented in
+advisoryPanel.ts (31 distinct transforms). This is a strength.
+
+
+================================================================
+EMOTION-BY-EMOTION CRITICAL AUDIT
+================================================================
+
+
+1. JOY
+------
+Guidance:  Warm golden-yellow (#FFD700), bouncy rounded forms,
+           Nunito or Quicksand bold, 24px corners, spring motion
+Stitch:    Plus Jakarta Sans headline, Be Vietnam Pro body,
+           16-32px corners, 350ms spring bounce
+Tokens:    Plus Jakarta Sans headline, Be Vietnam Pro body,
+           16/32/48px corners, rounded style
+           Colors: #fdf6df bg, #7b5400 primary (moderate)
+
+VERDICT: MOSTLY ALIGNED
++ Font pairing matches Stitch (not original guidance Nunito,
+  but Stitch overrode that and tokens match Stitch)
++ Corner radii aligned (16px base, rounded style)
++ Warm palette aligned
+- Joy:mild and Joy:intense use nearly identical values to
+  moderate. The "Diffused Dawn" (mild) vs "Radiant Festival"
+  (intense) distinction is not visible in the tokens.
+- No spring bounce easing in tokens (motion is in advisory
+  data only, not theme tokens)
+
+
+2. TRUST
+--------
+Guidance:  Cool teal-blue (#1A3A4A), Newsreader serif,
+           4-8px corners, restrained motion, monochromatic
+Stitch:    Newsreader headline, Inter body, 4-8px smooth
+           corners, 250ms restrained ease
+Tokens:    Newsreader headline (mild/moderate), BUT
+           Trust:intense uses Inter/Inter -- loses the serif
+
+VERDICT: GOOD BUT INTENSE VARIANT BREAKS
++ Mild and moderate match perfectly
+- Trust:intense drops Newsreader for Inter/Inter. The
+  design guidance for intense Trust ("Maximum Institutional")
+  calls for STRONGER institutional serif, not abandoning it.
+  This is backwards -- the font should get MORE serif at
+  intense, not less.
+- All three intensities have nearly identical color palettes.
+  The progression from "calm professional" to "maximum
+  institutional" is not visible in color.
+
+
+3. FEAR
+-------
+Guidance:  Dark violet/black (#0D0D0D), Epilogue thin (200
+           weight), 0-4px sharp corners, compressed line-height,
+           vignette inset shadows, tense motion
+Stitch:    Epilogue headline, Inter body, 0-4px sharp, 200ms
+           ease-in, cold violet palette
+Tokens:    Epilogue headline (mild/moderate), BUT
+           Fear:intense uses Inter/Inter -- loses Epilogue
+
+VERDICT: GOOD BUT INTENSE VARIANT BREAKS (same issue as Trust)
++ Mild/moderate match well: Epilogue, dark bg, sharp corners
++ Corner style progresses: smooth(mild) -> smooth(mod) ->
+  sharp(intense). Good intensity progression on shapes.
+- Fear:intense drops Epilogue for Inter/Inter. The guidance
+  says intense Fear should use even THINNER weights (200),
+  not switch to a different font entirely. Epilogue at
+  ultra-thin IS Fear. Losing it at intense -- the moment
+  it matters most -- is the biggest miss.
+- The "vignette" effect (darkness pressing inward from edges)
+  described in guidance is not implementable in the current
+  theme token structure.
+
+
+4. SURPRISE
+-----------
+Guidance:  Neon magenta/cyan on deep indigo, Space Grotesk,
+           MIXED corner radii (0px to 32px deliberate
+           inconsistency), snappy overshoot motion, electric
+Stitch:    Space Grotesk headline, Manrope body, 4px smooth
+           (mild), then mixed, then 16/32/48 rounded (intense)
+Tokens:    Space Grotesk headline, Plus Jakarta Sans body
+           (mild), Manrope body (mod/intense)
+           Corners: 4px smooth (mild), 4px smooth (mod),
+           16/32/48 rounded (intense)
+
+VERDICT: PARTIALLY ALIGNED
++ Space Grotesk headline is correct throughout
++ Dark theme on moderate/intense matches the deep indigo feel
+- Body font inconsistency: mild uses Plus Jakarta Sans but
+  should use Manrope per Stitch
+- Surprise:moderate has smooth corners (4px) when the design
+  guidance specifically calls for MIXED radii as a key
+  feature. The deliberate inconsistency IS the surprise.
+  Using uniform smooth corners defeats the concept.
+- The neon magenta (#ff7cf5) and cyan (#50e1f9) are present
+  but may not create enough "electric disruption" against
+  the dark background without glow effects
+
+
+5. SADNESS
+----------
+Guidance:  Pale desaturated blue-gray, Cormorant Garamond
+           light weight, 4-8px smooth corners, slow 600ms
+           drift motion, minimal shadows
+Stitch:    Cormorant Garamond headline, Newsreader body,
+           2-4px smooth, 600ms slow drift
+Tokens:    Newsreader headline (mild/moderate), Cormorant
+           Garamond headline (intense only)
+           Newsreader or Public Sans body
+
+VERDICT: FONT MISMATCH ON MILD/MODERATE
+- Stitch specifies Cormorant Garamond as the HEADLINE font
+  for Sadness. Tokens use Newsreader for mild/moderate and
+  only switch to Cormorant Garamond at intense. This is
+  backwards -- Cormorant Garamond's thin, contemplative
+  serifs ARE sadness. Newsreader is Trust's font.
++ Colors are appropriately desaturated and cool
++ Light theme with pale blue-gray backgrounds matches
++ Corner radii (2-4px smooth) align with guidance
+- Body font varies: Public Sans (mild) vs Newsreader
+  (moderate/intense). Should be consistent.
+
+
+6. DISGUST
+----------
+Guidance:  Sickly yellow-green, murky olive-brown, warm
+           olive-black background (#141408), Syne headline,
+           Work Sans body, 6px organic corners, 500ms oozing
+           motion, spreading olive-tinted shadows
+Stitch:    Syne headline, Work Sans body, 4-12px organic,
+           500ms cubic-bezier(0.4, 0, 0.6, 1)
+Tokens:    Epilogue headline (mild), Epilogue/Work Sans
+           (moderate/intense)
+           Colors: #141405/#141407 bg -- close to guidance
+           Corners: 2-4px smooth
+
+VERDICT: CRITICAL FONT MISMATCH
+- Guidance and Stitch both specify SYNE as headline font.
+  Tokens use EPILOGUE. These are completely different fonts.
+  Syne has organic irregularity that embodies contamination.
+  Epilogue is geometric and clinical -- that's Fear's font.
+  Using Fear's font for Disgust is a category error.
++ Background colors are close (#141405 vs #141408)
++ Dark theme is correct
+- Corner radii too small (2-4px vs guidance 6-12px). Disgust
+  should be organic/soft, not clinical/sharp.
+- cornerStyle is "smooth" but should feel more "organic"
+
+
+7. ANGER
+--------
+Guidance:  Saturated crimson on near-black, Oswald black
+           (condensed uppercase), 0px razor sharp corners,
+           150ms explosive snap, heavy crushing shadows
+Stitch:    Oswald headline, Inter body, 0px sharp, 150ms
+           cubic-bezier(0.2, 0, 0, 1)
+Tokens:    Inter headline, Inter body (ALL intensities)
+           Corners: 0px sharp -- correct
+           Colors: #200604 bg, #ff8e80 primary -- warm but
+           not the saturated crimson of guidance
+
+VERDICT: CRITICAL FONT MISMATCH
+- Guidance and Stitch both specify OSWALD (condensed
+  uppercase, heavy weight) as Anger's headline font. Tokens
+  use INTER for everything. Inter is a neutral humanist
+  sans-serif -- it has zero emotional weight. It's literally
+  the most neutral font in the Google Fonts library.
+  Using Inter for Anger is like whispering when you should
+  be screaming.
++ 0px sharp corners are correct
++ Dark theme is correct
+- All three intensity levels (mild/moderate/intense) have
+  nearly identical tokens. The progression from "Contained
+  Tension" to "Controlled Combustion" to "Total Eruption"
+  is invisible in the rendered output.
+- Primary color #ff8e80 is a SALMON PINK, not crimson.
+  The guidance calls for #930012 (deep crimson) and #ff0000.
+  Salmon pink is not angry.
+
+
+8. ANTICIPATION
+---------------
+Guidance:  Warm amber-gold on cream, Urbanist (narrow
+           geometry), 12px warm smooth corners, 280ms
+           gathering acceleration
+Stitch:    Urbanist headline, Nunito Sans body, 12px smooth,
+           280ms cubic-bezier(0.35, 0.0, 0.0, 1.0)
+Tokens:    Plus Jakarta Sans headline, Inter body
+           Corners: 4/8/12px smooth
+           Colors: #fff8f1/#fff5e7 bg, warm ambers
+
+VERDICT: FONT MISMATCH
+- Guidance and Stitch specify URBANIST as headline font.
+  Tokens use Plus Jakarta Sans. Urbanist has narrow directed
+  proportions that embody "forward lean." Plus Jakarta Sans
+  is rounded and friendly -- that's Joy territory.
++ Color palette is appropriately warm
++ Corner radii are in the right range
+- All three intensities have identical tokens for moderate
+  and intense. The progression is flat.
+
+
+9. LOVE
+-------
+Guidance:  Rose pink/blush, champagne gold, Crimson Pro
+           serif, 18px rounded corners, rose-tinted glow
+           shadows, 360ms embracing motion
+Stitch:    Crimson Pro headline, Rubik body, 18px rounded,
+           360ms cubic-bezier(0.25, 0.1, 0.25, 1)
+Tokens:    Noto Serif headline, Plus Jakarta Sans body
+           Corners: 16/32/48px rounded
+           Colors: #fef8fa bg, rose palette
+
+VERDICT: FONT MISMATCH
+- Guidance and Stitch both specify CRIMSON PRO as Love's
+  headline font. Tokens use Noto Serif. Crimson Pro has
+  warmth and intimacy in its curves. Noto Serif is more
+  neutral and institutional. The difference matters for an
+  emotion about intimacy.
+- Body font mismatch: Stitch says Rubik (rounded, warm),
+  tokens use Plus Jakarta Sans
++ Corner radii and style are aligned (rounded, generous)
++ Color palette is warm and rose-tinted
++ Light theme is correct
+
+
+10. SUBMISSION
+--------------
+Guidance:   Muted steel blue-gray, Maven Pro (soft rounded),
+            18px soft corners, yielding deceleration, barely
+            visible shadows
+Stitch:     Maven Pro headline, Lato body, 18px soft
+Tokens:     Inter headline, Inter body (ALL intensities)
+            Corners: 2-4px smooth
+
+VERDICT: CRITICAL FONT + SHAPE MISMATCH
+- Guidance and Stitch specify MAVEN PRO (soft, rounded,
+  transparent). Tokens use INTER. Maven Pro's rounded forms
+  embody yielding and softness. Inter is neutral -- it yields
+  nothing.
+- Corner radii are 2-4px (clinical) vs guidance 18px (soft,
+  defensive). This completely inverts the emotional character.
+  Submission should feel soft and yielding, not sharp.
+- Submission:intense is dark theme which is interesting but
+  doesn't match the guidance's "increasingly transparent"
+  concept
+
+
+11. ALARM
+---------
+Guidance:   Black with orange/yellow flashes, Oswald/Barlow
+            Condensed, fast jarring motion
+Stitch:     Oswald/Barlow headline, sharp corners
+Tokens:     Space Grotesk headline, Space Grotesk/Inter/
+            Work Sans body
+            Corners: 2px(mild) -> 0px(mod/intense) sharp
+
+VERDICT: FONT MISMATCH
+- Guidance specifies Oswald or Barlow Condensed (urgent,
+  compressed). Tokens use Space Grotesk (geometric, neutral).
+  For an emotion about urgency and alarm, condensed uppercase
+  type is essential.
++ Dark theme is correct
++ Corner progression to 0px sharp at intense is good
++ Color palette has the orange/amber alarm tones
+
+
+12. DISAPPOINTMENT
+------------------
+Guidance:   Faded lavender/gray, DM Sans/Nunito, deflating
+            motion, moderate rounded corners
+Stitch:     DM Sans/Nunito headline, light weight
+Tokens:     Plus Jakarta Sans headline/body (ALL intensities)
+            Corners: 4/8/12px smooth
+            Colors: light theme, faded pastels
+
+VERDICT: FONT MISMATCH
+- Guidance specifies DM Sans or Nunito (soft, slightly
+  deflated). Tokens use Plus Jakarta Sans. Not a huge
+  difference in character but still not what was designed.
++ Colors are appropriately muted and desaturated
++ Light theme matches the "faded" concept
+- The "deflating" quality described in guidance is not
+  visible in the static tokens
+
+
+13. REMORSE
+-----------
+Guidance:   Dark ash green/gray, Merriweather serif,
+            weighty motion, smooth corners
+Stitch:     Merriweather headline, heavy serif
+Tokens:     Noto Serif headline, Work Sans/Inter body
+            Corners: 2/4/8px smooth -> 0px sharp (intense)
+            Dark theme throughout
+
+VERDICT: FONT MISMATCH
+- Guidance specifies Merriweather (heavy literary serif).
+  Tokens use Noto Serif. Both are serifs but Merriweather
+  has more weight and gravitas -- important for remorse.
++ Dark theme is appropriate for the heavy moral weight
++ Corner progression to sharp at intense suggests
+  hardening/crystallizing
+
+
+14. CONTEMPT
+------------
+Guidance:   Dark burgundy/bronze, Bodoni/Didot serif (high
+            luxury), 0px sharp corners, cold precision,
+            asymmetric layouts
+Stitch:     Bodoni headline, serif luxury feel, 0px sharp
+Tokens:     Newsreader headline, Inter body
+            Corners: 2px(mild) -> 0px(mod/intense) sharp
+            Colors: #2c0603 bg (dark burgundy) -- correct
+
+VERDICT: CRITICAL FONT MISMATCH
+- Guidance and Stitch specify BODONI or DIDOT (extreme
+  thick/thin contrast, aristocratic luxury). Tokens use
+  NEWSREADER (institutional). Bodoni is the font of Vogue
+  magazine -- cold, superior, impossibly elegant. Newsreader
+  is the font of a broadsheet newspaper -- informative but
+  not contemptuous.
++ Dark burgundy background color is perfect
++ Sharp corners at intense are correct
++ The color palette conveys cold status well
+
+
+15. AGGRESSIVENESS
+------------------
+Guidance:   Hot red-orange on absolute black, Impact/Anton
+            or Teko (heavy condensed uppercase), 0px sharp,
+            striking explosive motion, hard directional
+            shadows
+Stitch:     Impact/Anton headline, 0px sharp, aggressive
+Tokens:     Space Grotesk headline, Space Grotesk/Inter body
+            Corners: 0px sharp -- correct
+            Colors: #1F0704 bg, #FF3D00 accent -- strong
+
+VERDICT: CRITICAL FONT MISMATCH
+- Guidance specifies Impact/Anton/Teko (heavy condensed
+  uppercase -- the "battering ram" aesthetic). Tokens use
+  Space Grotesk (geometric, balanced, moderate weight).
+  Space Grotesk cannot convey "battering ram." It's too
+  measured, too polite. Aggressiveness needs type that
+  HITS you.
++ 0px corners are correct
++ Color palette (#FF3D00, #DD2C00, #B71C1C) is strong
++ Dark theme is appropriately aggressive
+
+
+16. OPTIMISM
+------------
+Guidance:   Bright amber-gold on cream, Poppins/Quicksand
+            (rounded, friendly), rounded corners, upward
+            floating motion
+Stitch:     Poppins headline, rounded, warm
+Tokens:     Plus Jakarta Sans headline, Be Vietnam Pro/
+            Plus Jakarta Sans body
+            Corners: 16/32/48px rounded -- correct
+            Colors: warm amber palette -- correct
+
+VERDICT: MINOR FONT MISMATCH
+- Guidance specifies Poppins or Quicksand. Tokens use Plus
+  Jakarta Sans. These are all in the same family of rounded
+  geometric sans-serifs, so the mismatch is less severe than
+  others. Plus Jakarta Sans works reasonably well.
++ Corner radii are generously rounded -- correct
++ Warm color palette matches
++ Light theme is correct
+
+
+================================================================
+EXPANDED EMOTIONS (13) -- ALL MISSING FROM TOKENS
+================================================================
+
+These emotions have full Stitch prompts and design guidance
+but NO entries in designTokens.ts. They fall back to their
+parent primary emotion's theme via getEmotionThemeOrFallback().
+
+17. AWE -> Falls back to SURPRISE theme
+    Should be: Cosmic navy, Cormorant serif, luminous glow,
+    14px smooth corners, 450ms expansive motion
+    Gets: Space Grotesk, neon magenta/cyan, snappy motion
+    IMPACT: SEVERE. Awe is vast and contemplative. Surprise
+    is electric and jarring. These are opposites.
+
+18. CONFUSION -> Falls back to SURPRISE theme
+    Should be: Ambiguous warm/cool grays, mixed fonts,
+    inconsistent spacing, wavering motion
+    Gets: Space Grotesk, neon magenta/cyan, snappy motion
+    IMPACT: SEVERE. Confusion should feel uncertain and
+    muddied. Surprise's vivid neons are the opposite.
+
+19. DEPRESSION -> Falls back to SADNESS theme
+    Should be: Flat monochromatic mid-gray, Inter/Roboto
+    default weight, minimal inert motion, exhausted
+    Gets: Newsreader serif, pale blue-gray, literary
+    IMPACT: MODERATE. Sadness is contemplative and literary.
+    Depression is flat and inert. Close but wrong tone --
+    depression has no energy for contemplation.
+
+20. LONELINESS -> Falls back to SADNESS theme
+    Should be: Cold blue-gray, vast negative space,
+    Cormorant Garamond Light, drifting isolation
+    Gets: Newsreader, pale blue-gray
+    IMPACT: MODERATE. Sadness is appropriate territory but
+    the font should be thinner and the spacing much more
+    generous to convey isolation.
+
+21. GUILT -> Falls back to DISGUST theme
+    Should be: Dark blue-gray with maroon stains, Spectral
+    italic, literary confessional, sinking motion
+    Gets: Epilogue, sickly yellow-green
+    IMPACT: SEVERE. Guilt is moral weight and introspection.
+    Disgust is biological revulsion. Completely wrong palette
+    and font character.
+
+22. APPALLED -> Falls back to DISGUST theme
+    Should be: Murky olive-brown, Chakra Petch angular type,
+    contaminated erratic spacing
+    Gets: Epilogue, sickly yellow-green
+    IMPACT: LOW-MODERATE. Appalled is adjacent to Disgust
+    so the fallback is somewhat appropriate, but Chakra
+    Petch's angular character vs Epilogue's geometry would
+    make a difference.
+
+23. FRUSTRATION -> Falls back to ANGER theme
+    Should be: Harsh gray/orange-red, Inter Black/Archivo
+    Bold, blocked halting motion, cramped spacing
+    Gets: Inter (actually matches somewhat), crimson palette
+    IMPACT: MODERATE. The font accidentally works since
+    Anger's tokens use Inter. But the color palette is wrong
+    -- Frustration should be more orange/amber (blocked
+    energy) vs Anger's crimson (released fury).
+
+24. JEALOUSY -> Falls back to ANTICIPATION theme (wrong parent?)
+    Should be: Poisonous forest green, Bodoni Moda italic,
+    tight competitive spacing, toxic green glow
+    Gets: Plus Jakarta Sans, warm amber, rounded corners
+    IMPACT: SEVERE. Jealousy is dark, obsessive, toxic
+    green. Anticipation is warm, optimistic, amber. These
+    are emotionally opposite.
+
+25. INSPIRATION -> Falls back to ANTICIPATION theme
+    Should be: Indigo to sunrise gold, Poppins/DM Sans,
+    uplifting ascent motion, glass layers
+    Gets: Plus Jakarta Sans, warm amber
+    IMPACT: MODERATE. Inspiration shares some warmth with
+    Anticipation but should be lighter, more luminous, and
+    upward-oriented rather than forward-leaning.
+
+26. CONTENTMENT -> Falls back to JOY theme
+    Should be: Soft sage/cream, Nunito/Source Sans, settling
+    peace motion, 14-16px warm corners
+    Gets: Plus Jakarta Sans, golden-yellow, bouncy motion
+    IMPACT: MODERATE. Joy is exuberant and bouncy.
+    Contentment is quiet and settled. The energy level is
+    wrong even if the warmth is right.
+
+27. EMBARRASSMENT -> Falls back to FEAR theme
+    Should be: Blush pink, Nunito/DM Sans light, shrinking
+    motion, defensive 14px radii, warm
+    Gets: Epilogue, cold dark violet, sharp corners
+    IMPACT: SEVERE. Embarrassment is warm, pink, shrinking.
+    Fear is cold, dark, tense. Completely wrong color
+    temperature, shape language, and emotional character.
+
+28. FRIGHT -> Falls back to FEAR theme
+    Should be: Near-black with cold blue edge-light,
+    Oswald/Barlow condensed, stuttering flicker, maximum
+    speed (80-120ms)
+    Gets: Epilogue, dark violet, tense motion
+    IMPACT: LOW. Fright and Fear are closely related. The
+    main difference should be SPEED (Fright is faster) and
+    typography (condensed urgent vs thin clinical). The
+    fallback is the closest match of any expanded emotion.
+
+29. PRIDE -> Falls back to ANGER theme (wrong parent?)
+    Should be: Midnight purple with gold, Playfair Display
+    serif, ceremonial ascent, precise geometry
+    Gets: Inter, dark crimson, 0px sharp corners
+    IMPACT: SEVERE. Pride is regal, ceremonial, elevated.
+    Anger is pressurized, aggressive, confrontational.
+    Pride needs purple+gold and serif typography. Getting
+    crimson and Inter completely misrepresents the emotion.
+
+
+================================================================
+CROSS-CUTTING ISSUES
+================================================================
+
+1. FONT DIVERSITY
+   The design guidance specifies 16+ distinct headline fonts
+   across all emotions. The actual tokens use primarily:
+   - Plus Jakarta Sans (Joy, Anticipation, Disappointment,
+     Optimism) -- 4 emotions sharing one font
+   - Inter (Anger, Submission, Trust:intense, Fear:intense)
+     -- 4+ emotions sharing one neutral font
+   - Newsreader (Trust, Sadness:mild/mod, Contempt)
+   - Space Grotesk (Surprise, Alarm, Aggressiveness)
+   - Epilogue (Fear, Disgust)
+   - Noto Serif (Love, Remorse)
+   - Cormorant Garamond (Sadness:intense only)
+
+   MISSING from tokens entirely:
+   - Oswald (Anger, Alarm, Fright) -- the heavy condensed voice
+   - Syne (Disgust) -- the organic irregular voice
+   - Urbanist (Anticipation) -- the directed narrow voice
+   - Crimson Pro (Love) -- the intimate warm voice
+   - Maven Pro (Submission) -- the soft yielding voice
+   - Bodoni Moda (Contempt, Jealousy) -- the aristocratic voice
+   - Spectral (Guilt) -- the literary confessional voice
+   - Cormorant (Awe, Sadness) -- the monumental voice
+   - Playfair Display (Pride) -- the ceremonial voice
+   - Chakra Petch (Appalled) -- the angular uncomfortable voice
+
+   This is the single biggest gap. The font IS the emotion
+   in this system. Showing Inter for Anger or Plus Jakarta
+   Sans for Anticipation is like showing blue for Anger or
+   red for Sadness -- it contradicts the message.
+
+2. INTENSITY FLATTENING
+   Several emotions show no meaningful progression across
+   intensity levels:
+   - Anger: identical tokens for all 3 intensities
+   - Anticipation: moderate and intense are identical
+   - Aggressiveness: very similar across all 3
+   - Joy: minor color shifts only
+
+   The guidance describes dramatically different experiences
+   at each level (e.g. Joy: "Diffused Dawn" vs "Radiant
+   Festival"). The tokens don't deliver this.
+
+3. EXPANDED EMOTION COVERAGE
+   13 of 29 emotions have no dedicated theme tokens. For a
+   product that promises to map EVERY emotion to a unique
+   design system, having 45% of emotions fall back to a
+   parent's theme is a significant gap. The most damaging
+   fallbacks are:
+   - Embarrassment -> Fear (warm -> cold)
+   - Pride -> Anger (ceremonial -> aggressive)
+   - Jealousy -> Anticipation (toxic green -> warm amber)
+   - Guilt -> Disgust (moral weight -> biological revulsion)
+   - Awe -> Surprise (vast contemplation -> electric shock)
+
+4. ADVISORY PANEL vs PREVIEW
+   The advisoryPanel.ts is where the design system is
+   EXPLAINED (typography specimens, color palettes, spacing
+   bars, motion demos). This is well-implemented with 11
+   detailed sections. But the PREVIEW of what a screen
+   would look like using these tokens may not apply the
+   full guidance (shadows, spacing density, layout alignment).
+
+5. SHADOW/DEPTH SYSTEM
+   Each emotion has unique shadow approaches in the advisory
+   data (warm brown for Joy, vignette for Fear, spreading
+   olive for Disgust, crushing black for Anger, luminous
+   glow for Awe). These are described in the advisory but
+   not stored as reusable theme tokens.
+
+
+================================================================
+RECOMMENDATIONS (Priority Order)
+================================================================
+
+1. FIX HEADLINE FONTS (Critical)
+   Replace the generic fonts in designTokens.ts with the
+   Stitch-specified fonts. This is the highest-impact change:
+   - Anger: Inter -> Oswald
+   - Disgust: Epilogue -> Syne
+   - Anticipation: Plus Jakarta Sans -> Urbanist
+   - Love: Noto Serif -> Crimson Pro
+   - Submission: Inter -> Maven Pro
+   - Contempt: Newsreader -> Bodoni Moda
+   - Aggressiveness: Space Grotesk -> Teko (or Impact/Anton)
+   - Sadness: Newsreader -> Cormorant Garamond (all levels)
+   - Alarm: Space Grotesk -> Oswald/Barlow Condensed
+
+2. ADD EXPANDED EMOTION TOKENS (High)
+   Create dedicated designTokens entries for the 13 expanded
+   emotions, especially the severe mismatches:
+   - Embarrassment, Pride, Jealousy, Guilt, Awe (all severe)
+   - Confusion, Depression, Loneliness (moderate impact)
+
+3. FIX INTENSITY PROGRESSION (Medium)
+   Ensure each emotion shows meaningful visual differences
+   across mild/moderate/intense, particularly:
+   - Anger (currently identical across all 3)
+   - Anticipation (moderate = intense)
+   - Color saturation, font weight, spacing density, and
+     corner radius should all shift with intensity
+
+4. ADD BODY FONT DIFFERENTIATION (Medium)
+   Many emotions use Inter or Plus Jakarta Sans as body font.
+   The Stitch prompts specify distinct body fonts that
+   complement the headline:
+   - Fear: Inter (correct -- clinical contrast works)
+   - Joy: Be Vietnam Pro (correct in some variants)
+   - Disgust: Work Sans (not Epilogue)
+   - Sadness: Newsreader body (double-serif pairing)
+
+5. VERIFY COLOR ACCURACY (Low-Medium)
+   Some primary colors don't match the emotional intent:
+   - Anger primary #ff8e80 is salmon pink, not crimson
+   - Compare all palette colors against Stitch screenshots
+
+
+================================================================
+WHAT'S WORKING WELL
+================================================================
+
+- Motion system: 31 distinct motion characters with unique
+  transforms, well-mapped to emotions
+- Dark/light theme selection: appropriate per emotion
+- Corner style vocabulary: sharp/smooth/rounded correctly
+  mapped to emotional families
+- Advisory panel structure: 11 comprehensive sections that
+  explain the design system clearly
+- Color science: OKLCH color space for perceptually uniform
+  palettes is technically sound
+- The 8 primary + 8 dyad structure covers Plutchik's model
+- Spacing scales exist per emotion in advisory data
