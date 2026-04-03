@@ -287,7 +287,4 @@ export function initApp(): void {
 
   // Apply initial state
   onStoreChange();
-
-  // Expose store to console for testing
-  (window as unknown as Record<string, unknown>)['store'] = emotionStore;
 }
